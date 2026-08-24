@@ -20,6 +20,13 @@ from . import config as config_module
 from . import discovery, pipeline, playbooks, review, schema
 from .naming import run_id
 
+EXPECTED_FAILURES = (
+    discovery.DiscoveryError,
+    pipeline.PipelineError,
+    schema.SchemaValidationError,
+    config_module.ConfigError,
+)
+
 
 def _repository_root(value: str | None) -> Path:
     if value:
@@ -136,7 +143,12 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
-    return int(args.func(args))
+    try:
+        return int(args.func(args))
+    except EXPECTED_FAILURES as error:
+        # A refusal is an expected outcome, not a crash: report it in one line.
+        print(f"{type(error).__name__}: {error}", file=sys.stderr)
+        return 1
 
 
 if __name__ == "__main__":

@@ -238,6 +238,24 @@ def test_the_cli_runs_the_flow_and_reports_dry_run(
     assert "completeness COMPLETE" in captured
 
 
+def test_the_cli_reports_a_refusal_in_one_line(
+    config: Config, tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    code = cli.main(
+        [
+            "--artifact-root",
+            str(config.artifact_root_directory),
+            "run",
+            "--repository-root",
+            str(tmp_path / "empty"),
+        ]
+    )
+    captured = capsys.readouterr()
+    assert code == 1
+    assert captured.err.strip().startswith("DiscoveryError: ")
+    assert "Traceback" not in captured.err
+
+
 def test_the_cli_validate_command_loads_everything(
     config: Config, capsys: pytest.CaptureFixture[str]
 ) -> None:

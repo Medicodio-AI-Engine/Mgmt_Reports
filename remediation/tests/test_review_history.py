@@ -72,6 +72,20 @@ def test_a_review_without_a_question_is_not_accepted() -> None:
     assert decision.malformed
 
 
+def test_a_block_without_a_decision_line_is_reported_as_malformed() -> None:
+    parsed = review.parse_decisions(
+        "### DECISION: ISSUE_000001_ATTEMPT_01\nREVIEWER: raj\nCOMMENTS: looks fine\n"
+    )
+    decision = parsed["ISSUE_000001_ATTEMPT_01"]
+    assert decision.outcome is Outcome.PENDING
+    assert "no DECISION: line" in (decision.malformed or "")
+
+
+def test_an_untouched_generated_block_is_not_malformed() -> None:
+    block = review.decision_block("ISSUE_000001_ATTEMPT_01", "Missing regression tests")
+    assert review.parse_decisions(block)["ISSUE_000001_ATTEMPT_01"].malformed is None
+
+
 def test_an_unrecognized_outcome_is_reported_not_guessed() -> None:
     parsed = review.parse_decisions(
         "### DECISION: ISSUE_000001_ATTEMPT_01\nDECISION: looks fine to me\n"

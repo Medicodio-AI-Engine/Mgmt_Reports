@@ -101,7 +101,11 @@ def parse_decisions(text: str, *, source_file: str | None = None) -> dict[str, D
         stated = re.sub(r"#.*$", "", raw.get("DECISION", "")).strip().upper()
         outcome = _ALIASES.get(stated, Outcome.PENDING)
         malformed = None
-        if stated and outcome is Outcome.PENDING and stated != "PENDING":
+        if "DECISION" not in raw:
+            # Every generated block carries `DECISION: PENDING`, so a block without the
+            # line has been edited into a state the reviewer cannot see is broken.
+            malformed = "block has no DECISION: line; treated as PENDING"
+        elif stated and outcome is Outcome.PENDING and stated != "PENDING":
             malformed = f"unrecognized decision value {stated!r}; treated as PENDING"
         questions = _split_items(raw.get("QUESTIONS", ""))
         if outcome is Outcome.REVIEW and not questions:
