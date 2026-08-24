@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -30,6 +31,7 @@ from . import (
     effort,
     extract,
     guardrails,
+    history,
     ids,
     normalize,
     planner,
@@ -48,6 +50,8 @@ from .audit import AuditLog
 from .config import Config
 from .naming import Audience, Stage, artifact_name, run_id
 from .states import State, transition
+
+QUOTED = re.compile(r"[\"\u201c]([^\"\u201c\u201d]{4,120})[\"\u201d]")
 
 
 class PipelineError(RuntimeError):
@@ -314,14 +318,27 @@ def _review_targets(issue: dict[str, Any]) -> tuple[str, ...]:
     return tuple(str(name) for name in (issue.get("candidate_repositories") or []))
 
 
+def _quoted_subjects(issue: dict[str, Any]) -> tuple[str, ...]:
+    """Commit subjects the finding itself quoted, so history can be narrowed."""
+    stated = str(issue.get("description") or "")
+    return tuple(match.strip() for match in QUOTED.findall(stated) if len(match.strip()) > 8)
+
+
+def _review_one(session: Session, issue: dict[str, Any], target: str | None) -> dict[str, object]:
+    """Read one target repository: its current state, and the day's work in it."""
+    root = session.config.repository_root
+    paths = tuple(str(path) for path in (issue.get("files") or []))
+    state = codebase.inspect(root, target, paths)
+    local = codebase.checkout(root, target)
+    done = history.work_done(local, session.date, issue.get("owner"), _quoted_subjects(issue))
+    return {**state.as_dict(), "work_done": done.as_dict()}
+
+
 def _attach_code_review(session: Session, issues: list[dict[str, Any]]) -> None:
     """Record what a read-only look at each target repository found."""
-    root = session.config.repository_root
     for issue in issues:
-        paths = tuple(str(path) for path in (issue.get("files") or []))
         targets = _review_targets(issue) or (None,)
-        reviews = [codebase.inspect(root, target, paths) for target in targets]
-        issue["code_review"] = [review.as_dict() for review in reviews]
+        issue["code_review"] = [_review_one(session, issue, target) for target in targets]
 
 
 def _validate_issues(issues: list[dict[str, Any]]) -> None:

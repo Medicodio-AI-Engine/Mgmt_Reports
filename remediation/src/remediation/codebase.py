@@ -40,7 +40,7 @@ class CodeContext:
         }
 
 
-def _checkout(root: Path | None, repository: str | None) -> Path | None:
+def checkout(root: Path | None, repository: str | None) -> Path | None:
     """The local checkout of ``repository``, when one is available to read."""
     if root is None or not repository:
         return None
@@ -69,16 +69,16 @@ def _source_files(checkout: Path) -> int:
 
 def inspect(root: Path | None, repository: str | None, paths: tuple[str, ...] = ()) -> CodeContext:
     """Look at ``repository`` without changing anything in it."""
-    checkout = _checkout(root, repository)
-    if checkout is None:
+    local = checkout(root, repository)
+    if local is None:
         return CodeContext(repository=repository, checkout_available=False)
-    present, missing = _split_paths(checkout, paths)
+    present, missing = _split_paths(local, paths)
     return CodeContext(
         repository=repository,
         checkout_available=True,
         present_paths=tuple(present),
         missing_paths=tuple(missing),
-        source_file_count=_source_files(checkout),
+        source_file_count=_source_files(local),
     )
 
 

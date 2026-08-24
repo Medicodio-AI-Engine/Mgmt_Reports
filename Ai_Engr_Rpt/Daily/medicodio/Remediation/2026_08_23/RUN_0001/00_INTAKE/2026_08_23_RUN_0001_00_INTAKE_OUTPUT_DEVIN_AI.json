@@ -15,7 +15,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": null,
-          "source_file_count": null
+          "source_file_count": null,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -93,7 +103,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": null,
-          "source_file_count": null
+          "source_file_count": null,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -171,7 +191,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": null,
-          "source_file_count": null
+          "source_file_count": null,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -249,7 +279,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": null,
-          "source_file_count": null
+          "source_file_count": null,
+          "work_done": {
+            "author": "sameer-s-mansur",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -327,7 +367,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": null,
-          "source_file_count": null
+          "source_file_count": null,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -405,7 +455,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": null,
-          "source_file_count": null
+          "source_file_count": null,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -485,7 +545,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": null,
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -567,7 +637,17 @@
           ],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -656,7 +736,17 @@
           ],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -743,7 +833,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -828,7 +928,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -910,7 +1020,17 @@
           ],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -992,7 +1112,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1072,7 +1202,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1162,7 +1302,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1252,7 +1402,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1337,7 +1497,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1422,7 +1592,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1507,7 +1687,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1587,7 +1777,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1667,7 +1867,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1747,7 +1957,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1837,7 +2057,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -1927,7 +2157,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -2012,7 +2252,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -2099,7 +2349,17 @@
           ],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -2186,7 +2446,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -2266,7 +2536,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -2346,7 +2626,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -2431,7 +2721,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -2516,7 +2816,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -2596,7 +2906,17 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -2678,7 +2998,17 @@
           ],
           "present_paths": [],
           "repository": "globalcodio-monorepo",
-          "source_file_count": 6501
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_23",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
         }
       ],
       "component": null,
@@ -2770,7 +3100,21 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-integration",
-          "source_file_count": 713
+          "source_file_count": 713,
+          "work_done": {
+            "author": "sameer-s-mansur",
+            "commit_count": 4,
+            "date": "2026_08_23",
+            "deletions": 29,
+            "files_changed": 7,
+            "history_available": true,
+            "insertions": 336,
+            "subjects": [
+              "Record the real dev run: lifecycle verified live; api.dev binding deploy missing",
+              "Test the step-11 guard where it actually runs",
+              "Close out batch runs: both app-team pieces delivered and verified"
+            ]
+          }
         }
       ],
       "component": null,
@@ -2855,7 +3199,21 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-integration",
-          "source_file_count": 713
+          "source_file_count": 713,
+          "work_done": {
+            "author": "sameer-s-mansur",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 29,
+            "files_changed": 8,
+            "history_available": true,
+            "insertions": 347,
+            "subjects": [
+              "Record the real dev run: lifecycle verified live; api.dev binding deploy missing",
+              "Test the step-11 guard where it actually runs",
+              "Close out batch runs: both app-team pieces delivered and verified"
+            ]
+          }
         }
       ],
       "component": null,
@@ -2940,7 +3298,19 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-integration",
-          "source_file_count": 713
+          "source_file_count": 713,
+          "work_done": {
+            "author": "sameer-s-mansur",
+            "commit_count": 1,
+            "date": "2026_08_23",
+            "deletions": 16,
+            "files_changed": 3,
+            "history_available": true,
+            "insertions": 136,
+            "subjects": [
+              "Close out batch runs: both app-team pieces delivered and verified"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3025,7 +3395,21 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-integration",
-          "source_file_count": 713
+          "source_file_count": 713,
+          "work_done": {
+            "author": "sameer-s-mansur",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 29,
+            "files_changed": 8,
+            "history_available": true,
+            "insertions": 347,
+            "subjects": [
+              "Record the real dev run: lifecycle verified live; api.dev binding deploy missing",
+              "Test the step-11 guard where it actually runs",
+              "Close out batch runs: both app-team pieces delivered and verified"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3105,7 +3489,21 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-integration",
-          "source_file_count": 713
+          "source_file_count": 713,
+          "work_done": {
+            "author": "sameer-s-mansur",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 29,
+            "files_changed": 8,
+            "history_available": true,
+            "insertions": 347,
+            "subjects": [
+              "Record the real dev run: lifecycle verified live; api.dev binding deploy missing",
+              "Test the step-11 guard where it actually runs",
+              "Close out batch runs: both app-team pieces delivered and verified"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3185,7 +3583,21 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-integration",
-          "source_file_count": 713
+          "source_file_count": 713,
+          "work_done": {
+            "author": "sameer-s-mansur",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 29,
+            "files_changed": 8,
+            "history_available": true,
+            "insertions": 347,
+            "subjects": [
+              "Record the real dev run: lifecycle verified live; api.dev binding deploy missing",
+              "Test the step-11 guard where it actually runs",
+              "Close out batch runs: both app-team pieces delivered and verified"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3276,14 +3688,42 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-nodejs",
-          "source_file_count": 886
+          "source_file_count": 886,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 2905,
+            "files_changed": 37,
+            "history_available": true,
+            "insertions": 272,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning; edits update the row in place",
+              "revert(ask-ai): remove guideline drafting, edit proposals and duplication",
+              "fix(pe-integration): serve the engine the CURRENT version of a guideline"
+            ]
+          }
         },
         {
           "checkout_available": true,
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065
+          "source_file_count": 1065,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 3202,
+            "files_changed": 48,
+            "history_available": true,
+            "insertions": 714,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning from the UI",
+              "revert(ask-ai): remove guideline drafting and edit-proposal handoff",
+              "feat(kb): Version Notes on Specialty edit, edited-step markers on all wizards"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3369,14 +3809,42 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-nodejs",
-          "source_file_count": 886
+          "source_file_count": 886,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 2905,
+            "files_changed": 37,
+            "history_available": true,
+            "insertions": 272,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning; edits update the row in place",
+              "revert(ask-ai): remove guideline drafting, edit proposals and duplication",
+              "fix(pe-integration): serve the engine the CURRENT version of a guideline"
+            ]
+          }
         },
         {
           "checkout_available": true,
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065
+          "source_file_count": 1065,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 3202,
+            "files_changed": 48,
+            "history_available": true,
+            "insertions": 714,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning from the UI",
+              "revert(ask-ai): remove guideline drafting and edit-proposal handoff",
+              "feat(kb): Version Notes on Specialty edit, edited-step markers on all wizards"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3462,14 +3930,42 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-nodejs",
-          "source_file_count": 886
+          "source_file_count": 886,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 2905,
+            "files_changed": 37,
+            "history_available": true,
+            "insertions": 272,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning; edits update the row in place",
+              "revert(ask-ai): remove guideline drafting, edit proposals and duplication",
+              "fix(pe-integration): serve the engine the CURRENT version of a guideline"
+            ]
+          }
         },
         {
           "checkout_available": true,
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065
+          "source_file_count": 1065,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 3202,
+            "files_changed": 48,
+            "history_available": true,
+            "insertions": 714,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning from the UI",
+              "revert(ask-ai): remove guideline drafting and edit-proposal handoff",
+              "feat(kb): Version Notes on Specialty edit, edited-step markers on all wizards"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3555,14 +4051,42 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-nodejs",
-          "source_file_count": 886
+          "source_file_count": 886,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 2905,
+            "files_changed": 37,
+            "history_available": true,
+            "insertions": 272,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning; edits update the row in place",
+              "revert(ask-ai): remove guideline drafting, edit proposals and duplication",
+              "fix(pe-integration): serve the engine the CURRENT version of a guideline"
+            ]
+          }
         },
         {
           "checkout_available": true,
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065
+          "source_file_count": 1065,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 3202,
+            "files_changed": 48,
+            "history_available": true,
+            "insertions": 714,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning from the UI",
+              "revert(ask-ai): remove guideline drafting and edit-proposal handoff",
+              "feat(kb): Version Notes on Specialty edit, edited-step markers on all wizards"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3643,14 +4167,42 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-nodejs",
-          "source_file_count": 886
+          "source_file_count": 886,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 2905,
+            "files_changed": 37,
+            "history_available": true,
+            "insertions": 272,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning; edits update the row in place",
+              "revert(ask-ai): remove guideline drafting, edit proposals and duplication",
+              "fix(pe-integration): serve the engine the CURRENT version of a guideline"
+            ]
+          }
         },
         {
           "checkout_available": true,
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065
+          "source_file_count": 1065,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 3202,
+            "files_changed": 48,
+            "history_available": true,
+            "insertions": 714,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning from the UI",
+              "revert(ask-ai): remove guideline drafting and edit-proposal handoff",
+              "feat(kb): Version Notes on Specialty edit, edited-step markers on all wizards"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3731,14 +4283,42 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-nodejs",
-          "source_file_count": 886
+          "source_file_count": 886,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 2905,
+            "files_changed": 37,
+            "history_available": true,
+            "insertions": 272,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning; edits update the row in place",
+              "revert(ask-ai): remove guideline drafting, edit proposals and duplication",
+              "fix(pe-integration): serve the engine the CURRENT version of a guideline"
+            ]
+          }
         },
         {
           "checkout_available": true,
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065
+          "source_file_count": 1065,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 3202,
+            "files_changed": 48,
+            "history_available": true,
+            "insertions": 714,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning from the UI",
+              "revert(ask-ai): remove guideline drafting and edit-proposal handoff",
+              "feat(kb): Version Notes on Specialty edit, edited-step markers on all wizards"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3819,14 +4399,42 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-nodejs",
-          "source_file_count": 886
+          "source_file_count": 886,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 2905,
+            "files_changed": 37,
+            "history_available": true,
+            "insertions": 272,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning; edits update the row in place",
+              "revert(ask-ai): remove guideline drafting, edit proposals and duplication",
+              "fix(pe-integration): serve the engine the CURRENT version of a guideline"
+            ]
+          }
         },
         {
           "checkout_available": true,
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065
+          "source_file_count": 1065,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 3202,
+            "files_changed": 48,
+            "history_available": true,
+            "insertions": 714,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning from the UI",
+              "revert(ask-ai): remove guideline drafting and edit-proposal handoff",
+              "feat(kb): Version Notes on Specialty edit, edited-step markers on all wizards"
+            ]
+          }
         }
       ],
       "component": null,
@@ -3917,14 +4525,42 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-nodejs",
-          "source_file_count": 886
+          "source_file_count": 886,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 2905,
+            "files_changed": 37,
+            "history_available": true,
+            "insertions": 272,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning; edits update the row in place",
+              "revert(ask-ai): remove guideline drafting, edit proposals and duplication",
+              "fix(pe-integration): serve the engine the CURRENT version of a guideline"
+            ]
+          }
         },
         {
           "checkout_available": true,
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065
+          "source_file_count": 1065,
+          "work_done": {
+            "author": "hitesh",
+            "commit_count": 5,
+            "date": "2026_08_23",
+            "deletions": 3202,
+            "files_changed": 48,
+            "history_available": true,
+            "insertions": 714,
+            "subjects": [
+              "feat(kb)!: remove guideline versioning from the UI",
+              "revert(ask-ai): remove guideline drafting and edit-proposal handoff",
+              "feat(kb): Version Notes on Specialty edit, edited-step markers on all wizards"
+            ]
+          }
         }
       ],
       "component": null,

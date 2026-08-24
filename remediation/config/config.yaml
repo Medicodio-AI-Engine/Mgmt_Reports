@@ -42,8 +42,11 @@ repository_scope:
 
 # Where local checkouts of the target repositories may be read from, so a task
 # description can state what the code looks like today. Inspection is read-only:
-# paths are checked for existence and counted, never opened for writing, and no
-# command or git operation is run. Unset (or a path that does not exist) simply
+# paths are checked for existence and counted, never opened for writing, and the only
+# commands run are fixed read-only git queries (log, diff --shortstat, rev-parse) that
+# state what work landed that day and how it compares with the previous version.
+# Nothing is fetched, checked out, staged or committed.
+# Unset (or a path that does not exist) simply
 # reports "not inspected" — it never blocks a run. Set REPOSITORY_ROOT to enable.
 repository_root: null
 

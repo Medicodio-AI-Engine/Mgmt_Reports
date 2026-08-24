@@ -119,7 +119,7 @@ def test_guardrail_block_is_explained_in_comments() -> None:
     assert "blocked by guardrail" in supervisor.row_for(blocked).comments
 
 
-def test_description_says_what_was_observed_proposed_and_inspected() -> None:
+def test_description_leads_with_the_work_that_was_carried_out() -> None:
     issue = _issue(
         description="KB wizard changes are mirrored across backend and UI by hand.",
         recommended_action="Use Devin for the paired backend/UI propagation.",
@@ -130,13 +130,31 @@ def test_description_says_what_was_observed_proposed_and_inspected() -> None:
                 "present_paths": ["src/kb/wizard.tsx"],
                 "missing_paths": [],
                 "source_file_count": 812,
+                "work_done": {
+                    "date": "2026_08_23",
+                    "author": "hitesh",
+                    "commit_count": 4,
+                    "subjects": ["Add payer specialty guidelines"],
+                    "files_changed": 11,
+                    "insertions": 240,
+                    "deletions": 18,
+                    "history_available": True,
+                },
             }
         ],
     )
     described = supervisor.row_for(issue).task_description
-    assert "Observed: KB wizard changes are mirrored" in described
-    assert "Proposed: Use Devin for the paired" in described
-    assert "reviewed read-only (812 source file(s))" in described
+    assert described.startswith(
+        "Work carried out: medicodio-nextgen-app-react: 4 commit(s) by hitesh"
+    )
+    assert "11 file(s) (240 insertion(s), 18 deletion(s)) against the previous version" in described
+    assert '"Add payer specialty guidelines"' in described
+    assert (
+        "Code now: medicodio-nextgen-app-react reviewed read-only (812 source file(s))" in described
+    )
+    assert "Reported: KB wizard changes are mirrored" in described
+    assert "Recommended: Use Devin for the paired" in described
+    assert "Steps:" not in described
     assert "\n" not in described and "|" not in described
 
 

@@ -382,6 +382,56 @@
               "integer",
               "null"
             ]
+          },
+          "work_done": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "date": {
+                "type": "string"
+              },
+              "author": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "commit_count": {
+                "type": "integer"
+              },
+              "subjects": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "files_changed": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "insertions": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "deletions": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "history_available": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "date",
+              "commit_count",
+              "history_available"
+            ]
           }
         },
         "required": [

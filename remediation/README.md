@@ -95,8 +95,13 @@ in-scope task: `Task_ID`, `Task_Name`, `Task_Description`, `Task_Owner`,
 `Time_Human`, `Time_AI`, `Time_Human_AI`, `Comments`. Corroborating signals and
 out-of-scope findings are listed and counted below the table, never as tasks.
 
-`Task_Description` says what was observed, what is proposed, what a read-only look
-at the code found, and the first plan steps.
+`Task_Description` is about the work a person or Devin actually carried out, not
+about this pipeline. It leads with what the target repository's own history shows
+landed on the report date — how many commits, whose, their subjects, and how far
+the code moved against the version immediately before them — then what a read-only
+look at the code shows today, then the report's own claim and its recommendation.
+This platform's own plan steps are deliberately excluded: they are proposed future
+work, not work that was done.
 
 The three time columns are deterministic `HH:MM` planning estimates, not
 measurements:
@@ -111,8 +116,11 @@ measurements:
 
 Set `repository_root` (or `REPOSITORY_ROOT`) to a directory holding local checkouts
 of the target repositories and the description states what the code looks like
-today. The inspection is read-only: paths are tested for existence and source files
-counted, nothing is opened for writing, and no command or git operation runs. Unset,
+today and what was done to it that day. The inspection is read-only: paths are
+tested for existence and source files counted, nothing is opened for writing, and
+the only commands run are fixed `git log`, `git diff --shortstat` and
+`git rev-parse` queries against the checkout — nothing is fetched, checked out,
+staged or committed. Unset,
 or a repository with no checkout under that root, reports "not inspected" rather
 than guessing — it never blocks a run.
 
