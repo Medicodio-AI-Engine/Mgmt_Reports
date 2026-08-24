@@ -1,10 +1,10 @@
 """The supervisor report: what needs fixing, and what this run changed.
 
-One row per in-scope issue with the columns a supervisor signs off against:
-task, owner, task type, reported category, revised category, whether they match,
-complexity, the three time estimates, and a comment. Written as markdown (review
-and diff in the pull request) and as CSV (open in a spreadsheet); the two are
-generated from the same rows so they cannot disagree.
+One row per in-scope issue with the columns a supervisor signs off against: task,
+description, owner, task type, reported category, revised category, whether they
+match, complexity, the three time estimates, and a comment. Written as markdown
+(review and diff in the pull request) and as CSV (open in a spreadsheet); the two
+are generated from the same rows so they cannot disagree.
 
 Out-of-scope issues are listed separately and counted, never silently dropped.
 """
@@ -16,10 +16,11 @@ import io
 from dataclasses import dataclass
 from typing import Any
 
-from . import effort, scope
+from . import describe, effort, scope
 
 COLUMNS = (
     ("task_name", "Task_Name"),
+    ("task_description", "Task_Description"),
     ("task_owner", "Task_Owner"),
     ("task_type", "Task_Type"),
     ("category", "Category"),
@@ -41,8 +42,13 @@ TASK_TYPES: dict[str, str] = {
 
 ESTIMATE_NOTE = (
     "Time columns are planning estimates derived from the analysed complexity, remediability and "
-    "autonomy tier — not measurements. `Time_AI` for a tier C or D task covers investigation and "
-    "proposal only, because policy forbids the AI from making that change."
+    "autonomy tier — not measurements. `Time_Human` is how long the task takes a person working "
+    "alone; `Time_AI` is how long it takes Devin working alone, and for a tier C or D task it "
+    "covers investigation and a proposal only, because policy forbids the AI from making that "
+    "change. `Time_Human_AI` is the elapsed time when the two collaborate — Devin drafts and a "
+    "person directs and reviews — so it is not the sum of the other two and is usually shorter "
+    "than `Time_Human`. `Task_Description` states what was observed, what is proposed, and what a "
+    "read-only look at the code found."
 )
 
 
@@ -52,6 +58,7 @@ class Row:
 
     task_id: str
     task_name: str
+    task_description: str
     task_owner: str
     task_type: str
     category: str
@@ -67,6 +74,7 @@ class Row:
         """Cell values in the column order supervisors expect."""
         return [
             self.task_name,
+            self.task_description,
             self.task_owner,
             self.task_type,
             self.category,
@@ -126,6 +134,7 @@ def row_for(issue: dict[str, Any]) -> Row:
     return Row(
         task_id=str(issue["issue_id"]),
         task_name=str(issue["title"]),
+        task_description=str(issue.get("task_description") or describe.describe(issue)),
         task_owner=_owner(issue),
         task_type=_task_type(issue),
         category=str(issue.get("reported_category") or "—"),

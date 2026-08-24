@@ -727,18 +727,33 @@
 
 ## `ISSUE_000034` Manually re-running batch/dev runs to verify a guard
 
-- Repository: unresolved
+- Repository: medicodio-nextgen-integration
 - Autonomy tier: **C** (no execution)
-- Proposed action: PROPOSE: no approved playbook matched; request human direction.
+- Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 - Rollback: Nothing to roll back: this issue is proposal-only, so no repository state is changed.
+
+**Steps**
+
+1. Identify the defect class and the exact behavior that must not regress.
+2. Locate the existing test suite and the closest existing tests for that surface.
+3. Write the smallest test that fails against the current behavior when the defect is present.
+4. Run the new test and record the pre-fix result.
+5. Run the targeted suite for the touched module.
+6. Run the broader suite for the package.
+7. Record every command and its output as evidence.
 
 **Stop conditions**
 
-- NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook
+- SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive
+- MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.
+- MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.
+- Test framework cannot be identified.
+- CI or local test execution is unavailable in the target repository.
+- The behavior under test touches authentication, authorization, tenancy, PHI, secrets, or billing.
 
 ## `ISSUE_000035` Self-merging integration PRs within minutes
 
-- Repository: unresolved
+- Repository: medicodio-nextgen-integration
 - Autonomy tier: **C** (no execution)
 - Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 - Rollback: Nothing to roll back: this issue is proposal-only, so no repository state is changed.
@@ -752,12 +767,11 @@
 
 **Stop conditions**
 
-- TARGET_UNRESOLVED: confirm the repository before any implementation
 - The item requires an organizational policy decision.
 
 ## `ISSUE_000036` Non-conventional commit subjects
 
-- Repository: unresolved
+- Repository: medicodio-nextgen-integration
 - Autonomy tier: **C** (no execution)
 - Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 - Rollback: Nothing to roll back: this issue is proposal-only, so no repository state is changed.
@@ -771,30 +785,59 @@
 
 **Stop conditions**
 
-- TARGET_UNRESOLVED: confirm the repository before any implementation
 - The item requires an organizational policy decision.
 
 ## `ISSUE_000037` Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time.
 
-- Repository: unresolved
+- Repository: medicodio-nextgen-integration
 - Autonomy tier: **C** (no execution)
-- Proposed action: PROPOSE: no approved playbook matched; request human direction.
+- Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 - Rollback: Nothing to roll back: this issue is proposal-only, so no repository state is changed.
+
+**Steps**
+
+1. Identify the defect class and the exact behavior that must not regress.
+2. Locate the existing test suite and the closest existing tests for that surface.
+3. Write the smallest test that fails against the current behavior when the defect is present.
+4. Run the new test and record the pre-fix result.
+5. Run the targeted suite for the touched module.
+6. Run the broader suite for the package.
+7. Record every command and its output as evidence.
 
 **Stop conditions**
 
-- NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook
+- SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive
+- MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.
+- MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.
+- Test framework cannot be identified.
+- CI or local test execution is unavailable in the target repository.
+- The behavior under test touches authentication, authorization, tenancy, PHI, secrets, or billing.
 
 ## `ISSUE_000038` Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings).
 
-- Repository: unresolved
+- Repository: medicodio-nextgen-integration
 - Autonomy tier: **C** (no execution)
-- Proposed action: PROPOSE: no approved playbook matched; request human direction.
+- Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 - Rollback: Nothing to roll back: this issue is proposal-only, so no repository state is changed.
+
+**Steps**
+
+1. Identify the defect class and the exact behavior that must not regress.
+2. Locate the existing test suite and the closest existing tests for that surface.
+3. Write the smallest test that fails against the current behavior when the defect is present.
+4. Run the new test and record the pre-fix result.
+5. Run the targeted suite for the touched module.
+6. Run the broader suite for the package.
+7. Record every command and its output as evidence.
 
 **Stop conditions**
 
-- NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook
+- SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive
+- MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.
+- MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.
+- Test framework cannot be identified.
+- CI or local test execution is unavailable in the target repository.
+- The behavior under test touches authentication, authorization, tenancy, PHI, secrets, or billing.
 
 ## `ISSUE_000039` Integration changes landing with no independent review
 

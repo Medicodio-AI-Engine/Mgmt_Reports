@@ -40,6 +40,13 @@ repository_scope:
     - paperclip-ai
     - interview
 
+# Where local checkouts of the target repositories may be read from, so a task
+# description can state what the code looks like today. Inspection is read-only:
+# paths are checked for existence and counted, never opened for writing, and no
+# command or git operation is run. Unset (or a path that does not exist) simply
+# reports "not inspected" — it never blocks a run. Set REPOSITORY_ROOT to enable.
+repository_root: null
+
 # Verification commands per repository. Left empty deliberately: an unverified
 # command is worse than no command, so a human must supply these before any
 # execution is ever permitted.

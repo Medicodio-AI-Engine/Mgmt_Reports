@@ -22,7 +22,9 @@ from typing import Any
 
 from . import (
     autonomy,
+    codebase,
     dedupe,
+    describe,
     devfix,
     discovery,
     effort,
@@ -304,6 +306,24 @@ def _normalize_findings(
     return issues
 
 
+def _review_targets(issue: dict[str, Any]) -> tuple[str, ...]:
+    """The repository the finding names, or every repository it could mean."""
+    repository = issue.get("repository")
+    if repository:
+        return (str(repository),)
+    return tuple(str(name) for name in (issue.get("candidate_repositories") or []))
+
+
+def _attach_code_review(session: Session, issues: list[dict[str, Any]]) -> None:
+    """Record what a read-only look at each target repository found."""
+    root = session.config.repository_root
+    for issue in issues:
+        paths = tuple(str(path) for path in (issue.get("files") or []))
+        targets = _review_targets(issue) or (None,)
+        reviews = [codebase.inspect(root, target, paths) for target in targets]
+        issue["code_review"] = [review.as_dict() for review in reviews]
+
+
 def _validate_issues(issues: list[dict[str, Any]]) -> None:
     for issue in issues:
         schema.validate(issue, schema.ISSUE)
@@ -313,6 +333,7 @@ def intake(session: Session, manifest: dict[str, Any]) -> list[dict[str, Any]]:
     """Extract, deduplicate, normalize, and validate the report findings."""
     findings = _extract_findings(session)
     issues = _normalize_findings(session, findings)
+    _attach_code_review(session, issues)
     _validate_issues(issues)
     session.audit.record(
         "INTAKE",
@@ -433,6 +454,7 @@ def _apply_plan(
     issue["guardrail_violations"] = [violation.as_dict() for violation in violations]
     issue["plan"] = planner.plan(issue, match, decision, violations, session.config)
     issue.update(effort.for_issue(issue).as_dict())
+    issue["task_description"] = describe.describe(issue)
     _copy_plan_fields(issue)
 
 

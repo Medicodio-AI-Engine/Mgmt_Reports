@@ -39,19 +39,19 @@
 | `ISSUE_000031` | Use Devin to build the portal access-control test matrix (roles × account statuses) — bounded, high-value on a security surface, and it removes the late-night m | SECURITY_TENANCY | globalcodio-monorepo | 7 | 10 | — | CODE_CHANGE |
 | `ISSUE_000032` | Use Devin to split #1183-class branches (150 files, open 5 days) into stacked reviewable PRs. | MECHANICAL_MIGRATION | globalcodio-monorepo | 4 | 5 | — | CODE_CHANGE |
 | `ISSUE_000033` | Merges without an independent human review record | PROCESS_PRACTICE | globalcodio-monorepo | 2 | 4 | — | NON_CODE_PROCESS |
-| `ISSUE_000034` | Manually re-running batch/dev runs to verify a guard | MISSING_TEST | unresolved | 6 | 6 | — | CODE_CHANGE |
-| `ISSUE_000035` | Self-merging integration PRs within minutes | PROCESS_PRACTICE | unresolved | 3 | 8 | — | NON_CODE_PROCESS |
-| `ISSUE_000036` | Non-conventional commit subjects | PROCESS_PRACTICE | unresolved | 3 | 8 | — | NON_CODE_PROCESS |
-| `ISSUE_000037` | Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time. | MISSING_TEST | unresolved | 5 | 6 | — | CODE_CHANGE |
-| `ISSUE_000038` | Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings). | MISSING_TEST | unresolved | 5 | 6 | — | CODE_CHANGE |
+| `ISSUE_000034` | Manually re-running batch/dev runs to verify a guard | MISSING_TEST | medicodio-nextgen-integration | 6 | 4 | — | CODE_CHANGE |
+| `ISSUE_000035` | Self-merging integration PRs within minutes | PROCESS_PRACTICE | medicodio-nextgen-integration | 3 | 6 | — | NON_CODE_PROCESS |
+| `ISSUE_000036` | Non-conventional commit subjects | PROCESS_PRACTICE | medicodio-nextgen-integration | 3 | 6 | — | NON_CODE_PROCESS |
+| `ISSUE_000037` | Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time. | MISSING_TEST | medicodio-nextgen-integration | 5 | 4 | — | CODE_CHANGE |
+| `ISSUE_000038` | Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings). | MISSING_TEST | medicodio-nextgen-integration | 5 | 4 | — | CODE_CHANGE |
 | `ISSUE_000039` | Integration changes landing with no independent review | PROCESS_PRACTICE | medicodio-nextgen-integration | 2 | 6 | — | NON_CODE_PROCESS |
-| `ISSUE_000040` | Re-plumbing `version_number` through KB create/read paths, one surface at a time | PROCESS_PRACTICE | unresolved | 2 | 8 | — | NON_CODE_PROCESS |
-| `ISSUE_000041` | Mirroring every KB wizard change across backend and UI by hand | AUTOMATION_OPPORTUNITY | unresolved | 5 | 7 | — | TOOLING_AUTOMATION |
-| `ISSUE_000042` | Carrying 130/226-file branches for days, then replacing the PR | PROCESS_PRACTICE | unresolved | 3 | 8 | — | NON_CODE_PROCESS |
-| `ISSUE_000043` | Use Devin to generate a KB guideline wizard regression suite (General / Specialty / Specialty-Payer / Client-Payer scopes) so a versioning reversal of this size | MISSING_TEST | unresolved | 5 | 6 | — | CODE_CHANGE |
-| `ISSUE_000044` | Use Devin to carve the KB branches into landable PRs (schema/API, then UI, then wizard UX) instead of one 130-file backend branch plus one 226-file UI branch. | MECHANICAL_MIGRATION | unresolved | 4 | 7 | — | CODE_CHANGE |
-| `ISSUE_000045` | Use Devin for the paired backend/UI propagation of each KB contract change. | PROCESS_PRACTICE | unresolved | 2 | 8 | — | NON_CODE_PROCESS |
-| `ISSUE_000046` | Very large, long-lived unmerged branches | PROCESS_PRACTICE | unresolved | 2 | 8 | — | NON_CODE_PROCESS |
+| `ISSUE_000040` | Re-plumbing `version_number` through KB create/read paths, one surface at a time | PROCESS_PRACTICE | unresolved | 2 | 9 | — | NON_CODE_PROCESS |
+| `ISSUE_000041` | Mirroring every KB wizard change across backend and UI by hand | AUTOMATION_OPPORTUNITY | unresolved | 5 | 8 | — | TOOLING_AUTOMATION |
+| `ISSUE_000042` | Carrying 130/226-file branches for days, then replacing the PR | PROCESS_PRACTICE | unresolved | 3 | 9 | — | NON_CODE_PROCESS |
+| `ISSUE_000043` | Use Devin to generate a KB guideline wizard regression suite (General / Specialty / Specialty-Payer / Client-Payer scopes) so a versioning reversal of this size | MISSING_TEST | unresolved | 5 | 7 | — | CODE_CHANGE |
+| `ISSUE_000044` | Use Devin to carve the KB branches into landable PRs (schema/API, then UI, then wizard UX) instead of one 130-file backend branch plus one 226-file UI branch. | MECHANICAL_MIGRATION | unresolved | 4 | 8 | — | CODE_CHANGE |
+| `ISSUE_000045` | Use Devin for the paired backend/UI propagation of each KB contract change. | PROCESS_PRACTICE | unresolved | 2 | 9 | — | NON_CODE_PROCESS |
+| `ISSUE_000046` | Very large, long-lived unmerged branches | PROCESS_PRACTICE | unresolved | 2 | 9 | — | NON_CODE_PROCESS |
 | `ISSUE_000047` | Commit identity not linked to a GitHub account | PROCESS_PRACTICE | unresolved | 5 | 10 | — | NON_CODE_PROCESS |
 
 ## Scoring rationale
@@ -257,31 +257,31 @@
 ### `ISSUE_000034` Manually re-running batch/dev runs to verify a guard
 
 - Priority: Priority 6/10 from base 3 adjusted by: category MISSING_TEST (+2); high reported frequency (23) (+1).
-- Complexity: Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).
 - Confidence: 0.55
 
 ### `ISSUE_000035` Self-merging integration PRs within minutes
 
 - Priority: Priority 3/10 from base 3 adjusted by: high reported frequency (229) (+1); non-code process item, no software risk (-1).
-- Complexity: Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).
 - Confidence: 0.65
 
 ### `ISSUE_000036` Non-conventional commit subjects
 
 - Priority: Priority 3/10 from base 3 adjusted by: high reported frequency (23) (+1); non-code process item, no software risk (-1).
-- Complexity: Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).
 - Confidence: 0.55
 
 ### `ISSUE_000037` Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time.
 
 - Priority: Priority 5/10 from base 3 adjusted by: category MISSING_TEST (+2).
-- Complexity: Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).
 - Confidence: 0.5
 
 ### `ISSUE_000038` Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings).
 
 - Priority: Priority 5/10 from base 3 adjusted by: category MISSING_TEST (+2).
-- Complexity: Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).
 - Confidence: 0.5
 
 ### `ISSUE_000039` Integration changes landing with no independent review
@@ -293,49 +293,49 @@
 ### `ISSUE_000040` Re-plumbing `version_number` through KB create/read paths, one surface at a time
 
 - Priority: Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).
-- Complexity: Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).
 - Confidence: 0.55
 
 ### `ISSUE_000041` Mirroring every KB wizard change across backend and UI by hand
 
 - Priority: Priority 5/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1); high reported frequency (23) (+1).
-- Complexity: Complexity 7/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 8/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).
 - Confidence: 0.55
 
 ### `ISSUE_000042` Carrying 130/226-file branches for days, then replacing the PR
 
 - Priority: Priority 3/10 from base 3 adjusted by: high reported frequency (569) (+1); non-code process item, no software risk (-1).
-- Complexity: Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).
 - Confidence: 0.65
 
 ### `ISSUE_000043` Use Devin to generate a KB guideline wizard regression suite (General / Specialty / Specialty-Payer / Client-Payer scopes) so a versioning reversal of this size
 
 - Priority: Priority 5/10 from base 3 adjusted by: category MISSING_TEST (+2).
-- Complexity: Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 7/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).
 - Confidence: 0.5
 
 ### `ISSUE_000044` Use Devin to carve the KB branches into landable PRs (schema/API, then UI, then wizard UX) instead of one 130-file backend branch plus one 226-file UI branch.
 
 - Priority: Priority 4/10 from base 3 adjusted by: category MECHANICAL_MIGRATION (+1).
-- Complexity: Complexity 7/10 from: category MECHANICAL_MIGRATION base 4; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 8/10 from: category MECHANICAL_MIGRATION base 4; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).
 - Confidence: 0.5
 
 ### `ISSUE_000045` Use Devin for the paired backend/UI propagation of each KB contract change.
 
 - Priority: Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).
-- Complexity: Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).
 - Confidence: 0.5
 
 ### `ISSUE_000046` Very large, long-lived unmerged branches
 
 - Priority: Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).
-- Complexity: Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).
+- Complexity: Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).
 - Confidence: 0.65
 
 ### `ISSUE_000047` Commit identity not linked to a GitHub account
 
 - Priority: Priority 5/10 from base 3 adjusted by: security scope AUTHENTICATION (+3); non-code process item, no software risk (-1).
-- Complexity: Complexity 10/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); security-sensitive surface AUTHENTICATION (+2).
+- Complexity: Complexity 10/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); security-sensitive surface AUTHENTICATION (+2); spans multiple candidate repositories (+1).
 - Confidence: 0.55
 
 Ordering confers no permission: what may actually be done is decided by the autonomy tier and the guardrail engine.

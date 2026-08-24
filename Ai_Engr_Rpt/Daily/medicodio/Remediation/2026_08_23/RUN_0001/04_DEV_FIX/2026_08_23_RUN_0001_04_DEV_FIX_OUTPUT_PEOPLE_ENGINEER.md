@@ -619,11 +619,18 @@
 **Why nothing was executed**
 
 - DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change
-- target repository unresolved
+- medicodio-nextgen-integration is not in remediation_repository_allowlist
 
 **What would have been done**
 
 - create working branch devin/issue_000034-attempt-01
+- plan step: Identify the defect class and the exact behavior that must not regress.
+- plan step: Locate the existing test suite and the closest existing tests for that surface.
+- plan step: Write the smallest test that fails against the current behavior when the defect is present.
+- plan step: Run the new test and record the pre-fix result.
+- plan step: Run the targeted suite for the touched module.
+- plan step: Run the broader suite for the package.
+- plan step: Record every command and its output as evidence.
 
 ## `ISSUE_000035` Self-merging integration PRs within minutes
 
@@ -633,7 +640,7 @@
 **Why nothing was executed**
 
 - DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change
-- target repository unresolved
+- medicodio-nextgen-integration is not in remediation_repository_allowlist
 
 **What would have been done**
 
@@ -651,7 +658,7 @@
 **Why nothing was executed**
 
 - DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change
-- target repository unresolved
+- medicodio-nextgen-integration is not in remediation_repository_allowlist
 
 **What would have been done**
 
@@ -669,11 +676,18 @@
 **Why nothing was executed**
 
 - DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change
-- target repository unresolved
+- medicodio-nextgen-integration is not in remediation_repository_allowlist
 
 **What would have been done**
 
 - create working branch devin/issue_000037-attempt-01
+- plan step: Identify the defect class and the exact behavior that must not regress.
+- plan step: Locate the existing test suite and the closest existing tests for that surface.
+- plan step: Write the smallest test that fails against the current behavior when the defect is present.
+- plan step: Run the new test and record the pre-fix result.
+- plan step: Run the targeted suite for the touched module.
+- plan step: Run the broader suite for the package.
+- plan step: Record every command and its output as evidence.
 
 ## `ISSUE_000038` Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings).
 
@@ -683,11 +697,18 @@
 **Why nothing was executed**
 
 - DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change
-- target repository unresolved
+- medicodio-nextgen-integration is not in remediation_repository_allowlist
 
 **What would have been done**
 
 - create working branch devin/issue_000038-attempt-01
+- plan step: Identify the defect class and the exact behavior that must not regress.
+- plan step: Locate the existing test suite and the closest existing tests for that surface.
+- plan step: Write the smallest test that fails against the current behavior when the defect is present.
+- plan step: Run the new test and record the pre-fix result.
+- plan step: Run the targeted suite for the touched module.
+- plan step: Run the broader suite for the package.
+- plan step: Record every command and its output as evidence.
 
 ## `ISSUE_000039` Integration changes landing with no independent review
 

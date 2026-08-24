@@ -692,9 +692,9 @@ QUESTIONS:
 ## `ISSUE_000034` Manually re-running batch/dev runs to verify a guard
 
 - Category: MISSING_TEST · Remediability: CODE_CHANGE · Security scope: UNKNOWN
-- Priority: 6 · Complexity: 6 · Tier: C
-- Playbook: none matched
-- Proposed action: PROPOSE: no approved playbook matched; request human direction.
+- Priority: 6 · Complexity: 4 · Tier: C
+- Playbook: ORG_PB_REGRESSION_TEST_GENERATION
+- Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 
 **Evidence**
 
@@ -713,7 +713,7 @@ QUESTIONS:
 ## `ISSUE_000035` Self-merging integration PRs within minutes
 
 - Category: PROCESS_PRACTICE · Remediability: NON_CODE_PROCESS · Security scope: NONE
-- Priority: 3 · Complexity: 8 · Tier: C
+- Priority: 3 · Complexity: 6 · Tier: C
 - Playbook: GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL
 - Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 
@@ -734,7 +734,7 @@ QUESTIONS:
 ## `ISSUE_000036` Non-conventional commit subjects
 
 - Category: PROCESS_PRACTICE · Remediability: NON_CODE_PROCESS · Security scope: NONE
-- Priority: 3 · Complexity: 8 · Tier: C
+- Priority: 3 · Complexity: 6 · Tier: C
 - Playbook: GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL
 - Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 
@@ -755,9 +755,9 @@ QUESTIONS:
 ## `ISSUE_000037` Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time.
 
 - Category: MISSING_TEST · Remediability: CODE_CHANGE · Security scope: UNKNOWN
-- Priority: 5 · Complexity: 6 · Tier: C
-- Playbook: none matched
-- Proposed action: PROPOSE: no approved playbook matched; request human direction.
+- Priority: 5 · Complexity: 4 · Tier: C
+- Playbook: ORG_PB_REGRESSION_TEST_GENERATION
+- Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 
 **Evidence**
 
@@ -775,9 +775,9 @@ QUESTIONS:
 ## `ISSUE_000038` Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings).
 
 - Category: MISSING_TEST · Remediability: CODE_CHANGE · Security scope: UNKNOWN
-- Priority: 5 · Complexity: 6 · Tier: C
-- Playbook: none matched
-- Proposed action: PROPOSE: no approved playbook matched; request human direction.
+- Priority: 5 · Complexity: 4 · Tier: C
+- Playbook: ORG_PB_REGRESSION_TEST_GENERATION
+- Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 
 **Evidence**
 
@@ -817,7 +817,7 @@ QUESTIONS:
 ## `ISSUE_000040` Re-plumbing `version_number` through KB create/read paths, one surface at a time
 
 - Category: PROCESS_PRACTICE · Remediability: NON_CODE_PROCESS · Security scope: NONE
-- Priority: 2 · Complexity: 8 · Tier: C
+- Priority: 2 · Complexity: 9 · Tier: C
 - Playbook: GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL
 - Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 
@@ -838,7 +838,7 @@ QUESTIONS:
 ## `ISSUE_000041` Mirroring every KB wizard change across backend and UI by hand
 
 - Category: AUTOMATION_OPPORTUNITY · Remediability: TOOLING_AUTOMATION · Security scope: NONE
-- Priority: 5 · Complexity: 7 · Tier: C
+- Priority: 5 · Complexity: 8 · Tier: C
 - Playbook: GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL
 - Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 
@@ -859,7 +859,7 @@ QUESTIONS:
 ## `ISSUE_000042` Carrying 130/226-file branches for days, then replacing the PR
 
 - Category: PROCESS_PRACTICE · Remediability: NON_CODE_PROCESS · Security scope: NONE
-- Priority: 3 · Complexity: 8 · Tier: C
+- Priority: 3 · Complexity: 9 · Tier: C
 - Playbook: GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL
 - Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 
@@ -880,7 +880,7 @@ QUESTIONS:
 ## `ISSUE_000043` Use Devin to generate a KB guideline wizard regression suite (General / Specialty / Specialty-Payer / Client-Payer scopes) so a versioning reversal of this size
 
 - Category: MISSING_TEST · Remediability: CODE_CHANGE · Security scope: UNKNOWN
-- Priority: 5 · Complexity: 6 · Tier: C
+- Priority: 5 · Complexity: 7 · Tier: C
 - Playbook: none matched
 - Proposed action: PROPOSE: no approved playbook matched; request human direction.
 
@@ -900,7 +900,7 @@ QUESTIONS:
 ## `ISSUE_000044` Use Devin to carve the KB branches into landable PRs (schema/API, then UI, then wizard UX) instead of one 130-file backend branch plus one 226-file UI branch.
 
 - Category: MECHANICAL_MIGRATION · Remediability: CODE_CHANGE · Security scope: UNKNOWN
-- Priority: 4 · Complexity: 7 · Tier: C
+- Priority: 4 · Complexity: 8 · Tier: C
 - Playbook: none matched
 - Proposed action: PROPOSE: no approved playbook matched; request human direction.
 
@@ -920,7 +920,7 @@ QUESTIONS:
 ## `ISSUE_000045` Use Devin for the paired backend/UI propagation of each KB contract change.
 
 - Category: PROCESS_PRACTICE · Remediability: NON_CODE_PROCESS · Security scope: NONE
-- Priority: 2 · Complexity: 8 · Tier: C
+- Priority: 2 · Complexity: 9 · Tier: C
 - Playbook: GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL
 - Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 
@@ -940,7 +940,7 @@ QUESTIONS:
 ## `ISSUE_000046` Very large, long-lived unmerged branches
 
 - Category: PROCESS_PRACTICE · Remediability: NON_CODE_PROCESS · Security scope: NONE
-- Priority: 2 · Complexity: 8 · Tier: C
+- Priority: 2 · Complexity: 9 · Tier: C
 - Playbook: GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL
 - Proposed action: INVESTIGATE AND PROPOSE: no implementation until a human approves.
 

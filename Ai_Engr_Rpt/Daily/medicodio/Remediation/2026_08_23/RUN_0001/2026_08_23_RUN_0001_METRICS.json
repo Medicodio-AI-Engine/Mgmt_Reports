@@ -79,21 +79,18 @@
   "issues_without_playbook": [
     "ISSUE_000021",
     "ISSUE_000031",
-    "ISSUE_000034",
-    "ISSUE_000037",
-    "ISSUE_000038",
     "ISSUE_000043",
     "ISSUE_000044",
     "ISSUE_000047"
   ],
   "missing_capabilities": {
-    "ci.run_targeted_tests": 17,
+    "ci.run_targeted_tests": 20,
     "git.stacked_branches": 9,
     "qa.execute_cases": 6,
     "repo.multi_file_edit": 9,
-    "test.write_regression_test": 2
+    "test.write_regression_test": 5
   },
-  "playbook_match_rate": 0.83,
+  "playbook_match_rate": 0.894,
   "pull_requests_created": 0,
   "repositories_modified": [],
   "run_flags": []

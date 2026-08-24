@@ -1,13 +1,19 @@
 """Time-to-fix estimates in ``HH:MM``.
 
-Three estimates per issue: human-only, AI-only, and human-with-AI. They are
-derived deterministically from the analysed complexity, the remediability and the
+Three estimates per issue: the time a person needs alone, the time Devin needs
+alone, and the elapsed time when the two collaborate. They are derived
+deterministically from the analysed complexity, the remediability and the
 autonomy tier — they are planning figures, not measurements, and the supervisor
 report says so.
 
+The collaboration figure is deliberately **not** the sum of the other two: the
+AI drafts and the person directs and reviews, so the person spends a share of
+what they would spend alone. It is capped at the solo-human figure, because
+collaborating is never presented as slower than doing it yourself.
+
 Where autonomy policy forbids AI execution (tier C and D), the AI figure covers
-investigation and proposal only, and the joint figure carries the human decision
-time that must follow.
+investigation and proposal only, and the person still makes the change — with
+the investigation already done for them.
 """
 
 from __future__ import annotations
@@ -31,6 +37,9 @@ AI_SHARE: dict[str, float] = {
 }
 # Fixed human review time added to any AI-produced result, in minutes.
 REVIEW_MINUTES = 30
+# Share of the solo-human time a person still spends while collaborating: directing
+# and reviewing the AI's work on a change policy will not let the AI land itself.
+COLLABORATION_HUMAN_SHARE = 0.6
 # Tiers where the AI may investigate and propose but not implement.
 PROPOSAL_ONLY_TIERS = frozenset({"C", "D"})
 
@@ -75,10 +84,13 @@ def _ai_minutes(human_minutes: int, remediable: str, proposal_only: bool) -> int
 
 
 def _joint_minutes(ai_minutes: int, human_minutes: int, proposal_only: bool) -> int:
+    """Elapsed collaboration time: a share of the solo-human time, never the sum."""
     if proposal_only:
-        # The AI prepares evidence; a human still does the change and the decision.
-        return _round_to_quarter(ai_minutes + human_minutes)
-    return _round_to_quarter(ai_minutes + REVIEW_MINUTES)
+        # The AI investigates and proposes; the person makes the change from there.
+        together = ai_minutes + COLLABORATION_HUMAN_SHARE * human_minutes
+    else:
+        together = ai_minutes + REVIEW_MINUTES
+    return min(_round_to_quarter(together), human_minutes)
 
 
 def _basis(

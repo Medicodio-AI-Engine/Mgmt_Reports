@@ -39,11 +39,11 @@
 | `ISSUE_000031` | — | — | NO_MATCH | 0 | none |
 | `ISSUE_000032` | ORG_PB_MECHANICAL_MIGRATION | ORG | ORG_PLAYBOOK | 100 | repo.multi_file_edit, git.stacked_branches, ci.run_targeted_tests |
 | `ISSUE_000033` | GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL | GENERAL | GENERAL_PLAYBOOK | 72 | none |
-| `ISSUE_000034` | — | — | NO_MATCH | 0 | none |
+| `ISSUE_000034` | ORG_PB_REGRESSION_TEST_GENERATION | ORG | ORG_PLAYBOOK | 65 | test.write_regression_test, ci.run_targeted_tests |
 | `ISSUE_000035` | GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL | GENERAL | GENERAL_PLAYBOOK | 60 | none |
 | `ISSUE_000036` | GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL | GENERAL | GENERAL_PLAYBOOK | 60 | none |
-| `ISSUE_000037` | — | — | NO_MATCH | 0 | none |
-| `ISSUE_000038` | — | — | NO_MATCH | 0 | none |
+| `ISSUE_000037` | ORG_PB_REGRESSION_TEST_GENERATION | ORG | ORG_PLAYBOOK | 65 | test.write_regression_test, ci.run_targeted_tests |
+| `ISSUE_000038` | ORG_PB_REGRESSION_TEST_GENERATION | ORG | ORG_PLAYBOOK | 89 | test.write_regression_test, ci.run_targeted_tests |
 | `ISSUE_000039` | GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL | GENERAL | GENERAL_PLAYBOOK | 72 | none |
 | `ISSUE_000040` | GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL | GENERAL | GENERAL_PLAYBOOK | 60 | none |
 | `ISSUE_000041` | GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL | GENERAL | GENERAL_PLAYBOOK | 84 | none |
@@ -58,9 +58,6 @@
 
 - `ISSUE_000021` Use Devin to generate the live authenticated API validation he explicitly skipped on #1214, as a repeatable harness rather than a per-run manual pass.
 - `ISSUE_000031` Use Devin to build the portal access-control test matrix (roles × account statuses) — bounded, high-value on a security surface, and it removes the late-night m
-- `ISSUE_000034` Manually re-running batch/dev runs to verify a guard
-- `ISSUE_000037` Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time.
-- `ISSUE_000038` Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings).
 - `ISSUE_000043` Use Devin to generate a KB guideline wizard regression suite (General / Specialty / Specialty-Payer / Client-Payer scopes) so a versioning reversal of this size
 - `ISSUE_000044` Use Devin to carve the KB branches into landable PRs (schema/API, then UI, then wizard UX) instead of one 130-file backend branch plus one 226-file UI branch.
 - `ISSUE_000047` Commit identity not linked to a GitHub account

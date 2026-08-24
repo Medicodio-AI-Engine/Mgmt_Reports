@@ -19,6 +19,15 @@
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -206,11 +215,12 @@
         "INSUFFICIENT_EVIDENCE: rating data cannot justify a change",
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: The employee rating card records a below-midpoint automation score for SaijyotiMeti. Corroborating signal only: it supports prioritization of automation findings but is not evidence of any software defect. / Proposed: INVESTIGATE AND PROPOSE: no implementation until a human approves. / Code: target repository unresolved, so no code was inspected / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human_ai": "03:30",
       "title": "Low automation-adoption signal for SaijyotiMeti"
     },
     {
@@ -231,6 +241,15 @@
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -418,11 +437,12 @@
         "INSUFFICIENT_EVIDENCE: rating data cannot justify a change",
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: The employee rating card records a below-midpoint automation score for akanksh-rv. Corroborating signal only: it supports prioritization of automation findings but is not evidence of any software defect. / Proposed: INVESTIGATE AND PROPOSE: no implementation until a human approves. / Code: target repository unresolved, so no code was inspected / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human_ai": "03:30",
       "title": "Low automation-adoption signal for akanksh-rv"
     },
     {
@@ -443,6 +463,15 @@
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -630,11 +659,12 @@
         "INSUFFICIENT_EVIDENCE: rating data cannot justify a change",
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: The employee rating card records a below-midpoint automation score for Amrutha-Beedikar. Corroborating signal only: it supports prioritization of automation findings but is not evidence of any software defect. / Proposed: INVESTIGATE AND PROPOSE: no implementation until a human approves. / Code: target repository unresolved, so no code was inspected / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human_ai": "03:30",
       "title": "Low automation-adoption signal for Amrutha-Beedikar"
     },
     {
@@ -655,6 +685,15 @@
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -842,11 +881,12 @@
         "INSUFFICIENT_EVIDENCE: rating data cannot justify a change",
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: The employee rating card records a below-midpoint automation score for sameer-s-mansur. Corroborating signal only: it supports prioritization of automation findings but is not evidence of any software defect. / Proposed: INVESTIGATE AND PROPOSE: no implementation until a human approves. / Code: target repository unresolved, so no code was inspected / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human_ai": "03:30",
       "title": "Low automation-adoption signal for sameer-s-mansur"
     },
     {
@@ -867,6 +907,15 @@
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -1054,11 +1103,12 @@
         "INSUFFICIENT_EVIDENCE: rating data cannot justify a change",
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: The employee rating card records a below-midpoint automation score for anirudh-medicodio. Corroborating signal only: it supports prioritization of automation findings but is not evidence of any software defect. / Proposed: INVESTIGATE AND PROPOSE: no implementation until a human approves. / Code: target repository unresolved, so no code was inspected / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human_ai": "03:30",
       "title": "Low automation-adoption signal for anirudh-medicodio"
     },
     {
@@ -1079,6 +1129,15 @@
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -1266,11 +1325,12 @@
         "INSUFFICIENT_EVIDENCE: rating data cannot justify a change",
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: The employee rating card records a below-midpoint automation score for hitesh. Corroborating signal only: it supports prioritization of automation findings but is not evidence of any software defect. / Proposed: INVESTIGATE AND PROPOSE: no implementation until a human approves. / Code: target repository unresolved, so no code was inspected / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human_ai": "03:30",
       "title": "Low automation-adoption signal for hitesh"
     },
     {
@@ -1293,6 +1353,15 @@
       "category_match": true,
       "category_rationale": "category CI_FAILURE confirms the reported bug",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -1480,11 +1549,12 @@
         "ENVIRONMENT_NOT_VERIFIED: confirm the failure is infrastructure, not a code defect",
         "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
       ],
+      "task_description": "Observed: The report states globalcodio-monorepo had zero successful CI runs (52 failed + 14 cancelled). Verification evidence (fail-before, pass-after) cannot be produced in this repository until CI is restored. / Proposed: DOCUMENT ONLY: human-owned surface; produce findings and a proposal. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:45",
       "time_human": "06:45",
-      "time_human_ai": "08:30",
+      "time_human_ai": "05:45",
       "title": "CI has no successful runs in globalcodio-monorepo"
     },
     {
@@ -1505,6 +1575,17 @@
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "docs/review-logs/*"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -1708,11 +1789,12 @@
         "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Repetitive work reported for SaijyotiMeti: Hand-writing `docs/review-logs/` gate + review logs. Reported pattern: 21 docs commits on 08-23; the same pattern appears on 08-20, 08-21, 08-22. Report's recommended approach: Automate through scripts/tooling \u2014 the log content is derived from `/check` + `/fix` output; emit it from the routine instead of retyping it. / Proposed: Automate through scripts/tooling \u2014 the log content is derived from `/check` + `/fix` output; emit it from the routine instead of retyping it / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); reported paths no longer present: docs/review-logs/* / Steps: Derive QA cases from the issue, the diff,\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "00:30",
       "time_human": "02:30",
-      "time_human_ai": "03:00",
+      "time_human_ai": "02:00",
       "title": "Hand-writing `docs/review-logs/` gate + review logs"
     },
     {
@@ -1734,6 +1816,17 @@
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "origin/dev"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -1953,13 +2046,14 @@
         "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Repetitive work reported for SaijyotiMeti: Merging `origin/dev` into each feature branch by hand. Reported pattern: 8 merge commits on the day, across 3 branches. Report's recommended approach: Automate through scripts/tooling \u2014 auto-sync job or merge queue. / Proposed: Automate through scripts/tooling \u2014 auto-sync job or merge queue / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); reported paths no longer present: origin/dev / Steps: Enumerate every affected file and confirm the change is deterministic per file.; Confirm the transformation is reversible and produces no behavior change.; Apply the transformation in reviewable slices, each independently buildab\u2026",
       "test_cases_generated": [
         "ISSUE_000009_T01"
       ],
       "test_results": [],
       "time_ai": "00:45",
       "time_human": "03:00",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Merging `origin/dev` into each feature branch by hand"
     },
     {
@@ -1981,6 +2075,15 @@
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -2171,11 +2274,12 @@
       "stop_conditions": [
         "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
       ],
+      "task_description": "Observed: Repetitive work reported for SaijyotiMeti: Composing the Architect+EM review skeleton (verdict, lenses, nit list). Reported pattern: 3 times on 08-23. Report's recommended approach: Improve documentation/process \u2014 keep the judgment human, template the scaffolding. / Proposed: Improve documentation/process \u2014 keep the judgment human, template the scaffolding / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "00:45",
       "time_human": "03:00",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Composing the Architect+EM review skeleton (verdict, lenses, nit list)"
     },
     {
@@ -2197,6 +2301,15 @@
       "category_match": false,
       "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -2414,13 +2527,14 @@
         "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Delegation opportunity recorded for SaijyotiMeti: Use Devin to generate a regression suite for the AI Case Manager send-path defect class (#1210's \"reviewed draft discarded on send\", #1213's email header, #1215's Preview button) \u2014 one bounded task, high value because three of the day's five Global Codio PRs touched the same email/send surface. / Proposed: DOCUMENT ONLY: human-owned surface; produce findings and a proposal. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Identify the defect class and the exact behavior that must not regress.; Locate the existing test suite and the closest existing tests for that surface.;\u2026",
       "test_cases_generated": [
         "ISSUE_000011_T01"
       ],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human_ai": "03:30",
       "title": "Use Devin to generate a regression suite for the AI Case Manager send-path defect class (#1210's \"reviewed draft discarded on send\", #1213's email header, #1215"
     },
     {
@@ -2441,6 +2555,17 @@
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "docs/review-logs/*"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -2638,11 +2763,12 @@
         "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Delegation opportunity recorded for SaijyotiMeti: Use Devin to emit the review-log artifact from the existing `/check` + `/fix` output, replacing the hand-written `docs/review-logs/` commits. / Proposed: DOCUMENT ONLY: human-owned surface; produce findings and a proposal. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); reported paths no longer present: docs/review-logs/* / Steps: Derive QA cases from the issue, the diff, and the acceptance criteria.; State explicitly which cases can and cannot be executed with available access.; Execute the executable cases and record inputs, outputs, and environment. (+2 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "00:30",
       "time_human": "02:30",
-      "time_human_ai": "03:00",
+      "time_human_ai": "02:00",
       "title": "Use Devin to emit the review-log artifact from the existing `/check` + `/fix` output, replacing the hand-written `docs/review-logs/` commits."
     },
     {
@@ -2665,6 +2791,15 @@
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -2877,13 +3012,14 @@
         "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Delegation opportunity recorded for SaijyotiMeti: Use Devin to split feature branches over ~100 files into stacked, individually reviewable PRs before review starts (#1212 was 140 files). / Proposed: DOCUMENT ONLY: human-owned surface; produce findings and a proposal. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Enumerate every affected file and confirm the change is deterministic per file.; Confirm the transformation is reversible and produces no behavior change.; Apply the transformation in reviewable slices, each independently buildable. (+2 more in the plan)",
       "test_cases_generated": [
         "ISSUE_000013_T01"
       ],
       "test_results": [],
       "time_ai": "01:15",
       "time_human": "05:00",
-      "time_human_ai": "06:15",
+      "time_human_ai": "04:15",
       "title": "Use Devin to split feature branches over ~100 files into stacked, individually reviewable PRs before review starts (#1212 was 140 files)."
     },
     {
@@ -2905,6 +3041,15 @@
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -3110,11 +3255,12 @@
         "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Recurring pattern flagged for SaijyotiMeti: Hand-written review/audit logs. Current evidence: 21 `docs(...)` commits on 08-23, mostly review-log transcription. Recommended action: Generate the log from `/check`+`/fix` output; keep only the human verdict hand-written. / Proposed: Generate the log from `/check`+`/fix` output; keep only the human verdict hand-written / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Derive QA cases from the issue, the diff, and the acceptance criteria.; State explicitly which cases can and cannot be executed with available access.; Execute the executable cases and record inputs, outputs, and e\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:15",
-      "time_human_ai": "05:15",
+      "time_human_ai": "03:30",
       "title": "Hand-written review/audit logs"
     },
     {
@@ -3137,6 +3283,15 @@
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -3359,13 +3514,14 @@
         "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Recurring pattern flagged for SaijyotiMeti: Very large single-PR diffs. Current evidence: #1212 merged at 140 files / +14,878. Recommended action: Stack the work; cap review units at a size a reviewer can actually audit. / Proposed: Stack the work; cap review units at a size a reviewer can actually audit / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Enumerate every affected file and confirm the change is deterministic per file.; Confirm the transformation is reversible and produces no behavior change.; Apply the transformation in reviewable slices, each independently buildable. (+2 more in the plan)",
       "test_cases_generated": [
         "ISSUE_000015_T01"
       ],
       "test_results": [],
       "time_ai": "01:15",
       "time_human": "05:00",
-      "time_human_ai": "06:15",
+      "time_human_ai": "04:15",
       "title": "Very large single-PR diffs"
     },
     {
@@ -3388,6 +3544,15 @@
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -3606,13 +3771,14 @@
         "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Repetitive work reported for akanksh-rv: `dev \u2192 feat/qa-automation` promotion/sync PRs. Reported pattern: #1214 on 08-23; promotion/sync PRs were 16/42 PRs on 08-20 and 58/166 in the week window. Report's recommended approach: Automate through scripts/tooling \u2014 a scheduled fast-forward or merge queue; a 315-file sync is not a reviewable unit. / Proposed: Automate through scripts/tooling \u2014 a scheduled fast-forward or merge queue; a 315-file sync is not a reviewable unit / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Enumerate every affected file and confirm the change is deterministic per file.; Confirm the transformation\u2026",
       "test_cases_generated": [
         "ISSUE_000016_T01"
       ],
       "test_results": [],
       "time_ai": "01:15",
       "time_human": "05:00",
-      "time_human_ai": "06:15",
+      "time_human_ai": "04:15",
       "title": "`dev \u2192 feat/qa-automation` promotion/sync PRs"
     },
     {
@@ -3634,6 +3800,15 @@
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -3836,11 +4011,12 @@
         "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Repetitive work reported for akanksh-rv: Post-merge QA audit of already-merged feature work. Reported pattern: #1214's QA validation comment; the same post-merge remediation pattern was flagged 08-21 and 08-22. Report's recommended approach: Automate with Devin \u2014 move the audit pre-merge as a bounded per-PR Devin task. / Proposed: Automate with Devin \u2014 move the audit pre-merge as a bounded per-PR Devin task / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Derive QA cases from the issue, the diff, and the acceptance criteria.; State explicitly which cases can and cannot be executed with available access.; Execute the execut\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:15",
-      "time_human_ai": "05:15",
+      "time_human_ai": "03:30",
       "title": "Post-merge QA audit of already-merged feature work"
     },
     {
@@ -3862,6 +4038,15 @@
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -4052,11 +4237,12 @@
       "stop_conditions": [
         "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
       ],
+      "task_description": "Observed: Repetitive work reported for akanksh-rv: Filling (or not filling) the PR template by hand. Reported pattern: #1214 merged with placeholders; #1202 did the same on 08-22. Report's recommended approach: Improve documentation/process \u2014 block merge on an unfilled template. / Proposed: Improve documentation/process \u2014 block merge on an unfilled template / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "00:45",
       "time_human": "03:00",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Filling (or not filling) the PR template by hand"
     },
     {
@@ -4079,6 +4265,15 @@
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -4291,13 +4486,14 @@
         "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Delegation opportunity recorded for akanksh-rv: Use Devin for the recurring `dev \u2192 feat/qa-automation` sync plus its QA audit \u2014 mechanical, repeats every few days, and currently bypasses review entirely. / Proposed: DOCUMENT ONLY: human-owned surface; produce findings and a proposal. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Enumerate every affected file and confirm the change is deterministic per file.; Confirm the transformation is reversible and produces no behavior change.; Apply the transformation in reviewable slices, each independently buildable. (+2 more in the plan)",
       "test_cases_generated": [
         "ISSUE_000019_T01"
       ],
       "test_results": [],
       "time_ai": "01:15",
       "time_human": "05:00",
-      "time_human_ai": "06:15",
+      "time_human_ai": "04:15",
       "title": "Use Devin for the recurring `dev \u2192 feat/qa-automation` sync plus its QA audit \u2014 mechanical, repeats every few days, and currently bypasses review entirely."
     },
     {
@@ -4319,6 +4515,15 @@
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -4502,11 +4707,12 @@
       "stop_conditions": [
         "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
       ],
+      "task_description": "Observed: Delegation opportunity recorded for akanksh-rv: Use Devin to finish landing #1208 (the notes-visibility feature it authored): #1209's remediation is merged into the branch, so the remaining work is bounded. / Proposed: DOCUMENT ONLY: human-owned surface; produce findings and a proposal. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "00:45",
       "time_human": "03:00",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Use Devin to finish landing #1208 (the notes-visibility feature it authored): #1209's remediation is merged into the branch, so the remaining work is bounded."
     },
     {
@@ -4525,6 +4731,15 @@
       "category_match": true,
       "category_rationale": "category MISSING_TEST confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -4687,11 +4902,12 @@
       "stop_conditions": [
         "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
       ],
+      "task_description": "Observed: Delegation opportunity recorded for akanksh-rv: Use Devin to generate the live authenticated API validation he explicitly skipped on #1214, as a repeatable harness rather than a per-run manual pass. / Proposed: PROPOSE: no approved playbook matched; request human direction. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:30",
       "time_human": "06:00",
-      "time_human_ai": "07:30",
+      "time_human_ai": "05:00",
       "title": "Use Devin to generate the live authenticated API validation he explicitly skipped on #1214, as a repeatable harness rather than a per-run manual pass."
     },
     {
@@ -4714,6 +4930,15 @@
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -4936,13 +5161,14 @@
         "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Recurring pattern flagged for akanksh-rv: Promotion/sync PR self-merged without independent review. Current evidence: #1214: 315 files, opened 20:57, self-merged 21:06, zero review events. Recommended action: Automate the sync, or require one reviewer on any PR that moves \u22651 merged feature. / Proposed: Automate the sync, or require one reviewer on any PR that moves \u22651 merged feature / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Enumerate every affected file and confirm the change is deterministic per file.; Confirm the transformation is reversible and produces no behavior change.; Apply the transformation in reviewable\u2026",
       "test_cases_generated": [
         "ISSUE_000022_T01"
       ],
       "test_results": [],
       "time_ai": "01:15",
       "time_human": "05:00",
-      "time_human_ai": "06:15",
+      "time_human_ai": "04:15",
       "title": "Promotion/sync PR self-merged without independent review"
     },
     {
@@ -4964,6 +5190,15 @@
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -5158,11 +5393,12 @@
       "stop_conditions": [
         "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
       ],
+      "task_description": "Observed: Recurring pattern flagged for akanksh-rv: Unfilled PR-template bodies. Current evidence: #1214 merged with placeholder markers intact. Recommended action: Add a merge gate that rejects unfilled template sections. / Proposed: Add a merge gate that rejects unfilled template sections / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "00:45",
       "time_human": "03:00",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Unfilled PR-template bodies"
     },
     {
@@ -5184,6 +5420,15 @@
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -5385,11 +5630,12 @@
         "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Repetitive work reported for Amrutha-Beedikar: `/check` \u2192 `/fix` blocker clearing before review. Reported pattern: Once on 08-23; the same routine appears on every Global Codio feature branch this week. Report's recommended approach: Automate with Devin \u2014 bounded, rule-driven, verifiable. / Proposed: Automate with Devin \u2014 bounded, rule-driven, verifiable / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Derive QA cases from the issue, the diff, and the acceptance criteria.; State explicitly which cases can and cannot be executed with available access.; Execute the executable cases and record inputs, outputs, and environment\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:15",
-      "time_human_ai": "05:15",
+      "time_human_ai": "03:30",
       "title": "`/check` \u2192 `/fix` blocker clearing before review"
     },
     {
@@ -5411,6 +5657,15 @@
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -5612,11 +5867,12 @@
         "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Repetitive work reported for Amrutha-Beedikar: Writing the standards/review log by hand. Reported pattern: 1 docs commit on 08-23; same team-wide pattern. Report's recommended approach: Automate through scripts/tooling \u2014 emit from the routine's own output. / Proposed: Automate through scripts/tooling \u2014 emit from the routine's own output / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Derive QA cases from the issue, the diff, and the acceptance criteria.; State explicitly which cases can and cannot be executed with available access.; Execute the executable cases and record inputs, outputs, and environment. (+2 more in the\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:15",
-      "time_human_ai": "05:15",
+      "time_human_ai": "03:30",
       "title": "Writing the standards/review log by hand"
     },
     {
@@ -5638,6 +5894,17 @@
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "origin/dev"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -5857,13 +6124,14 @@
         "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Repetitive work reported for Amrutha-Beedikar: Syncing `origin/dev` into the feature branch. Reported pattern: 1 merge commit; recurring across all members. Report's recommended approach: Automate through scripts/tooling. / Proposed: Automate through scripts/tooling / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); reported paths no longer present: origin/dev / Steps: Enumerate every affected file and confirm the change is deterministic per file.; Confirm the transformation is reversible and produces no behavior change.; Apply the transformation in reviewable slices, each independently buildable. (+2 more in the plan)",
       "test_cases_generated": [
         "ISSUE_000026_T01"
       ],
       "test_results": [],
       "time_ai": "00:45",
       "time_human": "03:00",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Syncing `origin/dev` into the feature branch"
     },
     {
@@ -5885,6 +6153,15 @@
       "category_match": false,
       "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -6102,13 +6379,14 @@
         "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Delegation opportunity recorded for Amrutha-Beedikar: Use Devin to generate regression tests for the email-header / platform-field contract so the case_number behavior cannot silently regress (this surface changed three times in three days: #1210, #1213, #1215). / Proposed: DOCUMENT ONLY: human-owned surface; produce findings and a proposal. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Identify the defect class and the exact behavior that must not regress.; Locate the existing test suite and the closest existing tests for that surface.; Write the smallest test that fails against the current behavior when the defect is\u2026",
       "test_cases_generated": [
         "ISSUE_000027_T01"
       ],
       "test_results": [],
       "time_ai": "01:00",
       "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human_ai": "03:30",
       "title": "Use Devin to generate regression tests for the email-header / platform-field contract so the case_number behavior cannot silently regress (this surface changed "
     },
     {
@@ -6130,6 +6408,15 @@
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -6314,11 +6601,12 @@
       "stop_conditions": [
         "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
       ],
+      "task_description": "Observed: Delegation opportunity recorded for Amrutha-Beedikar: Use Devin for the pre-merge `/check`+`/fix` blocker pass on her branches, so her time goes to the domain decision rather than the standards sweep. / Proposed: DOCUMENT ONLY: human-owned surface; produce findings and a proposal. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "00:45",
       "time_human": "03:00",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Use Devin for the pre-merge `/check`+`/fix` blocker pass on her branches, so her time goes to the domain decision rather than the standards sweep."
     },
     {
@@ -6341,6 +6629,15 @@
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -6559,13 +6856,14 @@
         "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Repetitive work reported for anirudh-medicodio: Late-night test/doc top-ups on a long-lived shared branch. Reported pattern: 7 commits 22:31\u201323:56 on 08-23; 52 commits on 08-21; 211 in the week. Report's recommended approach: Automate with Devin \u2014 the test-matrix and doc-sync portions are bounded and delegable. / Proposed: Automate with Devin \u2014 the test-matrix and doc-sync portions are bounded and delegable / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Enumerate every affected file and confirm the change is deterministic per file.; Confirm the transformation is reversible and produces no behavior change.; Apply the tran\u2026",
       "test_cases_generated": [
         "ISSUE_000029_T01"
       ],
       "test_results": [],
       "time_ai": "01:15",
       "time_human": "05:00",
-      "time_human_ai": "06:15",
+      "time_human_ai": "04:15",
       "title": "Late-night test/doc top-ups on a long-lived shared branch"
     },
     {
@@ -6587,6 +6885,15 @@
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -6776,11 +7083,12 @@
       "stop_conditions": [
         "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
       ],
+      "task_description": "Observed: Repetitive work reported for anirudh-medicodio: Merging without a recorded human review. Reported pattern: #1209 on 08-23; 3/3 of his review events in the 08-21 window were low-information. Report's recommended approach: Improve documentation/process \u2014 require one written verdict on any PR merged into a Devin branch. / Proposed: Improve documentation/process \u2014 require one written verdict on any PR merged into a Devin branch / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "00:45",
       "time_human": "03:00",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Merging without a recorded human review"
     },
     {
@@ -6799,6 +7107,15 @@
       "category_match": true,
       "category_rationale": "category SECURITY_TENANCY confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -6959,11 +7276,12 @@
       "stop_conditions": [
         "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
       ],
+      "task_description": "Observed: Delegation opportunity recorded for anirudh-medicodio: Use Devin to build the portal access-control test matrix (roles \u00d7 account statuses) \u2014 bounded, high-value on a security surface, and it removes the late-night manual test top-ups. / Proposed: PROPOSE: no approved playbook matched; request human direction. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "02:30",
       "time_human": "10:00",
-      "time_human_ai": "12:30",
+      "time_human_ai": "08:30",
       "title": "Use Devin to build the portal access-control test matrix (roles \u00d7 account statuses) \u2014 bounded, high-value on a security surface, and it removes the late-night m"
     },
     {
@@ -6986,6 +7304,15 @@
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -7198,13 +7525,14 @@
         "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
         "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
+      "task_description": "Observed: Delegation opportunity recorded for anirudh-medicodio: Use Devin to split #1183-class branches (150 files, open 5 days) into stacked reviewable PRs. / Proposed: DOCUMENT ONLY: human-owned surface; produce findings and a proposal. / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Steps: Enumerate every affected file and confirm the change is deterministic per file.; Confirm the transformation is reversible and produces no behavior change.; Apply the transformation in reviewable slices, each independently buildable. (+2 more in the plan)",
       "test_cases_generated": [
         "ISSUE_000032_T01"
       ],
       "test_results": [],
       "time_ai": "01:15",
       "time_human": "05:00",
-      "time_human_ai": "06:15",
+      "time_human_ai": "04:15",
       "title": "Use Devin to split #1183-class branches (150 files, open 5 days) into stacked reviewable PRs."
     },
     {
@@ -7225,6 +7553,17 @@
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "devin/1787351619-notes-visibility-model"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -7421,44 +7760,57 @@
       "stop_conditions": [
         "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
       ],
+      "task_description": "Observed: Recurring pattern flagged for anirudh-medicodio: Merges without an independent human review record. Current evidence: Merged #1209 (12 files, +488/\u221226) into the open Devin branch `devin/1787351619-notes-visibility-model` with only a Devin Review bot comment on record. Recommended action: Write a short verdict (what you checked, what you accepted) on any PR you merge \u2014 especially one feeding a Devin branch. / Proposed: Write a short verdict (what you checked, what you accepted) on any PR you merge \u2014 especially one feeding a Devin branch / Code: globalcodio-monorepo reviewed read-only (6501 source file(s)); reported paths no longer present: devin/1787351619-notes-visibility-model /\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "00:30",
       "time_human": "02:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Merges without an independent human review record"
     },
     {
-      "analysis_scope": "UNRESOLVED",
+      "analysis_scope": "IN_SCOPE",
       "approval_required": true,
       "attempt_id": "ISSUE_000034_ATTEMPT_01",
       "autonomy_reasons": [
-        "no approved playbook matched; investigation and proposal only"
+        "playbook ORG_PB_REGRESSION_TEST_GENERATION default tier A",
+        "security scope could not be determined from the evidence",
+        "required capabilities are unavailable: test.write_regression_test, ci.run_targeted_tests"
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "MISSING_TEST",
       "category_match": true,
       "category_rationale": "category MISSING_TEST confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
         "confidence": 0.65,
         "factors": [
           "category MISSING_TEST base 3",
-          "target repository not determined from the report (+2)",
           "no file paths identified (+1)"
         ],
-        "rationale": "Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 6
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
       },
       "component": null,
       "confidence": 0.55,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "MISSING_TEST|REPOSITORY_UNKNOWN|automation batch dev guard harness manual manually reusable run running runs turn verification verify",
+      "dedupe_signature": "MISSING_TEST|medicodio-nextgen-integration|automation batch dev guard harness manual manually reusable run running runs turn verification verify",
       "defect_type": null,
       "description": "Repetitive work reported for sameer-s-mansur: Manually re-running batch/dev runs to verify a guard. Reported pattern: 3 commits on 08-23 (\"Test the step-11 guard where it actually runs\", \"Record the real dev run\", \"Close out batch runs\"); the same verification pattern appears in his 08-21/08-22 work. Report's recommended approach: Automate with Devin \u2014 turn the manual dev-run verification into a reusable harness.",
       "detected_at": "2026_08_23",
@@ -7466,7 +7818,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 6",
+        "complexity 4",
         "remediability CODE_CHANGE",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -7501,36 +7853,82 @@
         "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
         "suppression_reasons": [
           "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
-          "target repository unresolved"
+          "medicodio-nextgen-integration is not in remediation_repository_allowlist"
         ],
-        "test_cases_generated": [],
+        "test_cases_generated": [
+          "ISSUE_000034_T01"
+        ],
         "test_results": [],
         "would_have_done": [
-          "create working branch devin/issue_000034-attempt-01"
+          "create working branch devin/issue_000034-attempt-01",
+          "plan step: Identify the defect class and the exact behavior that must not regress.",
+          "plan step: Locate the existing test suite and the closest existing tests for that surface.",
+          "plan step: Write the smallest test that fails against the current behavior when the defect is present.",
+          "plan step: Run the new test and record the pre-fix result.",
+          "plan step: Run the targeted suite for the touched module.",
+          "plan step: Run the broader suite for the package.",
+          "plan step: Record every command and its output as evidence."
         ]
       },
       "frequency": "3 commits on 08-23 (\"Test the step-11 guard where it actually runs\", \"Record the real dev run\", \"Close out batch runs\"); the same verification pattern appears in his 08-21/08-22 work",
       "full_suite_result": null,
       "guardrail_violations": [],
-      "implementation_plan": [],
+      "implementation_plan": [
+        "Identify the defect class and the exact behavior that must not regress.",
+        "Locate the existing test suite and the closest existing tests for that surface.",
+        "Write the smallest test that fails against the current behavior when the defect is present.",
+        "Run the new test and record the pre-fix result.",
+        "Run the targeted suite for the touched module.",
+        "Run the broader suite for the package.",
+        "Record every command and its output as evidence."
+      ],
       "issue_id": "ISSUE_000034",
       "merged_sources": [
         "SOURCE_003:291"
       ],
-      "missing_skills": [],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "next_state": "DEV_REVIEW",
       "owner": "sameer-s-mansur",
       "plan": {
-        "acceptance_criteria": [],
+        "acceptance_criteria": [
+          "Does the test fail for the right reason before the fix?",
+          "Is the assertion tied to observable behavior rather than implementation detail?",
+          "Is the test deterministic and free of network or clock dependence?"
+        ],
         "dry_run": true,
         "execution_allowed": false,
-        "implementation_plan": [],
-        "proposed_action": "PROPOSE: no approved playbook matched; request human direction.",
+        "implementation_plan": [
+          "Identify the defect class and the exact behavior that must not regress.",
+          "Locate the existing test suite and the closest existing tests for that surface.",
+          "Write the smallest test that fails against the current behavior when the defect is present.",
+          "Run the new test and record the pre-fix result.",
+          "Run the targeted suite for the touched module.",
+          "Run the broader suite for the package.",
+          "Record every command and its output as evidence."
+        ],
+        "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
         "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
         "stop_conditions": [
-          "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Test framework cannot be identified.",
+          "CI or local test execution is unavailable in the target repository.",
+          "The behavior under test touches authentication, authorization, tenancy, PHI, secrets, or billing."
         ],
-        "test_plan": [],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Fail when Manually re-running batch/dev runs to verify a guard regresses",
+            "kind": "REGRESSION",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000034_T01",
+            "would_run": true
+          }
+        ],
         "verification_commands": [
           {
             "command": null,
@@ -7541,20 +7939,20 @@
         ]
       },
       "playbook_match": {
-        "confidence": 0,
-        "matched_on": [],
-        "playbook_id": null,
-        "playbook_name": null,
-        "playbook_scope": null,
-        "playbook_version": null,
-        "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
-          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook",
-          "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL: confidence 24 below 60"
+        "confidence": 65,
+        "matched_on": [
+          "category MISSING_TEST"
         ],
-        "source": "NO_MATCH"
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
       },
       "post_fix_success": null,
       "pr_number": null,
@@ -7569,12 +7967,12 @@
         "score": 6
       },
       "product": "Medicodio (`medicodio-nextgen-integration`)",
-      "proposed_action": "PROPOSE: no approved playbook matched; request human direction.",
+      "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
       "recommended_action": "Automate with Devin \u2014 turn the manual dev-run verification into a reusable harness",
       "related_change": null,
       "remediable": "CODE_CHANGE",
       "reported_category": "ENHANCEMENT",
-      "repository": null,
+      "repository": "medicodio-nextgen-integration",
       "reproduction": {
         "available": false,
         "method": "TEST_TO_BE_WRITTEN",
@@ -7583,11 +7981,17 @@
       "revised_category": "ENHANCEMENT",
       "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
       "run_id": "RUN_0001",
-      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "scope_reason": "medicodio-nextgen-integration is a medicodio library in the pilot scope",
       "security_scope": "UNKNOWN",
       "selected_for_attention": true,
-      "skills_available": [],
-      "skills_required": [],
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "source": "MGMT_REPORT",
       "source_provenance": [
         {
@@ -7607,49 +8011,63 @@
       "state": "DEV_REVIEW",
       "status": "OK",
       "stop_conditions": [
-        "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
-      "test_cases_generated": [],
+      "task_description": "Observed: Repetitive work reported for sameer-s-mansur: Manually re-running batch/dev runs to verify a guard. Reported pattern: 3 commits on 08-23 (\"Test the step-11 guard where it actually runs\", \"Record the real dev run\", \"Close out batch runs\"); the same verification pattern appears in his 08-21/08-22 work. Report's recommended approach: Automate with Devin \u2014 turn the manual dev-run verification into a reusable harness. / Proposed: Automate with Devin \u2014 turn the manual dev-run verification into a reusable harness / Code: medicodio-nextgen-integration reviewed read-only (713 source file(s)); no file paths were reported / Steps: Identify the defect class and the exact behavior that must no\u2026",
+      "test_cases_generated": [
+        "ISSUE_000034_T01"
+      ],
       "test_results": [],
-      "time_ai": "01:30",
-      "time_human": "06:00",
-      "time_human_ai": "07:30",
+      "time_ai": "01:00",
+      "time_human": "04:00",
+      "time_human_ai": "03:30",
       "title": "Manually re-running batch/dev runs to verify a guard"
     },
     {
-      "analysis_scope": "UNRESOLVED",
+      "analysis_scope": "IN_SCOPE",
       "approval_required": true,
       "attempt_id": "ISSUE_000035_ATTEMPT_01",
       "autonomy_reasons": [
         "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
         "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
-        "complexity 8 exceeds the autonomous ceiling 4",
-        "target repository could not be determined from the report"
+        "complexity 6 exceeds the autonomous ceiling 4"
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
         "confidence": 0.75,
         "factors": [
           "category PROCESS_PRACTICE base 5",
-          "target repository not determined from the report (+2)",
           "no file paths identified (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
       },
       "component": null,
       "confidence": 0.65,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|doc improve integration merge minimum minutes one pass process require review reviewer self wait within",
+      "dedupe_signature": "PROCESS_PRACTICE|medicodio-nextgen-integration|doc improve integration merge minimum minutes one pass process require review reviewer self wait within",
       "defect_type": null,
       "description": "Repetitive work reported for sameer-s-mansur: Self-merging integration PRs within minutes. Reported pattern: #228 (11 min) and #229 (8 s) on 08-23; long-lived branch/no-PR pattern flagged 08-22. Report's recommended approach: Improve documentation/process \u2014 require one reviewer, or at minimum wait for the Devin Review pass.",
       "detected_at": "2026_08_23",
@@ -7657,7 +8075,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 8",
+        "complexity 6",
         "remediability NON_CODE_PROCESS",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -7692,7 +8110,7 @@
         "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
         "suppression_reasons": [
           "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
-          "target repository unresolved"
+          "medicodio-nextgen-integration is not in remediation_repository_allowlist"
         ],
         "test_cases_generated": [],
         "test_results": [],
@@ -7736,7 +8154,6 @@
         "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
         "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
         "stop_conditions": [
-          "TARGET_UNRESOLVED: confirm the repository before any implementation",
           "The item requires an organizational policy decision."
         ],
         "test_plan": [],
@@ -7759,9 +8176,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -7784,7 +8201,7 @@
       "related_change": "#228, #229",
       "remediable": "NON_CODE_PROCESS",
       "reported_category": "ENHANCEMENT",
-      "repository": null,
+      "repository": "medicodio-nextgen-integration",
       "reproduction": {
         "available": false,
         "method": null,
@@ -7793,7 +8210,7 @@
       "revised_category": "ENHANCEMENT",
       "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
       "run_id": "RUN_0001",
-      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "scope_reason": "medicodio-nextgen-integration is a medicodio library in the pilot scope",
       "security_scope": "NONE",
       "selected_for_attention": true,
       "skills_available": [
@@ -7820,50 +8237,58 @@
       "stage": "04_DEV_FIX",
       "state": "DEV_REVIEW",
       "status": "OK",
-      "stop_conditions": [
-        "TARGET_UNRESOLVED: confirm the repository before any implementation"
-      ],
+      "stop_conditions": [],
+      "task_description": "Observed: Repetitive work reported for sameer-s-mansur: Self-merging integration PRs within minutes. Reported pattern: #228 (11 min) and #229 (8 s) on 08-23; long-lived branch/no-PR pattern flagged 08-22. Report's recommended approach: Improve documentation/process \u2014 require one reviewer, or at minimum wait for the Devin Review pass. / Proposed: Improve documentation/process \u2014 require one reviewer, or at minimum wait for the Devin Review pass / Code: medicodio-nextgen-integration reviewed read-only (713 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the s\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
-      "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_ai": "00:45",
+      "time_human": "03:00",
+      "time_human_ai": "02:30",
       "title": "Self-merging integration PRs within minutes"
     },
     {
-      "analysis_scope": "UNRESOLVED",
+      "analysis_scope": "IN_SCOPE",
       "approval_required": true,
       "attempt_id": "ISSUE_000036_ATTEMPT_01",
       "autonomy_reasons": [
         "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
         "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
-        "complexity 8 exceeds the autonomous ceiling 4",
-        "target repository could not be determined from the report"
+        "complexity 6 exceeds the autonomous ceiling 4"
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
         "confidence": 0.65,
         "factors": [
           "category PROCESS_PRACTICE base 5",
-          "target repository not determined from the report (+2)",
           "no file paths identified (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
       },
       "component": null,
       "confidence": 0.55,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|commit convention conventional doc enforce hook improve message non process subjects",
+      "dedupe_signature": "PROCESS_PRACTICE|medicodio-nextgen-integration|commit convention conventional doc enforce hook improve message non process subjects",
       "defect_type": null,
       "description": "Repetitive work reported for sameer-s-mansur: Non-conventional commit subjects. Reported pattern: 4 of 6 commits on 08-23 (\"Lock key: \u2026\", \"Close out batch runs\") vs the org's `type(scope):` convention. Report's recommended approach: Improve documentation/process \u2014 enforce the convention with a commit-message hook.",
       "detected_at": "2026_08_23",
@@ -7871,7 +8296,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 8",
+        "complexity 6",
         "remediability NON_CODE_PROCESS",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -7906,7 +8331,7 @@
         "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
         "suppression_reasons": [
           "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
-          "target repository unresolved"
+          "medicodio-nextgen-integration is not in remediation_repository_allowlist"
         ],
         "test_cases_generated": [],
         "test_results": [],
@@ -7950,7 +8375,6 @@
         "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
         "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
         "stop_conditions": [
-          "TARGET_UNRESOLVED: confirm the repository before any implementation",
           "The item requires an organizational policy decision."
         ],
         "test_plan": [],
@@ -7973,9 +8397,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -7998,7 +8422,7 @@
       "related_change": null,
       "remediable": "NON_CODE_PROCESS",
       "reported_category": "ENHANCEMENT",
-      "repository": null,
+      "repository": "medicodio-nextgen-integration",
       "reproduction": {
         "available": false,
         "method": null,
@@ -8007,7 +8431,7 @@
       "revised_category": "ENHANCEMENT",
       "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
       "run_id": "RUN_0001",
-      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "scope_reason": "medicodio-nextgen-integration is a medicodio library in the pilot scope",
       "security_scope": "NONE",
       "selected_for_attention": true,
       "skills_available": [
@@ -8034,47 +8458,58 @@
       "stage": "04_DEV_FIX",
       "state": "DEV_REVIEW",
       "status": "OK",
-      "stop_conditions": [
-        "TARGET_UNRESOLVED: confirm the repository before any implementation"
-      ],
+      "stop_conditions": [],
+      "task_description": "Observed: Repetitive work reported for sameer-s-mansur: Non-conventional commit subjects. Reported pattern: 4 of 6 commits on 08-23 (\"Lock key: \u2026\", \"Close out batch runs\") vs the org's `type(scope):` convention. Report's recommended approach: Improve documentation/process \u2014 enforce the convention with a commit-message hook. / Proposed: Improve documentation/process \u2014 enforce the convention with a commit-message hook / Code: medicodio-nextgen-integration reviewed read-only (713 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvemen\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
-      "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_ai": "00:45",
+      "time_human": "03:00",
+      "time_human_ai": "02:30",
       "title": "Non-conventional commit subjects"
     },
     {
-      "analysis_scope": "UNRESOLVED",
+      "analysis_scope": "IN_SCOPE",
       "approval_required": true,
       "attempt_id": "ISSUE_000037_ATTEMPT_01",
       "autonomy_reasons": [
-        "no approved playbook matched; investigation and proposal only"
+        "playbook ORG_PB_REGRESSION_TEST_GENERATION default tier A",
+        "security scope could not be determined from the evidence",
+        "required capabilities are unavailable: test.write_regression_test, ci.run_targeted_tests"
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "MISSING_TEST",
       "category_match": true,
       "category_rationale": "category MISSING_TEST confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
         "confidence": 0.6,
         "factors": [
           "category MISSING_TEST base 3",
-          "target repository not determined from the report (+2)",
           "no file paths identified (+1)"
         ],
-        "rationale": "Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 6
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
       },
       "component": null,
       "confidence": 0.5,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "MISSING_TEST|REPOSITORY_UNKNOWN|attach build dev does form hand harness integration key lock repeatable replacing run runs time verification workflows",
+      "dedupe_signature": "MISSING_TEST|medicodio-nextgen-integration|attach build dev does form hand harness integration key lock repeatable replacing run runs time verification workflows",
       "defect_type": null,
       "description": "Delegation opportunity recorded for sameer-s-mansur: Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time.",
       "detected_at": "2026_08_23",
@@ -8082,7 +8517,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 6",
+        "complexity 4",
         "remediability CODE_CHANGE",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -8112,36 +8547,82 @@
         "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
         "suppression_reasons": [
           "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
-          "target repository unresolved"
+          "medicodio-nextgen-integration is not in remediation_repository_allowlist"
         ],
-        "test_cases_generated": [],
+        "test_cases_generated": [
+          "ISSUE_000037_T01"
+        ],
         "test_results": [],
         "would_have_done": [
-          "create working branch devin/issue_000037-attempt-01"
+          "create working branch devin/issue_000037-attempt-01",
+          "plan step: Identify the defect class and the exact behavior that must not regress.",
+          "plan step: Locate the existing test suite and the closest existing tests for that surface.",
+          "plan step: Write the smallest test that fails against the current behavior when the defect is present.",
+          "plan step: Run the new test and record the pre-fix result.",
+          "plan step: Run the targeted suite for the touched module.",
+          "plan step: Run the broader suite for the package.",
+          "plan step: Record every command and its output as evidence."
         ]
       },
       "frequency": null,
       "full_suite_result": null,
       "guardrail_violations": [],
-      "implementation_plan": [],
+      "implementation_plan": [
+        "Identify the defect class and the exact behavior that must not regress.",
+        "Locate the existing test suite and the closest existing tests for that surface.",
+        "Write the smallest test that fails against the current behavior when the defect is present.",
+        "Run the new test and record the pre-fix result.",
+        "Run the targeted suite for the touched module.",
+        "Run the broader suite for the package.",
+        "Record every command and its output as evidence."
+      ],
       "issue_id": "ISSUE_000037",
       "merged_sources": [
         "SOURCE_003:296"
       ],
-      "missing_skills": [],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "next_state": "DEV_REVIEW",
       "owner": "sameer-s-mansur",
       "plan": {
-        "acceptance_criteria": [],
+        "acceptance_criteria": [
+          "Does the test fail for the right reason before the fix?",
+          "Is the assertion tied to observable behavior rather than implementation detail?",
+          "Is the test deterministic and free of network or clock dependence?"
+        ],
         "dry_run": true,
         "execution_allowed": false,
-        "implementation_plan": [],
-        "proposed_action": "PROPOSE: no approved playbook matched; request human direction.",
+        "implementation_plan": [
+          "Identify the defect class and the exact behavior that must not regress.",
+          "Locate the existing test suite and the closest existing tests for that surface.",
+          "Write the smallest test that fails against the current behavior when the defect is present.",
+          "Run the new test and record the pre-fix result.",
+          "Run the targeted suite for the touched module.",
+          "Run the broader suite for the package.",
+          "Record every command and its output as evidence."
+        ],
+        "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
         "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
         "stop_conditions": [
-          "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Test framework cannot be identified.",
+          "CI or local test execution is unavailable in the target repository.",
+          "The behavior under test touches authentication, authorization, tenancy, PHI, secrets, or billing."
         ],
-        "test_plan": [],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Fail when Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time. regresses",
+            "kind": "REGRESSION",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000037_T01",
+            "would_run": true
+          }
+        ],
         "verification_commands": [
           {
             "command": null,
@@ -8152,20 +8633,20 @@
         ]
       },
       "playbook_match": {
-        "confidence": 0,
-        "matched_on": [],
-        "playbook_id": null,
-        "playbook_name": null,
-        "playbook_scope": null,
-        "playbook_version": null,
-        "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
-          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook",
-          "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL: confidence 12 below 60"
+        "confidence": 65,
+        "matched_on": [
+          "category MISSING_TEST"
         ],
-        "source": "NO_MATCH"
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
       },
       "post_fix_success": null,
       "pr_number": null,
@@ -8179,12 +8660,12 @@
         "score": 5
       },
       "product": "Medicodio (`medicodio-nextgen-integration`)",
-      "proposed_action": "PROPOSE: no approved playbook matched; request human direction.",
+      "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
       "recommended_action": null,
       "related_change": null,
       "remediable": "CODE_CHANGE",
       "reported_category": "ENHANCEMENT",
-      "repository": null,
+      "repository": "medicodio-nextgen-integration",
       "reproduction": {
         "available": false,
         "method": "TEST_TO_BE_WRITTEN",
@@ -8193,11 +8674,17 @@
       "revised_category": "ENHANCEMENT",
       "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
       "run_id": "RUN_0001",
-      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "scope_reason": "medicodio-nextgen-integration is a medicodio library in the pilot scope",
       "security_scope": "UNKNOWN",
       "selected_for_attention": true,
-      "skills_available": [],
-      "skills_required": [],
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "source": "MGMT_REPORT",
       "source_provenance": [
         {
@@ -8217,46 +8704,63 @@
       "state": "DEV_REVIEW",
       "status": "OK",
       "stop_conditions": [
-        "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
-      "test_cases_generated": [],
+      "task_description": "Observed: Delegation opportunity recorded for sameer-s-mansur: Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time. / Proposed: INVESTIGATE AND PROPOSE: no implementation until a human approves. / Code: medicodio-nextgen-integration reviewed read-only (713 source file(s)); no file paths were reported / Steps: Identify the defect class and the exact behavior that must not regress.; Locate the existing test suite and the closest existing tests for that surface.; Write the smallest test that fails against the current behavior when the defect is present. (+4 more in the plan)",
+      "test_cases_generated": [
+        "ISSUE_000037_T01"
+      ],
       "test_results": [],
-      "time_ai": "01:30",
-      "time_human": "06:00",
-      "time_human_ai": "07:30",
+      "time_ai": "01:00",
+      "time_human": "04:00",
+      "time_human_ai": "03:30",
       "title": "Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time."
     },
     {
-      "analysis_scope": "UNRESOLVED",
+      "analysis_scope": "IN_SCOPE",
       "approval_required": true,
       "attempt_id": "ISSUE_000038_ATTEMPT_01",
       "autonomy_reasons": [
-        "no approved playbook matched; investigation and proposal only"
+        "playbook ORG_PB_REGRESSION_TEST_GENERATION default tier A",
+        "security scope could not be determined from the evidence",
+        "required capabilities are unavailable: test.write_regression_test, ci.run_targeted_tests"
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "MISSING_TEST",
       "category_match": false,
       "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
         "confidence": 0.6,
         "factors": [
           "category MISSING_TEST base 3",
-          "target repository not determined from the report (+2)",
           "no file paths identified (+1)"
         ],
-        "rationale": "Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 6
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
       },
       "component": null,
       "confidence": 0.5,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "MISSING_TEST|REPOSITORY_UNKNOWN|elaris file filename findings human landed open pairing review test write",
+      "dedupe_signature": "MISSING_TEST|medicodio-nextgen-integration|elaris file filename findings human landed open pairing review test write",
       "defect_type": null,
       "description": "Delegation opportunity recorded for sameer-s-mansur: Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings).",
       "detected_at": "2026_08_23",
@@ -8264,7 +8768,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 6",
+        "complexity 4",
         "remediability CODE_CHANGE",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -8294,36 +8798,82 @@
         "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
         "suppression_reasons": [
           "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
-          "target repository unresolved"
+          "medicodio-nextgen-integration is not in remediation_repository_allowlist"
         ],
-        "test_cases_generated": [],
+        "test_cases_generated": [
+          "ISSUE_000038_T01"
+        ],
         "test_results": [],
         "would_have_done": [
-          "create working branch devin/issue_000038-attempt-01"
+          "create working branch devin/issue_000038-attempt-01",
+          "plan step: Identify the defect class and the exact behavior that must not regress.",
+          "plan step: Locate the existing test suite and the closest existing tests for that surface.",
+          "plan step: Write the smallest test that fails against the current behavior when the defect is present.",
+          "plan step: Run the new test and record the pre-fix result.",
+          "plan step: Run the targeted suite for the touched module.",
+          "plan step: Run the broader suite for the package.",
+          "plan step: Record every command and its output as evidence."
         ]
       },
       "frequency": null,
       "full_suite_result": null,
       "guardrail_violations": [],
-      "implementation_plan": [],
+      "implementation_plan": [
+        "Identify the defect class and the exact behavior that must not regress.",
+        "Locate the existing test suite and the closest existing tests for that surface.",
+        "Write the smallest test that fails against the current behavior when the defect is present.",
+        "Run the new test and record the pre-fix result.",
+        "Run the targeted suite for the touched module.",
+        "Run the broader suite for the package.",
+        "Record every command and its output as evidence."
+      ],
       "issue_id": "ISSUE_000038",
       "merged_sources": [
         "SOURCE_003:297"
       ],
-      "missing_skills": [],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "next_state": "DEV_REVIEW",
       "owner": "sameer-s-mansur",
       "plan": {
-        "acceptance_criteria": [],
+        "acceptance_criteria": [
+          "Does the test fail for the right reason before the fix?",
+          "Is the assertion tied to observable behavior rather than implementation detail?",
+          "Is the test deterministic and free of network or clock dependence?"
+        ],
         "dry_run": true,
         "execution_allowed": false,
-        "implementation_plan": [],
-        "proposed_action": "PROPOSE: no approved playbook matched; request human direction.",
+        "implementation_plan": [
+          "Identify the defect class and the exact behavior that must not regress.",
+          "Locate the existing test suite and the closest existing tests for that surface.",
+          "Write the smallest test that fails against the current behavior when the defect is present.",
+          "Run the new test and record the pre-fix result.",
+          "Run the targeted suite for the touched module.",
+          "Run the broader suite for the package.",
+          "Record every command and its output as evidence."
+        ],
+        "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
         "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
         "stop_conditions": [
-          "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Test framework cannot be identified.",
+          "CI or local test execution is unavailable in the target repository.",
+          "The behavior under test touches authentication, authorization, tenancy, PHI, secrets, or billing."
         ],
-        "test_plan": [],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Fail when Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings). regresses",
+            "kind": "REGRESSION",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000038_T01",
+            "would_run": true
+          }
+        ],
         "verification_commands": [
           {
             "command": null,
@@ -8334,19 +8884,21 @@
         ]
       },
       "playbook_match": {
-        "confidence": 0,
-        "matched_on": [],
-        "playbook_id": null,
-        "playbook_name": null,
-        "playbook_scope": null,
-        "playbook_version": null,
+        "confidence": 89,
+        "matched_on": [
+          "category MISSING_TEST",
+          "keywords: regression test, tests for"
+        ],
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
         ],
-        "source": "NO_MATCH"
+        "source": "ORG_PLAYBOOK"
       },
       "post_fix_success": null,
       "pr_number": null,
@@ -8360,12 +8912,12 @@
         "score": 5
       },
       "product": "Medicodio (`medicodio-nextgen-integration`)",
-      "proposed_action": "PROPOSE: no approved playbook matched; request human direction.",
+      "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
       "recommended_action": null,
       "related_change": null,
       "remediable": "CODE_CHANGE",
       "reported_category": "BUG",
-      "repository": null,
+      "repository": "medicodio-nextgen-integration",
       "reproduction": {
         "available": false,
         "method": "TEST_TO_BE_WRITTEN",
@@ -8374,11 +8926,17 @@
       "revised_category": "ENHANCEMENT",
       "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
       "run_id": "RUN_0001",
-      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "scope_reason": "medicodio-nextgen-integration is a medicodio library in the pilot scope",
       "security_scope": "UNKNOWN",
       "selected_for_attention": true,
-      "skills_available": [],
-      "skills_required": [],
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "source": "MGMT_REPORT",
       "source_provenance": [
         {
@@ -8398,13 +8956,18 @@
       "state": "DEV_REVIEW",
       "status": "OK",
       "stop_conditions": [
-        "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
       ],
-      "test_cases_generated": [],
+      "task_description": "Observed: Delegation opportunity recorded for sameer-s-mansur: Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings). / Proposed: INVESTIGATE AND PROPOSE: no implementation until a human approves. / Code: medicodio-nextgen-integration reviewed read-only (713 source file(s)); no file paths were reported / Steps: Identify the defect class and the exact behavior that must not regress.; Locate the existing test suite and the closest existing tests for that surface.; Write the smallest test that fails against the current behavior when the defect is present. (+4 more in the plan)",
+      "test_cases_generated": [
+        "ISSUE_000038_T01"
+      ],
       "test_results": [],
-      "time_ai": "01:30",
-      "time_human": "06:00",
-      "time_human_ai": "07:30",
+      "time_ai": "01:00",
+      "time_human": "04:00",
+      "time_human_ai": "03:30",
       "title": "Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings)."
     },
     {
@@ -8418,11 +8981,22 @@
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -8438,7 +9012,7 @@
       "confidence": 0.65,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|assign changes hold independent integration landing medicodio merge nextgen pass reports review reviewer standing until",
+      "dedupe_signature": "PROCESS_PRACTICE|medicodio-nextgen-integration|assign changes hold independent integration landing medicodio merge nextgen pass reports review reviewer standing until",
       "defect_type": null,
       "description": "Recurring pattern flagged for sameer-s-mansur: Integration changes landing with no independent review. Current evidence: #228 self-merged 11 min after opening (63 files); #229 self-merged 8 s after opening, before Devin Review's pass completed. Recommended action: Assign a standing reviewer for `medicodio-nextgen-integration`, or hold merges until the Devin Review pass reports.",
       "detected_at": "2026_08_23",
@@ -8614,11 +9188,12 @@
       "state": "DEV_REVIEW",
       "status": "OK",
       "stop_conditions": [],
+      "task_description": "Observed: Recurring pattern flagged for sameer-s-mansur: Integration changes landing with no independent review. Current evidence: #228 self-merged 11 min after opening (63 files); #229 self-merged 8 s after opening, before Devin Review's pass completed. Recommended action: Assign a standing reviewer for `medicodio-nextgen-integration`, or hold merges until the Devin Review pass reports. / Proposed: Assign a standing reviewer for `medicodio-nextgen-integration`, or hold merges until the Devin Review pass reports / Code: medicodio-nextgen-integration reviewed read-only (713 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Id\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "00:45",
       "time_human": "03:00",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Integration changes landing with no independent review"
     },
     {
@@ -8628,16 +9203,35 @@
       "autonomy_reasons": [
         "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
         "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
-        "complexity 8 exceeds the autonomous ceiling 4",
+        "complexity 9 exceeds the autonomous ceiling 4",
         "target repository could not be determined from the report"
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -8645,10 +9239,11 @@
         "factors": [
           "category PROCESS_PRACTICE base 5",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 9
       },
       "component": null,
       "confidence": 0.55,
@@ -8662,7 +9257,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 8",
+        "complexity 9",
         "remediability NON_CODE_PROCESS",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -8764,9 +9359,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 9 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -8827,11 +9422,12 @@
       "stop_conditions": [
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: Repetitive work reported for hitesh: Re-plumbing `version_number` through KB create/read paths, one surface at a time. Reported pattern: 3 of the day's 4 fixes; then removed wholesale by the breaking change. Report's recommended approach: Improve documentation/process \u2014 settle the KB versioning contract before implementing it across surfaces. / Proposed: Improve documentation/process \u2014 settle the KB versioning contract before implementing it across surfaces / Code: medicodio-nextgen-app-nodejs reviewed read-only (886 source file(s)); no file paths were reported; medicodio-nextgen-app-react reviewed read-only (1065 source file(s)); no file paths were reported / Steps: Restate the r\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
-      "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human": "04:30",
+      "time_human_ai": "03:45",
       "title": "Re-plumbing `version_number` through KB create/read paths, one surface at a time"
     },
     {
@@ -8840,16 +9436,35 @@
       "attempt_id": "ISSUE_000041_ATTEMPT_01",
       "autonomy_reasons": [
         "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
-        "complexity 7 exceeds the autonomous ceiling 4",
+        "complexity 8 exceeds the autonomous ceiling 4",
         "target repository could not be determined from the report"
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "AUTOMATION_OPPORTUNITY",
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -8857,10 +9472,11 @@
         "factors": [
           "category AUTOMATION_OPPORTUNITY base 4",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 7/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 7
+        "rationale": "Complexity 8/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 8
       },
       "component": null,
       "confidence": 0.55,
@@ -8874,7 +9490,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 7",
+        "complexity 8",
         "remediability TOOLING_AUTOMATION",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -8977,9 +9593,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -9041,11 +9657,12 @@
       "stop_conditions": [
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: Repetitive work reported for hitesh: Mirroring every KB wizard change across backend and UI by hand. Reported pattern: Every 08-23 change has a paired nodejs + react commit. Report's recommended approach: Automate with Devin \u2014 paired-surface propagation is bounded, repetitive implementation. / Proposed: Automate with Devin \u2014 paired-surface propagation is bounded, repetitive implementation / Code: medicodio-nextgen-app-nodejs reviewed read-only (886 source file(s)); no file paths were reported; medicodio-nextgen-app-react reviewed read-only (1065 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:30",
-      "time_human": "05:45",
-      "time_human_ai": "07:15",
+      "time_ai": "01:45",
+      "time_human": "06:45",
+      "time_human_ai": "05:45",
       "title": "Mirroring every KB wizard change across backend and UI by hand"
     },
     {
@@ -9055,16 +9672,35 @@
       "autonomy_reasons": [
         "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
         "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
-        "complexity 8 exceeds the autonomous ceiling 4",
+        "complexity 9 exceeds the autonomous ceiling 4",
         "target repository could not be determined from the report"
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -9072,10 +9708,11 @@
         "factors": [
           "category PROCESS_PRACTICE base 5",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 9
       },
       "component": null,
       "confidence": 0.65,
@@ -9089,7 +9726,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 8",
+        "complexity 9",
         "remediability NON_CODE_PROCESS",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -9192,9 +9829,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 9 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -9256,11 +9893,12 @@
       "stop_conditions": [
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: Repetitive work reported for hitesh: Carrying 130/226-file branches for days, then replacing the PR. Reported pattern: #562/#488 opened 08-21, closed unmerged 08-24, replaced by #569/#493. Report's recommended approach: Improve documentation/process \u2014 land in slices; a 436k-line deletion diff cannot be reviewed. / Proposed: Improve documentation/process \u2014 land in slices; a 436k-line deletion diff cannot be reviewed / Code: medicodio-nextgen-app-nodejs reviewed read-only (886 source file(s)); no file paths were reported; medicodio-nextgen-app-react reviewed read-only (1065 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequ\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
-      "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human": "04:30",
+      "time_human_ai": "03:45",
       "title": "Carrying 130/226-file branches for days, then replacing the PR"
     },
     {
@@ -9272,11 +9910,30 @@
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "MISSING_TEST",
       "category_match": false,
       "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -9284,10 +9941,11 @@
         "factors": [
           "category MISSING_TEST base 3",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 6
+        "rationale": "Complexity 7/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 7
       },
       "component": null,
       "confidence": 0.5,
@@ -9301,7 +9959,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 6",
+        "complexity 7",
         "remediability CODE_CHANGE",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -9378,9 +10036,9 @@
         "playbook_scope": null,
         "playbook_version": null,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook",
           "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL: confidence 24 below 60"
         ],
@@ -9438,11 +10096,12 @@
       "stop_conditions": [
         "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
       ],
+      "task_description": "Observed: Delegation opportunity recorded for hitesh: Use Devin to generate a KB guideline wizard regression suite (General / Specialty / Specialty-Payer / Client-Payer scopes) so a versioning reversal of this size is caught by tests rather than by hand-checking each wizard. / Proposed: PROPOSE: no approved playbook matched; request human direction. / Code: medicodio-nextgen-app-nodejs reviewed read-only (886 source file(s)); no file paths were reported; medicodio-nextgen-app-react reviewed read-only (1065 source file(s)); no file paths were reported",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:30",
-      "time_human": "06:00",
-      "time_human_ai": "07:30",
+      "time_ai": "01:45",
+      "time_human": "07:00",
+      "time_human_ai": "06:00",
       "title": "Use Devin to generate a KB guideline wizard regression suite (General / Specialty / Specialty-Payer / Client-Payer scopes) so a versioning reversal of this size"
     },
     {
@@ -9454,11 +10113,30 @@
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -9466,10 +10144,11 @@
         "factors": [
           "category MECHANICAL_MIGRATION base 4",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 7/10 from: category MECHANICAL_MIGRATION base 4; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 7
+        "rationale": "Complexity 8/10 from: category MECHANICAL_MIGRATION base 4; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 8
       },
       "component": null,
       "confidence": 0.5,
@@ -9483,7 +10162,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 7",
+        "complexity 8",
         "remediability CODE_CHANGE",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -9560,9 +10239,9 @@
         "playbook_scope": null,
         "playbook_version": null,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
         ],
         "source": "NO_MATCH"
@@ -9619,11 +10298,12 @@
       "stop_conditions": [
         "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
       ],
+      "task_description": "Observed: Delegation opportunity recorded for hitesh: Use Devin to carve the KB branches into landable PRs (schema/API, then UI, then wizard UX) instead of one 130-file backend branch plus one 226-file UI branch. / Proposed: PROPOSE: no approved playbook matched; request human direction. / Code: medicodio-nextgen-app-nodejs reviewed read-only (886 source file(s)); no file paths were reported; medicodio-nextgen-app-react reviewed read-only (1065 source file(s)); no file paths were reported",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:45",
-      "time_human": "07:00",
-      "time_human_ai": "08:45",
+      "time_ai": "02:00",
+      "time_human": "08:00",
+      "time_human_ai": "06:45",
       "title": "Use Devin to carve the KB branches into landable PRs (schema/API, then UI, then wizard UX) instead of one 130-file backend branch plus one 226-file UI branch."
     },
     {
@@ -9633,16 +10313,35 @@
       "autonomy_reasons": [
         "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
         "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
-        "complexity 8 exceeds the autonomous ceiling 4",
+        "complexity 9 exceeds the autonomous ceiling 4",
         "target repository could not be determined from the report"
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -9650,10 +10349,11 @@
         "factors": [
           "category PROCESS_PRACTICE base 5",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 9
       },
       "component": null,
       "confidence": 0.5,
@@ -9667,7 +10367,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 8",
+        "complexity 9",
         "remediability NON_CODE_PROCESS",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -9764,9 +10464,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 9 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -9827,11 +10527,12 @@
       "stop_conditions": [
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: Delegation opportunity recorded for hitesh: Use Devin for the paired backend/UI propagation of each KB contract change. / Proposed: INVESTIGATE AND PROPOSE: no implementation until a human approves. / Code: medicodio-nextgen-app-nodejs reviewed read-only (886 source file(s)); no file paths were reported; medicodio-nextgen-app-react reviewed read-only (1065 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is process, tooling, or code.; Describe the smallest concrete improvement and who owns it. (+1 more in the plan)",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
-      "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human": "04:30",
+      "time_human_ai": "03:45",
       "title": "Use Devin for the paired backend/UI propagation of each KB contract change."
     },
     {
@@ -9841,16 +10542,35 @@
       "autonomy_reasons": [
         "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
         "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
-        "complexity 8 exceeds the autonomous ceiling 4",
+        "complexity 9 exceeds the autonomous ceiling 4",
         "target repository could not be determined from the report"
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -9858,10 +10578,11 @@
         "factors": [
           "category PROCESS_PRACTICE base 5",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 9
       },
       "component": null,
       "confidence": 0.65,
@@ -9875,7 +10596,7 @@
       "environment": null,
       "environment_signal": false,
       "estimate_basis": [
-        "complexity 8",
+        "complexity 9",
         "remediability NON_CODE_PROCESS",
         "autonomy tier C",
         "tier permits investigation and proposal only, so a human does the change"
@@ -9982,9 +10703,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 9 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -10045,11 +10766,12 @@
       "stop_conditions": [
         "TARGET_UNRESOLVED: confirm the repository before any implementation"
       ],
+      "task_description": "Observed: Recurring pattern flagged for hitesh: Very large, long-lived unmerged branches. Current evidence: Both PRs still open on 08-23 (130 files / 226 files), closed unmerged 08-24 and replaced by #569. Recommended action: Land in slices behind a flag; treat any PR over ~40 files as un-reviewable. / Proposed: Land in slices behind a flag; treat any PR over ~40 files as un-reviewable / Code: medicodio-nextgen-app-nodejs reviewed read-only (886 source file(s)); no file paths were reported; medicodio-nextgen-app-react reviewed read-only (1065 source file(s)); no file paths were reported / Steps: Restate the reported pattern with its evidence and frequency.; Identify whether the remedy is pr\u2026",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:00",
-      "time_human": "04:00",
-      "time_human_ai": "05:00",
+      "time_human": "04:30",
+      "time_human_ai": "03:45",
       "title": "Very large, long-lived unmerged branches"
     },
     {
@@ -10061,11 +10783,30 @@
       ],
       "autonomy_tier": "C",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
       "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "commands_executed": [],
       "commit_sha": null,
       "complexity": {
@@ -10074,9 +10815,10 @@
           "category PROCESS_PRACTICE base 5",
           "target repository not determined from the report (+2)",
           "no file paths identified (+1)",
-          "security-sensitive surface AUTHENTICATION (+2)"
+          "security-sensitive surface AUTHENTICATION (+2)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 10/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); security-sensitive surface AUTHENTICATION (+2).",
+        "rationale": "Complexity 10/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); security-sensitive surface AUTHENTICATION (+2); spans multiple candidate repositories (+1).",
         "score": 10
       },
       "component": null,
@@ -10239,11 +10981,12 @@
       "stop_conditions": [
         "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
       ],
+      "task_description": "Observed: Recurring pattern flagged for hitesh: Commit identity not linked to a GitHub account. Current evidence: 08-23 commits attributed to `hitesh.ms@medicodio.ai` with no login. Recommended action: Add the work email to the GitHub account so review/authorship data is joinable. / Proposed: Add the work email to the GitHub account so review/authorship data is joinable / Code: medicodio-nextgen-app-nodejs reviewed read-only (886 source file(s)); no file paths were reported; medicodio-nextgen-app-react reviewed read-only (1065 source file(s)); no file paths were reported",
       "test_cases_generated": [],
       "test_results": [],
       "time_ai": "01:15",
       "time_human": "05:00",
-      "time_human_ai": "06:15",
+      "time_human_ai": "04:15",
       "title": "Commit identity not linked to a GitHub account"
     }
   ],

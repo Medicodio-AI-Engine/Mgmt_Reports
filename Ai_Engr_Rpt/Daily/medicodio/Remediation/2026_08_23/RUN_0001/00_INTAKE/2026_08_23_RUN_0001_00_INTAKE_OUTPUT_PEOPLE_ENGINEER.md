@@ -50,11 +50,11 @@ Completeness: **COMPLETE**
 | `ISSUE_000031` | Use Devin to build the portal access-control test matrix (roles × account statuses) — bounded, high-value on a security surface, and it removes the late-night m | SECURITY_TENANCY | globalcodio-monorepo | — | — | — | CODE_CHANGE |
 | `ISSUE_000032` | Use Devin to split #1183-class branches (150 files, open 5 days) into stacked reviewable PRs. | MECHANICAL_MIGRATION | globalcodio-monorepo | — | — | — | CODE_CHANGE |
 | `ISSUE_000033` | Merges without an independent human review record | PROCESS_PRACTICE | globalcodio-monorepo | — | — | — | NON_CODE_PROCESS |
-| `ISSUE_000034` | Manually re-running batch/dev runs to verify a guard | MISSING_TEST | unresolved | — | — | — | CODE_CHANGE |
-| `ISSUE_000035` | Self-merging integration PRs within minutes | PROCESS_PRACTICE | unresolved | — | — | — | NON_CODE_PROCESS |
-| `ISSUE_000036` | Non-conventional commit subjects | PROCESS_PRACTICE | unresolved | — | — | — | NON_CODE_PROCESS |
-| `ISSUE_000037` | Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time. | MISSING_TEST | unresolved | — | — | — | CODE_CHANGE |
-| `ISSUE_000038` | Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings). | MISSING_TEST | unresolved | — | — | — | CODE_CHANGE |
+| `ISSUE_000034` | Manually re-running batch/dev runs to verify a guard | MISSING_TEST | medicodio-nextgen-integration | — | — | — | CODE_CHANGE |
+| `ISSUE_000035` | Self-merging integration PRs within minutes | PROCESS_PRACTICE | medicodio-nextgen-integration | — | — | — | NON_CODE_PROCESS |
+| `ISSUE_000036` | Non-conventional commit subjects | PROCESS_PRACTICE | medicodio-nextgen-integration | — | — | — | NON_CODE_PROCESS |
+| `ISSUE_000037` | Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time. | MISSING_TEST | medicodio-nextgen-integration | — | — | — | CODE_CHANGE |
+| `ISSUE_000038` | Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings). | MISSING_TEST | medicodio-nextgen-integration | — | — | — | CODE_CHANGE |
 | `ISSUE_000039` | Integration changes landing with no independent review | PROCESS_PRACTICE | medicodio-nextgen-integration | — | — | — | NON_CODE_PROCESS |
 | `ISSUE_000040` | Re-plumbing `version_number` through KB create/read paths, one surface at a time | PROCESS_PRACTICE | unresolved | — | — | — | NON_CODE_PROCESS |
 | `ISSUE_000041` | Mirroring every KB wizard change across backend and UI by hand | AUTOMATION_OPPORTUNITY | unresolved | — | — | — | TOOLING_AUTOMATION |

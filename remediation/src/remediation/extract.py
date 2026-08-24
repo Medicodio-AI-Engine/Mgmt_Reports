@@ -96,9 +96,11 @@ class RawFinding:
 
 
 def _repositories_for_product(product: str | None) -> tuple[str, ...]:
+    """Repositories the product line names itself, else the configured mapping."""
     if not product:
         return ()
-    return PRODUCT_REPOSITORIES.get(product.strip().lower(), ())
+    named = tuple(name.strip() for name in BACKTICKED.findall(product) if name.strip())
+    return named or PRODUCT_REPOSITORIES.get(product.strip().lower(), ())
 
 
 def _single_repository(candidates: tuple[str, ...]) -> str | None:

@@ -9,6 +9,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "complexity": {
         "confidence": 0.4,
         "factors": [
@@ -122,6 +131,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "complexity": {
         "confidence": 0.4,
         "factors": [
@@ -235,6 +253,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "complexity": {
         "confidence": 0.4,
         "factors": [
@@ -348,6 +375,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "complexity": {
         "confidence": 0.4,
         "factors": [
@@ -461,6 +497,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "complexity": {
         "confidence": 0.4,
         "factors": [
@@ -574,6 +619,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null
+        }
+      ],
       "complexity": {
         "confidence": 0.4,
         "factors": [
@@ -689,6 +743,15 @@
       "category": "CI_FAILURE",
       "category_match": true,
       "category_rationale": "category CI_FAILURE confirms the reported bug",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.6,
         "factors": [
@@ -804,6 +867,17 @@
       "category": "AUTOMATION_OPPORTUNITY",
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "docs/review-logs/*"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -929,6 +1003,17 @@
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "origin/dev"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -1053,6 +1138,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.65,
         "factors": [
@@ -1173,6 +1267,15 @@
       "category": "MISSING_TEST",
       "category_match": false,
       "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.7,
         "factors": [
@@ -1291,6 +1394,17 @@
       "category": "AUTOMATION_OPPORTUNITY",
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "docs/review-logs/*"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.7,
         "factors": [
@@ -1410,6 +1524,15 @@
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.7,
         "factors": [
@@ -1527,6 +1650,15 @@
       "category": "AUTOMATION_OPPORTUNITY",
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.65,
         "factors": [
@@ -1654,6 +1786,15 @@
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -1781,6 +1922,15 @@
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -1904,6 +2054,15 @@
       "category": "AUTOMATION_OPPORTUNITY",
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -2028,6 +2187,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -2148,6 +2316,15 @@
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.6,
         "factors": [
@@ -2265,6 +2442,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.7,
         "factors": [
@@ -2378,6 +2564,15 @@
       "category": "MISSING_TEST",
       "category_match": true,
       "category_rationale": "category MISSING_TEST confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.7,
         "factors": [
@@ -2488,6 +2683,15 @@
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -2615,6 +2819,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -2739,6 +2952,15 @@
       "category": "AUTOMATION_OPPORTUNITY",
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.65,
         "factors": [
@@ -2862,6 +3084,15 @@
       "category": "AUTOMATION_OPPORTUNITY",
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.65,
         "factors": [
@@ -2985,6 +3216,17 @@
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "origin/dev"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -3109,6 +3351,15 @@
       "category": "MISSING_TEST",
       "category_match": false,
       "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.7,
         "factors": [
@@ -3227,6 +3478,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.6,
         "factors": [
@@ -3341,6 +3601,15 @@
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.65,
         "factors": [
@@ -3464,6 +3733,15 @@
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -3583,6 +3861,15 @@
       "category": "SECURITY_TENANCY",
       "category_match": true,
       "category_rationale": "category SECURITY_TENANCY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.6,
         "factors": [
@@ -3691,6 +3978,15 @@
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.7,
         "factors": [
@@ -3808,6 +4104,17 @@
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "devin/1787351619-notes-visibility-model"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501
+        }
+      ],
       "complexity": {
         "confidence": 0.8,
         "factors": [
@@ -3925,28 +4232,38 @@
       "title": "Merges without an independent human review record"
     },
     {
-      "analysis_scope": "UNRESOLVED",
+      "analysis_scope": "IN_SCOPE",
       "attempt_id": "ISSUE_000034_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "MISSING_TEST",
       "category_match": true,
       "category_rationale": "category MISSING_TEST confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "complexity": {
         "confidence": 0.65,
         "factors": [
           "category MISSING_TEST base 3",
-          "target repository not determined from the report (+2)",
           "no file paths identified (+1)"
         ],
-        "rationale": "Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 6
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
       },
       "component": null,
       "confidence": 0.55,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "MISSING_TEST|REPOSITORY_UNKNOWN|automation batch dev guard harness manual manually reusable run running runs turn verification verify",
+      "dedupe_signature": "MISSING_TEST|medicodio-nextgen-integration|automation batch dev guard harness manual manually reusable run running runs turn verification verify",
       "defect_type": null,
       "description": "Repetitive work reported for sameer-s-mansur: Manually re-running batch/dev runs to verify a guard. Reported pattern: 3 commits on 08-23 (\"Test the step-11 guard where it actually runs\", \"Record the real dev run\", \"Close out batch runs\"); the same verification pattern appears in his 08-21/08-22 work. Report's recommended approach: Automate with Devin \u2014 turn the manual dev-run verification into a reusable harness.",
       "detected_at": "2026_08_23",
@@ -3971,24 +4288,27 @@
       "merged_sources": [
         "SOURCE_003:291"
       ],
-      "missing_skills": [],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "next_state": "PLANNED",
       "owner": "sameer-s-mansur",
       "playbook_match": {
-        "confidence": 0,
-        "matched_on": [],
-        "playbook_id": null,
-        "playbook_name": null,
-        "playbook_scope": null,
-        "playbook_version": null,
-        "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
-          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook",
-          "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL: confidence 24 below 60"
+        "confidence": 65,
+        "matched_on": [
+          "category MISSING_TEST"
         ],
-        "source": "NO_MATCH"
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
       },
       "priority": {
         "confidence": 0.55,
@@ -4004,7 +4324,7 @@
       "related_change": null,
       "remediable": "CODE_CHANGE",
       "reported_category": "ENHANCEMENT",
-      "repository": null,
+      "repository": "medicodio-nextgen-integration",
       "reproduction": {
         "available": false,
         "method": "TEST_TO_BE_WRITTEN",
@@ -4012,11 +4332,17 @@
       },
       "revised_category": "ENHANCEMENT",
       "run_id": "RUN_0001",
-      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "scope_reason": "medicodio-nextgen-integration is a medicodio library in the pilot scope",
       "security_scope": "UNKNOWN",
       "selected_for_attention": true,
-      "skills_available": [],
-      "skills_required": [],
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "source": "MGMT_REPORT",
       "source_provenance": [
         {
@@ -4038,28 +4364,38 @@
       "title": "Manually re-running batch/dev runs to verify a guard"
     },
     {
-      "analysis_scope": "UNRESOLVED",
+      "analysis_scope": "IN_SCOPE",
       "attempt_id": "ISSUE_000035_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
           "category PROCESS_PRACTICE base 5",
-          "target repository not determined from the report (+2)",
           "no file paths identified (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
       },
       "component": null,
       "confidence": 0.65,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|doc improve integration merge minimum minutes one pass process require review reviewer self wait within",
+      "dedupe_signature": "PROCESS_PRACTICE|medicodio-nextgen-integration|doc improve integration merge minimum minutes one pass process require review reviewer self wait within",
       "defect_type": null,
       "description": "Repetitive work reported for sameer-s-mansur: Self-merging integration PRs within minutes. Reported pattern: #228 (11 min) and #229 (8 s) on 08-23; long-lived branch/no-PR pattern flagged 08-22. Report's recommended approach: Improve documentation/process \u2014 require one reviewer, or at minimum wait for the Devin Review pass.",
       "detected_at": "2026_08_23",
@@ -4097,9 +4433,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -4118,7 +4454,7 @@
       "related_change": "#228, #229",
       "remediable": "NON_CODE_PROCESS",
       "reported_category": "ENHANCEMENT",
-      "repository": null,
+      "repository": "medicodio-nextgen-integration",
       "reproduction": {
         "available": false,
         "method": null,
@@ -4126,7 +4462,7 @@
       },
       "revised_category": "ENHANCEMENT",
       "run_id": "RUN_0001",
-      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "scope_reason": "medicodio-nextgen-integration is a medicodio library in the pilot scope",
       "security_scope": "NONE",
       "selected_for_attention": true,
       "skills_available": [
@@ -4156,28 +4492,38 @@
       "title": "Self-merging integration PRs within minutes"
     },
     {
-      "analysis_scope": "UNRESOLVED",
+      "analysis_scope": "IN_SCOPE",
       "attempt_id": "ISSUE_000036_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "complexity": {
         "confidence": 0.65,
         "factors": [
           "category PROCESS_PRACTICE base 5",
-          "target repository not determined from the report (+2)",
           "no file paths identified (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
       },
       "component": null,
       "confidence": 0.55,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|commit convention conventional doc enforce hook improve message non process subjects",
+      "dedupe_signature": "PROCESS_PRACTICE|medicodio-nextgen-integration|commit convention conventional doc enforce hook improve message non process subjects",
       "defect_type": null,
       "description": "Repetitive work reported for sameer-s-mansur: Non-conventional commit subjects. Reported pattern: 4 of 6 commits on 08-23 (\"Lock key: \u2026\", \"Close out batch runs\") vs the org's `type(scope):` convention. Report's recommended approach: Improve documentation/process \u2014 enforce the convention with a commit-message hook.",
       "detected_at": "2026_08_23",
@@ -4215,9 +4561,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -4236,7 +4582,7 @@
       "related_change": null,
       "remediable": "NON_CODE_PROCESS",
       "reported_category": "ENHANCEMENT",
-      "repository": null,
+      "repository": "medicodio-nextgen-integration",
       "reproduction": {
         "available": false,
         "method": null,
@@ -4244,7 +4590,7 @@
       },
       "revised_category": "ENHANCEMENT",
       "run_id": "RUN_0001",
-      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "scope_reason": "medicodio-nextgen-integration is a medicodio library in the pilot scope",
       "security_scope": "NONE",
       "selected_for_attention": true,
       "skills_available": [
@@ -4274,28 +4620,38 @@
       "title": "Non-conventional commit subjects"
     },
     {
-      "analysis_scope": "UNRESOLVED",
+      "analysis_scope": "IN_SCOPE",
       "attempt_id": "ISSUE_000037_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "MISSING_TEST",
       "category_match": true,
       "category_rationale": "category MISSING_TEST confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "complexity": {
         "confidence": 0.6,
         "factors": [
           "category MISSING_TEST base 3",
-          "target repository not determined from the report (+2)",
           "no file paths identified (+1)"
         ],
-        "rationale": "Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 6
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
       },
       "component": null,
       "confidence": 0.5,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "MISSING_TEST|REPOSITORY_UNKNOWN|attach build dev does form hand harness integration key lock repeatable replacing run runs time verification workflows",
+      "dedupe_signature": "MISSING_TEST|medicodio-nextgen-integration|attach build dev does form hand harness integration key lock repeatable replacing run runs time verification workflows",
       "defect_type": null,
       "description": "Delegation opportunity recorded for sameer-s-mansur: Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time.",
       "detected_at": "2026_08_23",
@@ -4315,24 +4671,27 @@
       "merged_sources": [
         "SOURCE_003:296"
       ],
-      "missing_skills": [],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "next_state": "PLANNED",
       "owner": "sameer-s-mansur",
       "playbook_match": {
-        "confidence": 0,
-        "matched_on": [],
-        "playbook_id": null,
-        "playbook_name": null,
-        "playbook_scope": null,
-        "playbook_version": null,
-        "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
-          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook",
-          "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL: confidence 12 below 60"
+        "confidence": 65,
+        "matched_on": [
+          "category MISSING_TEST"
         ],
-        "source": "NO_MATCH"
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
       },
       "priority": {
         "confidence": 0.5,
@@ -4347,7 +4706,7 @@
       "related_change": null,
       "remediable": "CODE_CHANGE",
       "reported_category": "ENHANCEMENT",
-      "repository": null,
+      "repository": "medicodio-nextgen-integration",
       "reproduction": {
         "available": false,
         "method": "TEST_TO_BE_WRITTEN",
@@ -4355,11 +4714,17 @@
       },
       "revised_category": "ENHANCEMENT",
       "run_id": "RUN_0001",
-      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "scope_reason": "medicodio-nextgen-integration is a medicodio library in the pilot scope",
       "security_scope": "UNKNOWN",
       "selected_for_attention": true,
-      "skills_available": [],
-      "skills_required": [],
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "source": "MGMT_REPORT",
       "source_provenance": [
         {
@@ -4381,28 +4746,38 @@
       "title": "Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time."
     },
     {
-      "analysis_scope": "UNRESOLVED",
+      "analysis_scope": "IN_SCOPE",
       "attempt_id": "ISSUE_000038_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "MISSING_TEST",
       "category_match": false,
       "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "complexity": {
         "confidence": 0.6,
         "factors": [
           "category MISSING_TEST base 3",
-          "target repository not determined from the report (+2)",
           "no file paths identified (+1)"
         ],
-        "rationale": "Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 6
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
       },
       "component": null,
       "confidence": 0.5,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "MISSING_TEST|REPOSITORY_UNKNOWN|elaris file filename findings human landed open pairing review test write",
+      "dedupe_signature": "MISSING_TEST|medicodio-nextgen-integration|elaris file filename findings human landed open pairing review test write",
       "defect_type": null,
       "description": "Delegation opportunity recorded for sameer-s-mansur: Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings).",
       "detected_at": "2026_08_23",
@@ -4422,23 +4797,28 @@
       "merged_sources": [
         "SOURCE_003:297"
       ],
-      "missing_skills": [],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "next_state": "PLANNED",
       "owner": "sameer-s-mansur",
       "playbook_match": {
-        "confidence": 0,
-        "matched_on": [],
-        "playbook_id": null,
-        "playbook_name": null,
-        "playbook_scope": null,
-        "playbook_version": null,
+        "confidence": 89,
+        "matched_on": [
+          "category MISSING_TEST",
+          "keywords: regression test, tests for"
+        ],
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
         ],
-        "source": "NO_MATCH"
+        "source": "ORG_PLAYBOOK"
       },
       "priority": {
         "confidence": 0.5,
@@ -4453,7 +4833,7 @@
       "related_change": null,
       "remediable": "CODE_CHANGE",
       "reported_category": "BUG",
-      "repository": null,
+      "repository": "medicodio-nextgen-integration",
       "reproduction": {
         "available": false,
         "method": "TEST_TO_BE_WRITTEN",
@@ -4461,11 +4841,17 @@
       },
       "revised_category": "ENHANCEMENT",
       "run_id": "RUN_0001",
-      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "scope_reason": "medicodio-nextgen-integration is a medicodio library in the pilot scope",
       "security_scope": "UNKNOWN",
       "selected_for_attention": true,
-      "skills_available": [],
-      "skills_required": [],
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
       "source": "MGMT_REPORT",
       "source_provenance": [
         {
@@ -4490,10 +4876,21 @@
       "analysis_scope": "IN_SCOPE",
       "attempt_id": "ISSUE_000039_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-integration"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-integration",
+          "source_file_count": 713
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
@@ -4507,7 +4904,7 @@
       "confidence": 0.65,
       "corroborating_only": false,
       "corroboration": [],
-      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|assign changes hold independent integration landing medicodio merge nextgen pass reports review reviewer standing until",
+      "dedupe_signature": "PROCESS_PRACTICE|medicodio-nextgen-integration|assign changes hold independent integration landing medicodio merge nextgen pass reports review reviewer standing until",
       "defect_type": null,
       "description": "Recurring pattern flagged for sameer-s-mansur: Integration changes landing with no independent review. Current evidence: #228 self-merged 11 min after opening (63 files); #229 self-merged 8 s after opening, before Devin Review's pass completed. Recommended action: Assign a standing reviewer for `medicodio-nextgen-integration`, or hold merges until the Devin Review pass reports.",
       "detected_at": "2026_08_23",
@@ -4612,19 +5009,39 @@
       "analysis_scope": "UNRESOLVED",
       "attempt_id": "ISSUE_000040_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": false,
       "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "complexity": {
         "confidence": 0.65,
         "factors": [
           "category PROCESS_PRACTICE base 5",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 9
       },
       "component": null,
       "confidence": 0.55,
@@ -4668,9 +5085,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 9 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -4729,19 +5146,39 @@
       "analysis_scope": "UNRESOLVED",
       "attempt_id": "ISSUE_000041_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "AUTOMATION_OPPORTUNITY",
       "category_match": true,
       "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "complexity": {
         "confidence": 0.65,
         "factors": [
           "category AUTOMATION_OPPORTUNITY base 4",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 7/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 7
+        "rationale": "Complexity 8/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 8
       },
       "component": null,
       "confidence": 0.55,
@@ -4786,9 +5223,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -4848,19 +5285,39 @@
       "analysis_scope": "UNRESOLVED",
       "attempt_id": "ISSUE_000042_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
           "category PROCESS_PRACTICE base 5",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 9
       },
       "component": null,
       "confidence": 0.65,
@@ -4905,9 +5362,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 9 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -4967,19 +5424,39 @@
       "analysis_scope": "UNRESOLVED",
       "attempt_id": "ISSUE_000043_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "MISSING_TEST",
       "category_match": false,
       "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "complexity": {
         "confidence": 0.6,
         "factors": [
           "category MISSING_TEST base 3",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 6
+        "rationale": "Complexity 7/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 7
       },
       "component": null,
       "confidence": 0.5,
@@ -5016,9 +5493,9 @@
         "playbook_scope": null,
         "playbook_version": null,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook",
           "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL: confidence 24 below 60"
         ],
@@ -5074,19 +5551,39 @@
       "analysis_scope": "UNRESOLVED",
       "attempt_id": "ISSUE_000044_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "MECHANICAL_MIGRATION",
       "category_match": true,
       "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "complexity": {
         "confidence": 0.6,
         "factors": [
           "category MECHANICAL_MIGRATION base 4",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 7/10 from: category MECHANICAL_MIGRATION base 4; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 7
+        "rationale": "Complexity 8/10 from: category MECHANICAL_MIGRATION base 4; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 8
       },
       "component": null,
       "confidence": 0.5,
@@ -5123,9 +5620,9 @@
         "playbook_scope": null,
         "playbook_version": null,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
         ],
         "source": "NO_MATCH"
@@ -5180,19 +5677,39 @@
       "analysis_scope": "UNRESOLVED",
       "attempt_id": "ISSUE_000045_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "complexity": {
         "confidence": 0.6,
         "factors": [
           "category PROCESS_PRACTICE base 5",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 9
       },
       "component": null,
       "confidence": 0.5,
@@ -5231,9 +5748,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 9 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -5292,19 +5809,39 @@
       "analysis_scope": "UNRESOLVED",
       "attempt_id": "ISSUE_000046_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "complexity": {
         "confidence": 0.75,
         "factors": [
           "category PROCESS_PRACTICE base 5",
           "target repository not determined from the report (+2)",
-          "no file paths identified (+1)"
+          "no file paths identified (+1)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
-        "score": 8
+        "rationale": "Complexity 9/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); spans multiple candidate repositories (+1).",
+        "score": 9
       },
       "component": null,
       "confidence": 0.65,
@@ -5353,9 +5890,9 @@
         "playbook_scope": "GENERAL",
         "playbook_version": 1,
         "rejected_candidates": [
-          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
-          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 9 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 9 exceeds playbook maximum 4",
           "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
         ],
         "source": "GENERAL_PLAYBOOK"
@@ -5414,19 +5951,39 @@
       "analysis_scope": "UNRESOLVED",
       "attempt_id": "ISSUE_000047_ATTEMPT_01",
       "branch": null,
-      "candidate_repositories": [],
+      "candidate_repositories": [
+        "medicodio-nextgen-app-nodejs",
+        "medicodio-nextgen-app-react"
+      ],
       "category": "PROCESS_PRACTICE",
       "category_match": true,
       "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-nodejs",
+          "source_file_count": 886
+        },
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "medicodio-nextgen-app-react",
+          "source_file_count": 1065
+        }
+      ],
       "complexity": {
         "confidence": 0.65,
         "factors": [
           "category PROCESS_PRACTICE base 5",
           "target repository not determined from the report (+2)",
           "no file paths identified (+1)",
-          "security-sensitive surface AUTHENTICATION (+2)"
+          "security-sensitive surface AUTHENTICATION (+2)",
+          "spans multiple candidate repositories (+1)"
         ],
-        "rationale": "Complexity 10/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); security-sensitive surface AUTHENTICATION (+2).",
+        "rationale": "Complexity 10/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); security-sensitive surface AUTHENTICATION (+2); spans multiple candidate repositories (+1).",
         "score": 10
       },
       "component": null,

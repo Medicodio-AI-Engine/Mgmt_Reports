@@ -71,10 +71,23 @@ def test_ai_is_faster_than_a_human_when_it_may_implement() -> None:
     assert estimate.ai < estimate.human
 
 
-def test_proposal_only_tier_needs_human_time_on_top() -> None:
+def test_proposal_only_tier_still_costs_most_of_the_human_time() -> None:
     estimate = effort.estimate(5, "CODE_CHANGE", "D")
-    assert estimate.joint > estimate.human
+    assert estimate.joint > effort.estimate(5, "CODE_CHANGE", "A").joint
     assert any("proposal only" in reason for reason in estimate.basis)
+
+
+def _minutes(hhmm: str) -> int:
+    hours, minutes = hhmm.split(":")
+    return int(hours) * 60 + int(minutes)
+
+
+def test_collaboration_is_not_the_sum_and_never_slower_than_a_human_alone() -> None:
+    for tier in ("A", "B", "C", "D"):
+        estimate = effort.estimate(6, "CODE_CHANGE", tier)
+        joint = _minutes(estimate.joint)
+        assert joint < _minutes(estimate.human) + _minutes(estimate.ai)
+        assert joint <= _minutes(estimate.human)
 
 
 def test_higher_complexity_costs_more() -> None:

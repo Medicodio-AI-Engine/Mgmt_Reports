@@ -11,6 +11,7 @@ from remediation import scope, supervisor
 EXPECTED_HEADERS = [
     "Task_ID",
     "Task_Name",
+    "Task_Description",
     "Task_Owner",
     "Task_Type",
     "Category",
@@ -116,6 +117,27 @@ def test_guardrail_block_is_explained_in_comments() -> None:
         guardrail_violations=[{"stop_reason": "security scope requires a human owner"}],
     )
     assert "blocked by guardrail" in supervisor.row_for(blocked).comments
+
+
+def test_description_says_what_was_observed_proposed_and_inspected() -> None:
+    issue = _issue(
+        description="KB wizard changes are mirrored across backend and UI by hand.",
+        recommended_action="Use Devin for the paired backend/UI propagation.",
+        code_review=[
+            {
+                "repository": "medicodio-nextgen-app-react",
+                "checkout_available": True,
+                "present_paths": ["src/kb/wizard.tsx"],
+                "missing_paths": [],
+                "source_file_count": 812,
+            }
+        ],
+    )
+    described = supervisor.row_for(issue).task_description
+    assert "Observed: KB wizard changes are mirrored" in described
+    assert "Proposed: Use Devin for the paired" in described
+    assert "reviewed read-only (812 source file(s))" in described
+    assert "\n" not in described and "|" not in described
 
 
 def test_corroborating_signal_is_counted_not_listed_as_a_task() -> None:

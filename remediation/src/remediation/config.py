@@ -54,6 +54,7 @@ class Config:
     redact_employee_ratings: bool
     future_stages_enabled: dict[str, bool]
     repository_scope: RepositoryScope = field(default_factory=RepositoryScope)
+    repository_root: Path | None = None
 
     def stage_enabled(self, stage: str) -> bool:
         """Future stages are disabled unless explicitly turned on in config."""
@@ -108,6 +109,14 @@ def _repository_scope(raw: Any) -> RepositoryScope:
         prefixes=tuple(raw.get("prefixes") or default.prefixes),
         excluded=tuple(raw.get("excluded") or default.excluded),
     )
+
+
+def _repository_root(value: str | None) -> Path | None:
+    """Where target checkouts may be read from; unset means read nothing."""
+    if not value:
+        return None
+    root = Path(value).expanduser()
+    return root if root.is_dir() else None
 
 
 def _read_file(path: Path) -> dict[str, Any]:
@@ -203,4 +212,5 @@ def _config(merged: dict[str, Any]) -> Config:
         redact_employee_ratings=_as_bool(merged.get("redact_employee_ratings"), True),
         future_stages_enabled=_future_stages(merged),
         repository_scope=_repository_scope(merged.get("repository_scope")),
+        repository_root=_repository_root(pick("repository_root", "REPOSITORY_ROOT")),
     )

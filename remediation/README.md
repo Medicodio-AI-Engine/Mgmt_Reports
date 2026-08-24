@@ -86,6 +86,36 @@ Anything unparseable (missing outcome, `REVIEW` with no question, unrecognized v
   redacted downstream, only the source locator survives), and a CI outage is an environment
   signal until someone shows it is a code defect.
 
+## Supervisor report
+
+Every run writes `<date>_<run>_SUPERVISOR_REPORT.md` and `.csv` next to the stage
+folders, generated from the analysed issues (never hand-written), with one row per
+in-scope task: `Task_ID`, `Task_Name`, `Task_Description`, `Task_Owner`,
+`Task_Type`, `Category`, `Revised_Category`, `Category_Match`, `Complexity` (1-10),
+`Time_Human`, `Time_AI`, `Time_Human_AI`, `Comments`. Corroborating signals and
+out-of-scope findings are listed and counted below the table, never as tasks.
+
+`Task_Description` says what was observed, what is proposed, what a read-only look
+at the code found, and the first plan steps.
+
+The three time columns are deterministic `HH:MM` planning estimates, not
+measurements:
+
+| Column | Meaning |
+| ------ | ------- |
+| `Time_Human` | how long the task takes a person working alone |
+| `Time_AI` | how long Devin takes alone — for tier C/D that is investigation and a proposal only, because policy forbids the AI making the change |
+| `Time_Human_AI` | elapsed time when the two collaborate (Devin drafts, a person directs and reviews) — **not** the sum of the other two, and never longer than `Time_Human` |
+
+### Reading the target code
+
+Set `repository_root` (or `REPOSITORY_ROOT`) to a directory holding local checkouts
+of the target repositories and the description states what the code looks like
+today. The inspection is read-only: paths are tested for existence and source files
+counted, nothing is opened for writing, and no command or git operation runs. Unset,
+or a repository with no checkout under that root, reports "not inspected" rather
+than guessing — it never blocks a run.
+
 ## Layout
 
 | Path | Contents |
