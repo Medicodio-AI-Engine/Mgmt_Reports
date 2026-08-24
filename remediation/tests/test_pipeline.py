@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
@@ -72,6 +73,23 @@ def test_every_machine_output_validates_and_chains_to_the_next_stage(
             assert expected.endswith("_INPUT.json")
         else:
             assert document["next_expected_input_file"] is None
+
+
+def test_a_stage_input_references_the_previous_output_by_digest(
+    config: Config, checkout: Path
+) -> None:
+    result = pipeline.run(config, repository_root=checkout)
+    previous = Stage.INTAKE
+    for stage in STAGES[1:]:
+        directory = result.paths.stage_dir(stage)
+        path = next(p for p in directory.iterdir() if p.name.endswith("_INPUT.json"))
+        reference = json.loads(path.read_text(encoding="utf-8"))
+        assert reference["source_stage"] == previous.value
+        source = result.paths.root / reference["source_artifact"]
+        assert hashlib.sha256(source.read_bytes()).hexdigest() == reference["sha256"], (
+            f"{stage.value} input does not match the {previous.value} output it names"
+        )
+        previous = stage
 
 
 def test_the_run_stops_at_dev_review_and_changes_nothing(config: Config, checkout: Path) -> None:

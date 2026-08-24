@@ -10,6 +10,7 @@ document). A stage never runs on data that failed validation.
 
 from __future__ import annotations
 
+import hashlib
 import json
 from dataclasses import dataclass
 from pathlib import Path
@@ -104,6 +105,27 @@ def _write_stage(
     human_path.write_text(human, encoding="utf-8")
     written.append(human_path)
     return written
+
+
+def _input_reference(
+    paths: RunPaths, stage: Stage, report_date: str, run: str, previous: Stage
+) -> dict[str, Any]:
+    """A stage's input is the previous stage's machine output, referenced by digest.
+
+    Copying it would duplicate every issue once per stage and make the daily artifact
+    directory unreadable in a diff.
+    """
+    path = paths.stage_dir(previous) / artifact_name(
+        report_date, run, previous, "OUTPUT", Audience.DEVIN_AI
+    )
+    return {
+        "run_id": run,
+        "report_date": report_date,
+        "stage": stage.value,
+        "source_stage": previous.value,
+        "source_artifact": str(path.relative_to(paths.root)),
+        "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+    }
 
 
 def _document(
@@ -251,7 +273,7 @@ def run(
         Stage.TRIAGE,
         context.report_date,
         context.run_id,
-        intake_doc,
+        _input_reference(paths, Stage.TRIAGE, context.report_date, context.run_id, Stage.INTAKE),
         triage_doc,
         render.triage(triage_doc),
     )
@@ -282,7 +304,9 @@ def run(
         Stage.PLAYBOOK_MATCH,
         context.report_date,
         context.run_id,
-        triage_doc,
+        _input_reference(
+            paths, Stage.PLAYBOOK_MATCH, context.report_date, context.run_id, Stage.TRIAGE
+        ),
         match_doc,
         render.playbook_match(match_doc),
     )
@@ -338,7 +362,9 @@ def run(
         Stage.PLAN,
         context.report_date,
         context.run_id,
-        match_doc,
+        _input_reference(
+            paths, Stage.PLAN, context.report_date, context.run_id, Stage.PLAYBOOK_MATCH
+        ),
         plan_doc,
         render.plan(plan_doc),
     )
@@ -378,7 +404,7 @@ def run(
         Stage.DEV_FIX,
         context.report_date,
         context.run_id,
-        plan_doc,
+        _input_reference(paths, Stage.DEV_FIX, context.report_date, context.run_id, Stage.PLAN),
         fix_doc,
         render.dev_fix(fix_doc),
     )
@@ -461,7 +487,9 @@ def run(
         Stage.DEV_REVIEW,
         context.report_date,
         context.run_id,
-        fix_doc,
+        _input_reference(
+            paths, Stage.DEV_REVIEW, context.report_date, context.run_id, Stage.DEV_FIX
+        ),
         review_doc,
         render.dev_review(review_doc),
     )
