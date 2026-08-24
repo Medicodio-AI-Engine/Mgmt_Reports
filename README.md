@@ -6,11 +6,12 @@ Management reporting artifacts produced by the daily engineering review automati
 
 ```
 Ai_Engr_Rpt/Daily/medicodio/Detail/
-  mgmt-activity-report-YYYY-MM-DD.md
-  employee-rating-cards-YYYY-MM-DD.md
+  Mgmt_Activity_Report_YYYY_MM_DD.md
+  Employee_Rating_Cards_YYYY_MM_DD.md
 ```
 
-`YYYY-MM-DD` is the **review date** (the UTC day the report covers), not the run date.
+`YYYY_MM_DD` is the **review date** (the UTC day the report covers), not the run date. The date
+comes last so files group by report type and then sort chronologically within each type.
 
 ## Format
 
