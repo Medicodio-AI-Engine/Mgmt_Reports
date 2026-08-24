@@ -43,12 +43,14 @@ TASK_TYPES: dict[str, str] = {
 ESTIMATE_NOTE = (
     "Time columns are planning estimates derived from the analysed complexity, remediability and "
     "autonomy tier — not measurements. `Time_Human` is how long the task takes a person working "
-    "alone; `Time_AI` is how long it takes Devin working alone, and for a tier C or D task it "
-    "covers investigation and a proposal only, because policy forbids the AI from making that "
-    "change. `Time_Human_AI` is the elapsed time when the two collaborate — Devin drafts and a "
-    "person directs and reviews — so it is not the sum of the other two and is usually shorter "
-    "than `Time_Human`. `Task_Description` states what was observed, what is proposed, and what a "
-    "read-only look at the code found."
+    "alone; `Time_AI` is how long it takes Devin working alone — writing the change is the part it "
+    "does fastest, so it is a small fraction of the human figure, and for a tier C or D task it "
+    "covers investigation and a written proposal only, because policy forbids the AI from making "
+    "that change. `Time_Human_AI` is the elapsed time when the two collaborate — Devin drafts and "
+    "a person directs and reviews — so it is not the sum of the other two and is shorter than "
+    "`Time_Human`. `Task_Description` states the work the repository history shows was carried "
+    "out, what a read-only look at the code shows now, and what the report claimed and "
+    "recommended."
 )
 
 

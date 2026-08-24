@@ -109,7 +109,7 @@ measurements:
 | Column | Meaning |
 | ------ | ------- |
 | `Time_Human` | how long the task takes a person working alone |
-| `Time_AI` | how long Devin takes alone — for tier C/D that is investigation and a proposal only, because policy forbids the AI making the change |
+| `Time_AI` | how long Devin takes alone — writing the change is the part it does fastest, so this is a small fraction of the human figure (about an eighth for code and tooling work, a quarter for process/judgement work); for tier C/D it covers investigation and a written proposal only, because policy forbids the AI making the change |
 | `Time_Human_AI` | elapsed time when the two collaborate (Devin drafts, a person directs and reviews) — **not** the sum of the other two, and never longer than `Time_Human` |
 
 ### Reading the target code
@@ -133,6 +133,7 @@ than guessing — it never blocks a run.
 | `playbooks/org`, `playbooks/general` | approved playbooks; org playbooks win over general ones |
 | `skills/registry.yaml` | capabilities available to the platform; dry run marks execution capabilities unavailable |
 | `config/config.yaml`, `.env.example` | configuration; env vars override the file |
+| `docs/BRIEF.md` | the design brief, updated to what is actually built (stages, scope, guardrails, effort model) |
 | `examples/` | manifest, `OUTPUT_DEVIN_AI.json`, and a `OUTPUT_PEOPLE_ENGINEER.md` with decisions filled in |
 | `tests/` | unit and end-to-end tests |
 

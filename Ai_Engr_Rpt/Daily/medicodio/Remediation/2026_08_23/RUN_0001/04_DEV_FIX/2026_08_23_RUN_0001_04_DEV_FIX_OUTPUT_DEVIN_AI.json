@@ -228,9 +228,9 @@
       "task_description": "Work carried out: unresolved repository: repository history was not read (no local checkout with history) / Code now: target repository unresolved, so no code was inspected / Reported: The employee rating card records a below-midpoint automation score for SaijyotiMeti. / Recommended: INVESTIGATE AND PROPOSE: no implementation until a human approves.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Low automation-adoption signal for SaijyotiMeti"
     },
     {
@@ -460,9 +460,9 @@
       "task_description": "Work carried out: unresolved repository: repository history was not read (no local checkout with history) / Code now: target repository unresolved, so no code was inspected / Reported: The employee rating card records a below-midpoint automation score for akanksh-rv. / Recommended: INVESTIGATE AND PROPOSE: no implementation until a human approves.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Low automation-adoption signal for akanksh-rv"
     },
     {
@@ -692,9 +692,9 @@
       "task_description": "Work carried out: unresolved repository: repository history was not read (no local checkout with history) / Code now: target repository unresolved, so no code was inspected / Reported: The employee rating card records a below-midpoint automation score for Amrutha-Beedikar. / Recommended: INVESTIGATE AND PROPOSE: no implementation until a human approves.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Low automation-adoption signal for Amrutha-Beedikar"
     },
     {
@@ -924,9 +924,9 @@
       "task_description": "Work carried out: unresolved repository: repository history was not read (no local checkout with history) / Code now: target repository unresolved, so no code was inspected / Reported: The employee rating card records a below-midpoint automation score for sameer-s-mansur. / Recommended: INVESTIGATE AND PROPOSE: no implementation until a human approves.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Low automation-adoption signal for sameer-s-mansur"
     },
     {
@@ -1156,9 +1156,9 @@
       "task_description": "Work carried out: unresolved repository: repository history was not read (no local checkout with history) / Code now: target repository unresolved, so no code was inspected / Reported: The employee rating card records a below-midpoint automation score for anirudh-medicodio. / Recommended: INVESTIGATE AND PROPOSE: no implementation until a human approves.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Low automation-adoption signal for anirudh-medicodio"
     },
     {
@@ -1388,9 +1388,9 @@
       "task_description": "Work carried out: unresolved repository: repository history was not read (no local checkout with history) / Code now: target repository unresolved, so no code was inspected / Reported: The employee rating card records a below-midpoint automation score for hitesh. / Recommended: INVESTIGATE AND PROPOSE: no implementation until a human approves.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Low automation-adoption signal for hitesh"
     },
     {
@@ -1622,9 +1622,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: The report states globalcodio-monorepo had zero successful CI runs (52 failed + 14 cancelled). / Recommended: DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:45",
+      "time_ai": "00:30",
       "time_human": "06:45",
-      "time_human_ai": "05:45",
+      "time_human_ai": "04:00",
       "title": "CI has no successful runs in globalcodio-monorepo"
     },
     {
@@ -1872,9 +1872,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); reported paths no longer present: docs/review-logs/* / Reported: Repetitive work reported for SaijyotiMeti: Hand-writing `docs/review-logs/` gate + review logs. / Recommended: Automate through scripts/tooling \u2014 the log content is derived from `/check` + `/fix` output; emit it from the routine instead of retyping it",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:30",
+      "time_ai": "00:15",
       "time_human": "02:30",
-      "time_human_ai": "02:00",
+      "time_human_ai": "01:30",
       "title": "Hand-writing `docs/review-logs/` gate + review logs"
     },
     {
@@ -2141,9 +2141,9 @@
         "ISSUE_000009_T01"
       ],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Merging `origin/dev` into each feature branch by hand"
     },
     {
@@ -2377,9 +2377,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for SaijyotiMeti: Composing the Architect+EM review skeleton (verdict, lenses, nit list). / Recommended: Improve documentation/process \u2014 keep the judgment human, template the scaffolding",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Composing the Architect+EM review skeleton (verdict, lenses, nit list)"
     },
     {
@@ -2642,9 +2642,9 @@
         "ISSUE_000011_T01"
       ],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Use Devin to generate a regression suite for the AI Case Manager send-path defect class (#1210's \"reviewed draft discarded on send\", #1213's email header, #1215"
     },
     {
@@ -2886,9 +2886,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); reported paths no longer present: docs/review-logs/* / Reported: Delegation opportunity recorded for SaijyotiMeti: Use Devin to emit the review-log artifact from the existing `/check` + `/fix` output, replacing the hand-written `docs/review-logs/` commits. / Recommended: DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:30",
+      "time_ai": "00:15",
       "time_human": "02:30",
-      "time_human_ai": "02:00",
+      "time_human_ai": "01:30",
       "title": "Use Devin to emit the review-log artifact from the existing `/check` + `/fix` output, replacing the hand-written `docs/review-logs/` commits."
     },
     {
@@ -3147,9 +3147,9 @@
         "ISSUE_000013_T01"
       ],
       "test_results": [],
-      "time_ai": "01:15",
+      "time_ai": "00:30",
       "time_human": "05:00",
-      "time_human_ai": "04:15",
+      "time_human_ai": "03:00",
       "title": "Use Devin to split feature branches over ~100 files into stacked, individually reviewable PRs before review starts (#1212 was 140 files)."
     },
     {
@@ -3398,9 +3398,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Recurring pattern flagged for SaijyotiMeti: Hand-written review/audit logs. / Recommended: Generate the log from `/check`+`/fix` output; keep only the human verdict hand-written",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:15",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:30",
       "title": "Hand-written review/audit logs"
     },
     {
@@ -3669,9 +3669,9 @@
         "ISSUE_000015_T01"
       ],
       "test_results": [],
-      "time_ai": "01:15",
+      "time_ai": "00:30",
       "time_human": "05:00",
-      "time_human_ai": "04:15",
+      "time_human_ai": "03:00",
       "title": "Very large single-PR diffs"
     },
     {
@@ -3936,9 +3936,9 @@
         "ISSUE_000016_T01"
       ],
       "test_results": [],
-      "time_ai": "01:15",
+      "time_ai": "00:30",
       "time_human": "05:00",
-      "time_human_ai": "04:15",
+      "time_human_ai": "03:00",
       "title": "`dev \u2192 feat/qa-automation` promotion/sync PRs"
     },
     {
@@ -4184,9 +4184,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for akanksh-rv: Post-merge QA audit of already-merged feature work. / Recommended: Automate with Devin \u2014 move the audit pre-merge as a bounded per-PR Devin task",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:15",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:30",
       "title": "Post-merge QA audit of already-merged feature work"
     },
     {
@@ -4420,9 +4420,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for akanksh-rv: Filling (or not filling) the PR template by hand. / Recommended: Improve documentation/process \u2014 block merge on an unfilled template",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Filling (or not filling) the PR template by hand"
     },
     {
@@ -4681,9 +4681,9 @@
         "ISSUE_000019_T01"
       ],
       "test_results": [],
-      "time_ai": "01:15",
+      "time_ai": "00:30",
       "time_human": "05:00",
-      "time_human_ai": "04:15",
+      "time_human_ai": "03:00",
       "title": "Use Devin for the recurring `dev \u2192 feat/qa-automation` sync plus its QA audit \u2014 mechanical, repeats every few days, and currently bypasses review entirely."
     },
     {
@@ -4910,9 +4910,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Delegation opportunity recorded for akanksh-rv: Use Devin to finish landing #1208 (the notes-visibility feature it authored): #1209's remediation is merged into the branch, so the remaining work is bounded. / Recommended: DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Use Devin to finish landing #1208 (the notes-visibility feature it authored): #1209's remediation is merged into the branch, so the remaining work is bounded."
     },
     {
@@ -5115,9 +5115,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Delegation opportunity recorded for akanksh-rv: Use Devin to generate the live authenticated API validation he explicitly skipped on #1214, as a repeatable harness rather than a per-run manual pass. / Recommended: PROPOSE: no approved playbook matched; request human direction.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:30",
+      "time_ai": "00:30",
       "time_human": "06:00",
-      "time_human_ai": "05:00",
+      "time_human_ai": "03:30",
       "title": "Use Devin to generate the live authenticated API validation he explicitly skipped on #1214, as a repeatable harness rather than a per-run manual pass."
     },
     {
@@ -5386,9 +5386,9 @@
         "ISSUE_000022_T01"
       ],
       "test_results": [],
-      "time_ai": "01:15",
+      "time_ai": "00:30",
       "time_human": "05:00",
-      "time_human_ai": "04:15",
+      "time_human_ai": "03:00",
       "title": "Promotion/sync PR self-merged without independent review"
     },
     {
@@ -5626,9 +5626,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Recurring pattern flagged for akanksh-rv: Unfilled PR-template bodies. / Recommended: Add a merge gate that rejects unfilled template sections",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Unfilled PR-template bodies"
     },
     {
@@ -5873,9 +5873,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for Amrutha-Beedikar: `/check` \u2192 `/fix` blocker clearing before review. / Recommended: Automate with Devin \u2014 bounded, rule-driven, verifiable",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:15",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:30",
       "title": "`/check` \u2192 `/fix` blocker clearing before review"
     },
     {
@@ -6120,9 +6120,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for Amrutha-Beedikar: Writing the standards/review log by hand. / Recommended: Automate through scripts/tooling \u2014 emit from the routine's own output",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:15",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:30",
       "title": "Writing the standards/review log by hand"
     },
     {
@@ -6389,9 +6389,9 @@
         "ISSUE_000026_T01"
       ],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Syncing `origin/dev` into the feature branch"
     },
     {
@@ -6654,9 +6654,9 @@
         "ISSUE_000027_T01"
       ],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Use Devin to generate regression tests for the email-header / platform-field contract so the case_number behavior cannot silently regress (this surface changed "
     },
     {
@@ -6884,9 +6884,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Delegation opportunity recorded for Amrutha-Beedikar: Use Devin for the pre-merge `/check`+`/fix` blocker pass on her branches, so her time goes to the domain decision rather than the standards sweep. / Recommended: DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Use Devin for the pre-merge `/check`+`/fix` blocker pass on her branches, so her time goes to the domain decision rather than the standards sweep."
     },
     {
@@ -7151,9 +7151,9 @@
         "ISSUE_000029_T01"
       ],
       "test_results": [],
-      "time_ai": "01:15",
+      "time_ai": "00:30",
       "time_human": "05:00",
-      "time_human_ai": "04:15",
+      "time_human_ai": "03:00",
       "title": "Late-night test/doc top-ups on a long-lived shared branch"
     },
     {
@@ -7386,9 +7386,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for anirudh-medicodio: Merging without a recorded human review. / Recommended: Improve documentation/process \u2014 require one written verdict on any PR merged into a Devin branch",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Merging without a recorded human review"
     },
     {
@@ -7589,9 +7589,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Delegation opportunity recorded for anirudh-medicodio: Use Devin to build the portal access-control test matrix (roles \u00d7 account statuses) \u2014 bounded, high-value on a security surface, and it removes the late-night manual test top-ups. / Recommended: PROPOSE: no approved playbook matched; request human direction.",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "02:30",
+      "time_ai": "00:45",
       "time_human": "10:00",
-      "time_human_ai": "08:30",
+      "time_human_ai": "05:45",
       "title": "Use Devin to build the portal access-control test matrix (roles \u00d7 account statuses) \u2014 bounded, high-value on a security surface, and it removes the late-night m"
     },
     {
@@ -7850,9 +7850,9 @@
         "ISSUE_000032_T01"
       ],
       "test_results": [],
-      "time_ai": "01:15",
+      "time_ai": "00:30",
       "time_human": "05:00",
-      "time_human_ai": "04:15",
+      "time_human_ai": "03:00",
       "title": "Use Devin to split #1183-class branches (150 files, open 5 days) into stacked reviewable PRs."
     },
     {
@@ -8093,9 +8093,9 @@
       "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-08-23 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); reported paths no longer present: devin/1787351619-notes-visibility-model / Reported: Recurring pattern flagged for anirudh-medicodio: Merges without an independent human review record. / Recommended: Write a short verdict (what you checked, what you accepted) on any PR you merge \u2014 especially one feeding a Devin branch",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:30",
+      "time_ai": "00:15",
       "time_human": "02:00",
-      "time_human_ai": "01:45",
+      "time_human_ai": "01:15",
       "title": "Merges without an independent human review record"
     },
     {
@@ -8364,9 +8364,9 @@
         "ISSUE_000034_T01"
       ],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Manually re-running batch/dev runs to verify a guard"
     },
     {
@@ -8599,9 +8599,9 @@
       "task_description": "Work carried out: medicodio-nextgen-integration: 5 commit(s) by sameer-s-mansur landed changing 8 file(s) (347 insertion(s), 29 deletion(s)) against the previous version: \"Record the real dev run: lifecycle verified live; api.dev binding deploy missing\"; \"Test the step-11 guard where it actually runs\"; \"Close out batch runs: both app-team pieces delivered and verified\" / Code now: medicodio-nextgen-integration reviewed read-only (713 source file(s)); no file paths were reported / Reported: Repetitive work reported for sameer-s-mansur: Self-merging integration PRs within minutes. / Recommended: Improve documentation/process \u2014 require one reviewer, or at minimum wait for the Devin Review pass",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Self-merging integration PRs within minutes"
     },
     {
@@ -8832,9 +8832,9 @@
       "task_description": "Work carried out: medicodio-nextgen-integration: 1 commit(s) by sameer-s-mansur landed changing 3 file(s) (136 insertion(s), 16 deletion(s)) against the previous version: \"Close out batch runs: both app-team pieces delivered and verified\" / Code now: medicodio-nextgen-integration reviewed read-only (713 source file(s)); no file paths were reported / Reported: Repetitive work reported for sameer-s-mansur: Non-conventional commit subjects. / Recommended: Improve documentation/process \u2014 enforce the convention with a commit-message hook",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Non-conventional commit subjects"
     },
     {
@@ -9097,9 +9097,9 @@
         "ISSUE_000037_T01"
       ],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Use Devin to build a repeatable integration verification harness for the lock-key / attach-form workflows, replacing the hand-run dev runs he re-does each time."
     },
     {
@@ -9363,9 +9363,9 @@
         "ISSUE_000038_T01"
       ],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:00",
-      "time_human_ai": "03:30",
+      "time_human_ai": "02:15",
       "title": "Use Devin to write regression tests for Elaris filename pairing (63 files landed with no human review and 3 open Devin Review findings)."
     },
     {
@@ -9603,9 +9603,9 @@
       "task_description": "Work carried out: medicodio-nextgen-integration: 5 commit(s) by sameer-s-mansur landed changing 8 file(s) (347 insertion(s), 29 deletion(s)) against the previous version: \"Record the real dev run: lifecycle verified live; api.dev binding deploy missing\"; \"Test the step-11 guard where it actually runs\"; \"Close out batch runs: both app-team pieces delivered and verified\" / Code now: medicodio-nextgen-integration reviewed read-only (713 source file(s)); no file paths were reported / Reported: Recurring pattern flagged for sameer-s-mansur: Integration changes landing with no independent review. / Recommended: Assign a standing reviewer for `medicodio-nextgen-integration`, or hold merges until t\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "00:45",
+      "time_ai": "00:15",
       "time_human": "03:00",
-      "time_human_ai": "02:30",
+      "time_human_ai": "01:45",
       "title": "Integration changes landing with no independent review"
     },
     {
@@ -9655,7 +9655,7 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065,
+          "source_file_count": 1147,
           "work_done": {
             "author": "hitesh",
             "commit_count": 5,
@@ -9865,9 +9865,9 @@
       "task_description": "Work carried out: medicodio-nextgen-app-nodejs: 5 commit(s) by hitesh landed changing 37 file(s) (272 insertion(s), 2905 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning; edits update the row in place\"; \"revert(ask-ai): remove guideline drafting, edit proposals and duplication\"; \"fix(pe-integration): serve the engine the CURRENT version of a guideline\"; medicodio-nextgen-app-react: 5 commit(s) by hitesh landed changing 48 file(s) (714 insertion(s), 3202 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning from the UI\"; \"revert(ask-ai): remove guideline drafting and edit-proposal handoff\"; \"feat(kb): Version Notes on Specialty e\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:30",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Re-plumbing `version_number` through KB create/read paths, one surface at a time"
     },
     {
@@ -9916,7 +9916,7 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065,
+          "source_file_count": 1147,
           "work_done": {
             "author": "hitesh",
             "commit_count": 5,
@@ -10128,9 +10128,9 @@
       "task_description": "Work carried out: medicodio-nextgen-app-nodejs: 5 commit(s) by hitesh landed changing 37 file(s) (272 insertion(s), 2905 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning; edits update the row in place\"; \"revert(ask-ai): remove guideline drafting, edit proposals and duplication\"; \"fix(pe-integration): serve the engine the CURRENT version of a guideline\"; medicodio-nextgen-app-react: 5 commit(s) by hitesh landed changing 48 file(s) (714 insertion(s), 3202 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning from the UI\"; \"revert(ask-ai): remove guideline drafting and edit-proposal handoff\"; \"feat(kb): Version Notes on Specialty e\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:45",
+      "time_ai": "00:30",
       "time_human": "06:45",
-      "time_human_ai": "05:45",
+      "time_human_ai": "04:00",
       "title": "Mirroring every KB wizard change across backend and UI by hand"
     },
     {
@@ -10180,7 +10180,7 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065,
+          "source_file_count": 1147,
           "work_done": {
             "author": "hitesh",
             "commit_count": 5,
@@ -10392,9 +10392,9 @@
       "task_description": "Work carried out: medicodio-nextgen-app-nodejs: 5 commit(s) by hitesh landed changing 37 file(s) (272 insertion(s), 2905 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning; edits update the row in place\"; \"revert(ask-ai): remove guideline drafting, edit proposals and duplication\"; \"fix(pe-integration): serve the engine the CURRENT version of a guideline\"; medicodio-nextgen-app-react: 5 commit(s) by hitesh landed changing 48 file(s) (714 insertion(s), 3202 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning from the UI\"; \"revert(ask-ai): remove guideline drafting and edit-proposal handoff\"; \"feat(kb): Version Notes on Specialty e\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:30",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Carrying 130/226-file branches for days, then replacing the PR"
     },
     {
@@ -10441,7 +10441,7 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065,
+          "source_file_count": 1147,
           "work_done": {
             "author": "hitesh",
             "commit_count": 5,
@@ -10623,9 +10623,9 @@
       "task_description": "Work carried out: medicodio-nextgen-app-nodejs: 5 commit(s) by hitesh landed changing 37 file(s) (272 insertion(s), 2905 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning; edits update the row in place\"; \"revert(ask-ai): remove guideline drafting, edit proposals and duplication\"; \"fix(pe-integration): serve the engine the CURRENT version of a guideline\"; medicodio-nextgen-app-react: 5 commit(s) by hitesh landed changing 48 file(s) (714 insertion(s), 3202 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning from the UI\"; \"revert(ask-ai): remove guideline drafting and edit-proposal handoff\"; \"feat(kb): Version Notes on Specialty e\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:45",
+      "time_ai": "00:30",
       "time_human": "07:00",
-      "time_human_ai": "06:00",
+      "time_human_ai": "04:00",
       "title": "Use Devin to generate a KB guideline wizard regression suite (General / Specialty / Specialty-Payer / Client-Payer scopes) so a versioning reversal of this size"
     },
     {
@@ -10672,7 +10672,7 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065,
+          "source_file_count": 1147,
           "work_done": {
             "author": "hitesh",
             "commit_count": 5,
@@ -10853,9 +10853,9 @@
       "task_description": "Work carried out: medicodio-nextgen-app-nodejs: 5 commit(s) by hitesh landed changing 37 file(s) (272 insertion(s), 2905 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning; edits update the row in place\"; \"revert(ask-ai): remove guideline drafting, edit proposals and duplication\"; \"fix(pe-integration): serve the engine the CURRENT version of a guideline\"; medicodio-nextgen-app-react: 5 commit(s) by hitesh landed changing 48 file(s) (714 insertion(s), 3202 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning from the UI\"; \"revert(ask-ai): remove guideline drafting and edit-proposal handoff\"; \"feat(kb): Version Notes on Specialty e\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "02:00",
+      "time_ai": "00:45",
       "time_human": "08:00",
-      "time_human_ai": "06:45",
+      "time_human_ai": "04:45",
       "title": "Use Devin to carve the KB branches into landable PRs (schema/API, then UI, then wizard UX) instead of one 130-file backend branch plus one 226-file UI branch."
     },
     {
@@ -10905,7 +10905,7 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065,
+          "source_file_count": 1147,
           "work_done": {
             "author": "hitesh",
             "commit_count": 5,
@@ -11110,9 +11110,9 @@
       "task_description": "Work carried out: medicodio-nextgen-app-nodejs: 5 commit(s) by hitesh landed changing 37 file(s) (272 insertion(s), 2905 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning; edits update the row in place\"; \"revert(ask-ai): remove guideline drafting, edit proposals and duplication\"; \"fix(pe-integration): serve the engine the CURRENT version of a guideline\"; medicodio-nextgen-app-react: 5 commit(s) by hitesh landed changing 48 file(s) (714 insertion(s), 3202 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning from the UI\"; \"revert(ask-ai): remove guideline drafting and edit-proposal handoff\"; \"feat(kb): Version Notes on Specialty e\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:30",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Use Devin for the paired backend/UI propagation of each KB contract change."
     },
     {
@@ -11162,7 +11162,7 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065,
+          "source_file_count": 1147,
           "work_done": {
             "author": "hitesh",
             "commit_count": 5,
@@ -11377,9 +11377,9 @@
       "task_description": "Work carried out: medicodio-nextgen-app-nodejs: 5 commit(s) by hitesh landed changing 37 file(s) (272 insertion(s), 2905 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning; edits update the row in place\"; \"revert(ask-ai): remove guideline drafting, edit proposals and duplication\"; \"fix(pe-integration): serve the engine the CURRENT version of a guideline\"; medicodio-nextgen-app-react: 5 commit(s) by hitesh landed changing 48 file(s) (714 insertion(s), 3202 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning from the UI\"; \"revert(ask-ai): remove guideline drafting and edit-proposal handoff\"; \"feat(kb): Version Notes on Specialty e\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:00",
+      "time_ai": "00:15",
       "time_human": "04:30",
-      "time_human_ai": "03:45",
+      "time_human_ai": "02:30",
       "title": "Very large, long-lived unmerged branches"
     },
     {
@@ -11426,7 +11426,7 @@
           "missing_paths": [],
           "present_paths": [],
           "repository": "medicodio-nextgen-app-react",
-          "source_file_count": 1065,
+          "source_file_count": 1147,
           "work_done": {
             "author": "hitesh",
             "commit_count": 5,
@@ -11620,9 +11620,9 @@
       "task_description": "Work carried out: medicodio-nextgen-app-nodejs: 5 commit(s) by hitesh landed changing 37 file(s) (272 insertion(s), 2905 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning; edits update the row in place\"; \"revert(ask-ai): remove guideline drafting, edit proposals and duplication\"; \"fix(pe-integration): serve the engine the CURRENT version of a guideline\"; medicodio-nextgen-app-react: 5 commit(s) by hitesh landed changing 48 file(s) (714 insertion(s), 3202 deletion(s)) against the previous version: \"feat(kb)!: remove guideline versioning from the UI\"; \"revert(ask-ai): remove guideline drafting and edit-proposal handoff\"; \"feat(kb): Version Notes on Specialty e\u2026",
       "test_cases_generated": [],
       "test_results": [],
-      "time_ai": "01:15",
+      "time_ai": "00:30",
       "time_human": "05:00",
-      "time_human_ai": "04:15",
+      "time_human_ai": "03:00",
       "title": "Commit identity not linked to a GitHub account"
     }
   ],

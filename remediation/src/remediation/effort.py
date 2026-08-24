@@ -14,6 +14,10 @@ collaborating is never presented as slower than doing it yourself.
 Where autonomy policy forbids AI execution (tier C and D), the AI figure covers
 investigation and proposal only, and the person still makes the change — with
 the investigation already done for them.
+
+The AI figures are a small fraction of the human ones: writing and changing code
+is the part it does fastest, so a task a person spends hours on is minutes of AI
+work plus the review the person owns.
 """
 
 from __future__ import annotations
@@ -28,18 +32,24 @@ HUMAN_MINUTES_PER_POINT: dict[str, int] = {
     "NON_CODE_PROCESS": 30,
     "UNKNOWN": 45,
 }
-# Share of the human time an AI run needs for the same work.
+# Share of the human time an AI run needs for the same work. Writing the code is
+# where the AI is fastest, so these are small; process and judgement work, where
+# the words matter more than the typing, gains less.
 AI_SHARE: dict[str, float] = {
-    "CODE_CHANGE": 0.35,
-    "TOOLING_AUTOMATION": 0.30,
-    "NON_CODE_PROCESS": 0.50,
-    "UNKNOWN": 0.60,
+    "CODE_CHANGE": 0.12,
+    "TOOLING_AUTOMATION": 0.12,
+    "NON_CODE_PROCESS": 0.25,
+    "UNKNOWN": 0.20,
 }
+# Share of the human time the AI needs to investigate and write up a proposal on a
+# change policy forbids it from making itself.
+PROPOSAL_SHARE = 0.08
 # Fixed human review time added to any AI-produced result, in minutes.
 REVIEW_MINUTES = 30
 # Share of the solo-human time a person still spends while collaborating: directing
 # and reviewing the AI's work on a change policy will not let the AI land itself.
-COLLABORATION_HUMAN_SHARE = 0.6
+# Below 1.0 because the investigation and the draft arrive already done.
+COLLABORATION_HUMAN_SHARE = 0.5
 # Tiers where the AI may investigate and propose but not implement.
 PROPOSAL_ONLY_TIERS = frozenset({"C", "D"})
 
@@ -80,7 +90,7 @@ def _human_minutes(complexity: int, remediable: str) -> int:
 
 def _ai_minutes(human_minutes: int, remediable: str, proposal_only: bool) -> int:
     share = AI_SHARE.get(remediable, AI_SHARE["UNKNOWN"])
-    return _round_to_quarter(human_minutes * (0.25 if proposal_only else share))
+    return _round_to_quarter(human_minutes * (PROPOSAL_SHARE if proposal_only else share))
 
 
 def _joint_minutes(ai_minutes: int, human_minutes: int, proposal_only: bool) -> int:
