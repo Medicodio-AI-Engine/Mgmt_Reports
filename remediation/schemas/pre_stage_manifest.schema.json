@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medicodio.ai/schemas/remediation/pre_stage_manifest.json",
+  "title": "Pre-stage source manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "report_date",
+    "repository",
+    "directory",
+    "requested_report_date",
+    "resolved_report_date",
+    "date_resolution_method",
+    "source_files",
+    "files_discovered",
+    "completeness",
+    "required_sources_present",
+    "warnings",
+    "next_state"
+  ],
+  "properties": {
+    "run_id": { "type": "string", "pattern": "^RUN_\\d{4}$" },
+    "report_date": { "type": "string", "pattern": "^\\d{4}_\\d{2}_\\d{2}$" },
+    "repository": { "type": "string" },
+    "directory": { "type": "string" },
+    "branch": { "type": ["string", "null"] },
+    "requested_report_date": { "type": ["string", "null"] },
+    "resolved_report_date": { "type": "string", "pattern": "^\\d{4}_\\d{2}_\\d{2}$" },
+    "date_resolution_method": {
+      "type": "string",
+      "enum": [
+        "EXPLICIT_ARGUMENT",
+        "TRIGGERING_EVENT",
+        "SELECTED_REPORT_CONTENT",
+        "LATEST_COMPLETE_GROUP"
+      ]
+    },
+    "source_directory": { "type": "string" },
+    "files_discovered": { "type": "array", "items": { "type": "string" } },
+    "source_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "report_type",
+          "filename",
+          "repository_path",
+          "file_format",
+          "filename_date",
+          "content_review_date",
+          "normalized_date",
+          "date_verified"
+        ],
+        "properties": {
+          "source_id": { "type": "string", "pattern": "^SOURCE_\\d{3}$" },
+          "report_type": {
+            "type": "string",
+            "enum": ["DAILY_ENGINEERING_DETAIL", "EMPLOYEE_RATING_CARDS", "UNKNOWN_REPORT"]
+          },
+          "filename": { "type": "string" },
+          "repository_path": { "type": "string" },
+          "file_format": { "type": "string" },
+          "filename_date": { "type": ["string", "null"] },
+          "content_review_date": { "type": ["string", "null"] },
+          "normalized_date": { "type": ["string", "null"] },
+          "date_verified": { "type": "boolean" },
+          "classification_evidence": { "type": "array", "items": { "type": "string" } },
+          "excluded": { "type": "boolean" },
+          "exclusion_reason": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "completeness": {
+      "type": "string",
+      "enum": [
+        "COMPLETE",
+        "PARTIAL",
+        "AMBIGUOUS",
+        "DATE_MISMATCH",
+        "DUPLICATE_SOURCE_TYPE",
+        "NO_REPORTS_FOUND"
+      ]
+    },
+    "required_sources_present": { "type": "boolean" },
+    "missing_sources": { "type": "array", "items": { "type": "string" } },
+    "run_flags": { "type": "array", "items": { "type": "string" } },
+    "warnings": { "type": "array", "items": { "type": "string" } },
+    "human_action_required": { "type": ["string", "null"] },
+    "next_state": { "type": "string" },
+    "next_expected_input_file": { "type": ["string", "null"] }
+  }
+}

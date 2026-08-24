@@ -1,0 +1,42 @@
+playbook_id: GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL
+name: Process or tooling improvement proposal (no code remediation)
+scope: GENERAL
+version: 1
+owner: Unassigned (general fallback)
+applies_to_categories:
+  - PROCESS_PRACTICE
+  - AUTOMATION_OPPORTUNITY
+  - CI_FAILURE
+  - UNKNOWN
+match_keywords:
+  - hand-written
+  - by hand
+  - manual
+  - self-merge
+  - template
+  - review log
+  - automate
+  - ci
+required_skills:
+  - analysis.write_proposal
+default_autonomy_tier: C
+max_complexity: 10
+allowed_security_scopes:
+  - NONE
+  - UNKNOWN
+requires_reproduction: false
+requires_failing_test_first: false
+steps:
+  - Restate the reported pattern with its evidence and frequency.
+  - Identify whether the remedy is process, tooling, or code.
+  - Describe the smallest concrete improvement and who owns it.
+  - Produce the proposal for human decision; make no repository change.
+guardrails:
+  - Never fabricate a code defect from a process observation.
+  - Never treat an employee rating as evidence of a software defect.
+  - Never treat a CI outage as a code defect without independent verification.
+stop_conditions:
+  - The item requires an organizational policy decision.
+review_checklist:
+  - Is the remedy correctly classified as process, tooling, or code?
+  - Is every claim traceable to a report line?

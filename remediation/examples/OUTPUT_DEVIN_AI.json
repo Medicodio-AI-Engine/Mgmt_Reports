@@ -1,0 +1,672 @@
+{
+  "dry_run": true,
+  "issues": [
+    {
+      "approval_required": true,
+      "attempt_id": "ISSUE_000009_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_MECHANICAL_MIGRATION default tier B",
+        "security scope could not be determined from the evidence",
+        "required capabilities are unavailable: repo.multi_file_edit, git.stacked_branches, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "C",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "changed_files": [],
+      "commands_executed": [],
+      "commit_sha": null,
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category MECHANICAL_MIGRATION base 4",
+          "repository and paths both known (-1)"
+        ],
+        "rationale": "Complexity 3/10 from: category MECHANICAL_MIGRATION base 4; repository and paths both known (-1).",
+        "score": 3
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|auto automation branch dev feature hand job merge origin queue scripts sync through tooling",
+      "defect_type": null,
+      "description": "Repetitive work reported for SaijyotiMeti: Merging `origin/dev` into each feature branch by hand. Reported pattern: 8 merge commits on the day, across 3 branches. Report's recommended approach: Automate through scripts/tooling \u2014 auto-sync job or merge queue.",
+      "detected_at": "2026_08_23",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Merging `origin/dev` into each feature branch by hand",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_003:49"
+        },
+        {
+          "excerpt": "Automate through scripts/tooling \u2014 auto-sync job or merge queue",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_003:49"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [
+        "origin/dev"
+      ],
+      "fix": {
+        "branch": null,
+        "changed_files": [],
+        "commands_executed": [],
+        "commit_sha": null,
+        "dry_run": true,
+        "executed": false,
+        "external_systems_changed": [],
+        "full_suite_result": null,
+        "next_state": "DEV_REVIEW",
+        "post_fix_success": null,
+        "pr_number": null,
+        "pre_fix_failure": null,
+        "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
+        "suppression_reasons": [
+          "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
+          "globalcodio-monorepo is not in remediation_repository_allowlist"
+        ],
+        "test_cases_generated": [
+          "ISSUE_000009_T01"
+        ],
+        "test_results": [],
+        "would_have_done": [
+          "create working branch devin/issue_000009-attempt-01",
+          "plan step: Enumerate every affected file and confirm the change is deterministic per file.",
+          "plan step: Confirm the transformation is reversible and produces no behavior change.",
+          "plan step: Apply the transformation in reviewable slices, each independently buildable.",
+          "plan step: Run build, typecheck, and the affected test suites per slice.",
+          "plan step: Record the file list, commands, and results for each slice."
+        ]
+      },
+      "frequency": "8 merge commits on the day, across 3 branches",
+      "full_suite_result": null,
+      "guardrail_violations": [],
+      "human_review_result": "PENDING",
+      "implementation_plan": [
+        "Enumerate every affected file and confirm the change is deterministic per file.",
+        "Confirm the transformation is reversible and produces no behavior change.",
+        "Apply the transformation in reviewable slices, each independently buildable.",
+        "Run build, typecheck, and the affected test suites per slice.",
+        "Record the file list, commands, and results for each slice."
+      ],
+      "issue_id": "ISSUE_000009",
+      "merged_sources": [
+        "SOURCE_003:49"
+      ],
+      "missing_skills": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_REVIEW",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Is every slice reviewable on its own?",
+          "Is the diff free of behavior changes?",
+          "Is the rollback simply reverting the slice?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Enumerate every affected file and confirm the change is deterministic per file.",
+          "Confirm the transformation is reversible and produces no behavior change.",
+          "Apply the transformation in reviewable slices, each independently buildable.",
+          "Run build, typecheck, and the affected test suites per slice.",
+          "Record the file list, commands, and results for each slice."
+        ],
+        "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "The transformation requires human judgment on any file.",
+          "Any slice changes runtime behavior.",
+          "The migration touches database schema, data, or irreversible infrastructure."
+        ],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Existing suites must pass unchanged (no behavior change)",
+            "kind": "EXISTING_SUITE",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000009_T01",
+            "would_run": true
+          }
+        ],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 89,
+        "matched_on": [
+          "category MECHANICAL_MIGRATION",
+          "keywords: sync, merge queue"
+        ],
+        "playbook_id": "ORG_PB_MECHANICAL_MIGRATION",
+        "playbook_name": "Mechanical multi-file or cross-repository migration",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "post_fix_success": null,
+      "pr_number": null,
+      "pre_fix_failure": null,
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category MECHANICAL_MIGRATION (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category MECHANICAL_MIGRATION (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
+      "recommended_action": "Automate through scripts/tooling \u2014 auto-sync job or merge queue",
+      "rejection_history": [],
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0001",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Merging `origin/dev` into each feature branch by hand",
+          "finding_reference": "line 49",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_23",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/mgmt-activity-report-2026-08-23.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_003"
+        }
+      ],
+      "source_reference": "2026_08_23:SOURCE_003:49",
+      "stage": "05_DEV_REVIEW",
+      "state": "DEV_REVIEW",
+      "status": "OK",
+      "stop_conditions": [
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "test_cases_generated": [
+        "ISSUE_000009_T01"
+      ],
+      "test_results": [],
+      "title": "Merging `origin/dev` into each feature branch by hand"
+    },
+    {
+      "approval_required": true,
+      "attempt_id": "ISSUE_000011_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_REGRESSION_TEST_GENERATION default tier A",
+        "security scope could not be determined from the evidence",
+        "required capabilities are unavailable: test.write_regression_test, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "C",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MISSING_TEST",
+      "changed_files": [],
+      "commands_executed": [],
+      "commit_sha": null,
+      "complexity": {
+        "confidence": 0.7,
+        "factors": [
+          "category MISSING_TEST base 3",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
+      },
+      "component": null,
+      "confidence": 0.6,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MISSING_TEST|globalcodio-monorepo|case class defect discarded draft email generation header manager path review send test",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for SaijyotiMeti: Use Devin to generate a regression suite for the AI Case Manager send-path defect class (#1210's \"reviewed draft discarded on send\", #1213's email header, #1215's Preview button) \u2014 one bounded task, high value because three of the day's five Global Codio PRs touched the same email/send surface.",
+      "detected_at": "2026_08_23",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Use Devin to generate a regression suite for the AI Case Manager send-path defect class (#1210's \"reviewed draft discarded on send\", #1213's email header, #1215's Preview button) \u2014 one bounded task, high value because three of the day's five Global Codio PRs touched the same email/send surface.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_003:53"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "fix": {
+        "branch": null,
+        "changed_files": [],
+        "commands_executed": [],
+        "commit_sha": null,
+        "dry_run": true,
+        "executed": false,
+        "external_systems_changed": [],
+        "full_suite_result": null,
+        "next_state": "DEV_REVIEW",
+        "post_fix_success": null,
+        "pr_number": null,
+        "pre_fix_failure": null,
+        "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
+        "suppression_reasons": [
+          "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
+          "globalcodio-monorepo is not in remediation_repository_allowlist"
+        ],
+        "test_cases_generated": [
+          "ISSUE_000011_T01"
+        ],
+        "test_results": [],
+        "would_have_done": [
+          "create working branch devin/issue_000011-attempt-01",
+          "plan step: Identify the defect class and the exact behavior that must not regress.",
+          "plan step: Locate the existing test suite and the closest existing tests for that surface.",
+          "plan step: Write the smallest test that fails against the current behavior when the defect is present.",
+          "plan step: Run the new test and record the pre-fix result.",
+          "plan step: Run the targeted suite for the touched module.",
+          "plan step: Run the broader suite for the package.",
+          "plan step: Record every command and its output as evidence."
+        ]
+      },
+      "frequency": null,
+      "full_suite_result": null,
+      "guardrail_violations": [],
+      "human_review_result": "PENDING",
+      "implementation_plan": [
+        "Identify the defect class and the exact behavior that must not regress.",
+        "Locate the existing test suite and the closest existing tests for that surface.",
+        "Write the smallest test that fails against the current behavior when the defect is present.",
+        "Run the new test and record the pre-fix result.",
+        "Run the targeted suite for the touched module.",
+        "Run the broader suite for the package.",
+        "Record every command and its output as evidence."
+      ],
+      "issue_id": "ISSUE_000011",
+      "merged_sources": [
+        "SOURCE_003:53"
+      ],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_REVIEW",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Does the test fail for the right reason before the fix?",
+          "Is the assertion tied to observable behavior rather than implementation detail?",
+          "Is the test deterministic and free of network or clock dependence?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Identify the defect class and the exact behavior that must not regress.",
+          "Locate the existing test suite and the closest existing tests for that surface.",
+          "Write the smallest test that fails against the current behavior when the defect is present.",
+          "Run the new test and record the pre-fix result.",
+          "Run the targeted suite for the touched module.",
+          "Run the broader suite for the package.",
+          "Record every command and its output as evidence."
+        ],
+        "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Test framework cannot be identified.",
+          "CI or local test execution is unavailable in the target repository.",
+          "The behavior under test touches authentication, authorization, tenancy, PHI, secrets, or billing."
+        ],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Fail when Use Devin to generate a regression suite for the AI Case Manager send-path defect class (#1210's \"reviewed draft discarded on send\", #1213's email header, #1215 regresses",
+            "kind": "REGRESSION",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000011_T01",
+            "would_run": true
+          }
+        ],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 77,
+        "matched_on": [
+          "category MISSING_TEST",
+          "keywords: regression suite"
+        ],
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "post_fix_success": null,
+      "pr_number": null,
+      "pre_fix_failure": null,
+      "priority": {
+        "confidence": 0.6,
+        "factors": [
+          "category MISSING_TEST (+2)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category MISSING_TEST (+2).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
+      "recommended_action": null,
+      "rejection_history": [],
+      "related_change": "#1210, #1213, #1215",
+      "remediable": "CODE_CHANGE",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": "TEST_TO_BE_WRITTEN",
+        "notes": "No reproduction exists yet: the finding is absence of coverage. A generated test must first demonstrate the uncovered behavior."
+      },
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0001",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": true,
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Use Devin to generate a regression suite for the AI Case Manager send-path defect class (#1210's \"reviewed draft discarded on send\", #1213's email header, #1215's Preview button) \u2014 one bounded task, high value because three of the day's five Global Codio PRs touched the same email/send surface.",
+          "finding_reference": "line 53",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_23",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/mgmt-activity-report-2026-08-23.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_003"
+        }
+      ],
+      "source_reference": "2026_08_23:SOURCE_003:53",
+      "stage": "05_DEV_REVIEW",
+      "state": "DEV_REVIEW",
+      "status": "OK",
+      "stop_conditions": [
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "test_cases_generated": [
+        "ISSUE_000011_T01"
+      ],
+      "test_results": [],
+      "title": "Use Devin to generate a regression suite for the AI Case Manager send-path defect class (#1210's \"reviewed draft discarded on send\", #1213's email header, #1215"
+    },
+    {
+      "approval_required": true,
+      "attempt_id": "ISSUE_000001_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
+        "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
+        "rating-card corroboration only; not evidence of a software defect",
+        "complexity 8 exceeds the autonomous ceiling 4",
+        "target repository could not be determined from the report"
+      ],
+      "autonomy_tier": "C",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "PROCESS_PRACTICE",
+      "changed_files": [],
+      "commands_executed": [],
+      "commit_sha": null,
+      "complexity": {
+        "confidence": 0.4,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 8
+      },
+      "component": null,
+      "confidence": 0.3,
+      "corroborating_only": true,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|adoption automation low saijyotimeti signal",
+      "defect_type": null,
+      "description": "The employee rating card records a below-midpoint automation score for SaijyotiMeti. Corroborating signal only: it supports prioritization of automation findings but is not evidence of any software defect.",
+      "detected_at": "2026_08_23",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "[rating detail redacted; see the employee rating card at this locator in Mgmt_Reports]",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_002:29"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "fix": {
+        "branch": null,
+        "changed_files": [],
+        "commands_executed": [],
+        "commit_sha": null,
+        "dry_run": true,
+        "executed": false,
+        "external_systems_changed": [],
+        "full_suite_result": null,
+        "next_state": "DEV_REVIEW",
+        "post_fix_success": null,
+        "pr_number": null,
+        "pre_fix_failure": null,
+        "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
+        "suppression_reasons": [
+          "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
+          "target repository unresolved"
+        ],
+        "test_cases_generated": [],
+        "test_results": [],
+        "would_have_done": [
+          "create working branch devin/issue_000001-attempt-01",
+          "plan step: Restate the reported pattern with its evidence and frequency.",
+          "plan step: Identify whether the remedy is process, tooling, or code.",
+          "plan step: Describe the smallest concrete improvement and who owns it.",
+          "plan step: Produce the proposal for human decision; make no repository change."
+        ]
+      },
+      "frequency": null,
+      "full_suite_result": null,
+      "guardrail_violations": [],
+      "human_review_result": "PENDING",
+      "implementation_plan": [
+        "Restate the reported pattern with its evidence and frequency.",
+        "Identify whether the remedy is process, tooling, or code.",
+        "Describe the smallest concrete improvement and who owns it.",
+        "Produce the proposal for human decision; make no repository change."
+      ],
+      "issue_id": "ISSUE_000001",
+      "merged_sources": [
+        "SOURCE_002:29"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_REVIEW",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the remedy correctly classified as process, tooling, or code?",
+          "Is every claim traceable to a report line?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Restate the reported pattern with its evidence and frequency.",
+          "Identify whether the remedy is process, tooling, or code.",
+          "Describe the smallest concrete improvement and who owns it.",
+          "Produce the proposal for human decision; make no repository change."
+        ],
+        "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "INSUFFICIENT_EVIDENCE: rating data cannot justify a change",
+          "TARGET_UNRESOLVED: confirm the repository before any implementation",
+          "The item requires an organizational policy decision."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "post_fix_success": null,
+      "pr_number": null,
+      "pre_fix_failure": null,
+      "priority": {
+        "confidence": 0.3,
+        "factors": [
+          "non-code process item, no software risk (-1)",
+          "rating-card corroboration only, not defect evidence (-2)"
+        ],
+        "rationale": "Priority 1/10 from base 3 adjusted by: non-code process item, no software risk (-1); rating-card corroboration only, not defect evidence (-2).",
+        "score": 1
+      },
+      "product": "Global Codio",
+      "proposed_action": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
+      "recommended_action": null,
+      "rejection_history": [],
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0001",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "[rating detail redacted; see the employee rating card at this locator in Mgmt_Reports]",
+          "finding_reference": "line 29",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_23",
+          "report_type": "EMPLOYEE_RATING_CARDS",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/employee-rating-cards-2026-08-23.md",
+          "section": "card_automation",
+          "source_id": "SOURCE_002"
+        }
+      ],
+      "source_reference": "2026_08_23:SOURCE_002:29",
+      "stage": "05_DEV_REVIEW",
+      "state": "DEV_REVIEW",
+      "status": "OK",
+      "stop_conditions": [
+        "INSUFFICIENT_EVIDENCE: rating data cannot justify a change",
+        "TARGET_UNRESOLVED: confirm the repository before any implementation"
+      ],
+      "test_cases_generated": [],
+      "test_results": [],
+      "title": "Low automation-adoption signal for SaijyotiMeti"
+    }
+  ],
+  "next_expected_input_file": null,
+  "next_state": "DEV_REVIEW",
+  "report_date": "2026_08_23",
+  "run_flags": [],
+  "run_id": "RUN_0001",
+  "stage": "05_DEV_REVIEW",
+  "status": "OK",
+  "warnings": []
+}

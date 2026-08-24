@@ -1,0 +1,42 @@
+# Version 1 pilot configuration.
+#
+# The pilot is dry-run only. `remediation_repository_allowlist` is intentionally
+# empty: even with dry-run disabled, no engineering repository may be written.
+
+mgmt_reports_repository: Medicodio-AI-Engine/Mgmt_Reports
+mgmt_reports_directory: Ai_Engr_Rpt/Daily/medicodio/Detail
+mgmt_reports_branch: main
+
+# Artifacts are written into this repository so the DECISION blocks are committed
+# alongside the reports they came from.
+artifact_root_directory: Ai_Engr_Rpt/Remediation/medicodio
+
+playbook_directory: playbooks/org
+general_playbook_registry: playbooks/general
+org_skill_registry: skills/registry.yaml
+
+approval_mechanism: FILE_DECISION_BLOCK
+dry_run_mode: true
+
+# No repository may be modified during the pilot.
+remediation_repository_allowlist: []
+
+# Verification commands per repository. Left empty deliberately: an unverified
+# command is worse than no command, so a human must supply these before any
+# execution is ever permitted.
+commands: {}
+
+default_branches:
+  Medicodio-AI-Engine/Mgmt_Reports: main
+
+max_complexity_for_autonomy: 4
+min_playbook_confidence: 60
+redact_employee_ratings: true
+
+# Future stages remain disabled. Enabling any of them requires an explicit,
+# reviewed change plus human approval.
+future_stages_enabled:
+  06_QA: false
+  07_UAT: false
+  08_RELEASE: false
+  09_LEARNING: false

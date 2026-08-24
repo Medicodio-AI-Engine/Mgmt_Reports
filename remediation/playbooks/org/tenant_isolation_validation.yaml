@@ -1,0 +1,46 @@
+playbook_id: ORG_PB_TENANT_ISOLATION_VALIDATION
+name: Tenant isolation / RLS / IDOR validation (inspection and testing only)
+scope: ORG
+version: 1
+owner: Security and engineering leadership (Medicodio)
+applies_to_categories:
+  - SECURITY_TENANCY
+match_keywords:
+  - tenant
+  - tenancy
+  - rls
+  - row level security
+  - idor
+  - cross-tenant
+  - access control
+  - portal access
+required_skills:
+  - security.read_tenancy_model
+  - test.write_isolation_test
+  - qa.execute_cases
+default_autonomy_tier: C
+max_complexity: 10
+allowed_security_scopes:
+  - TENANT_ISOLATION
+  - AUTHORIZATION
+  - AUTHENTICATION
+requires_reproduction: true
+requires_failing_test_first: true
+steps:
+  - Read and document the current tenancy/authorization model from the code as it exists.
+  - Identify the boundary the report claims may be violated.
+  - Write read-only tests that assert cross-tenant access is denied.
+  - Execute the tests and record results.
+  - Produce a written finding with evidence and a proposed change for human decision.
+guardrails:
+  - Never modify tenant isolation, authorization, or authentication logic autonomously.
+  - Never relax an existing isolation assertion.
+  - Never use production or PHI data in a test.
+  - Escalate to a human owner for any semantic change.
+stop_conditions:
+  - Any remediation would alter isolation or authorization semantics.
+  - The finding cannot be verified without production access.
+review_checklist:
+  - Is the current model documented from code rather than assumed?
+  - Does the proposal leave the semantic decision to a human?
+  - Are all tests read-only and free of production data?

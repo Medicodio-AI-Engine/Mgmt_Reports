@@ -1,0 +1,54 @@
+playbook_id: ORG_PB_MECHANICAL_MIGRATION
+name: Mechanical multi-file or cross-repository migration
+scope: ORG
+version: 1
+owner: Engineering leadership (Medicodio)
+applies_to_categories:
+  - MECHANICAL_MIGRATION
+  - CODE_QUALITY
+match_keywords:
+  - split
+  - stack
+  - stacked
+  - carve
+  - sync
+  - promotion
+  - merge queue
+  - fast-forward
+  - rename
+  - mechanical
+exclude_keywords:
+  - migration of data
+  - database migration
+  - irreversible
+required_skills:
+  - repo.multi_file_edit
+  - git.stacked_branches
+  - ci.run_targeted_tests
+default_autonomy_tier: B
+max_complexity: 5
+allowed_security_scopes:
+  - NONE
+  # UNKNOWN is allowed so the work can be planned, but the autonomy classifier
+  # caps an unverified scope at Tier B, so a human still confirms it.
+  - UNKNOWN
+requires_reproduction: false
+requires_failing_test_first: false
+steps:
+  - Enumerate every affected file and confirm the change is deterministic per file.
+  - Confirm the transformation is reversible and produces no behavior change.
+  - Apply the transformation in reviewable slices, each independently buildable.
+  - Run build, typecheck, and the affected test suites per slice.
+  - Record the file list, commands, and results for each slice.
+guardrails:
+  - Never combine a mechanical migration with a behavior change in the same slice.
+  - Never perform schema or data migrations under this playbook.
+  - Abort if any slice cannot be built or tested independently.
+stop_conditions:
+  - The transformation requires human judgment on any file.
+  - Any slice changes runtime behavior.
+  - The migration touches database schema, data, or irreversible infrastructure.
+review_checklist:
+  - Is every slice reviewable on its own?
+  - Is the diff free of behavior changes?
+  - Is the rollback simply reverting the slice?
