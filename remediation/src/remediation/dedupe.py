@@ -133,37 +133,48 @@ def _compatible_repository(left: RawFinding, right: RawFinding) -> bool:
     return left.repository == right.repository
 
 
+def _mergeable(existing: Cluster, finding: RawFinding) -> bool:
+    """Only findings of the same kind, target, and evidence class may merge."""
+    if existing.primary.category != finding.category:
+        return False
+    if not _compatible_repository(existing.primary, finding):
+        return False
+    return existing.primary.corroborating_only == finding.corroborating_only
+
+
+def _finding_tokens(finding: RawFinding) -> set[str]:
+    return tokens(f"{finding.title} {finding.recommended_action or ''}")
+
+
+def _merge_reason(existing: Cluster, finding: RawFinding) -> str | None:
+    """Why this finding belongs to this cluster, or ``None`` if it does not."""
+    locator = f"{finding.source_id}:{finding.source_line}"
+    if existing.signature == signature(finding):
+        return f"identical signature with {locator}"
+    score = similarity(_finding_tokens(existing.primary), _finding_tokens(finding))
+    if score >= SIMILARITY_THRESHOLD:
+        return f"token similarity {score:.2f} with {locator}"
+    return None
+
+
+def _place(clusters: list[Cluster], finding: RawFinding) -> bool:
+    """Add the finding to the first cluster that accepts it."""
+    for existing in clusters:
+        if not _mergeable(existing, finding):
+            continue
+        reason = _merge_reason(existing, finding)
+        if reason is None:
+            continue
+        existing.members.append(finding)
+        existing.merge_reasons.append(reason)
+        return True
+    return False
+
+
 def cluster(findings: list[RawFinding]) -> list[Cluster]:
     """Group findings into clusters, most-supported first, order-stable."""
     clusters: list[Cluster] = []
     for finding in findings:
-        finding_tokens = tokens(f"{finding.title} {finding.recommended_action or ''}")
-        placed = False
-        for existing in clusters:
-            if existing.primary.category != finding.category:
-                continue
-            if not _compatible_repository(existing.primary, finding):
-                continue
-            if existing.primary.corroborating_only != finding.corroborating_only:
-                continue
-            if existing.signature == signature(finding):
-                existing.members.append(finding)
-                existing.merge_reasons.append(
-                    f"identical signature with {finding.source_id}:{finding.source_line}"
-                )
-                placed = True
-                break
-            score = similarity(
-                tokens(f"{existing.primary.title} {existing.primary.recommended_action or ''}"),
-                finding_tokens,
-            )
-            if score >= SIMILARITY_THRESHOLD:
-                existing.members.append(finding)
-                existing.merge_reasons.append(
-                    f"token similarity {score:.2f} with {finding.source_id}:{finding.source_line}"
-                )
-                placed = True
-                break
-        if not placed:
+        if not _place(clusters, finding):
             clusters.append(Cluster(primary=finding))
     return clusters

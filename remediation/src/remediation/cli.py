@@ -35,31 +35,40 @@ def _repository_root(value: str | None) -> Path:
     return Path(__file__).resolve().parents[3]
 
 
-def _load(args: argparse.Namespace) -> config_module.Config:
+def _overrides(args: argparse.Namespace) -> dict[str, object]:
+    """Only explicitly typed flags may override the committed configuration."""
     overrides: dict[str, object] = {}
-    if getattr(args, "allow_writes", False):
+    if args.allow_writes:
         overrides["dry_run_mode"] = False
-    if getattr(args, "artifact_root", None):
+    if args.artifact_root:
         overrides["artifact_root_directory"] = args.artifact_root
-    return config_module.load(
-        Path(args.config).expanduser() if args.config else None, overrides=overrides
-    )
+    return overrides
+
+
+def _load(args: argparse.Namespace) -> config_module.Config:
+    path = Path(args.config).expanduser() if args.config else None
+    return config_module.load(path, overrides=_overrides(args))
+
+
+def _run_summary(result: pipeline.Result, config: config_module.Config) -> list[str]:
+    return [
+        f"run {result.run_context.run_id} report_date {result.run_context.report_date}",
+        f"completeness {result.run_context.completeness.value}",
+        f"issues {result.metrics['issues_total']}",
+        f"dry_run {config.dry_run_mode}",
+        f"artifacts {result.paths.root}",
+    ]
 
 
 def cmd_run(args: argparse.Namespace) -> int:
     config = _load(args)
-    root = _repository_root(args.repository_root)
     result = pipeline.run(
         config,
         report_date=args.report_date,
-        repository_root=root,
+        repository_root=_repository_root(args.repository_root),
         limit=args.limit,
     )
-    print(f"run {result.run_context.run_id} report_date {result.run_context.report_date}")
-    print(f"completeness {result.run_context.completeness.value}")
-    print(f"issues {result.metrics['issues_total']}")
-    print(f"dry_run {config.dry_run_mode}")
-    print(f"artifacts {result.paths.root}")
+    print("\n".join(_run_summary(result, config)))
     for warning in result.run_context.warnings:
         print(f"warning: {warning}", file=sys.stderr)
     return 0
@@ -102,41 +111,49 @@ def cmd_validate(args: argparse.Namespace) -> int:
     return 0
 
 
-def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="remediation", description=__doc__)
-    parser.add_argument("--config", help="path to config.yaml")
-    parser.add_argument("--artifact-root", help="override the artifact output directory")
-    subparsers = parser.add_subparsers(dest="command", required=True)
-
-    run_parser = subparsers.add_parser("run", help="execute the Version 1 flow for one report date")
-    run_parser.add_argument(
-        "--report-date", help="YYYY-MM-DD or YYYY_MM_DD; default: latest complete"
-    )
-    run_parser.add_argument("--repository-root", help="path to the Mgmt_Reports checkout")
-    run_parser.add_argument(
-        "--limit", type=int, default=10, help="candidates to select for attention"
-    )
-    run_parser.add_argument(
+def _add_run(subparsers: argparse._SubParsersAction) -> None:
+    parser = subparsers.add_parser("run", help="execute the Version 1 flow for one report date")
+    parser.add_argument("--report-date", help="YYYY-MM-DD or YYYY_MM_DD; default: latest complete")
+    parser.add_argument("--repository-root", help="path to the Mgmt_Reports checkout")
+    parser.add_argument("--limit", type=int, default=10, help="candidates to select for attention")
+    parser.add_argument(
         "--allow-writes",
         action="store_true",
         help="disable dry-run (still refuses unless a repository is allowlisted)",
     )
-    run_parser.set_defaults(func=cmd_run)
+    parser.set_defaults(func=cmd_run)
 
-    discover_parser = subparsers.add_parser("discover", help="print the source manifest only")
-    discover_parser.add_argument("--report-date")
-    discover_parser.add_argument("--repository-root")
-    discover_parser.set_defaults(func=cmd_discover)
 
-    decisions_parser = subparsers.add_parser(
+def _add_discover(subparsers: argparse._SubParsersAction) -> None:
+    parser = subparsers.add_parser("discover", help="print the source manifest only")
+    parser.add_argument("--report-date")
+    parser.add_argument("--repository-root")
+    parser.set_defaults(func=cmd_discover)
+
+
+def _add_decisions(subparsers: argparse._SubParsersAction) -> None:
+    parser = subparsers.add_parser(
         "decisions", help="print every DECISION block found in the artifacts"
     )
-    decisions_parser.set_defaults(func=cmd_decisions)
+    parser.set_defaults(func=cmd_decisions)
 
-    validate_parser = subparsers.add_parser(
+
+def _add_validate(subparsers: argparse._SubParsersAction) -> None:
+    parser = subparsers.add_parser(
         "validate", help="load configuration, playbooks, skills, and schemas"
     )
-    validate_parser.set_defaults(func=cmd_validate)
+    parser.set_defaults(func=cmd_validate)
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(prog="remediation", description=__doc__)
+    parser.add_argument("--config", help="path to config.yaml")
+    parser.add_argument("--artifact-root", help="override the artifact output directory")
+    # Declared once here so every subcommand can read it without attribute probing.
+    parser.set_defaults(allow_writes=False)
+    subparsers = parser.add_subparsers(dest="command", required=True)
+    for add in (_add_run, _add_discover, _add_decisions, _add_validate):
+        add(subparsers)
     return parser
 
 

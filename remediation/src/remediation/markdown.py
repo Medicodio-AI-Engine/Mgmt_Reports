@@ -77,50 +77,89 @@ def _split_row(line: str) -> list[str]:
     return [cell.strip() for cell in stripped.split("|")]
 
 
+def _starts_table(lines: list[tuple[int, str]], index: int) -> bool:
+    """A header row followed by a divider row opens a table."""
+    _, line = lines[index]
+    _, following = lines[index + 1]
+    return "|" in line and bool(TABLE_DIVIDER.match(following.strip()))
+
+
+def _row(number: int, line: str, headers: list[str]) -> Row | None:
+    """One body row, padded to the header width, or ``None`` if it is not a row."""
+    cells = _split_row(line)
+    if len(cells) < 2:
+        return None
+    padded = cells + [""] * (len(headers) - len(cells))
+    return Row(line=number, cells=dict(zip(headers, padded, strict=False)))
+
+
+def _read_rows(
+    lines: list[tuple[int, str]], start: int, headers: list[str]
+) -> tuple[list[Row], int]:
+    """Body rows from ``start``, and the index of the first line after the table."""
+    rows: list[Row] = []
+    cursor = start
+    while cursor < len(lines) and "|" in lines[cursor][1]:
+        row = _row(lines[cursor][0], lines[cursor][1], headers)
+        if row is None:
+            break
+        rows.append(row)
+        cursor += 1
+    return rows, cursor
+
+
+def _read_table(lines: list[tuple[int, str]], index: int) -> tuple[Table, int]:
+    number, line = lines[index]
+    headers = _split_row(line)
+    rows, cursor = _read_rows(lines, index + 2, headers)
+    return Table(line=number, headers=headers, rows=rows), cursor
+
+
 def parse_tables(lines: list[tuple[int, str]]) -> list[Table]:
+    """Every pipe table in the given numbered lines."""
     tables: list[Table] = []
     index = 0
     while index < len(lines) - 1:
-        number, line = lines[index]
-        _, following = lines[index + 1]
-        if "|" in line and TABLE_DIVIDER.match(following.strip()):
-            headers = _split_row(line)
-            rows: list[Row] = []
-            cursor = index + 2
-            while cursor < len(lines) and "|" in lines[cursor][1]:
-                row_number, row_line = lines[cursor]
-                cells = _split_row(row_line)
-                if len(cells) < 2:
-                    break
-                padded = cells + [""] * (len(headers) - len(cells))
-                rows.append(Row(line=row_number, cells=dict(zip(headers, padded, strict=False))))
-                cursor += 1
-            tables.append(Table(line=number, headers=headers, rows=rows))
-            index = cursor
+        if not _starts_table(lines, index):
+            index += 1
             continue
-        index += 1
+        table, index = _read_table(lines, index)
+        tables.append(table)
     return tables
+
+
+def _heading_path(stack: list[str], level: int, title: str) -> list[str]:
+    """The heading stack after entering ``title``, padded for skipped levels."""
+    trimmed = stack[: level - 1]
+    trimmed += [""] * (level - 1 - len(trimmed))
+    return [*trimmed, title]
+
+
+def _heading(line: str) -> tuple[int, str] | None:
+    match = HEADING.match(line)
+    return (len(match.group(1)), match.group(2).strip()) if match else None
+
+
+def _open_section(
+    result: list[Section], stack: list[str], number: int, heading: tuple[int, str]
+) -> list[str]:
+    """Start a new section for one heading and return the updated heading stack."""
+    level, title = heading
+    updated = _heading_path(stack, level, title)
+    result.append(Section(level=level, title=title, line=number, path=tuple(updated)))
+    return updated
 
 
 def sections(text: str) -> list[Section]:
     """Split a document into heading-scoped sections, preserving heading paths."""
-    result: list[Section] = []
+    result = [Section(level=0, title="", line=0, path=())]
     stack: list[str] = []
-    current = Section(level=0, title="", line=0, path=())
-    result.append(current)
     for number, line in enumerate(text.splitlines(), start=1):
-        match = HEADING.match(line)
-        if not match:
-            current.lines.append((number, line))
-            continue
-        level = len(match.group(1))
-        title = match.group(2).strip()
-        stack = stack[: level - 1]
-        while len(stack) < level - 1:
-            stack.append("")
-        stack.append(title)
-        current = Section(level=level, title=title, line=number, path=tuple(stack))
-        result.append(current)
+        heading = _heading(line)
+        if heading is None:
+            result[-1].lines.append((number, line))
+        else:
+            stack = _open_section(result, stack, number, heading)
     return result
 
 

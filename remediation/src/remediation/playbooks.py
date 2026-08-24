@@ -144,32 +144,44 @@ class Registry:
         return next((p for p in self.all if p.playbook_id == playbook_id), None)
 
 
-def load_registry(config: Config, learned: dict[str, str] | None = None) -> Registry:
-    def load_dir(directory: Path) -> list[Playbook]:
-        if not directory.is_dir():
-            return []
-        return [
-            _load_playbook(path)
-            for path in sorted(directory.iterdir())
-            if path.suffix in {".yaml", ".yml"}
-        ]
+def _load_directory(directory: Path) -> list[Playbook]:
+    """Every playbook declared in one scope directory."""
+    if not directory.is_dir():
+        return []
+    paths = sorted(directory.iterdir())
+    return [_load_playbook(path) for path in paths if path.suffix in {".yaml", ".yml"}]
 
-    skills: dict[str, Skill] = {}
-    if config.org_skill_registry.exists():
-        raw = yaml.safe_load(config.org_skill_registry.read_text(encoding="utf-8")) or {}
-        for entry in raw.get("skills") or []:
-            skills[str(entry["id"])] = Skill(
-                skill_id=str(entry["id"]),
-                description=str(entry.get("description") or ""),
-                available=bool(entry.get("available")),
-                unavailable_reason=entry.get("unavailable_reason"),
-            )
 
-    org = load_dir(config.playbook_directory)
-    general = load_dir(config.general_playbook_registry)
+def _skill(entry: dict[str, Any]) -> Skill:
+    return Skill(
+        skill_id=str(entry["id"]),
+        description=str(entry.get("description") or ""),
+        available=bool(entry.get("available")),
+        unavailable_reason=entry.get("unavailable_reason"),
+    )
+
+
+def _load_skills(path: Path) -> dict[str, Skill]:
+    """The declared capability registry; absent means no capabilities are claimed."""
+    if not path.exists():
+        return {}
+    raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return {str(entry["id"]): _skill(entry) for entry in raw.get("skills") or []}
+
+
+def _reject_duplicate_ids(org: list[Playbook], general: list[Playbook]) -> None:
+    """One id must name one playbook, or precedence would be ambiguous."""
     duplicates = {p.playbook_id for p in org} & {p.playbook_id for p in general}
     if duplicates:
         raise PlaybookError(f"playbook id declared in both scopes: {', '.join(sorted(duplicates))}")
+
+
+def load_registry(config: Config, learned: dict[str, str] | None = None) -> Registry:
+    """Load org and general playbooks plus the declared capability registry."""
+    org = _load_directory(config.playbook_directory)
+    general = _load_directory(config.general_playbook_registry)
+    _reject_duplicate_ids(org, general)
+    skills = _load_skills(config.org_skill_registry)
     return Registry(org=org, general=general, skills=skills, learned=dict(learned or {}))
 
 
@@ -183,86 +195,110 @@ def _issue_text(issue: dict[str, Any]) -> str:
     return " ".join(parts).lower()
 
 
-def _score(playbook: Playbook, issue: dict[str, Any]) -> tuple[int, list[str], list[str]]:
-    """Return (confidence 0-100, matched_on, blocking_reasons)."""
-    matched: list[str] = []
-    blocking: list[str] = []
-    text = _issue_text(issue)
+def _keyword_hits(playbook: Playbook, text: str) -> list[str]:
+    return [keyword for keyword in playbook.match_keywords if keyword in text]
 
-    category = issue.get("category")
-    if category in playbook.applies_to_categories:
-        matched.append(f"category {category}")
-    hits = [keyword for keyword in playbook.match_keywords if keyword in text]
+
+def _matched_on(playbook: Playbook, issue: dict[str, Any], hits: list[str]) -> list[str]:
+    matched = []
+    if issue.get("category") in playbook.applies_to_categories:
+        matched.append(f"category {issue['category']}")
     if hits:
         matched.append("keywords: " + ", ".join(hits[:5]))
+    return matched
+
+
+def _excluded_reason(playbook: Playbook, text: str) -> str | None:
     excluded = [keyword for keyword in playbook.exclude_keywords if keyword in text]
-    if excluded:
-        blocking.append("excluded by keywords: " + ", ".join(excluded))
+    return "excluded by keywords: " + ", ".join(excluded) if excluded else None
 
+
+def _scope_reason(playbook: Playbook, issue: dict[str, Any]) -> str | None:
     scope = issue.get("security_scope") or "UNKNOWN"
-    if scope not in playbook.allowed_security_scopes:
-        blocking.append(f"security scope {scope} not allowed by playbook")
+    if scope in playbook.allowed_security_scopes:
+        return None
+    return f"security scope {scope} not allowed by playbook"
 
+
+def _complexity_reason(playbook: Playbook, issue: dict[str, Any]) -> str | None:
     complexity = (issue.get("complexity") or {}).get("score")
-    if isinstance(complexity, int) and complexity > playbook.max_complexity:
-        blocking.append(
-            f"complexity {complexity} exceeds playbook maximum {playbook.max_complexity}"
-        )
-
-    confidence = 0
-    if category in playbook.applies_to_categories:
-        # A declared category is on its own enough to clear min_playbook_confidence;
-        # keyword hits and org scope only strengthen an already-valid match.
-        confidence += 60
-    confidence += min(35, 12 * len(hits))
-    if playbook.scope == "ORG":
-        confidence += 5
-    return min(confidence, 100), matched, blocking
+    if not isinstance(complexity, int) or complexity <= playbook.max_complexity:
+        return None
+    return f"complexity {complexity} exceeds playbook maximum {playbook.max_complexity}"
 
 
-def match(issue: dict[str, Any], registry: Registry, config: Config) -> Match:
-    """Match one scored issue against the registry, honoring scope precedence."""
-    rejected: list[str] = []
-    best: tuple[int, Playbook, list[str]] | None = None
+def _blocking(playbook: Playbook, issue: dict[str, Any], text: str) -> list[str]:
+    """Every reason this playbook may not be used for this issue."""
+    reasons = (
+        _excluded_reason(playbook, text),
+        _scope_reason(playbook, issue),
+        _complexity_reason(playbook, issue),
+    )
+    return [reason for reason in reasons if reason]
 
-    for group, precedence in (
-        (registry.org, Precedence.ORG_PLAYBOOK),
-        (registry.general, Precedence.GENERAL_PLAYBOOK),
-    ):
-        for playbook in group:
-            confidence, matched, blocking = _score(playbook, issue)
-            if blocking:
-                rejected.append(f"{playbook.playbook_id}: " + "; ".join(blocking))
-                continue
-            if confidence < config.min_playbook_confidence:
-                if confidence > 0:
-                    rejected.append(
-                        f"{playbook.playbook_id}: confidence {confidence} below "
-                        f"{config.min_playbook_confidence}"
-                    )
-                continue
-            if best is None or confidence > best[0]:
-                best = (confidence, playbook, matched)
-        if best is not None:
-            # Organization scope resolved; never fall through to general guidance.
-            confidence, playbook, matched = best
-            learned = registry.learned.get(issue.get("dedupe_signature", ""))
-            resolved = (
-                Precedence.LEARNED_PATTERN
-                if learned and learned == playbook.playbook_id
-                else precedence
-            )
-            return _with_skills(
-                Match(
-                    playbook=playbook,
-                    precedence=resolved,
-                    confidence=confidence,
-                    matched_on=matched,
-                    rejected=rejected,
-                ),
-                registry,
-            )
 
+def _confidence(playbook: Playbook, issue: dict[str, Any], hits: list[str]) -> int:
+    """A declared category alone clears the minimum; keywords and org scope strengthen it."""
+    score = 60 if issue.get("category") in playbook.applies_to_categories else 0
+    score += min(35, 12 * len(hits))
+    score += 5 if playbook.scope == "ORG" else 0
+    return min(score, 100)
+
+
+def _score(playbook: Playbook, issue: dict[str, Any]) -> tuple[int, list[str], list[str]]:
+    """Return (confidence 0-100, matched_on, blocking_reasons)."""
+    text = _issue_text(issue)
+    hits = _keyword_hits(playbook, text)
+    return (
+        _confidence(playbook, issue, hits),
+        _matched_on(playbook, issue, hits),
+        _blocking(playbook, issue, text),
+    )
+
+
+Candidate = tuple[int, Playbook, list[str]]
+
+
+def _rejection(playbook: Playbook, confidence: int, blocking: list[str], floor: int) -> str | None:
+    """Why this playbook was not usable, when it is worth telling a reviewer."""
+    if blocking:
+        return f"{playbook.playbook_id}: " + "; ".join(blocking)
+    if confidence < floor and confidence > 0:
+        return f"{playbook.playbook_id}: confidence {confidence} below {floor}"
+    return None
+
+
+def _candidate(
+    playbook: Playbook, issue: dict[str, Any], floor: int, rejected: list[str]
+) -> Candidate | None:
+    """One playbook's usable candidacy; its rejection reason is recorded either way."""
+    confidence, matched, blocking = _score(playbook, issue)
+    reason = _rejection(playbook, confidence, blocking, floor)
+    if reason:
+        rejected.append(reason)
+    if blocking or confidence < floor:
+        return None
+    return (confidence, playbook, matched)
+
+
+def _best_in_group(
+    group: list[Playbook], issue: dict[str, Any], floor: int, rejected: list[str]
+) -> Candidate | None:
+    """Highest-confidence usable playbook in one scope; records why others failed."""
+    scored = [_candidate(playbook, issue, floor, rejected) for playbook in group]
+    usable = [candidate for candidate in scored if candidate is not None]
+    return max(usable, key=lambda candidate: candidate[0]) if usable else None
+
+
+def _precedence_for(
+    playbook: Playbook, issue: dict[str, Any], registry: Registry, scope: Precedence
+) -> Precedence:
+    """A learned pattern is credited as such when it selected this playbook."""
+    learned = registry.learned.get(issue.get("dedupe_signature", ""))
+    return Precedence.LEARNED_PATTERN if learned == playbook.playbook_id else scope
+
+
+def _no_match(rejected: list[str]) -> Match:
     return Match(
         playbook=None,
         precedence=Precedence.NO_MATCH,
@@ -273,6 +309,36 @@ def match(issue: dict[str, Any], registry: Registry, config: Config) -> Match:
         skills_available=[],
         missing_skills=[],
     )
+
+
+def _matched(candidate: Candidate, precedence: Precedence, rejected: list[str]) -> Match:
+    confidence, playbook, matched_on = candidate
+    return Match(
+        playbook=playbook,
+        precedence=precedence,
+        confidence=confidence,
+        matched_on=matched_on,
+        rejected=rejected,
+    )
+
+
+def match(issue: dict[str, Any], registry: Registry, config: Config) -> Match:
+    """Match one scored issue against the registry, honoring scope precedence.
+
+    Organization scope is resolved first and never falls through to general guidance.
+    """
+    rejected: list[str] = []
+    groups = (
+        (registry.org, Precedence.ORG_PLAYBOOK),
+        (registry.general, Precedence.GENERAL_PLAYBOOK),
+    )
+    for group, scope in groups:
+        best = _best_in_group(group, issue, config.min_playbook_confidence, rejected)
+        if best is None:
+            continue
+        precedence = _precedence_for(best[1], issue, registry, scope)
+        return _with_skills(_matched(best, precedence, rejected), registry)
+    return _no_match(rejected)
 
 
 def _with_skills(result: Match, registry: Registry) -> Match:

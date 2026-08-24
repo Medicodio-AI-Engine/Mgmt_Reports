@@ -8,7 +8,7 @@ Management reporting artifacts produced by the daily engineering review automati
 Ai_Engr_Rpt/Daily/medicodio/Detail/
   mgmt-activity-report-YYYY-MM-DD.md
   employee-rating-cards-YYYY-MM-DD.md
-Ai_Engr_Rpt/Remediation/medicodio/YYYY_MM_DD/RUN_NNNN/
+Ai_Engr_Rpt/Daily/medicodio/Remediation/YYYY_MM_DD/RUN_NNNN/
   per-stage remediation run artifacts
 remediation/
   the remediation platform that reads the reports above

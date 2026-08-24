@@ -11,52 +11,66 @@ from __future__ import annotations
 
 from typing import Any
 
+from . import scope as scope_module
 from .autonomy import Decision
 from .config import Config
 from .guardrails import Violation
 from .playbooks import Match
 
+TIER_ACTIONS: dict[str, str] = {
+    "D": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+    "C": "INVESTIGATE AND PROPOSE: no implementation until a human approves.",
+    "B": (
+        "IMPLEMENT UNDER APPROVAL: prepare the change and tests; a human must approve before merge."
+    ),
+    "A": "IMPLEMENT: mechanical, reversible change with test evidence.",
+}
+
 CANDIDATE_LIMIT = 10
 
 
+DRY_RUN_REASON = "dry-run: no repository is written"
+
+# category -> (test kind, intent template, reason it is not generated)
+TEST_INTENTS: dict[str, tuple[str, str, str]] = {
+    "MISSING_TEST": ("REGRESSION", "Fail when {surface} regresses", DRY_RUN_REASON),
+    "SECURITY_TENANCY": (
+        "ISOLATION",
+        "Assert cross-tenant access is denied (read-only)",
+        "human-owned surface: inspection and proposal only",
+    ),
+    "MECHANICAL_MIGRATION": (
+        "EXISTING_SUITE",
+        "Existing suites must pass unchanged (no behavior change)",
+        DRY_RUN_REASON,
+    ),
+    "CODE_QUALITY": (
+        "EXISTING_SUITE",
+        "Existing suites must pass unchanged (no behavior change)",
+        DRY_RUN_REASON,
+    ),
+}
+
+
+def _planned_test(issue: dict[str, Any], spec: tuple[str, str, str]) -> dict[str, Any]:
+    kind, intent, reason = spec
+    surface = issue.get("title") or "the reported behavior"
+    return {
+        "test_id": f"{issue['issue_id']}_T01",
+        "intent": intent.format(surface=surface),
+        "kind": kind,
+        "would_run": True,
+        "generated": False,
+        "reason_not_generated": reason,
+    }
+
+
 def _test_plan(issue: dict[str, Any], match: Match) -> list[dict[str, Any]]:
-    if match.playbook is None:
+    """The test that would prove the fix, if this category has a provable one."""
+    spec = TEST_INTENTS.get(issue["category"])
+    if match.playbook is None or spec is None:
         return []
-    if issue["category"] == "MISSING_TEST":
-        surface = issue.get("title") or "the reported behavior"
-        return [
-            {
-                "test_id": f"{issue['issue_id']}_T01",
-                "intent": f"Fail when {surface} regresses",
-                "kind": "REGRESSION",
-                "would_run": True,
-                "generated": False,
-                "reason_not_generated": "dry-run: no repository is written",
-            }
-        ]
-    if issue["category"] == "SECURITY_TENANCY":
-        return [
-            {
-                "test_id": f"{issue['issue_id']}_T01",
-                "intent": "Assert cross-tenant access is denied (read-only)",
-                "kind": "ISOLATION",
-                "would_run": True,
-                "generated": False,
-                "reason_not_generated": "human-owned surface: inspection and proposal only",
-            }
-        ]
-    if issue["category"] in {"MECHANICAL_MIGRATION", "CODE_QUALITY"}:
-        return [
-            {
-                "test_id": f"{issue['issue_id']}_T01",
-                "intent": "Existing suites must pass unchanged (no behavior change)",
-                "kind": "EXISTING_SUITE",
-                "would_run": True,
-                "generated": False,
-                "reason_not_generated": "dry-run: no repository is written",
-            }
-        ]
-    return []
+    return [_planned_test(issue, spec)]
 
 
 def _commands(issue: dict[str, Any], config: Config) -> list[dict[str, Any]]:
@@ -97,6 +111,20 @@ def _rollback(issue: dict[str, Any], decision: Decision) -> str:
     )
 
 
+def proposed_action(match: Match, decision: Decision, blocked: bool) -> str:
+    """The one-line instruction a reviewer reads first."""
+    if blocked:
+        return "STOP: guardrail violation; human action required before any work."
+    if match.playbook is None:
+        return "PROPOSE: no approved playbook matched; request human direction."
+    return TIER_ACTIONS.get(decision.tier, TIER_ACTIONS["A"])
+
+
+def _stop_conditions(match: Match, decision: Decision, violations: list[Violation]) -> list[str]:
+    playbook_stops = list(match.playbook.stop_conditions) if match.playbook else []
+    return decision.stop_conditions + [v.stop_reason for v in violations] + playbook_stops
+
+
 def plan(
     issue: dict[str, Any],
     match: Match,
@@ -106,46 +134,40 @@ def plan(
 ) -> dict[str, Any]:
     """Build the implementation plan for one issue."""
     blocked = bool(violations)
-    steps = list(match.playbook.steps) if match.playbook else []
-    if blocked:
-        proposed = "STOP: guardrail violation; human action required before any work."
-    elif match.playbook is None:
-        proposed = "PROPOSE: no approved playbook matched; request human direction."
-    elif decision.tier == "D":
-        proposed = "DOCUMENT ONLY: human-owned surface; produce findings and a proposal."
-    elif decision.tier == "C":
-        proposed = "INVESTIGATE AND PROPOSE: no implementation until a human approves."
-    elif decision.tier == "B":
-        proposed = (
-            "IMPLEMENT UNDER APPROVAL: prepare the change and tests; a human must approve before "
-            "merge."
-        )
-    else:
-        proposed = "IMPLEMENT: mechanical, reversible change with test evidence."
-
     return {
-        "proposed_action": proposed,
-        "implementation_plan": steps,
+        "proposed_action": proposed_action(match, decision, blocked),
+        "implementation_plan": list(match.playbook.steps) if match.playbook else [],
         "acceptance_criteria": list(match.playbook.review_checklist) if match.playbook else [],
         "test_plan": _test_plan(issue, match),
         "verification_commands": _commands(issue, config),
         "rollback_plan": _rollback(issue, decision),
-        "stop_conditions": decision.stop_conditions
-        + [violation.stop_reason for violation in violations]
-        + (list(match.playbook.stop_conditions) if match.playbook else []),
+        "stop_conditions": _stop_conditions(match, decision, violations),
         "execution_allowed": decision.execution_allowed and not blocked,
         "dry_run": config.dry_run_mode,
     }
 
 
+def _rank_key(issue: dict[str, Any]) -> tuple[int, int, str]:
+    return (
+        -(issue.get("priority", {}).get("score") or 0),
+        issue.get("complexity", {}).get("score") or 10,
+        issue["issue_id"],
+    )
+
+
+def in_pilot_scope(issue: dict[str, Any]) -> bool:
+    """Out-of-scope issues stay recorded as evidence but are never worked on."""
+    return issue.get("analysis_scope") != scope_module.OUT_OF_SCOPE
+
+
 def select_candidates(issues: list[dict[str, Any]], limit: int = CANDIDATE_LIMIT) -> list[str]:
-    """Order issues for attention: highest priority, then lowest complexity.
+    """Order in-scope issues for attention: highest priority, then lowest complexity.
 
     Selection is ordering only. It confers no permission: the autonomy tier and the
     guardrail engine decide what may be done with a selected issue.
     """
     ranked = sorted(
-        issues,
+        [issue for issue in issues if in_pilot_scope(issue)],
         key=lambda issue: (
             -(issue.get("priority", {}).get("score") or 0),
             issue.get("complexity", {}).get("score") or 10,

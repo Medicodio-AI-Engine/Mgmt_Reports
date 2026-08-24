@@ -8,10 +8,17 @@ much does this matter"; complexity answers "how hard and how risky is the change
 from __future__ import annotations
 
 import re
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from typing import Any
 
 _NUMBER = re.compile(r"\d+")
+
+# One score adjustment: how much, and the factor text that explains it.
+Adjustment = tuple[int, str]
+Rule = Callable[[dict[str, Any]], "Adjustment | None"]
+
+PRIORITY_BASE = 3
 
 SECURITY_WEIGHT = {
     "PHI": 4,
@@ -80,87 +87,136 @@ def _largest_number(text: str | None) -> int | None:
     return max(values) if values else None
 
 
-def priority(issue: dict[str, Any]) -> Score:
-    factors: list[str] = []
-    score = 3
+def _category_priority(issue: dict[str, Any]) -> Adjustment | None:
     category = issue["category"]
     bump = CATEGORY_PRIORITY.get(category, 0)
-    if bump:
-        score += bump
-        factors.append(f"category {category} (+{bump})")
+    return (bump, f"category {category} (+{bump})") if bump else None
 
-    scope = issue["security_scope"]
-    weight = SECURITY_WEIGHT.get(scope, 0)
-    if weight:
-        score += weight
-        factors.append(f"security scope {scope} (+{weight})")
 
+def _security_priority(issue: dict[str, Any]) -> Adjustment | None:
+    marker = issue["security_scope"]
+    weight = SECURITY_WEIGHT.get(marker, 0)
+    return (weight, f"security scope {marker} (+{weight})") if weight else None
+
+
+def _support_priority(issue: dict[str, Any]) -> Adjustment | None:
+    """Repeated independent reporting raises priority."""
     support = len(issue.get("merged_sources") or [])
     if support >= 3:
-        score += 2
-        factors.append(f"reported {support} times across sources (+2)")
-    elif support == 2:
-        score += 1
-        factors.append("reported twice across sources (+1)")
+        return (2, f"reported {support} times across sources (+2)")
+    return (1, "reported twice across sources (+1)") if support == 2 else None
 
-    if issue.get("recommended_action") and issue.get("frequency"):
-        occurrences = _largest_number(issue["frequency"])
-        if occurrences and occurrences >= 10:
-            score += 1
-            factors.append(f"high reported frequency ({occurrences}) (+1)")
 
-    if issue["remediable"] == "NON_CODE_PROCESS":
-        score -= 1
-        factors.append("non-code process item, no software risk (-1)")
+def _frequency_priority(issue: dict[str, Any]) -> Adjustment | None:
+    if not (issue.get("recommended_action") and issue.get("frequency")):
+        return None
+    occurrences = _largest_number(issue["frequency"])
+    if not occurrences or occurrences < 10:
+        return None
+    return (1, f"high reported frequency ({occurrences}) (+1)")
 
-    if issue.get("corroborating_only"):
-        score -= 2
-        factors.append("rating-card corroboration only, not defect evidence (-2)")
 
-    value = _clamp(score)
-    rationale = (
-        f"Priority {value}/10 from base 3 adjusted by: "
-        + ("; ".join(factors) if factors else "no adjusting factors")
-        + "."
-    )
+def _non_code_priority(issue: dict[str, Any]) -> Adjustment | None:
+    if issue["remediable"] != "NON_CODE_PROCESS":
+        return None
+    return (-1, "non-code process item, no software risk (-1)")
+
+
+def _corroboration_priority(issue: dict[str, Any]) -> Adjustment | None:
+    if not issue.get("corroborating_only"):
+        return None
+    return (-2, "rating-card corroboration only, not defect evidence (-2)")
+
+
+PRIORITY_RULES: tuple[Rule, ...] = (
+    _category_priority,
+    _security_priority,
+    _support_priority,
+    _frequency_priority,
+    _non_code_priority,
+    _corroboration_priority,
+)
+
+
+def _unresolved_repository_complexity(issue: dict[str, Any]) -> Adjustment | None:
+    if issue["repository"] is not None:
+        return None
+    return (2, "target repository not determined from the report (+2)")
+
+
+def _no_paths_complexity(issue: dict[str, Any]) -> Adjustment | None:
+    return None if issue["files"] else (1, "no file paths identified (+1)")
+
+
+def _security_complexity(issue: dict[str, Any]) -> Adjustment | None:
+    marker = issue["security_scope"]
+    if marker in {"NONE", "UNKNOWN"}:
+        return None
+    return (2, f"security-sensitive surface {marker} (+2)")
+
+
+def _multi_repository_complexity(issue: dict[str, Any]) -> Adjustment | None:
+    if len(issue.get("candidate_repositories") or []) <= 1:
+        return None
+    return (1, "spans multiple candidate repositories (+1)")
+
+
+def _environment_complexity(issue: dict[str, Any]) -> Adjustment | None:
+    if not issue.get("environment_signal"):
+        return None
+    return (1, "depends on infrastructure outside the codebase (+1)")
+
+
+def _known_target_complexity(issue: dict[str, Any]) -> Adjustment | None:
+    if not (issue["files"] and issue["repository"]):
+        return None
+    return (-1, "repository and paths both known (-1)")
+
+
+COMPLEXITY_RULES: tuple[Rule, ...] = (
+    _unresolved_repository_complexity,
+    _no_paths_complexity,
+    _security_complexity,
+    _multi_repository_complexity,
+    _environment_complexity,
+    _known_target_complexity,
+)
+
+
+def adjustments(issue: dict[str, Any], rules: tuple[Rule, ...]) -> list[Adjustment]:
+    """Every applicable adjustment, in rule order."""
+    applied = [rule(issue) for rule in rules]
+    return [item for item in applied if item is not None]
+
+
+def _total(base: int, applied: list[Adjustment]) -> int:
+    return _clamp(base + sum(delta for delta, _ in applied))
+
+
+def priority(issue: dict[str, Any]) -> Score:
+    """How much this issue matters, 1–10."""
+    applied = adjustments(issue, PRIORITY_RULES)
+    factors = [factor for _, factor in applied]
+    value = _total(PRIORITY_BASE, applied)
+    detail = "; ".join(factors) if factors else "no adjusting factors"
     return Score(
         value=value,
         factors=factors,
-        rationale=rationale,
+        rationale=f"Priority {value}/10 from base {PRIORITY_BASE} adjusted by: {detail}.",
         confidence=float(issue.get("confidence") or 0.5),
     )
 
 
 def complexity(issue: dict[str, Any]) -> Score:
-    factors: list[str] = []
-    score = CATEGORY_COMPLEXITY.get(issue["category"], 7)
-    factors.append(f"category {issue['category']} base {score}")
-
-    if issue["repository"] is None:
-        score += 2
-        factors.append("target repository not determined from the report (+2)")
-    if not issue["files"]:
-        score += 1
-        factors.append("no file paths identified (+1)")
-    if issue["security_scope"] not in {"NONE", "UNKNOWN"}:
-        score += 2
-        factors.append(f"security-sensitive surface {issue['security_scope']} (+2)")
-    if len(issue.get("candidate_repositories") or []) > 1:
-        score += 1
-        factors.append("spans multiple candidate repositories (+1)")
-    if issue.get("environment_signal"):
-        score += 1
-        factors.append("depends on infrastructure outside the codebase (+1)")
-    if issue["files"] and issue["repository"]:
-        score -= 1
-        factors.append("repository and paths both known (-1)")
-
-    value = _clamp(score)
-    rationale = f"Complexity {value}/10 from: " + "; ".join(factors) + "."
+    """How hard and how risky the change is, 1–10."""
+    base = CATEGORY_COMPLEXITY.get(issue["category"], 7)
+    applied = adjustments(issue, COMPLEXITY_RULES)
+    factors = [f"category {issue['category']} base {base}"] + [f for _, f in applied]
+    value = _total(base, applied)
     return Score(
         value=value,
         factors=factors,
-        rationale=rationale,
+        rationale=f"Complexity {value}/10 from: " + "; ".join(factors) + ".",
         confidence=round(min(0.8, float(issue.get("confidence") or 0.5) + 0.1), 2),
     )
 

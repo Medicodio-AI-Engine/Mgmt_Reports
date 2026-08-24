@@ -8,6 +8,7 @@ the issue is forced into. A single violation is enough to stop the issue.
 from __future__ import annotations
 
 import re
+from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any
 
@@ -97,6 +98,145 @@ def _text(issue: dict[str, Any]) -> str:
     ).lower()
 
 
+@dataclass(frozen=True)
+class Subject:
+    """One issue with the decision and configuration it is being checked against."""
+
+    issue: dict[str, Any]
+    match: Match
+    decision: Decision
+    config: Config
+
+    @property
+    def locator(self) -> str:
+        return self.issue.get("source_reference") or self.issue["issue_id"]
+
+    @property
+    def text(self) -> str:
+        return _text(self.issue)
+
+    @property
+    def implementable(self) -> bool:
+        """Tier C and D are already restricted to inspection and proposal."""
+        return self.decision.tier in {"A", "B"}
+
+
+def _violation(rule: str, reason: str, evidence: str, action: str) -> Violation:
+    return Violation(
+        rule=rule,
+        stop_reason=reason,
+        evidence=[evidence],
+        required_human_action=action,
+        forced_state=State.BLOCKED.value,
+    )
+
+
+def _forbidden_domains(subject: Subject) -> list[Violation]:
+    """Human-owned domains block only work that could otherwise be implemented."""
+    if not subject.implementable:
+        return []
+    found = [
+        (rule, re.search(pattern, subject.text), action)
+        for rule, pattern, action in FORBIDDEN_PATTERNS
+    ]
+    return [
+        _violation(
+            rule,
+            f"Issue text matches the human-owned domain {rule}; autonomous change is prohibited.",
+            f"{subject.locator}: matched {hit.group(0)!r}",
+            action,
+        )
+        for rule, hit, action in found
+        if hit
+    ]
+
+
+def _environment_as_defect(subject: Subject) -> Violation | None:
+    if not subject.issue.get("environment_signal"):
+        return None
+    if subject.issue.get("remediable") != "CODE_CHANGE":
+        return None
+    return _violation(
+        "ENVIRONMENT_AS_CODE_DEFECT",
+        "An environment/infrastructure failure was classified as a code change without "
+        "independent verification.",
+        f"{subject.locator}: environment_signal set with remediable=CODE_CHANGE",
+        "Verify the infrastructure failure before opening code work.",
+    )
+
+
+def _rating_as_evidence(subject: Subject) -> Violation | None:
+    if not subject.issue.get("corroborating_only"):
+        return None
+    if subject.issue.get("remediable") != "CODE_CHANGE":
+        return None
+    return _violation(
+        "RATING_AS_DEFECT_EVIDENCE",
+        "Employee rating data was used as evidence of a software defect.",
+        f"{subject.locator}: corroborating_only source proposed as a code change",
+        "Provide defect evidence independent of rating cards.",
+    )
+
+
+def _org_candidate_rejected(match: Match) -> bool:
+    return any(entry.split(":", 1)[0].startswith("ORG_PB") for entry in match.rejected)
+
+
+def _generic_over_org(subject: Subject) -> Violation | None:
+    playbook = subject.match.playbook
+    if playbook is None or playbook.scope != "GENERAL" or not subject.implementable:
+        return None
+    if not _org_candidate_rejected(subject.match):
+        return None
+    return _violation(
+        "GENERIC_OVER_ORG_PLAYBOOK",
+        "A general playbook was selected while an organization playbook was a candidate for "
+        "the same issue.",
+        f"{subject.locator}: rejected org candidates {subject.match.rejected}",
+        "Resolve which organization playbook governs this issue.",
+    )
+
+
+def _dry_run_execution(subject: Subject) -> Violation | None:
+    if not (subject.decision.execution_allowed and subject.config.dry_run_mode):
+        return None
+    return _violation(
+        "DRY_RUN_EXECUTION_ATTEMPT",
+        "Execution was marked allowed while dry-run mode is enabled.",
+        f"{subject.locator}: dry_run_mode=True with execution_allowed=True",
+        "Disable dry-run explicitly before any execution.",
+    )
+
+
+def _needs_failing_test(subject: Subject) -> bool:
+    playbook = subject.match.playbook
+    if playbook is None or not playbook.requires_failing_test_first:
+        return False
+    if subject.decision.tier != "A" or subject.issue.get("category") == "MISSING_TEST":
+        return False
+    return not (subject.issue.get("reproduction") or {}).get("available")
+
+
+def _promotion_without_tests(subject: Subject) -> Violation | None:
+    if not _needs_failing_test(subject):
+        return None
+    return _violation(
+        "PROMOTION_WITHOUT_TESTS",
+        "Playbook requires a failing test before the fix and no pre-fix failure exists.",
+        f"{subject.locator}: requires_failing_test_first with no reproduction",
+        "Produce the failing test evidence first.",
+    )
+
+
+CHECKS: tuple[Callable[[Subject], Violation | None], ...] = (
+    _environment_as_defect,
+    _rating_as_evidence,
+    _generic_over_org,
+    _dry_run_execution,
+    _promotion_without_tests,
+)
+
+
 def evaluate(
     issue: dict[str, Any],
     match: Match,
@@ -104,104 +244,6 @@ def evaluate(
     config: Config,
 ) -> list[Violation]:
     """Return every guardrail violation for one issue."""
-    violations: list[Violation] = []
-    text = _text(issue)
-    locator = issue.get("source_reference") or issue["issue_id"]
-
-    # A human-owned domain only needs blocking when the issue could otherwise be
-    # implemented. Tier C and D issues are already restricted to inspection and
-    # proposal, which the specification explicitly permits on these surfaces.
-    implementable = decision.tier in {"A", "B"}
-
-    for rule, pattern, action in FORBIDDEN_PATTERNS:
-        found = re.search(pattern, text)
-        if not found or not implementable:
-            continue
-        violations.append(
-            Violation(
-                rule=rule,
-                stop_reason=(
-                    f"Issue text matches the human-owned domain {rule}; autonomous change is "
-                    "prohibited."
-                ),
-                evidence=[f"{locator}: matched {found.group(0)!r}"],
-                required_human_action=action,
-                forced_state=State.BLOCKED.value,
-            )
-        )
-
-    if issue.get("environment_signal") and issue.get("remediable") == "CODE_CHANGE":
-        violations.append(
-            Violation(
-                rule="ENVIRONMENT_AS_CODE_DEFECT",
-                stop_reason=(
-                    "An environment/infrastructure failure was classified as a code change without "
-                    "independent verification."
-                ),
-                evidence=[f"{locator}: environment_signal set with remediable=CODE_CHANGE"],
-                required_human_action="Verify the infrastructure failure before opening code work.",
-                forced_state=State.BLOCKED.value,
-            )
-        )
-
-    if issue.get("corroborating_only") and issue.get("remediable") == "CODE_CHANGE":
-        violations.append(
-            Violation(
-                rule="RATING_AS_DEFECT_EVIDENCE",
-                stop_reason="Employee rating data was used as evidence of a software defect.",
-                evidence=[f"{locator}: corroborating_only source proposed as a code change"],
-                required_human_action="Provide defect evidence independent of rating cards.",
-                forced_state=State.BLOCKED.value,
-            )
-        )
-
-    if (
-        match.playbook is not None
-        and match.playbook.scope == "GENERAL"
-        and any(candidate.split(":", 1)[0].startswith("ORG_PB") for candidate in match.rejected)
-        and decision.tier in {"A", "B"}
-    ):
-        violations.append(
-            Violation(
-                rule="GENERIC_OVER_ORG_PLAYBOOK",
-                stop_reason=(
-                    "A general playbook was selected while an organization playbook was a "
-                    "candidate for the same issue."
-                ),
-                evidence=[f"{locator}: rejected org candidates {match.rejected}"],
-                required_human_action="Resolve which organization playbook governs this issue.",
-                forced_state=State.BLOCKED.value,
-            )
-        )
-
-    if decision.execution_allowed and config.dry_run_mode:
-        violations.append(
-            Violation(
-                rule="DRY_RUN_EXECUTION_ATTEMPT",
-                stop_reason="Execution was marked allowed while dry-run mode is enabled.",
-                evidence=[f"{locator}: dry_run_mode=True with execution_allowed=True"],
-                required_human_action="Disable dry-run explicitly before any execution.",
-                forced_state=State.BLOCKED.value,
-            )
-        )
-
-    if (
-        match.playbook is not None
-        and match.playbook.requires_failing_test_first
-        and decision.tier == "A"
-        and not (issue.get("reproduction") or {}).get("available")
-        and issue.get("category") != "MISSING_TEST"
-    ):
-        violations.append(
-            Violation(
-                rule="PROMOTION_WITHOUT_TESTS",
-                stop_reason=(
-                    "Playbook requires a failing test before the fix and no pre-fix failure exists."
-                ),
-                evidence=[f"{locator}: requires_failing_test_first with no reproduction"],
-                required_human_action="Produce the failing test evidence first.",
-                forced_state=State.BLOCKED.value,
-            )
-        )
-
-    return violations
+    subject = Subject(issue=issue, match=match, decision=decision, config=config)
+    found = [check(subject) for check in CHECKS]
+    return _forbidden_domains(subject) + [item for item in found if item is not None]

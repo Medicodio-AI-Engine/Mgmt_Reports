@@ -180,81 +180,101 @@ class RunContext:
         }
 
 
-def classify(path: Path, text: str) -> tuple[ReportType, list[str]]:
-    """Classify a report by filename semantics and header evidence."""
-    evidence: list[str] = []
+def _filename_guess(path: Path) -> ReportType | None:
+    """The report type the filename claims, if any."""
     stem = path.stem.lower().replace("-", "_")
-    filename_guess: ReportType | None = None
     for report_type, hints in _FILENAME_HINTS.items():
-        normalized_hints = {hint.replace("-", "_") for hint in hints}
-        if any(hint in stem for hint in normalized_hints):
-            filename_guess = report_type
-            evidence.append(f"filename matches {report_type.value} naming")
-            break
+        if any(hint.replace("-", "_") in stem for hint in hints):
+            return report_type
+    return None
 
+
+def _content_guess(text: str) -> tuple[ReportType | None, list[str]]:
+    """The report type the content evidence supports, and that evidence."""
     lowered = text.lower()
-    detail_hits = [i for i in _DETAIL_INDICATORS if i in lowered]
-    cards_hits = [i for i in _CARDS_INDICATORS if i in lowered]
-    content_guess: ReportType | None = None
-    if len(cards_hits) >= 2 and len(cards_hits) > len(detail_hits):
-        content_guess = ReportType.EMPLOYEE_RATING_CARDS
-        evidence.append("content indicators: " + ", ".join(sorted(cards_hits)[:4]))
-    elif len(detail_hits) >= 2:
-        content_guess = ReportType.DAILY_ENGINEERING_DETAIL
-        evidence.append("content indicators: " + ", ".join(sorted(detail_hits)[:4]))
+    detail = [i for i in _DETAIL_INDICATORS if i in lowered]
+    cards = [i for i in _CARDS_INDICATORS if i in lowered]
+    if len(cards) >= 2 and len(cards) > len(detail):
+        return ReportType.EMPLOYEE_RATING_CARDS, sorted(cards)[:4]
+    if len(detail) >= 2:
+        return ReportType.DAILY_ENGINEERING_DETAIL, sorted(detail)[:4]
+    return None, []
 
-    resolved = content_guess or filename_guess or ReportType.UNKNOWN_REPORT
-    if filename_guess and content_guess and filename_guess is not content_guess:
-        evidence.append(
-            f"filename suggested {filename_guess.value}, content evidence chose {content_guess.value}"
-        )
-    return resolved, evidence
+
+def _classification_evidence(
+    named: ReportType | None, guessed: ReportType | None, indicators: list[str]
+) -> list[str]:
+    evidence = [f"filename matches {named.value} naming"] if named else []
+    if indicators:
+        evidence.append("content indicators: " + ", ".join(indicators))
+    if named and guessed and named is not guessed:
+        evidence.append(f"filename suggested {named.value}, content evidence chose {guessed.value}")
+    return evidence
+
+
+def classify(path: Path, text: str) -> tuple[ReportType, list[str]]:
+    """Classify a report by filename semantics and header evidence.
+
+    Content evidence wins over the filename, because a report can be renamed but its
+    body is what the pipeline actually reads.
+    """
+    named = _filename_guess(path)
+    guessed, indicators = _content_guess(text)
+    resolved = guessed or named or ReportType.UNKNOWN_REPORT
+    return resolved, _classification_evidence(named, guessed, indicators)
+
+
+def _unreadable_source(path: Path, source_id: str) -> SourceFile:
+    """A file the pipeline cannot read is preserved, excluded, and explained."""
+    return SourceFile(
+        source_id=source_id,
+        path=path,
+        repository_path=path.name,
+        report_type=ReportType.UNKNOWN_REPORT,
+        filename_date=dates.find_date(path.name),
+        content_review_date=None,
+        normalized_date=dates.find_date(path.name),
+        date_verified=False,
+        classification_evidence=[f"unreadable format {path.suffix or 'none'}"],
+        excluded=True,
+        exclusion_reason="UNSUPPORTED_FORMAT",
+    )
+
+
+def _readable_source(path: Path, source_id: str) -> SourceFile:
+    """Classify one readable report and verify its date against its content."""
+    text = path.read_text(encoding="utf-8", errors="replace")
+    report_type, evidence = classify(path, text)
+    filename_date = dates.find_date(path.name)
+    content_date = dates.find_content_review_date(text)
+    mismatch = bool(filename_date and content_date and filename_date != content_date)
+    return SourceFile(
+        source_id=source_id,
+        path=path,
+        repository_path=path.name,
+        report_type=report_type,
+        filename_date=filename_date,
+        content_review_date=content_date,
+        normalized_date=filename_date or content_date,
+        date_verified=bool(filename_date and content_date and not mismatch),
+        classification_evidence=evidence,
+        excluded=mismatch,
+        exclusion_reason="DATE_MISMATCH" if mismatch else None,
+    )
+
+
+def _read_source(path: Path, source_id: str) -> SourceFile:
+    if path.suffix.lower() not in READABLE_SUFFIXES:
+        return _unreadable_source(path, source_id)
+    return _readable_source(path, source_id)
 
 
 def scan(directory: Path) -> list[SourceFile]:
     """Read every candidate artifact in ``directory`` and classify it."""
     if not directory.is_dir():
         raise DiscoveryError(f"report directory not found: {directory}")
-    found: list[SourceFile] = []
-    for index, path in enumerate(sorted(p for p in directory.iterdir() if p.is_file()), start=1):
-        if path.suffix.lower() not in READABLE_SUFFIXES:
-            found.append(
-                SourceFile(
-                    source_id=f"SOURCE_{index:03d}",
-                    path=path,
-                    repository_path=path.name,
-                    report_type=ReportType.UNKNOWN_REPORT,
-                    filename_date=dates.find_date(path.name),
-                    content_review_date=None,
-                    normalized_date=dates.find_date(path.name),
-                    date_verified=False,
-                    classification_evidence=[f"unreadable format {path.suffix or 'none'}"],
-                    excluded=True,
-                    exclusion_reason="UNSUPPORTED_FORMAT",
-                )
-            )
-            continue
-        text = path.read_text(encoding="utf-8", errors="replace")
-        report_type, evidence = classify(path, text)
-        filename_date = dates.find_date(path.name)
-        content_date = dates.find_content_review_date(text)
-        mismatch = bool(filename_date and content_date and filename_date != content_date)
-        found.append(
-            SourceFile(
-                source_id=f"SOURCE_{index:03d}",
-                path=path,
-                repository_path=path.name,
-                report_type=report_type,
-                filename_date=filename_date,
-                content_review_date=content_date,
-                normalized_date=filename_date or content_date,
-                date_verified=bool(filename_date and content_date and not mismatch),
-                classification_evidence=evidence,
-                excluded=mismatch,
-                exclusion_reason="DATE_MISMATCH" if mismatch else None,
-            )
-        )
-    return found
+    files = sorted(p for p in directory.iterdir() if p.is_file())
+    return [_read_source(path, f"SOURCE_{index:03d}") for index, path in enumerate(files, start=1)]
 
 
 def group_by_date(sources: list[SourceFile]) -> dict[str, list[SourceFile]]:
@@ -266,54 +286,90 @@ def group_by_date(sources: list[SourceFile]) -> dict[str, list[SourceFile]]:
     return grouped
 
 
-def _completeness(group: list[SourceFile]) -> tuple[Completeness, list[str], str | None]:
-    warnings: list[str] = []
-    human_action: str | None = None
-    usable = [s for s in group if not s.excluded]
-    if any(s.exclusion_reason == "DATE_MISMATCH" for s in group):
-        warnings.append(
-            "DATE_MISMATCH: filename date and stated review date disagree; artifact excluded from "
-            "automatic processing"
-        )
-    by_type: dict[ReportType, list[SourceFile]] = {}
-    for source in usable:
-        by_type.setdefault(source.report_type, []).append(source)
+REQUIRED_TYPES = frozenset({ReportType.DAILY_ENGINEERING_DETAIL, ReportType.EMPLOYEE_RATING_CARDS})
+DATE_MISMATCH_WARNING = (
+    "DATE_MISMATCH: filename date and stated review date disagree; artifact excluded from "
+    "automatic processing"
+)
 
-    duplicates = {
-        t: files
-        for t, files in by_type.items()
-        if len(files) > 1 and t is not ReportType.UNKNOWN_REPORT
+
+def _has_date_mismatch(group: list[SourceFile]) -> bool:
+    return any(s.exclusion_reason == "DATE_MISMATCH" for s in group)
+
+
+def _by_type(group: list[SourceFile]) -> dict[ReportType, list[SourceFile]]:
+    """Usable sources indexed by report type."""
+    indexed: dict[ReportType, list[SourceFile]] = {}
+    for source in group:
+        if not source.excluded:
+            indexed.setdefault(source.report_type, []).append(source)
+    return indexed
+
+
+def _duplicates(indexed: dict[ReportType, list[SourceFile]]) -> str | None:
+    """Two candidates for one report type: a human must pick the authoritative one."""
+    found = {
+        report_type: files
+        for report_type, files in indexed.items()
+        if len(files) > 1 and report_type is not ReportType.UNKNOWN_REPORT
     }
-    if duplicates:
-        listed = ", ".join(
-            f"{t.value}: {', '.join(sorted(f.path.name for f in files))}"
-            for t, files in duplicates.items()
-        )
-        warnings.append(f"DUPLICATE_SOURCE_TYPE: {listed}; all alternatives preserved in manifest")
-        human_action = "Select the authoritative revision for the duplicated report type"
-        return Completeness.DUPLICATE_SOURCE_TYPE, warnings, human_action
+    if not found:
+        return None
+    return ", ".join(
+        f"{report_type.value}: {', '.join(sorted(f.path.name for f in files))}"
+        for report_type, files in found.items()
+    )
 
-    required = {ReportType.DAILY_ENGINEERING_DETAIL, ReportType.EMPLOYEE_RATING_CARDS}
-    present = required & set(by_type)
-    if not present:
-        if any(s.exclusion_reason == "DATE_MISMATCH" for s in group):
-            return (
-                Completeness.DATE_MISMATCH,
-                warnings,
-                "Confirm the correct review date for the excluded artifacts",
-            )
-        return (
-            Completeness.NO_REPORTS_FOUND,
-            warnings,
-            "No recognizable management report for this date",
-        )
-    if present == required:
-        return Completeness.COMPLETE, warnings, human_action
-    missing = ", ".join(sorted(t.value for t in required - present))
+
+def _nothing_recognized(
+    group: list[SourceFile], warnings: list[str]
+) -> tuple[Completeness, list[str], str | None]:
+    if _has_date_mismatch(group):
+        action = "Confirm the correct review date for the excluded artifacts"
+        return Completeness.DATE_MISMATCH, warnings, action
+    return (
+        Completeness.NO_REPORTS_FOUND,
+        warnings,
+        "No recognizable management report for this date",
+    )
+
+
+def _duplicate_outcome(
+    duplicated: str, warnings: list[str]
+) -> tuple[Completeness, list[str], str | None]:
+    warnings.append(f"DUPLICATE_SOURCE_TYPE: {duplicated}; all alternatives preserved in manifest")
+    action = "Select the authoritative revision for the duplicated report type"
+    return Completeness.DUPLICATE_SOURCE_TYPE, warnings, action
+
+
+def _partial(
+    present: set[ReportType], warnings: list[str]
+) -> tuple[Completeness, list[str], str | None]:
+    missing = ", ".join(sorted(t.value for t in REQUIRED_TYPES - present))
     warnings.append(
         f"PARTIAL: missing {missing}; run continues in analysis-only mode with reduced confidence"
     )
-    return Completeness.PARTIAL, warnings, human_action
+    return Completeness.PARTIAL, warnings, None
+
+
+def _recognized(
+    group: list[SourceFile], present: set[ReportType], warnings: list[str]
+) -> tuple[Completeness, list[str], str | None]:
+    if not present:
+        return _nothing_recognized(group, warnings)
+    if present == REQUIRED_TYPES:
+        return Completeness.COMPLETE, warnings, None
+    return _partial(present, warnings)
+
+
+def _completeness(group: list[SourceFile]) -> tuple[Completeness, list[str], str | None]:
+    """How usable this date's source set is, and what a human must do about it."""
+    warnings = [DATE_MISMATCH_WARNING] if _has_date_mismatch(group) else []
+    indexed = _by_type(group)
+    duplicated = _duplicates(indexed)
+    if duplicated:
+        return _duplicate_outcome(duplicated, warnings)
+    return _recognized(group, REQUIRED_TYPES & set(indexed), warnings)
 
 
 def assemble(
@@ -329,28 +385,11 @@ def assemble(
     grouped = group_by_date(discovered)
     if not grouped:
         raise DiscoveryError(f"no dated report artifacts found in {directory}")
-
-    if requested_report_date:
-        report_date = dates.normalize(requested_report_date)
-        method = DateResolution.EXPLICIT_ARGUMENT
-    elif event_report_date:
-        report_date = dates.normalize(event_report_date)
-        method = DateResolution.TRIGGERING_EVENT
-    else:
-        report_date, method = _latest_complete(grouped)
-
-    group = grouped.get(report_date, [])
-    if not group:
-        raise DiscoveryError(
-            f"no report artifacts for {report_date}; available dates: {', '.join(sorted(grouped))}"
-        )
+    report_date, method = _resolve_date(grouped, requested_report_date, event_report_date)
+    group = _group_for(grouped, report_date)
     completeness, warnings, human_action = _completeness(group)
+    warnings += _fallback_warning(completeness, method)
     run_flags = [] if completeness is Completeness.COMPLETE else ["PARTIAL_SOURCE_DATA"]
-    if completeness is Completeness.PARTIAL and method is DateResolution.LATEST_COMPLETE_GROUP:
-        warnings.append(
-            "No date in the directory has the full required source set; processed the newest "
-            "available group instead"
-        )
     return RunContext(
         run_id=run_id,
         report_date=report_date,
@@ -366,6 +405,40 @@ def assemble(
         human_action_required=human_action,
         source_directory=config.mgmt_reports_directory,
     )
+
+
+def _resolve_date(
+    grouped: dict[str, list[SourceFile]],
+    requested_report_date: str | None,
+    event_report_date: str | None,
+) -> tuple[str, DateResolution]:
+    """Which report date this run is about, and how that was decided."""
+    if requested_report_date:
+        return dates.normalize(requested_report_date), DateResolution.EXPLICIT_ARGUMENT
+    if event_report_date:
+        return dates.normalize(event_report_date), DateResolution.TRIGGERING_EVENT
+    return _latest_complete(grouped)
+
+
+def _group_for(grouped: dict[str, list[SourceFile]], report_date: str) -> list[SourceFile]:
+    group = grouped.get(report_date, [])
+    if group:
+        return group
+    raise DiscoveryError(
+        f"no report artifacts for {report_date}; available dates: {', '.join(sorted(grouped))}"
+    )
+
+
+def _fallback_warning(completeness: Completeness, method: DateResolution) -> list[str]:
+    """Say so when no date was complete and the newest group was used instead."""
+    if completeness is not Completeness.PARTIAL:
+        return []
+    if method is not DateResolution.LATEST_COMPLETE_GROUP:
+        return []
+    return [
+        "No date in the directory has the full required source set; processed the newest "
+        "available group instead"
+    ]
 
 
 def _latest_complete(grouped: dict[str, list[SourceFile]]) -> tuple[str, DateResolution]:

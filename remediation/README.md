@@ -42,7 +42,7 @@ complete date needs both a detailed engineering report and an employee rating ca
 date with only one of them runs as `PARTIAL` and is flagged `PARTIAL_SOURCE_DATA` and
 analysis-only.
 
-Artifacts land in `Ai_Engr_Rpt/Remediation/medicodio/<YYYY_MM_DD>/<RUN_ID>/`, one directory per
+Artifacts land in `Ai_Engr_Rpt/Daily/medicodio/Remediation/<YYYY_MM_DD>/<RUN_ID>/`, one directory per
 stage, named `YYYY_MM_DD_<RUN_ID>_<STAGE>_<ARTIFACT>_<AUDIENCE>.<ext>`. Each stage writes
 `INPUT.json`, `OUTPUT_DEVIN_AI.json` (schema-validated), and `OUTPUT_PEOPLE_ENGINEER.md`.
 `audit.jsonl` is append-only.

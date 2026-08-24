@@ -140,6 +140,12 @@
     "duplicate_of": { "type": ["string", "null"] },
     "merged_sources": { "type": "array", "items": { "type": "string" } },
     "dedupe_signature": { "type": "string" },
-    "corroboration": { "type": "array", "items": { "type": "string" } }
+    "corroboration": { "type": "array", "items": { "type": "string" } },
+    "analysis_scope": { "enum": ["IN_SCOPE", "OUT_OF_SCOPE", "UNRESOLVED"] },
+    "scope_reason": { "type": "string" },
+    "reported_category": { "enum": ["BUG", "ENHANCEMENT"] },
+    "revised_category": { "enum": ["BUG", "ENHANCEMENT"] },
+    "category_match": { "type": "boolean" },
+    "category_rationale": { "type": "string" }
   }
 }

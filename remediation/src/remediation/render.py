@@ -142,59 +142,74 @@ def playbook_match(document: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def _block(title: str, items: list[str]) -> list[str]:
+    """A bolded subsection, or nothing when it has no items."""
+    return [f"**{title}**", "", *items, ""] if items else []
+
+
+def _plan_facts(issue: dict[str, Any], planned: dict[str, Any]) -> list[str]:
+    execution = "execution permitted" if planned.get("execution_allowed") else "no execution"
+    return [
+        f"## `{issue['issue_id']}` {issue['title']}",
+        "",
+        f"- Repository: {issue.get('repository') or 'unresolved'}",
+        f"- Autonomy tier: **{issue.get('autonomy_tier')}** ({execution})",
+        f"- Proposed action: {planned.get('proposed_action')}",
+        f"- Rollback: {planned.get('rollback_plan')}",
+        "",
+    ]
+
+
+def _violation_lines(violations: list[dict[str, Any]]) -> list[str]:
+    return [
+        line
+        for violation in violations
+        for line in (
+            f"- `{violation['rule']}` — {violation['stop_reason']}",
+            f"  - Evidence: {'; '.join(violation['evidence'])}",
+            f"  - Required human action: {violation['required_human_action']}",
+        )
+    ]
+
+
+def _plan_issue(issue: dict[str, Any]) -> list[str]:
+    planned = issue.get("plan") or {}
+    steps = [f"{n}. {step}" for n, step in enumerate(planned.get("implementation_plan") or [], 1)]
+    stops = [f"- {condition}" for condition in planned.get("stop_conditions") or []]
+    return [
+        *_plan_facts(issue, planned),
+        *_block("Steps", steps),
+        *_block("Stop conditions", stops),
+        *_block("Guardrail violations", _violation_lines(issue.get("guardrail_violations") or [])),
+    ]
+
+
 def plan(document: dict[str, Any]) -> str:
     lines = _header(document, Stage.PLAN, "Plan — proposed actions and stop conditions")
     for issue in document["issues"]:
-        planned = issue.get("plan") or {}
-        lines += [
-            f"## `{issue['issue_id']}` {issue['title']}",
-            "",
-            f"- Repository: {issue.get('repository') or 'unresolved'}",
-            f"- Autonomy tier: **{issue.get('autonomy_tier')}** "
-            f"({'execution permitted' if planned.get('execution_allowed') else 'no execution'})",
-            f"- Proposed action: {planned.get('proposed_action')}",
-            f"- Rollback: {planned.get('rollback_plan')}",
-            "",
-        ]
-        if planned.get("implementation_plan"):
-            lines += ["**Steps**", ""]
-            lines += [f"{n}. {step}" for n, step in enumerate(planned["implementation_plan"], 1)]
-            lines += [""]
-        if planned.get("stop_conditions"):
-            lines += ["**Stop conditions**", ""]
-            lines += [f"- {condition}" for condition in planned["stop_conditions"]]
-            lines += [""]
-        if issue.get("guardrail_violations"):
-            lines += ["**Guardrail violations**", ""]
-            for violation in issue["guardrail_violations"]:
-                lines += [
-                    f"- `{violation['rule']}` — {violation['stop_reason']}",
-                    f"  - Evidence: {'; '.join(violation['evidence'])}",
-                    f"  - Required human action: {violation['required_human_action']}",
-                ]
-            lines += [""]
+        lines += _plan_issue(issue)
     return "\n".join(lines)
+
+
+def _dev_fix_issue(issue: dict[str, Any]) -> list[str]:
+    fix = issue.get("fix") or {}
+    suppressed = [f"- {reason}" for reason in fix.get("suppression_reasons") or []]
+    intended = [f"- {item}" for item in fix.get("would_have_done") or []]
+    return [
+        f"## `{issue['issue_id']}` {issue['title']}",
+        "",
+        f"- Attempt: `{issue['attempt_id']}`",
+        f"- {fix.get('statement', 'No execution record.')}",
+        "",
+        *_block("Why nothing was executed", suppressed),
+        *_block("What would have been done", intended),
+    ]
 
 
 def dev_fix(document: dict[str, Any]) -> str:
     lines = _header(document, Stage.DEV_FIX, "Dev fix — dry-run record")
     for issue in document["issues"]:
-        fix = issue.get("fix") or {}
-        lines += [
-            f"## `{issue['issue_id']}` {issue['title']}",
-            "",
-            f"- Attempt: `{issue['attempt_id']}`",
-            f"- {fix.get('statement', 'No execution record.')}",
-            "",
-        ]
-        if fix.get("suppression_reasons"):
-            lines += ["**Why nothing was executed**", ""]
-            lines += [f"- {reason}" for reason in fix["suppression_reasons"]]
-            lines += [""]
-        if fix.get("would_have_done"):
-            lines += ["**What would have been done**", ""]
-            lines += [f"- {item}" for item in fix["would_have_done"]]
-            lines += [""]
+        lines += _dev_fix_issue(issue)
     return "\n".join(lines)
 
 
@@ -209,42 +224,58 @@ def dev_review(document: dict[str, Any]) -> str:
         "",
     ]
     for issue in document["issues"]:
-        planned = issue.get("plan") or {}
-        match = issue.get("playbook_match") or {}
-        lines += [
-            f"## `{issue['issue_id']}` {issue['title']}",
-            "",
-            f"- Category: {issue['category']} · Remediability: {issue['remediable']} · "
-            f"Security scope: {issue['security_scope']}",
-            f"- Priority: {(issue.get('priority') or {}).get('score')} · Complexity: "
-            f"{(issue.get('complexity') or {}).get('score')} · Tier: {issue.get('autonomy_tier')}",
-            f"- Playbook: {match.get('playbook_id') or 'none matched'}",
-            f"- Proposed action: {planned.get('proposed_action')}",
-            "",
-            "**Evidence**",
-            "",
-        ]
-        for item in issue["evidence"][:6]:
-            lines.append(f"- [{item['kind']}] `{item['locator']}` — {item['excerpt']}")
-        lines += [""]
-        if issue.get("questions"):
-            lines += ["**Open questions**", "", *[f"- {q}" for q in issue["questions"]], ""]
-        if issue.get("rejection_history"):
-            lines += ["**Rejection history**", ""]
-            for record in issue["rejection_history"]:
-                lines.append(
-                    f"- `{record['attempt_id']}` rejected by {record.get('reviewer') or 'unknown'}: "
-                    f"{'; '.join(record.get('comments') or []) or 'no comment'}"
-                )
-            lines += [""]
-        if issue.get("human_review_result") and issue["human_review_result"] != "PENDING":
-            lines += [
-                f"**Recorded decision:** {issue['human_review_result']}"
-                + (f" by {issue['reviewer']}" if issue.get("reviewer") else ""),
-                "",
-            ]
-        lines += [decision_block(issue["attempt_id"], issue["title"]), ""]
+        lines += _dev_review_issue(issue)
     return "\n".join(lines)
+
+
+def _review_facts(issue: dict[str, Any]) -> list[str]:
+    planned = issue.get("plan") or {}
+    match = issue.get("playbook_match") or {}
+    return [
+        f"## `{issue['issue_id']}` {issue['title']}",
+        "",
+        f"- Category: {issue['category']} · Remediability: {issue['remediable']} · "
+        f"Security scope: {issue['security_scope']}",
+        f"- Priority: {(issue.get('priority') or {}).get('score')} · Complexity: "
+        f"{(issue.get('complexity') or {}).get('score')} · Tier: {issue.get('autonomy_tier')}",
+        f"- Playbook: {match.get('playbook_id') or 'none matched'}",
+        f"- Proposed action: {planned.get('proposed_action')}",
+        "",
+    ]
+
+
+def _rejection_lines(history: list[dict[str, Any]]) -> list[str]:
+    return [
+        f"- `{record['attempt_id']}` rejected by {record.get('reviewer') or 'unknown'}: "
+        f"{'; '.join(record.get('comments') or []) or 'no comment'}"
+        for record in history
+    ]
+
+
+def _recorded_decision(issue: dict[str, Any]) -> list[str]:
+    """Show an already-recorded outcome so a reviewer does not decide twice."""
+    outcome = issue.get("human_review_result")
+    if not outcome or outcome == "PENDING":
+        return []
+    reviewer = f" by {issue['reviewer']}" if issue.get("reviewer") else ""
+    return [f"**Recorded decision:** {outcome}{reviewer}", ""]
+
+
+def _dev_review_issue(issue: dict[str, Any]) -> list[str]:
+    evidence = [
+        f"- [{item['kind']}] `{item['locator']}` — {item['excerpt']}"
+        for item in issue["evidence"][:6]
+    ]
+    questions = [f"- {question}" for question in issue.get("questions") or []]
+    return [
+        *_review_facts(issue),
+        *_block("Evidence", evidence),
+        *_block("Open questions", questions),
+        *_block("Rejection history", _rejection_lines(issue.get("rejection_history") or [])),
+        *_recorded_decision(issue),
+        decision_block(issue["attempt_id"], issue["title"]),
+        "",
+    ]
 
 
 def run_summary(document: dict[str, Any], metrics: dict[str, Any]) -> str:

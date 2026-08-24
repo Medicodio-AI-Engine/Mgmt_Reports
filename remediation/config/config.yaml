@@ -9,7 +9,7 @@ mgmt_reports_branch: main
 
 # Artifacts are written into this repository so the DECISION blocks are committed
 # alongside the reports they came from.
-artifact_root_directory: Ai_Engr_Rpt/Remediation/medicodio
+artifact_root_directory: Ai_Engr_Rpt/Daily/medicodio/Remediation
 
 playbook_directory: playbooks/org
 general_playbook_registry: playbooks/general
@@ -20,6 +20,25 @@ dry_run_mode: true
 
 # No repository may be modified during the pilot.
 remediation_repository_allowlist: []
+
+# The pilot covers the medicodio libraries and the management reports only.
+# Findings about anything else are kept as evidence but labelled OUT_OF_SCOPE and
+# excluded from the supervisor report. Widening the pilot is a change here, not in code.
+repository_scope:
+  repositories:
+    - Mgmt_Reports
+    - medicodio-nextgen-app-nodejs
+    - medicodio-nextgen-app-react
+    - medicodio-nextgen-integration
+    - medicodio-paperclip
+    - nextgen-codio-engine
+  prefixes:
+    - medicodio-
+    - nextgen-codio
+  excluded:
+    - globalcodio-monorepo
+    - paperclip-ai
+    - interview
 
 # Verification commands per repository. Left empty deliberately: an unverified
 # command is worse than no command, so a human must supply these before any
