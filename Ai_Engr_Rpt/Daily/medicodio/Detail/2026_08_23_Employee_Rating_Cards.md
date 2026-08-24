@@ -2,7 +2,7 @@
 
 **Review date:** 2026-08-23 (Sunday, UTC) · **Run date:** 2026-08-24 UTC
 **Scope:** the 6 contributors with observable activity on the review date (of ~24 seen across the month)
-**Companion report:** `20260823_Mgmt_Activity_Report.md`
+**Companion report:** `2026_08_23_Mgmt_Activity_Report.md`
 
 > **Weekend caveat — read before comparing.** 2026-08-23 was a Sunday. These cards score the *quality* of what was done on a low-staffing day, not the day's throughput, and they are **not** a like-for-like baseline for weekday cards. Where a dimension has no evidence on the day it is marked **NR** and excluded from the weighted average.
 >
