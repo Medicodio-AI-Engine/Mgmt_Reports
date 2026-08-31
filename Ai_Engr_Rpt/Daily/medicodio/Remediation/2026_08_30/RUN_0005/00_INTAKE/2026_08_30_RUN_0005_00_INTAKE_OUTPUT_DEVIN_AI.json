@@ -1,0 +1,3231 @@
+{
+  "dry_run": true,
+  "issues": [
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000002_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "PROCESS_PRACTICE",
+      "category_match": false,
+      "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.3,
+      "corroborating_only": true,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|adoption akanksh automation low signal",
+      "defect_type": null,
+      "description": "The employee rating card records a below-midpoint automation score for akanksh-rv. Corroborating signal only: it supports prioritization of automation findings but is not evidence of any software defect.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "[rating detail redacted; see the employee rating card at this locator in Mgmt_Reports]",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_010:39"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000002",
+      "merged_sources": [
+        "SOURCE_010:39"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "akanksh-rv",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "BUG",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "[rating detail redacted; see the employee rating card at this locator in Mgmt_Reports]",
+          "finding_reference": "line 39",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_30",
+          "report_type": "EMPLOYEE_RATING_CARDS",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Employee_Rating_Cards.md",
+          "section": "card_automation",
+          "source_id": "SOURCE_010"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_010:39",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Low automation-adoption signal for akanksh-rv"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000282_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|after automation bounded check commit delegate fix fixes gate hand herself keep list mechanical output precise remediation run verification writing",
+      "defect_type": null,
+      "description": "Repetitive work reported for SaijyotiMeti: Hand-writing the `/check` \u2192 `/fix` remediation commits after each gate run. Reported pattern: Every large feature close-out she owns (08-28 #1256, 08-29 #1260). Report's recommended approach: Automate with Devin \u2014 the gate output is a precise, bounded work list; delegate the mechanical fixes and keep the verification for herself.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Hand-writing the `/check` \u2192 `/fix` remediation commits after each gate run",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:87"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 the gate output is a precise, bounded work list; delegate the mechanical fixes and keep the verification for herself",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:87"
+        }
+      ],
+      "files": [],
+      "frequency": "Every large feature close-out she owns (08-28 #1256, 08-29 #1260)",
+      "issue_id": "ISSUE_000282",
+      "merged_sources": [
+        "SOURCE_011:87"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "SaijyotiMeti",
+      "product": "Global Codio",
+      "recommended_action": "Automate with Devin \u2014 the gate output is a precise, bounded work list; delegate the mechanical fixes and keep the verification for herself",
+      "related_change": "#1256, #1260",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Hand-writing the `/check` \u2192 `/fix` remediation commits after each gate run",
+          "finding_reference": "line 87",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:87",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Hand-writing the `/check` \u2192 `/fix` remediation commits after each gate run"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000283_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|authoring automation gate generation log markdown only output pass review scripts skeleton through tooling verdict writes",
+      "defect_type": null,
+      "description": "Repetitive work reported for SaijyotiMeti: Authoring the review-log markdown for each gate pass. Reported pattern: 5 commits this window, 3 on 08-28. Report's recommended approach: Automate through scripts/tooling \u2014 generate the log skeleton from the gate output; she writes only the verdict.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Authoring the review-log markdown for each gate pass",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:88"
+        },
+        {
+          "excerpt": "Automate through scripts/tooling \u2014 generate the log skeleton from the gate output; she writes only the verdict",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:88"
+        }
+      ],
+      "files": [],
+      "frequency": "5 commits this window, 3 on 08-28",
+      "issue_id": "ISSUE_000283",
+      "merged_sources": [
+        "SOURCE_011:88"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "SaijyotiMeti",
+      "product": "Global Codio",
+      "recommended_action": "Automate through scripts/tooling \u2014 generate the log skeleton from the gate output; she writes only the verdict",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Authoring the review-log markdown for each gate pass",
+          "finding_reference": "line 88",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:88",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Authoring the review-log markdown for each gate pass"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000284_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|deriving doc dormant finding format improve labelling org process publish real rejected reply standard verified whether",
+      "defect_type": null,
+      "description": "Repetitive work reported for SaijyotiMeti: Re-deriving whether a Devin finding is real. Reported pattern: 4 findings this window, every window she reviews. Report's recommended approach: Improve documentation/process \u2014 publish her \"verified real / verified dormant / rejected\" labelling as the org's standard reply format.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Re-deriving whether a Devin finding is real",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:89"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 publish her \"verified real / verified dormant / rejected\" labelling as the org's standard reply format",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:89"
+        }
+      ],
+      "files": [],
+      "frequency": "4 findings this window, every window she reviews",
+      "issue_id": "ISSUE_000284",
+      "merged_sources": [
+        "SOURCE_011:89"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "SaijyotiMeti",
+      "product": "Global Codio",
+      "recommended_action": "Improve documentation/process \u2014 publish her \"verified real / verified dormant / rejected\" labelling as the org's standard reply format",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Re-deriving whether a Devin finding is real",
+          "finding_reference": "line 89",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:89",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Re-deriving whether a Devin finding is real"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000285_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": false,
+      "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|bugs caller case combination delegate filter instance matrix myaiworkservice one per permission scope test two window",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for SaijyotiMeti: Delegate a permission/scope matrix suite for `MyAiWorkService` \u2014 one case per (caller permission \u00d7 instance filter) combination. Two of this window's bugs and one wrong test all lived in that matrix.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate a permission/scope matrix suite for `MyAiWorkService` \u2014 one case per (caller permission \u00d7 instance filter) combination. Two of this window's bugs and one wrong test all lived in that matrix.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:93"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000285",
+      "merged_sources": [
+        "SOURCE_011:93"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "SaijyotiMeti",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "AUTHORIZATION",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate a permission/scope matrix suite for `MyAiWorkService` \u2014 one case per (caller permission \u00d7 instance filter) combination. Two of this window's bugs and one wrong test all lived in that matrix.",
+          "finding_reference": "line 93",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:93",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate a permission/scope matrix suite for `MyAiWorkService` \u2014 one case per (caller permission \u00d7 instance filter) combination. Two of this window's bugs and o"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000286_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|case data_flows delegate entity fast follow gap left manager one open own review section",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for SaijyotiMeti: Delegate the `data_flows.md` AI Case Manager entity section, the one gap her own review left open and recommended as a fast follow-up.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the `data_flows.md` AI Case Manager entity section, the one gap her own review left open and recommended as a fast follow-up.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:94"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000286",
+      "merged_sources": [
+        "SOURCE_011:94"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "SaijyotiMeti",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the `data_flows.md` AI Case Manager entity section, the one gap her own review left open and recommended as a fast follow-up.",
+          "finding_reference": "line 94",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:94",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate the `data_flows.md` AI Case Manager entity section, the one gap her own review left open and recommended as a fast follow-up."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000287_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|close delegate done feature fix han herself keep next out pass remediation review same verification",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for SaijyotiMeti: Delegate the `/fix` remediation pass on her next feature close-out and keep the review for herself, so verification and remediation are not done by the same hands in the same hour.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the `/fix` remediation pass on her next feature close-out and keep the review for herself, so verification and remediation are not done by the same hands in the same hour.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:95"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000287",
+      "merged_sources": [
+        "SOURCE_011:95"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "SaijyotiMeti",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the `/fix` remediation pass on her next feature close-out and keep the review for herself, so verification and remediation are not done by the same hands in the same hour.",
+          "finding_reference": "line 95",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:95",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate the `/fix` remediation pass on her next feature close-out and keep the review for herself, so verification and remediation are not done by the same han"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000288_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|already approve author automation blocker findings format last mechanism merge own provides regardless reply seconds thread treat unanswered who within",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for SaijyotiMeti: Approve-and-merge within seconds of the last automated report. Current evidence: Approved 06:56:38 and merged 06:56:58, 37 s after a new Devin Review finding posted at 06:56:21. Recommended action: Treat an unanswered findings report as a merge blocker regardless of who the author is; her own thread format already provides the reply mechanism.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Approve-and-merge within seconds of the last automated report \u2014 Approved 06:56:38 and merged 06:56:58, 37 s after a new Devin Review finding posted at 06:56:21",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:119"
+        },
+        {
+          "excerpt": "Treat an unanswered findings report as a merge blocker regardless of who the author is; her own thread format already provides the reply mechanism",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:119"
+        },
+        {
+          "excerpt": "previous evidence: 08-29 report: org-wide pattern of merging minutes after a findings report (Medicodio #412, #413)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:119"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000288",
+      "merged_sources": [
+        "SOURCE_011:119"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "SaijyotiMeti",
+      "product": "Global Codio",
+      "recommended_action": "Treat an unanswered findings report as a merge blocker regardless of who the author is; her own thread format already provides the reply mechanism",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Approve-and-merge within seconds of the last automated report \u2014 Approved 06:56:38 and merged 06:56:58, 37 s after a new Devin Review finding posted at 06:56:21",
+          "finding_reference": "line 119",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:119",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Approve-and-merge within seconds of the last automated report"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000289_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|another delegated engineer eyes genuinely have pair person remediation remediator review reviewer same second",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for SaijyotiMeti: Reviewer and remediator are the same person. Current evidence: She wrote the 13 remediation commits and then the review that approved them. Recommended action: Have the remediation delegated (to Devin or another engineer) so the review is genuinely second-pair-of-eyes.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Reviewer and remediator are the same person \u2014 She wrote the 13 remediation commits and then the review that approved them",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:120"
+        },
+        {
+          "excerpt": "Have the remediation delegated (to Devin or another engineer) so the review is genuinely second-pair-of-eyes",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:120"
+        },
+        {
+          "excerpt": "previous evidence: 08-28 (#1256, same shape)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:120"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000289",
+      "merged_sources": [
+        "SOURCE_011:120"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "SaijyotiMeti",
+      "product": "Global Codio",
+      "recommended_action": "Have the remediation delegated (to Devin or another engineer) so the review is genuinely second-pair-of-eyes",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Reviewer and remediator are the same person \u2014 She wrote the 13 remediation commits and then the review that approved them",
+          "finding_reference": "line 120",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:120",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Reviewer and remediator are the same person"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000290_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|audit authored automation back blockers branch feed findings fixing follow found hand hands own pass rather reviewer scoped session",
+      "defect_type": null,
+      "description": "Repetitive work reported for anirudh-medicodio: Hand-fixing blockers found by his own audit pass on a Devin-authored branch. Reported pattern: 08-28 (3 commits) and 08-29 (9 commits) on the same PR. Report's recommended approach: Automate with Devin \u2014 feed the audit findings back as a scoped follow-up session rather than fixing them in the reviewer's hands.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Hand-fixing blockers found by his own audit pass on a Devin-authored branch",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:158"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 feed the audit findings back as a scoped follow-up session rather than fixing them in the reviewer's hands",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:158"
+        }
+      ],
+      "files": [],
+      "frequency": "08-28 (3 commits) and 08-29 (9 commits) on the same PR",
+      "issue_id": "ISSUE_000290",
+      "merged_sources": [
+        "SOURCE_011:158"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "anirudh-medicodio",
+      "product": "Global Codio",
+      "recommended_action": "Automate with Devin \u2014 feed the audit findings back as a scoped follow-up session rather than fixing them in the reviewer's hands",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Hand-fixing blockers found by his own audit pass on a Devin-authored branch",
+          "finding_reference": "line 158",
+          "member": "anirudh-medicodio",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:158",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Hand-fixing blockers found by his own audit pass on a Devin-authored branch"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000291_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|across automation cannot commit correction gate log needed output real recording results review run running scripts three through tooling write",
+      "defect_type": null,
+      "description": "Repetitive work reported for anirudh-medicodio: Re-running and re-recording gate results across three review logs. Reported pattern: Every close-out; this window included a correction commit. Report's recommended approach: Automate through scripts/tooling \u2014 write the gate log from the run output so a \"real results\" correction commit cannot be needed.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Re-running and re-recording gate results across three review logs",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:159"
+        },
+        {
+          "excerpt": "Automate through scripts/tooling \u2014 write the gate log from the run output so a \"real results\" correction commit cannot be needed",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:159"
+        }
+      ],
+      "files": [],
+      "frequency": "Every close-out; this window included a correction commit",
+      "issue_id": "ISSUE_000291",
+      "merged_sources": [
+        "SOURCE_011:159"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "anirudh-medicodio",
+      "product": "Global Codio",
+      "recommended_action": "Automate through scripts/tooling \u2014 write the gate log from the run output so a \"real results\" correction commit cannot be needed",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Re-running and re-recording gate results across three review logs",
+          "finding_reference": "line 159",
+          "member": "anirudh-medicodio",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:159",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Re-running and re-recording gate results across three review logs"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000292_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": false,
+      "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|any cannot counterpart covering data discovering doc fail have improve integration layer mocked mocks must non path persistence process repo rule spec test therefore",
+      "defect_type": null,
+      "description": "Repetitive work reported for anirudh-medicodio: Discovering that a spec suite mocks the data layer and therefore cannot fail. Reported pattern: Found this window, root cause of several blockers. Report's recommended approach: Improve documentation/process \u2014 a repo rule that any spec covering a persistence path must have a non-mocked integration counterpart.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Discovering that a spec suite mocks the data layer and therefore cannot fail",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:160"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 a repo rule that any spec covering a persistence path must have a non-mocked integration counterpart",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:160"
+        }
+      ],
+      "files": [],
+      "frequency": "Found this window, root cause of several blockers",
+      "issue_id": "ISSUE_000292",
+      "merged_sources": [
+        "SOURCE_011:160"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "anirudh-medicodio",
+      "product": "Global Codio",
+      "recommended_action": "Improve documentation/process \u2014 a repo rule that any spec covering a persistence path must have a non-mocked integration counterpart",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Discovering that a spec suite mocks the data layer and therefore cannot fail",
+          "finding_reference": "line 160",
+          "member": "anirudh-medicodio",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:160",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Discovering that a spec suite mocks the data layer and therefore cannot fail"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000293_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|against bundle content delegable delegate export highest import integration mocked non real rollback schema sync test value",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for anirudh-medicodio: Delegate a non-mocked content-sync integration suite (export \u2192 bundle \u2192 import \u2192 rollback against a real schema). This is the highest-value delegable suite in Global Codio right now: six of the seven blockers were invisible to the existing specs.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate a non-mocked content-sync integration suite (export \u2192 bundle \u2192 import \u2192 rollback against a real schema). This is the highest-value delegable suite in Global Codio right now: six of the seven blockers were invisible to the existing specs.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:164"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000293",
+      "merged_sources": [
+        "SOURCE_011:164"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "anirudh-medicodio",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate a non-mocked content-sync integration suite (export \u2192 bundle \u2192 import \u2192 rollback against a real schema). This is the highest-value delegable suite in Global Codio right now: six of the seven blockers were invisible to the existing specs.",
+          "finding_reference": "line 164",
+          "member": "anirudh-medicodio",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:164",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate a non-mocked content-sync integration suite (export \u2192 bundle \u2192 import \u2192 rollback against a real schema). This is the highest-value delegable suite in G"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000294_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": false,
+      "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|case delegate export expression failed fixtures import including json key natural registry round table trip",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for anirudh-medicodio: Delegate the export/import round-trip fixtures for every registry table, including the JSON-expression natural key case that failed.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the export/import round-trip fixtures for every registry table, including the JSON-expression natural key case that failed.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:165"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000294",
+      "merged_sources": [
+        "SOURCE_011:165"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "anirudh-medicodio",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the export/import round-trip fixtures for every registry table, including the JSON-expression natural key case that failed.",
+          "finding_reference": "line 165",
+          "member": "anirudh-medicodio",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:165",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate the export/import round-trip fixtures for every registry table, including the JSON-expression natural key case that failed."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000295_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|acceptance criteria currently decision decisions delegate follow items merge needs one scoped six unresolve written",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for anirudh-medicodio: Delegate the six `[needs decision]` items as one scoped follow-up PR with his decisions written as acceptance criteria \u2014 they are currently merged and unresolved.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the six `[needs decision]` items as one scoped follow-up PR with his decisions written as acceptance criteria \u2014 they are currently merged and unresolved.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:166"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000295",
+      "merged_sources": [
+        "SOURCE_011:166"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "anirudh-medicodio",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the six `[needs decision]` items as one scoped follow-up PR with his decisions written as acceptance criteria \u2014 they are currently merged and unresolved.",
+          "finding_reference": "line 166",
+          "member": "anirudh-medicodio",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:166",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate the six `[needs decision]` items as one scoped follow-up PR with his decisions written as acceptance criteria \u2014 they are currently merged and unresolve"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000296_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|also before contributor main merge named own require reviewer second where",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for anirudh-medicodio: Reviewer-of-own-work. Current evidence: He is #1244's principal contributor and the author of its only substantive review; the independent approval that followed was 8 characters. Recommended action: For PRs where the reviewer is also the main contributor, require a second named reviewer before merge.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Reviewer-of-own-work \u2014 He is #1244's principal contributor and the author of its only substantive review; the independent approval that followed was 8 characters",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:190"
+        },
+        {
+          "excerpt": "For PRs where the reviewer is also the main contributor, require a second named reviewer before merge",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:190"
+        },
+        {
+          "excerpt": "previous evidence: 08-29 report noted he works inside #1244 and answers its findings",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:190"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000296",
+      "merged_sources": [
+        "SOURCE_011:190"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "anirudh-medicodio",
+      "product": "Global Codio",
+      "recommended_action": "For PRs where the reviewer is also the main contributor, require a second named reviewer before merge",
+      "related_change": "#1244",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Reviewer-of-own-work \u2014 He is #1244's principal contributor and the author of its only substantive review; the independent approval that followed was 8 characters",
+          "finding_reference": "line 190",
+          "member": "anirudh-medicodio",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:190",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Reviewer-of-own-work"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000297_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|architect contributor either forces instead large named reviewable reviewer series size split threshold very who",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for anirudh-medicodio: Very large PR instead of a reviewable series. Current evidence: #1244 merged at 125 files / 122 commits / +25,798. Recommended action: Size threshold that forces either a split or a named architect reviewer who is not a contributor.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Very large PR instead of a reviewable series \u2014 #1244 merged at 125 files / 122 commits / +25,798",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:191"
+        },
+        {
+          "excerpt": "Size threshold that forces either a split or a named architect reviewer who is not a contributor",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:191"
+        },
+        {
+          "excerpt": "previous evidence: 08-27, 08-28, 08-29 reports (#1239, #1244, #1260)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:191"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000297",
+      "merged_sources": [
+        "SOURCE_011:191"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "anirudh-medicodio",
+      "product": "Global Codio",
+      "recommended_action": "Size threshold that forces either a split or a named architect reviewer who is not a contributor",
+      "related_change": "#1244",
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Very large PR instead of a reviewable series \u2014 #1244 merged at 125 files / 122 commits / +25,798",
+          "finding_reference": "line 191",
+          "member": "anirudh-medicodio",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:191",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Very large PR instead of a reviewable series"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000298_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "anirudh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|before button convert decision hold issue items merge needs open owner tracked",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for anirudh-medicodio: Merge with `[needs decision]` items open. Current evidence: Six `[needs decision]` items raised 16:02:39; merged 16:09:12 with no intervening commit. Recommended action: Convert each to a tracked issue with an owner before the merge button, or hold the merge.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Merge with `[needs decision]` items open \u2014 Six `[needs decision]` items raised 16:02:39; merged 16:09:12 with no intervening commit",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:192"
+        },
+        {
+          "excerpt": "Convert each to a tracked issue with an owner before the merge button, or hold the merge",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:192"
+        },
+        {
+          "excerpt": "previous evidence: New this window at this severity",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:192"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000298",
+      "merged_sources": [
+        "SOURCE_011:192"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "anirudh-medicodio",
+      "product": "Global Codio",
+      "recommended_action": "Convert each to a tracked issue with an owner before the merge button, or hold the merge",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Merge with `[needs decision]` items open \u2014 Six `[needs decision]` items raised 16:02:39; merged 16:09:12 with no intervening commit",
+          "finding_reference": "line 192",
+          "member": "anirudh-medicodio",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:192",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Merge with `[needs decision]` items open"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000299_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|across automation example exists hook identical implementation implementing modules near notification one per remaining repetitive repository similar skill skills subscriber trios worked",
+      "defect_type": null,
+      "description": "Repetitive work reported for akanksh-rv: Implementing near-identical subscriber + notification + repository-hook trios per AI skill. Reported pattern: Phases 5\u201311 this window; the same shape as the assignment/handoff work in #1260. Report's recommended approach: Automate with Devin \u2014 one worked example exists; the remaining skills are repetitive implementation across similar modules.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Implementing near-identical subscriber + notification + repository-hook trios per AI skill",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:228"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 one worked example exists; the remaining skills are repetitive implementation across similar modules",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:228"
+        }
+      ],
+      "files": [],
+      "frequency": "Phases 5\u201311 this window; the same shape as the assignment/handoff work in #1260",
+      "issue_id": "ISSUE_000299",
+      "merged_sources": [
+        "SOURCE_011:228"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "akanksh-rv",
+      "product": "Global Codio",
+      "recommended_action": "Automate with Devin \u2014 one worked example exists; the remaining skills are repetitive implementation across similar modules",
+      "related_change": "#1260",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Implementing near-identical subscriber + notification + repository-hook trios per AI skill",
+          "finding_reference": "line 228",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:228",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Implementing near-identical subscriber + notification + repository-hook trios per AI skill"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000300_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|accumulating before branch doc draft grow improve let many one open opening phase phases process reviewably",
+      "defect_type": null,
+      "description": "Repetitive work reported for akanksh-rv: Accumulating many phases on one branch before opening a PR. Reported pattern: #1260 (80 commits, 161 files); this branch already at 8 commits with no PR. Report's recommended approach: Improve documentation/process \u2014 open the PR at phase 1 as a draft and let it grow reviewably.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Accumulating many phases on one branch before opening a PR",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:229"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 open the PR at phase 1 as a draft and let it grow reviewably",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:229"
+        }
+      ],
+      "files": [],
+      "frequency": "#1260 (80 commits, 161 files); this branch already at 8 commits with no PR",
+      "issue_id": "ISSUE_000300",
+      "merged_sources": [
+        "SOURCE_011:229"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "akanksh-rv",
+      "product": "Global Codio",
+      "recommended_action": "Improve documentation/process \u2014 open the PR at phase 1 as a draft and let it grow reviewably",
+      "related_change": "#1260",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Accumulating many phases on one branch before opening a PR",
+          "finding_reference": "line 229",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:229",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Accumulating many phases on one branch before opening a PR"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000301_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": false,
+      "category_rationale": "reported as bug but category AUTOMATION_OPPORTUNITY shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation commit delegate failure hand matrices per permission phase scope subscriber test unevenly writing",
+      "defect_type": null,
+      "description": "Repetitive work reported for akanksh-rv: Hand-writing per-phase tests unevenly (3 of 8 commits). Reported pattern: Both this window and #1260, where the missed cases were the ones Devin Review caught. Report's recommended approach: Automate with Devin \u2014 delegate the permission/scope and subscriber-failure matrices.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Hand-writing per-phase tests unevenly (3 of 8 commits)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:230"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 delegate the permission/scope and subscriber-failure matrices",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:230"
+        }
+      ],
+      "files": [],
+      "frequency": "Both this window and #1260, where the missed cases were the ones Devin Review caught",
+      "issue_id": "ISSUE_000301",
+      "merged_sources": [
+        "SOURCE_011:230"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "akanksh-rv",
+      "product": "Global Codio",
+      "recommended_action": "Automate with Devin \u2014 delegate the permission/scope and subscriber-failure matrices",
+      "related_change": "#1260",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "AUTHORIZATION",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Hand-writing per-phase tests unevenly (3 of 8 commits)",
+          "finding_reference": "line 230",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:230",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Hand-writing per-phase tests unevenly (3 of 8 commits)"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000302_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MISSING_TEST",
+      "category_match": true,
+      "category_rationale": "category MISSING_TEST confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MISSING_TEST|globalcodio-monorepo|covering delegate denied draft duplicate fired letter matrix notification paths permission revie skill subscriber test",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for akanksh-rv: Delegate the subscriber/notification test matrix for the draft-letter skill (fired / not fired / duplicate / permission-denied), covering the paths the AI Review Queue signpost depends on.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the subscriber/notification test matrix for the draft-letter skill (fired / not fired / duplicate / permission-denied), covering the paths the AI Review Queue signpost depends on.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:234"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000302",
+      "merged_sources": [
+        "SOURCE_011:234"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "akanksh-rv",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": "TEST_TO_BE_WRITTEN",
+        "notes": "No reproduction exists yet: the finding is absence of coverage. A generated test must first demonstrate the uncovered behavior."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "AUTHORIZATION",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the subscriber/notification test matrix for the draft-letter skill (fired / not fired / duplicate / permission-denied), covering the paths the AI Review Queue signpost depends on.",
+          "finding_reference": "line 234",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:234",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate the subscriber/notification test matrix for the draft-letter skill (fired / not fired / duplicate / permission-denied), covering the paths the AI Revie"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000303_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|any assumes contract delegate draftstepstartedsubscriber interface must new provider registry rewire same satisfy skill test",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for akanksh-rv: Delegate the AI-skill registry contract test so any new skill provider must satisfy the same interface the `DraftStepStartedSubscriber` rewire assumes.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the AI-skill registry contract test so any new skill provider must satisfy the same interface the `DraftStepStartedSubscriber` rewire assumes.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:235"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000303",
+      "merged_sources": [
+        "SOURCE_011:235"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "akanksh-rv",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the AI-skill registry contract test so any new skill provider must satisfy the same interface the `DraftStepStartedSubscriber` rewire assumes.",
+          "finding_reference": "line 235",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:235",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate the AI-skill registry contract test so any new skill provider must satisfy the same interface the `DraftStepStartedSubscriber` rewire assumes."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000304_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|acceptance already becomes commit criteria delegate numbered own phase preparation small subject write you",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for akanksh-rv: Delegate phase-by-phase PR preparation: each numbered phase becomes its own small PR with the acceptance criteria you already write in the commit subject.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate phase-by-phase PR preparation: each numbered phase becomes its own small PR with the acceptance criteria you already write in the commit subject.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:236"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000304",
+      "merged_sources": [
+        "SOURCE_011:236"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "akanksh-rv",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate phase-by-phase PR preparation: each numbered phase becomes its own small PR with the acceptance criteria you already write in the commit subject.",
+          "finding_reference": "line 236",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:236",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate phase-by-phase PR preparation: each numbered phase becomes its own small PR with the acceptance criteria you already write in the commit subject."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000305_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|boundaries branch draft instead large now one open phase reviewable series split very",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for akanksh-rv: One very large PR instead of a reviewable series. Current evidence: #1260 merged at 161 files / 80 commits; the successor branch is accumulating the same way. Recommended action: Open the current branch as a draft PR now and split at phase boundaries.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "One very large PR instead of a reviewable series \u2014 #1260 merged at 161 files / 80 commits; the successor branch is accumulating the same way",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:259"
+        },
+        {
+          "excerpt": "Open the current branch as a draft PR now and split at phase boundaries",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:259"
+        },
+        {
+          "excerpt": "previous evidence: 08-29 report flagged #1260 at 152 files as a team-level pattern with him named",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:259"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000305",
+      "merged_sources": [
+        "SOURCE_011:259"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "akanksh-rv",
+      "product": "Global Codio",
+      "recommended_action": "Open the current branch as a draft PR now and split at phase boundaries",
+      "related_change": "#1260",
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "One very large PR instead of a reviewable series \u2014 #1260 merged at 161 files / 80 commits; the successor branch is accumulating the same way",
+          "finding_reference": "line 259",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:259",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "One very large PR instead of a reviewable series"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000306_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|acceptance assertion behaviour criterion encode intended observed output prd rather test write",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for akanksh-rv: Tests that encode current behaviour rather than intended behaviour. Current evidence: Corrected by the reviewer, not by the author. Recommended action: Write the assertion from the PRD acceptance criterion, not from the observed output.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Tests that encode current behaviour rather than intended behaviour \u2014 Corrected by the reviewer, not by the author",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:260"
+        },
+        {
+          "excerpt": "Write the assertion from the PRD acceptance criterion, not from the observed output",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:260"
+        },
+        {
+          "excerpt": "previous evidence: New, but material: a #1260 test asserted the instance-filter bug as expected",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:260"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000306",
+      "merged_sources": [
+        "SOURCE_011:260"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "akanksh-rv",
+      "product": "Global Codio",
+      "recommended_action": "Write the assertion from the PRD acceptance criterion, not from the observed output",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Tests that encode current behaviour rather than intended behaviour \u2014 Corrected by the reviewer, not by the author",
+          "finding_reference": "line 260",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:260",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Tests that encode current behaviour rather than intended behaviour"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000307_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MISSING_TEST",
+      "category_match": true,
+      "category_rationale": "category MISSING_TEST confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MISSING_TEST|globalcodio-monorepo|bounded delegate item leverage matrix observable one outcome subscriber test",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for akanksh-rv: No observable Devin leverage. Current evidence: Unchanged this window. Recommended action: Delegate one bounded item (the subscriber test matrix) and report the outcome.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "No observable Devin leverage \u2014 Unchanged this window",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:261"
+        },
+        {
+          "excerpt": "Delegate one bounded item (the subscriber test matrix) and report the outcome",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:261"
+        },
+        {
+          "excerpt": "previous evidence: 08-29 report: \"None observed \u2014 no Devin-trailer commits, no delegated sub-PRs\"",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:261"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000307",
+      "merged_sources": [
+        "SOURCE_011:261"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "akanksh-rv",
+      "product": "Global Codio",
+      "recommended_action": "Delegate one bounded item (the subscriber test matrix) and report the outcome",
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": "TEST_TO_BE_WRITTEN",
+        "notes": "No reproduction exists yet: the finding is absence of coverage. A generated test must first demonstrate the uncovered behavior."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "No observable Devin leverage \u2014 Unchanged this window",
+          "finding_reference": "line 261",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:261",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "No observable Devin leverage"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000308_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|accepted approval body checked doc improve large merge off one open process remains required signing template what word you",
+      "defect_type": null,
+      "description": "Repetitive work reported for Amrutha-Beedikar: Signing off large merges with a one-word body. Reported pattern: 08-28 (#1254, 331 files), 08-29 (#1244, 125 files). Report's recommended approach: Improve documentation/process \u2014 a required approval template: what you checked, what you accepted, what remains open.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Signing off large merges with a one-word body",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:294"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 a required approval template: what you checked, what you accepted, what remains open",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:294"
+        }
+      ],
+      "files": [],
+      "frequency": "08-28 (#1254, 331 files), 08-29 (#1244, 125 files)",
+      "issue_id": "ISSUE_000308",
+      "merged_sources": [
+        "SOURCE_011:294"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "Amrutha-Beedikar",
+      "product": "Global Codio",
+      "recommended_action": "Improve documentation/process \u2014 a required approval template: what you checked, what you accepted, what remains open",
+      "related_change": "#1244, #1254",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Signing off large merges with a one-word body",
+          "finding_reference": "line 294",
+          "member": "Amrutha-Beedikar",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:294",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Signing off large merges with a one-word body"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000309_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": false,
+      "category_rationale": "reported as bug but category AUTOMATION_OPPORTUNITY shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation check comment decision exists fails finding judging large manually merge needs required review safe scripts status through tooling unanswered unresolved whether while",
+      "defect_type": null,
+      "description": "Repetitive work reported for Amrutha-Beedikar: Manually judging whether a large PR is safe to merge. Reported pattern: Every release action she takes. Report's recommended approach: Automate through scripts/tooling \u2014 a required status check that fails while an unanswered Devin Review finding or an unresolved `[needs decision]` comment exists.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Manually judging whether a large PR is safe to merge",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:295"
+        },
+        {
+          "excerpt": "Automate through scripts/tooling \u2014 a required status check that fails while an unanswered Devin Review finding or an unresolved `[needs decision]` comment exists",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:295"
+        }
+      ],
+      "files": [],
+      "frequency": "Every release action she takes",
+      "issue_id": "ISSUE_000309",
+      "merged_sources": [
+        "SOURCE_011:295"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "Amrutha-Beedikar",
+      "product": "Global Codio",
+      "recommended_action": "Automate through scripts/tooling \u2014 a required status check that fails while an unanswered Devin Review finding or an unresolved `[needs decision]` comment exists",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Manually judging whether a large PR is safe to merge",
+          "finding_reference": "line 295",
+          "member": "Amrutha-Beedikar",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:295",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Manually judging whether a large PR is safe to merge"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000310_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|assembling automation commit generation merge promotion range release summary",
+      "defect_type": null,
+      "description": "Repetitive work reported for Amrutha-Beedikar: Assembling the release/promotion summary. Reported pattern: Flagged in the 08-29 report and unchanged. Report's recommended approach: Automate with Devin \u2014 generate the merge summary from the commit range.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Assembling the release/promotion summary",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:296"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 generate the merge summary from the commit range",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:296"
+        }
+      ],
+      "files": [],
+      "frequency": "Flagged in the 08-29 report and unchanged",
+      "issue_id": "ISSUE_000310",
+      "merged_sources": [
+        "SOURCE_011:296"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "Amrutha-Beedikar",
+      "product": "Global Codio",
+      "recommended_action": "Automate with Devin \u2014 generate the merge summary from the commit range",
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Assembling the release/promotion summary",
+          "finding_reference": "line 296",
+          "member": "Amrutha-Beedikar",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:296",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Assembling the release/promotion summary"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000311_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|any blocks can check decision delegate finding gate job merge needs one pre review scoped session small while write",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for Amrutha-Beedikar: Delegate a pre-merge gate check \u2014 a small CI job (Devin can write it in one scoped session) that blocks merge while any Devin Review finding or `[needs decision]` review comment on the PR is unresolved. This directly addresses the one weak practice visible in her record.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate a pre-merge gate check \u2014 a small CI job (Devin can write it in one scoped session) that blocks merge while any Devin Review finding or `[needs decision]` review comment on the PR is unresolved. This directly addresses the one weak practice visible in her record.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:300"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000311",
+      "merged_sources": [
+        "SOURCE_011:300"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "Amrutha-Beedikar",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate a pre-merge gate check \u2014 a small CI job (Devin can write it in one scoped session) that blocks merge while any Devin Review finding or `[needs decision]` review comment on the PR is unresolved. This directly addresses the one weak practice visible in her record.",
+          "finding_reference": "line 300",
+          "member": "Amrutha-Beedikar",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:300",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate a pre-merge gate check \u2014 a small CI job (Devin can write it in one scoped session) that blocks merge while any Devin Review finding or `[needs decision"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000312_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|approval body commit construction delegate generation merge promotion range substantive summary",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for Amrutha-Beedikar: Delegate generation of the merge/promotion summary from the commit range so the approval body is substantive by construction.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate generation of the merge/promotion summary from the commit range so the approval body is substantive by construction.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:301"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000312",
+      "merged_sources": [
+        "SOURCE_011:301"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "Amrutha-Beedikar",
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate generation of the merge/promotion summary from the commit range so the approval body is substantive by construction.",
+          "finding_reference": "line 301",
+          "member": "Amrutha-Beedikar",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:301",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Delegate generation of the merge/promotion summary from the commit range so the approval body is substantive by construction."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000313_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|adopt approval body content dev empty format large line main non require saijyotimeti three uat verdict very",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for Amrutha-Beedikar: Approval without content on a very large PR. Current evidence: 8-character `approved` on #1244 (125 files). Recommended action: Require a non-empty approval body on `dev`/`uat`/`main`; adopt SaijyotiMeti's three-line verdict format.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Approval without content on a very large PR \u2014 8-character `approved` on #1244 (125 files)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:324"
+        },
+        {
+          "excerpt": "Require a non-empty approval body on `dev`/`uat`/`main`; adopt SaijyotiMeti's three-line verdict format",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:324"
+        },
+        {
+          "excerpt": "previous evidence: 08-29 report: 8-character approval on the 331-file prod PR #1254; the pattern is documented every day since 08-26",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:324"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000313",
+      "merged_sources": [
+        "SOURCE_011:324"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "Amrutha-Beedikar",
+      "product": "Global Codio",
+      "recommended_action": "Require a non-empty approval body on `dev`/`uat`/`main`; adopt SaijyotiMeti's three-line verdict format",
+      "related_change": "#1244",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Approval without content on a very large PR \u2014 8-character `approved` on #1244 (125 files)",
+          "finding_reference": "line 324",
+          "member": "Amrutha-Beedikar",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:324",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Approval without content on a very large PR"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000314_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Amrutha-Beedikar",
+            "commit_count": 0,
+            "date": "2026_08_30",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|available blocker change decision findings hard highest leverage make merge org over set single unresolved",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for Amrutha-Beedikar: Merge over an unresolved findings/decision set. Current evidence: #1244 merged 6 m 22 s after six `[needs decision]` items, no intervening commit. Recommended action: Make unresolved findings a hard merge blocker; this is the highest-leverage single change available to the org.",
+      "detected_at": "2026_08_30",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Merge over an unresolved findings/decision set \u2014 #1244 merged 6 m 22 s after six `[needs decision]` items, no intervening commit",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:325"
+        },
+        {
+          "excerpt": "Make unresolved findings a hard merge blocker; this is the highest-leverage single change available to the org",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:325"
+        },
+        {
+          "excerpt": "previous evidence: 08-29 report: Medicodio #412 merged 96 s and #413 75 s after findings reports",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:325"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000314",
+      "merged_sources": [
+        "SOURCE_011:325"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "Amrutha-Beedikar",
+      "product": "Global Codio",
+      "recommended_action": "Make unresolved findings a hard merge blocker; this is the highest-leverage single change available to the org",
+      "related_change": "#1244",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Merge over an unresolved findings/decision set \u2014 #1244 merged 6 m 22 s after six `[needs decision]` items, no intervening commit",
+          "finding_reference": "line 325",
+          "member": "Amrutha-Beedikar",
+          "report_date": "2026_08_30",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_30_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_30:SOURCE_011:325",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Merge over an unresolved findings/decision set"
+    }
+  ],
+  "next_expected_input_file": "2026_08_30_RUN_0005_01_TRIAGE_INPUT.json",
+  "next_state": "TRIAGED",
+  "report_date": "2026_08_30",
+  "run_flags": [],
+  "run_id": "RUN_0005",
+  "stage": "00_INTAKE",
+  "status": "OK",
+  "warnings": []
+}
