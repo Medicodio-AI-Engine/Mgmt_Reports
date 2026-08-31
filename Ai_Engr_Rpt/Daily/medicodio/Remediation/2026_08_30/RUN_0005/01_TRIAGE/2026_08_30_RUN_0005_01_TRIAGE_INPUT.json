@@ -1,0 +1,8 @@
+{
+  "report_date": "2026_08_30",
+  "run_id": "RUN_0005",
+  "sha256": "b6173ffb80f71a04c43c0c585f3b0649eea017b1c0dad1a8ea8337934f4fb574",
+  "source_artifact": "00_INTAKE/2026_08_30_RUN_0005_00_INTAKE_OUTPUT_DEVIN_AI.json",
+  "source_stage": "00_INTAKE",
+  "stage": "01_TRIAGE"
+}
