@@ -1,0 +1,82 @@
+{
+  "awaiting_human_decision": [
+    "ISSUE_000282",
+    "ISSUE_000283",
+    "ISSUE_000284",
+    "ISSUE_000285",
+    "ISSUE_000286",
+    "ISSUE_000287",
+    "ISSUE_000288",
+    "ISSUE_000289",
+    "ISSUE_000290",
+    "ISSUE_000291",
+    "ISSUE_000292",
+    "ISSUE_000293",
+    "ISSUE_000294",
+    "ISSUE_000295",
+    "ISSUE_000296",
+    "ISSUE_000297",
+    "ISSUE_000298",
+    "ISSUE_000299",
+    "ISSUE_000300",
+    "ISSUE_000301",
+    "ISSUE_000302",
+    "ISSUE_000303",
+    "ISSUE_000304",
+    "ISSUE_000305",
+    "ISSUE_000306",
+    "ISSUE_000307",
+    "ISSUE_000308",
+    "ISSUE_000309",
+    "ISSUE_000310",
+    "ISSUE_000311",
+    "ISSUE_000312",
+    "ISSUE_000313",
+    "ISSUE_000314",
+    "ISSUE_000315",
+    "ISSUE_000316",
+    "ISSUE_000317"
+  ],
+  "commits_created": 0,
+  "dry_run": true,
+  "executions_performed": 0,
+  "guardrail_blocked_count": 0,
+  "guardrail_rules_fired": {},
+  "human_decisions_recorded": 0,
+  "issues_by_autonomy_tier": {
+    "C": 16,
+    "D": 20
+  },
+  "issues_by_category": {
+    "AUTOMATION_OPPORTUNITY": 10,
+    "MECHANICAL_MIGRATION": 3,
+    "MISSING_TEST": 5,
+    "PROCESS_PRACTICE": 18
+  },
+  "issues_by_remediability": {
+    "CODE_CHANGE": 8,
+    "NON_CODE_PROCESS": 18,
+    "TOOLING_AUTOMATION": 10
+  },
+  "issues_by_state": {
+    "DEV_REVIEW": 36
+  },
+  "issues_total": 36,
+  "issues_without_playbook": [
+    "ISSUE_000302",
+    "ISSUE_000306",
+    "ISSUE_000312",
+    "ISSUE_000313"
+  ],
+  "missing_capabilities": {
+    "ci.run_targeted_tests": 11,
+    "git.stacked_branches": 2,
+    "qa.execute_cases": 5,
+    "repo.multi_file_edit": 2,
+    "test.write_regression_test": 4
+  },
+  "playbook_match_rate": 0.889,
+  "pull_requests_created": 0,
+  "repositories_modified": [],
+  "run_flags": []
+}

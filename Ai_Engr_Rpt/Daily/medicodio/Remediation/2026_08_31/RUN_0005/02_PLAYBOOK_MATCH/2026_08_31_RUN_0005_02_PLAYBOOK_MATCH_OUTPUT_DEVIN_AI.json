@@ -1,0 +1,4953 @@
+{
+  "dry_run": true,
+  "issues": [
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000282_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": false,
+      "category_rationale": "reported as bug but category AUTOMATION_OPPORTUNITY shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "ragha82",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|already automation checking gates has human open owns picked reminder reviewer scripts stale through tooling whether",
+      "defect_type": null,
+      "description": "Repetitive work reported for ragha82: Re-checking whether an open PR has picked up a human reviewer. Reported pattern: #1250 open 4 days, #1259 open 3 days. Report's recommended approach: Automate through scripts/tooling \u2014 a stale-PR reminder on the CI gates he already owns.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Re-checking whether an open PR has picked up a human reviewer",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:86"
+        },
+        {
+          "excerpt": "Automate through scripts/tooling \u2014 a stale-PR reminder on the CI gates he already owns",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:86"
+        }
+      ],
+      "files": [],
+      "frequency": "#1250 open 4 days, #1259 open 3 days",
+      "issue_id": "ISSUE_000282",
+      "merged_sources": [
+        "SOURCE_011:86"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "ragha82",
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)",
+          "high reported frequency (1259) (+1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1); high reported frequency (1259) (+1).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "recommended_action": "Automate through scripts/tooling \u2014 a stale-PR reminder on the CI gates he already owns",
+      "related_change": "#1250, #1259",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Re-checking whether an open PR has picked up a human reviewer",
+          "finding_reference": "line 86",
+          "member": "ragha82",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:86",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Re-checking whether an open PR has picked up a human reviewer"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000283_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "ragha82",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category MECHANICAL_MIGRATION base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category MECHANICAL_MIGRATION base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|concern doc driven field fixes improve level one part process reviewable shipped split update",
+      "defect_type": null,
+      "description": "Repetitive work reported for ragha82: QA-driven field-level fixes shipped as one \"qa update\" PR. Reported pattern: #1250 spans unrelated QA items. Report's recommended approach: Improve documentation/process \u2014 split by concern so each part is reviewable.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "QA-driven field-level fixes shipped as one \"qa update\" PR",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:87"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 split by concern so each part is reviewable",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:87"
+        }
+      ],
+      "files": [],
+      "frequency": "#1250 spans unrelated QA items",
+      "issue_id": "ISSUE_000283",
+      "merged_sources": [
+        "SOURCE_011:87"
+      ],
+      "missing_skills": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "ragha82",
+      "playbook_match": {
+        "confidence": 77,
+        "matched_on": [
+          "category MECHANICAL_MIGRATION",
+          "keywords: split"
+        ],
+        "playbook_id": "ORG_PB_MECHANICAL_MIGRATION",
+        "playbook_name": "Mechanical multi-file or cross-repository migration",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category MECHANICAL_MIGRATION (+1)",
+          "high reported frequency (1250) (+1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category MECHANICAL_MIGRATION (+1); high reported frequency (1250) (+1).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "recommended_action": "Improve documentation/process \u2014 split by concern so each part is reviewable",
+      "related_change": "#1250",
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "QA-driven field-level fixes shipped as one \"qa update\" PR",
+          "finding_reference": "line 87",
+          "member": "ragha82",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:87",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "QA-driven field-level fixes shipped as one \"qa update\" PR"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000284_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MISSING_TEST",
+      "category_match": true,
+      "category_rationale": "category MISSING_TEST confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "ragha82",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.7,
+        "factors": [
+          "category MISSING_TEST base 3",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
+      },
+      "component": null,
+      "confidence": 0.6,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MISSING_TEST|globalcodio-monorepo|allow bounded data delegate driven empty exactly extraction field handling lands list matrix shape test well",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for ragha82: Delegate a test matrix for the extraction allow-list empty-field handling in #1259 \u2014 bounded, data-driven, exactly the shape Devin lands well.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate a test matrix for the extraction allow-list empty-field handling in #1259 \u2014 bounded, data-driven, exactly the shape Devin lands well.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:91"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000284",
+      "merged_sources": [
+        "SOURCE_011:91"
+      ],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "ragha82",
+      "playbook_match": {
+        "confidence": 77,
+        "matched_on": [
+          "category MISSING_TEST",
+          "keywords: test matrix"
+        ],
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.6,
+        "factors": [
+          "category MISSING_TEST (+2)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category MISSING_TEST (+2).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": "#1259",
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": "TEST_TO_BE_WRITTEN",
+        "notes": "No reproduction exists yet: the finding is absence of coverage. A generated test must first demonstrate the uncovered behavior."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate a test matrix for the extraction allow-list empty-field handling in #1259 \u2014 bounded, data-driven, exactly the shape Devin lands well.",
+          "finding_reference": "line 91",
+          "member": "ragha82",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:91",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate a test matrix for the extraction allow-list empty-field handling in #1259 \u2014 bounded, data-driven, exactly the shape Devin lands well."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000285_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": false,
+      "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "ragha82",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|already automation built delegate extending job scheduled stale unreviewed",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for ragha82: Delegate a stale-PR / unreviewed-PR report as a scheduled job, extending the CI automation he already built.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate a stale-PR / unreviewed-PR report as a scheduled job, extending the CI automation he already built.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:92"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000285",
+      "merged_sources": [
+        "SOURCE_011:92"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "ragha82",
+      "playbook_match": {
+        "confidence": 72,
+        "matched_on": [
+          "category PROCESS_PRACTICE",
+          "keywords: ci"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate a stale-PR / unreviewed-PR report as a scheduled job, extending the CI automation he already built.",
+          "finding_reference": "line 92",
+          "member": "ragha82",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:92",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate a stale-PR / unreviewed-PR report as a scheduled job, extending the CI automation he already built."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000286_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "ragha82",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|assign bot human named only open review reviewer time treat",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for ragha82: Open PR with bot review only and no human reviewer. Current evidence: Still open, unattended through the review window; #1259 now in the same state. Recommended action: Assign a named reviewer at open time; treat \"bot-reviewed only\" as not-reviewed.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Open PR with bot review only and no human reviewer \u2014 Still open, unattended through the review window; #1259 now in the same state",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:114"
+        },
+        {
+          "excerpt": "Assign a named reviewer at open time; treat \"bot-reviewed only\" as not-reviewed",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:114"
+        },
+        {
+          "excerpt": "previous evidence: 08-30 report listed #1250 as open since 08-27",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:114"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000286",
+      "merged_sources": [
+        "SOURCE_011:114"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "ragha82",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "recommended_action": "Assign a named reviewer at open time; treat \"bot-reviewed only\" as not-reviewed",
+      "related_change": "#1259",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Open PR with bot review only and no human reviewer \u2014 Still open, unattended through the review window; #1259 now in the same state",
+          "finding_reference": "line 114",
+          "member": "ragha82",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:114",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Open PR with bot review only and no human reviewer"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000287_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "svh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation based case cheaper enforcing generated guard manual matrix mutating one per surface test verification",
+      "defect_type": null,
+      "description": "Repetitive work reported for svh-medicodio: Enforcing a state-based guard surface by surface. Reported pattern: #1258 (closed/archived read-only). Report's recommended approach: Automate with Devin \u2014 one case per (case state \u00d7 mutating surface); a generated matrix suite is cheaper than manual verification.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Enforcing a state-based guard surface by surface",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:145"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 one case per (case state \u00d7 mutating surface); a generated matrix suite is cheaper than manual verification",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:145"
+        }
+      ],
+      "files": [],
+      "frequency": "#1258 (closed/archived read-only)",
+      "issue_id": "ISSUE_000287",
+      "merged_sources": [
+        "SOURCE_011:145"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "svh-medicodio",
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)",
+          "high reported frequency (1258) (+1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1); high reported frequency (1258) (+1).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "recommended_action": "Automate with Devin \u2014 one case per (case state \u00d7 mutating surface); a generated matrix suite is cheaper than manual verification",
+      "related_change": "#1258",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Enforcing a state-based guard surface by surface",
+          "finding_reference": "line 145",
+          "member": "svh-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:145",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Enforcing a state-based guard surface by surface"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000288_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "svh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|archived closed control covering delegate endpoint enforcement matrix mutating only read",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for svh-medicodio: Delegate the closed/archived read-only enforcement matrix covering every mutating endpoint and UI control.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the closed/archived read-only enforcement matrix covering every mutating endpoint and UI control.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:149"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000288",
+      "merged_sources": [
+        "SOURCE_011:149"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "svh-medicodio",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the closed/archived read-only enforcement matrix covering every mutating endpoint and UI control.",
+          "finding_reference": "line 149",
+          "member": "svh-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:149",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate the closed/archived read-only enforcement matrix covering every mutating endpoint and UI control."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000289_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MISSING_TEST",
+      "category_match": true,
+      "category_rationale": "category MISSING_TEST confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "svh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category MISSING_TEST base 3",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MISSING_TEST|globalcodio-monorepo|backfill broad cases delegate editable guard must negative open over prevent remain test",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for svh-medicodio: Delegate backfill tests for the guard's negative cases (open cases must remain editable) to prevent an over-broad guard.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate backfill tests for the guard's negative cases (open cases must remain editable) to prevent an over-broad guard.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:150"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000289",
+      "merged_sources": [
+        "SOURCE_011:150"
+      ],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "svh-medicodio",
+      "playbook_match": {
+        "confidence": 77,
+        "matched_on": [
+          "category MISSING_TEST",
+          "keywords: tests for"
+        ],
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "category MISSING_TEST (+2)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category MISSING_TEST (+2).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": "TEST_TO_BE_WRITTEN",
+        "notes": "No reproduction exists yet: the finding is absence of coverage. A generated test must first demonstrate the uncovered behavior."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate backfill tests for the guard's negative cases (open cases must remain editable) to prevent an over-broad guard.",
+          "finding_reference": "line 150",
+          "member": "svh-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:150",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate backfill tests for the guard's negative cases (open cases must remain editable) to prevent an over-broad guard."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000290_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "svh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|bot friday late named only open opened request review reviewer time",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for svh-medicodio: PR opened late on Friday with bot review only. Current evidence: Still open and unreviewed after the review window. Recommended action: Request a named reviewer at open time.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "PR opened late on Friday with bot review only \u2014 Still open and unreviewed after the review window",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:172"
+        },
+        {
+          "excerpt": "Request a named reviewer at open time",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:172"
+        },
+        {
+          "excerpt": "previous evidence: 08-30 report listed #1258 among the open, unreviewed set",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:172"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000290",
+      "merged_sources": [
+        "SOURCE_011:172"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "svh-medicodio",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "recommended_action": "Request a named reviewer at open time",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "PR opened late on Friday with bot review only \u2014 Still open and unreviewed after the review window",
+          "finding_reference": "line 172",
+          "member": "svh-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:172",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "PR opened late on Friday with bot review only"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000291_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "svh-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|bounded delegate first guard leverage matrix observable session test",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for svh-medicodio: No observable Devin leverage. Current evidence: Unchanged. Recommended action: Delegate the state-guard matrix suite as a first bounded session.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "No observable Devin leverage \u2014 Unchanged",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:173"
+        },
+        {
+          "excerpt": "Delegate the state-guard matrix suite as a first bounded session",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:173"
+        },
+        {
+          "excerpt": "previous evidence: 0 Devin-trailer commits across week and month",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:173"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000291",
+      "merged_sources": [
+        "SOURCE_011:173"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "svh-medicodio",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "recommended_action": "Delegate the state-guard matrix suite as a first bounded session",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "No observable Devin leverage \u2014 Unchanged",
+          "finding_reference": "line 173",
+          "member": "svh-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:173",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "No observable Devin leverage"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000292_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Pj-Vineeth-Kumar",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation displayed does fix fixes generation identifier identifiers lookup manual need new next parity per search searchability test",
+      "defect_type": null,
+      "description": "Repetitive work reported for Pj-Vineeth-Kumar: Lookup/searchability fixes on displayed identifiers. Reported pattern: #1257; the 08-23 report recorded his #1183 (150 files) in the same area. Report's recommended approach: Automate with Devin \u2014 generate a search-parity test per displayed identifier so the next identifier does not need a new manual fix.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Lookup/searchability fixes on displayed identifiers",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:204"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 generate a search-parity test per displayed identifier so the next identifier does not need a new manual fix",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:204"
+        }
+      ],
+      "files": [],
+      "frequency": "#1257; the 08-23 report recorded his #1183 (150 files) in the same area",
+      "issue_id": "ISSUE_000292",
+      "merged_sources": [
+        "SOURCE_011:204"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "Pj-Vineeth-Kumar",
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)",
+          "high reported frequency (1257) (+1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1); high reported frequency (1257) (+1).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "recommended_action": "Automate with Devin \u2014 generate a search-parity test per displayed identifier so the next identifier does not need a new manual fix",
+      "related_change": "#1183, #1257",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Lookup/searchability fixes on displayed identifiers",
+          "finding_reference": "line 204",
+          "member": "Pj-Vineeth-Kumar",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:204",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Lookup/searchability fixes on displayed identifiers"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000293_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MISSING_TEST",
+      "category_match": false,
+      "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Pj-Vineeth-Kumar",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category MISSING_TEST base 3",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MISSING_TEST|globalcodio-monorepo|assert delegate identifier parity platform queryable rendered search shared test through",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for Pj-Vineeth-Kumar: Delegate search-parity regression tests: for every identifier rendered in the UI, assert it is queryable through the shared search platform.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate search-parity regression tests: for every identifier rendered in the UI, assert it is queryable through the shared search platform.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:208"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000293",
+      "merged_sources": [
+        "SOURCE_011:208"
+      ],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "Pj-Vineeth-Kumar",
+      "playbook_match": {
+        "confidence": 77,
+        "matched_on": [
+          "category MISSING_TEST",
+          "keywords: regression test"
+        ],
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "category MISSING_TEST (+2)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category MISSING_TEST (+2).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": "TEST_TO_BE_WRITTEN",
+        "notes": "No reproduction exists yet: the finding is absence of coverage. A generated test must first demonstrate the uncovered behavior."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate search-parity regression tests: for every identifier rendered in the UI, assert it is queryable through the shared search platform.",
+          "finding_reference": "line 208",
+          "member": "Pj-Vineeth-Kumar",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:208",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate search-parity regression tests: for every identifier rendered in the UI, assert it is queryable through the shared search platform."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000294_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Pj-Vineeth-Kumar",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|bodies delegate description gates have landed large pass preparation previously screenshots thin which",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for Pj-Vineeth-Kumar: Delegate the PR-preparation pass (description, gates, screenshots) on his large PRs, which have previously landed with thin bodies.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the PR-preparation pass (description, gates, screenshots) on his large PRs, which have previously landed with thin bodies.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:209"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000294",
+      "merged_sources": [
+        "SOURCE_011:209"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "Pj-Vineeth-Kumar",
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the PR-preparation pass (description, gates, screenshots) on his large PRs, which have previously landed with thin bodies.",
+          "finding_reference": "line 209",
+          "member": "Pj-Vineeth-Kumar",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:209",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate the PR-preparation pass (description, gates, screenshots) on his large PRs, which have previously landed with thin bodies."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000295_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "Pj-Vineeth-Kumar",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|bot named only open review reviewer time",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for Pj-Vineeth-Kumar: Open PR with bot review only. Current evidence: Unattended through the review window. Recommended action: Named reviewer at open time.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Open PR with bot review only \u2014 Unattended through the review window",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:231"
+        },
+        {
+          "excerpt": "Named reviewer at open time",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:231"
+        },
+        {
+          "excerpt": "previous evidence: 08-30 report listed #1257 as open since 08-27/08-28",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:231"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000295",
+      "merged_sources": [
+        "SOURCE_011:231"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "Pj-Vineeth-Kumar",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "recommended_action": "Named reviewer at open time",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Open PR with bot review only \u2014 Unattended through the review window",
+          "finding_reference": "line 231",
+          "member": "Pj-Vineeth-Kumar",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:231",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Open PR with bot review only"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000296_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|accumulating before branch continuously doc draft end feature gates improve instead multi one open opening phase process review run",
+      "defect_type": null,
+      "description": "Repetitive work reported for akanksh-rv: Accumulating a multi-phase feature on one branch before opening a PR. Reported pattern: 08-29 (#1260: 161 files, 80 commits), now again on the draft-letter skill branch. Report's recommended approach: Improve documentation/process \u2014 open a draft PR at phase 1 so gates and Devin Review run continuously instead of at the end.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Accumulating a multi-phase feature on one branch before opening a PR",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:262"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 open a draft PR at phase 1 so gates and Devin Review run continuously instead of at the end",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:262"
+        }
+      ],
+      "files": [],
+      "frequency": "08-29 (#1260: 161 files, 80 commits), now again on the draft-letter skill branch",
+      "issue_id": "ISSUE_000296",
+      "merged_sources": [
+        "SOURCE_011:262"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "akanksh-rv",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "high reported frequency (1260) (+1)",
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 3/10 from base 3 adjusted by: high reported frequency (1260) (+1); non-code process item, no software risk (-1).",
+        "score": 3
+      },
+      "product": "Global Codio",
+      "recommended_action": "Improve documentation/process \u2014 open a draft PR at phase 1 so gates and Devin Review run continuously instead of at the end",
+      "related_change": "#1260",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Accumulating a multi-phase feature on one branch before opening a PR",
+          "finding_reference": "line 262",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:262",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Accumulating a multi-phase feature on one branch before opening a PR"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000297_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation contract driven hand notification per registry skill subscriber test wiring writing",
+      "defect_type": null,
+      "description": "Repetitive work reported for akanksh-rv: Writing subscriber/notification wiring per skill by hand. Reported pattern: Phases 6, 7, 9 of this branch. Report's recommended approach: Automate with Devin \u2014 a registry-driven contract test per subscriber.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Writing subscriber/notification wiring per skill by hand",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:263"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 a registry-driven contract test per subscriber",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:263"
+        }
+      ],
+      "files": [],
+      "frequency": "Phases 6, 7, 9 of this branch",
+      "issue_id": "ISSUE_000297",
+      "merged_sources": [
+        "SOURCE_011:263"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "akanksh-rv",
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "recommended_action": "Automate with Devin \u2014 a registry-driven contract test per subscriber",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Writing subscriber/notification wiring per skill by hand",
+          "finding_reference": "line 263",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:263",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Writing subscriber/notification wiring per skill by hand"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000298_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MISSING_TEST",
+      "category_match": false,
+      "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category MISSING_TEST base 3",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MISSING_TEST|globalcodio-monorepo|bug case delegate hide likely manager matrix most notification phases registry skill subscriber test wiring",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for akanksh-rv: Delegate the subscriber/notification test matrix for the AI Case Manager skill registry \u2014 the phases most likely to hide a wiring bug.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the subscriber/notification test matrix for the AI Case Manager skill registry \u2014 the phases most likely to hide a wiring bug.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:267"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000298",
+      "merged_sources": [
+        "SOURCE_011:267"
+      ],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "akanksh-rv",
+      "playbook_match": {
+        "confidence": 77,
+        "matched_on": [
+          "category MISSING_TEST",
+          "keywords: test matrix"
+        ],
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "category MISSING_TEST (+2)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category MISSING_TEST (+2).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": "TEST_TO_BE_WRITTEN",
+        "notes": "No reproduction exists yet: the finding is absence of coverage. A generated test must first demonstrate the uncovered behavior."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the subscriber/notification test matrix for the AI Case Manager skill registry \u2014 the phases most likely to hide a wiring bug.",
+          "finding_reference": "line 267",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:267",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate the subscriber/notification test matrix for the AI Case Manager skill registry \u2014 the phases most likely to hide a wiring bug."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000299_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|cannot contract delegate incorrectly new register registry skill test",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for akanksh-rv: Delegate the AI-skill registry contract tests so a new skill cannot register incorrectly.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the AI-skill registry contract tests so a new skill cannot register incorrectly.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:268"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000299",
+      "merged_sources": [
+        "SOURCE_011:268"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "akanksh-rv",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the AI-skill registry contract tests so a new skill cannot register incorrectly.",
+          "finding_reference": "line 268",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:268",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate the AI-skill registry contract tests so a new skill cannot register incorrectly."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000300_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|branch draft end large let one open per phase rather review run",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for akanksh-rv: Open the branch as a draft PR and let Devin Review run per phase, rather than one large review at the end.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Open the branch as a draft PR and let Devin Review run per phase, rather than one large review at the end.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:269"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000300",
+      "merged_sources": [
+        "SOURCE_011:269"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "akanksh-rv",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Open the branch as a draft PR and let Devin Review run per phase, rather than one large review at the end.",
+          "finding_reference": "line 269",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:269",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Open the branch as a draft PR and let Devin Review run per phase, rather than one large review at the end."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000301_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [
+            "feat/ai-cm-draft-support-letter-skill"
+          ],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category MECHANICAL_MIGRATION base 4",
+          "repository and paths both known (-1)"
+        ],
+        "rationale": "Complexity 3/10 from: category MECHANICAL_MIGRATION base 4; repository and paths both known (-1).",
+        "score": 3
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|boundary draft feature instead landed large now open phase reviewable series single split",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for akanksh-rv: Large feature landed as a single PR instead of a reviewable series. Current evidence: `feat/ai-cm-draft-support-letter-skill` at 12 phases with no PR yet, second day. Recommended action: Open a draft PR now and split by phase boundary.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Large feature landed as a single PR instead of a reviewable series \u2014 `feat/ai-cm-draft-support-letter-skill` at 12 phases with no PR yet, second day",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:291"
+        },
+        {
+          "excerpt": "Open a draft PR now and split by phase boundary",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:291"
+        },
+        {
+          "excerpt": "previous evidence: 08-30 report: #1260, 161 files / 80 commits",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:291"
+        }
+      ],
+      "files": [
+        "feat/ai-cm-draft-support-letter-skill"
+      ],
+      "frequency": null,
+      "issue_id": "ISSUE_000301",
+      "merged_sources": [
+        "SOURCE_011:291"
+      ],
+      "missing_skills": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "PLANNED",
+      "owner": "akanksh-rv",
+      "playbook_match": {
+        "confidence": 77,
+        "matched_on": [
+          "category MECHANICAL_MIGRATION",
+          "keywords: split"
+        ],
+        "playbook_id": "ORG_PB_MECHANICAL_MIGRATION",
+        "playbook_name": "Mechanical multi-file or cross-repository migration",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category MECHANICAL_MIGRATION (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category MECHANICAL_MIGRATION (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "recommended_action": "Open a draft PR now and split by phase boundary",
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Large feature landed as a single PR instead of a reviewable series \u2014 `feat/ai-cm-draft-support-letter-skill` at 12 phases with no PR yet, second day",
+          "finding_reference": "line 291",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:291",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Large feature landed as a single PR instead of a reviewable series"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000302_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)",
+          "security-sensitive surface AUTHENTICATION (+2)"
+        ],
+        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1); security-sensitive surface AUTHENTICATION (+2).",
+        "score": 8
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|attribution author commit correct identity landing link review under unlinked",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for akanksh-rv: Commits landing under an unlinked author identity. Current evidence: Branch commits attributed to `claude`, not to his GitHub login. Recommended action: Link the identity so review attribution is correct.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Commits landing under an unlinked author identity \u2014 Branch commits attributed to `claude`, not to his GitHub login",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:292"
+        },
+        {
+          "excerpt": "Link the identity so review attribution is correct",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:292"
+        },
+        {
+          "excerpt": "previous evidence: 08-21 report recorded the same class of issue for other members' emails",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:292"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000302",
+      "merged_sources": [
+        "SOURCE_011:292"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "akanksh-rv",
+      "playbook_match": {
+        "confidence": 0,
+        "matched_on": [],
+        "playbook_id": null,
+        "playbook_name": null,
+        "playbook_scope": null,
+        "playbook_version": null,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: security scope AUTHENTICATION not allowed by playbook; complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: security scope AUTHENTICATION not allowed by playbook; complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: security scope AUTHENTICATION not allowed by playbook; complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: confidence 5 below 60",
+          "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL: security scope AUTHENTICATION not allowed by playbook"
+        ],
+        "source": "NO_MATCH"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "security scope AUTHENTICATION (+3)",
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: security scope AUTHENTICATION (+3); non-code process item, no software risk (-1).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "recommended_action": "Link the identity so review attribution is correct",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "AUTHENTICATION",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Commits landing under an unlinked author identity \u2014 Branch commits attributed to `claude`, not to his GitHub login",
+          "finding_reference": "line 292",
+          "member": "akanksh-rv",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:292",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Commits landing under an unlinked author identity"
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000303_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "Medicodio-Amit",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 8
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|across date days doc draft either finish improve leaving marked open process progress ready review should surface",
+      "defect_type": null,
+      "description": "Repetitive work reported for Medicodio-Amit: Leaving a draft PR open across days with no review surface. Reported pattern: #393 open as draft for 6 days. Report's recommended approach: Improve documentation/process \u2014 a draft is either work-in-progress with a stated finish date or should be marked ready.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Leaving a draft PR open across days with no review surface",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:323"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 a draft is either work-in-progress with a stated finish date or should be marked ready",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:323"
+        }
+      ],
+      "files": [],
+      "frequency": "#393 open as draft for 6 days",
+      "issue_id": "ISSUE_000303",
+      "merged_sources": [
+        "SOURCE_011:323"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "Medicodio-Amit",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "high reported frequency (393) (+1)",
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 3/10 from base 3 adjusted by: high reported frequency (393) (+1); non-code process item, no software risk (-1).",
+        "score": 3
+      },
+      "product": "Medicodio",
+      "recommended_action": "Improve documentation/process \u2014 a draft is either work-in-progress with a stated finish date or should be marked ready",
+      "related_change": "#393",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": true,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Leaving a draft PR open across days with no review surface",
+          "finding_reference": "line 323",
+          "member": "Medicodio-Amit",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:323",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Leaving a draft PR open across days with no review surface"
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000304_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "Medicodio-Amit",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 7/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 7
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|REPOSITORY_UNKNOWN|automation driven fixtures generation hand has per redesigns row rule table test verified",
+      "defect_type": null,
+      "description": "Repetitive work reported for Medicodio-Amit: KB-table-driven rule redesigns verified by hand. Reported pattern: #411. Report's recommended approach: Automate with Devin \u2014 generate per-row fixtures from the KB table so each rule row has a test.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "KB-table-driven rule redesigns verified by hand",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:324"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 generate per-row fixtures from the KB table so each rule row has a test",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:324"
+        }
+      ],
+      "files": [],
+      "frequency": "#411",
+      "issue_id": "ISSUE_000304",
+      "merged_sources": [
+        "SOURCE_011:324"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "Medicodio-Amit",
+      "playbook_match": {
+        "confidence": 84,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY",
+          "keywords: by hand, automate"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)",
+          "high reported frequency (411) (+1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1); high reported frequency (411) (+1).",
+        "score": 5
+      },
+      "product": "Medicodio",
+      "recommended_action": "Automate with Devin \u2014 generate per-row fixtures from the KB table so each rule row has a test",
+      "related_change": "#411",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": true,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "KB-table-driven rule redesigns verified by hand",
+          "finding_reference": "line 324",
+          "member": "Medicodio-Amit",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:324",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "KB-table-driven rule redesigns verified by hand"
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000305_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "Medicodio-Amit",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 7/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 7
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|REPOSITORY_UNKNOWN|collapse delegate fixtures generated per row rules table",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for Medicodio-Amit: Delegate per-row fixtures for the I.B.9 collapse rules, generated from the KB table.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate per-row fixtures for the I.B.9 collapse rules, generated from the KB table.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:328"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000305",
+      "merged_sources": [
+        "SOURCE_011:328"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "Medicodio-Amit",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1).",
+        "score": 4
+      },
+      "product": "Medicodio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": true,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate per-row fixtures for the I.B.9 collapse rules, generated from the KB table.",
+          "finding_reference": "line 328",
+          "member": "Medicodio-Amit",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:328",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate per-row fixtures for the I.B.9 collapse rules, generated from the KB table."
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000306_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "MISSING_TEST",
+      "category_match": true,
+      "category_rationale": "category MISSING_TEST confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "Medicodio-Amit",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.7,
+        "factors": [
+          "category MISSING_TEST base 3",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category MISSING_TEST base 3; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.6,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MISSING_TEST|REPOSITORY_UNKNOWN|before delegate episodic feature marked memory precision ready recall test",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for Medicodio-Amit: Delegate recall-precision tests for the episodic memory feature in #393 before it is marked ready.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate recall-precision tests for the episodic memory feature in #393 before it is marked ready.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:329"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000306",
+      "merged_sources": [
+        "SOURCE_011:329"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "Medicodio-Amit",
+      "playbook_match": {
+        "confidence": 0,
+        "matched_on": [],
+        "playbook_id": null,
+        "playbook_name": null,
+        "playbook_scope": null,
+        "playbook_version": null,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook",
+          "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL: confidence 12 below 60"
+        ],
+        "source": "NO_MATCH"
+      },
+      "priority": {
+        "confidence": 0.6,
+        "factors": [
+          "category MISSING_TEST (+2)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category MISSING_TEST (+2).",
+        "score": 5
+      },
+      "product": "Medicodio",
+      "recommended_action": null,
+      "related_change": "#393",
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": "TEST_TO_BE_WRITTEN",
+        "notes": "No reproduction exists yet: the finding is absence of coverage. A generated test must first demonstrate the uncovered behavior."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": true,
+      "skills_available": [],
+      "skills_required": [],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate recall-precision tests for the episodic memory feature in #393 before it is marked ready.",
+          "finding_reference": "line 329",
+          "member": "Medicodio-Amit",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:329",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate recall-precision tests for the episodic memory feature in #393 before it is marked ready."
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000307_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "Medicodio-Amit",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 8
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|close date days draft engine finish hours land left older open",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for Medicodio-Amit: Devin/engine draft PRs left open for days. Current evidence: #393 draft for 6 days, #405 (Devin-authored) draft since 08-27. Recommended action: Close, land, or state a finish date for each draft older than 48 hours.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Devin/engine draft PRs left open for days \u2014 #393 draft for 6 days, #405 (Devin-authored) draft since 08-27",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:351"
+        },
+        {
+          "excerpt": "Close, land, or state a finish date for each draft older than 48 hours",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:351"
+        },
+        {
+          "excerpt": "previous evidence: 08-22/08-23 reports: engine #373 draft for 4 consecutive days",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:351"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000307",
+      "merged_sources": [
+        "SOURCE_011:351"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "Medicodio-Amit",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Medicodio",
+      "recommended_action": "Close, land, or state a finish date for each draft older than 48 hours",
+      "related_change": "#393, #405",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Devin/engine draft PRs left open for days \u2014 #393 draft for 6 days, #405 (Devin-authored) draft since 08-27",
+          "finding_reference": "line 351",
+          "member": "Medicodio-Amit",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:351",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Devin/engine draft PRs left open for days"
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000308_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "amit-pandey-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 8
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|before bot cycle doc gate human improve one pass process require review reviewer running same third verdict",
+      "defect_type": null,
+      "description": "Repetitive work reported for amit-pandey-medicodio: Re-running the same Devin Review cycle on one PR. Reported pattern: #249 has six bot passes across two days and still no human review. Report's recommended approach: Improve documentation/process \u2014 a bot pass is a gate, not a reviewer; require one human verdict before the third bot pass.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Re-running the same Devin Review cycle on one PR",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:382"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 a bot pass is a gate, not a reviewer; require one human verdict before the third bot pass",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:382"
+        }
+      ],
+      "files": [],
+      "frequency": "#249 has six bot passes across two days and still no human review",
+      "issue_id": "ISSUE_000308",
+      "merged_sources": [
+        "SOURCE_011:382"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "amit-pandey-medicodio",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "high reported frequency (249) (+1)",
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 3/10 from base 3 adjusted by: high reported frequency (249) (+1); non-code process item, no software risk (-1).",
+        "score": 3
+      },
+      "product": "Medicodio",
+      "recommended_action": "Improve documentation/process \u2014 a bot pass is a gate, not a reviewer; require one human verdict before the third bot pass",
+      "related_change": "#249",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": true,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Re-running the same Devin Review cycle on one PR",
+          "finding_reference": "line 382",
+          "member": "amit-pandey-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:382",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Re-running the same Devin Review cycle on one PR"
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000309_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "amit-pandey-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 7/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 7
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|REPOSITORY_UNKNOWN|automation construction contract flag integration new per plumbing prompt registry test validated",
+      "defect_type": null,
+      "description": "Repetitive work reported for amit-pandey-medicodio: Prompt/flag registry plumbing per integration. Reported pattern: #248, #249. Report's recommended approach: Automate with Devin \u2014 registry contract tests so each new prompt or flag is validated by construction.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Prompt/flag registry plumbing per integration",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:383"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 registry contract tests so each new prompt or flag is validated by construction",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:383"
+        }
+      ],
+      "files": [],
+      "frequency": "#248, #249",
+      "issue_id": "ISSUE_000309",
+      "merged_sources": [
+        "SOURCE_011:383"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "amit-pandey-medicodio",
+      "playbook_match": {
+        "confidence": 72,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY",
+          "keywords: automate"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)",
+          "high reported frequency (249) (+1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1); high reported frequency (249) (+1).",
+        "score": 5
+      },
+      "product": "Medicodio",
+      "recommended_action": "Automate with Devin \u2014 registry contract tests so each new prompt or flag is validated by construction",
+      "related_change": "#248, #249",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": true,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Prompt/flag registry plumbing per integration",
+          "finding_reference": "line 383",
+          "member": "amit-pandey-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:383",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Prompt/flag registry plumbing per integration"
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000310_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "PROCESS_PRACTICE",
+      "category_match": false,
+      "category_rationale": "reported as bug but category PROCESS_PRACTICE shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "amit-pandey-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 8
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|contract delegate fails has loudly missing prompt registered registry required resolves test variables when",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for amit-pandey-medicodio: Delegate prompt-registry contract tests (every registered prompt resolves, has required variables, and fails loudly when missing).",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate prompt-registry contract tests (every registered prompt resolves, has required variables, and fails loudly when missing).",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:387"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000310",
+      "merged_sources": [
+        "SOURCE_011:387"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "amit-pandey-medicodio",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Medicodio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "BUG",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate prompt-registry contract tests (every registered prompt resolves, has required variables, and fails loudly when missing).",
+          "finding_reference": "line 387",
+          "member": "amit-pandey-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:387",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate prompt-registry contract tests (every registered prompt resolves, has required variables, and fails loudly when missing)."
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000311_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "amit-pandey-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.7,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 8
+      },
+      "component": null,
+      "confidence": 0.6,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|across boundary created delegate flag insurance integration propagation test",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for amit-pandey-medicodio: Delegate the insurance-created-flag propagation tests across the integration boundary in #248.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Delegate the insurance-created-flag propagation tests across the integration boundary in #248.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:388"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000311",
+      "merged_sources": [
+        "SOURCE_011:388"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "amit-pandey-medicodio",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.6,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Medicodio",
+      "recommended_action": null,
+      "related_change": "#248",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Delegate the insurance-created-flag propagation tests across the integration boundary in #248.",
+          "finding_reference": "line 388",
+          "member": "amit-pandey-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:388",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Delegate the insurance-created-flag propagation tests across the integration boundary in #248."
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000312_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "amit-pandey-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category MECHANICAL_MIGRATION base 4",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 7/10 from: category MECHANICAL_MIGRATION base 4; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 7
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|REPOSITORY_UNKNOWN|acceptance bot criteria findings follow open remaining scoped split two ups written",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for amit-pandey-medicodio: Split the two open PRs' remaining work into scoped follow-ups with acceptance criteria written from the bot findings.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Split the two open PRs' remaining work into scoped follow-ups with acceptance criteria written from the bot findings.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:389"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000312",
+      "merged_sources": [
+        "SOURCE_011:389"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "amit-pandey-medicodio",
+      "playbook_match": {
+        "confidence": 0,
+        "matched_on": [],
+        "playbook_id": null,
+        "playbook_name": null,
+        "playbook_scope": null,
+        "playbook_version": null,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "NO_MATCH"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "category MECHANICAL_MIGRATION (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category MECHANICAL_MIGRATION (+1).",
+        "score": 4
+      },
+      "product": "Medicodio",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": true,
+      "skills_available": [],
+      "skills_required": [],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Split the two open PRs' remaining work into scoped follow-ups with acceptance criteria written from the bot findings.",
+          "finding_reference": "line 389",
+          "member": "amit-pandey-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:389",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Split the two open PRs' remaining work into scoped follow-ups with acceptance criteria written from the bot findings."
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000313_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "amit-pandey-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)",
+          "security-sensitive surface AUTHENTICATION (+2)"
+        ],
+        "rationale": "Complexity 10/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1); security-sensitive surface AUTHENTICATION (+2).",
+        "score": 10
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|account attributed commit email github him landing leverage link under unlinked",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for amit-pandey-medicodio: Commits landing under an unlinked email. Current evidence: Unchanged; his Devin work is still invisible under his login. Recommended action: Link the email to the GitHub account so his Devin leverage is attributed to him.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Commits landing under an unlinked email \u2014 Unchanged; his Devin work is still invisible under his login",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:411"
+        },
+        {
+          "excerpt": "Link the email to the GitHub account so his Devin leverage is attributed to him",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:411"
+        },
+        {
+          "excerpt": "previous evidence: 08-21 report identified `amit.p@medicodio.ai` as a separate API identity",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:411"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000313",
+      "merged_sources": [
+        "SOURCE_011:411"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "amit-pandey-medicodio",
+      "playbook_match": {
+        "confidence": 0,
+        "matched_on": [],
+        "playbook_id": null,
+        "playbook_name": null,
+        "playbook_scope": null,
+        "playbook_version": null,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: security scope AUTHENTICATION not allowed by playbook; complexity 10 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: security scope AUTHENTICATION not allowed by playbook; complexity 10 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: security scope AUTHENTICATION not allowed by playbook; complexity 10 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: confidence 5 below 60",
+          "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL: security scope AUTHENTICATION not allowed by playbook"
+        ],
+        "source": "NO_MATCH"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "security scope AUTHENTICATION (+3)",
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: security scope AUTHENTICATION (+3); non-code process item, no software risk (-1).",
+        "score": 5
+      },
+      "product": "Medicodio",
+      "recommended_action": "Link the email to the GitHub account so his Devin leverage is attributed to him",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "AUTHENTICATION",
+      "selected_for_attention": true,
+      "skills_available": [],
+      "skills_required": [],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Commits landing under an unlinked email \u2014 Unchanged; his Devin work is still invisible under his login",
+          "finding_reference": "line 411",
+          "member": "amit-pandey-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:411",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Commits landing under an unlinked email"
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000314_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "amit-pandey-medicodio",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 8
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|before bot days human left one only open pass required review third verdict",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for amit-pandey-medicodio: Bot-review-only PRs left open for days. Current evidence: Both still open through the review window. Recommended action: One human verdict required before the third bot pass.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Bot-review-only PRs left open for days \u2014 Both still open through the review window",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:412"
+        },
+        {
+          "excerpt": "One human verdict required before the third bot pass",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:412"
+        },
+        {
+          "excerpt": "previous evidence: 08-30 report listed #248/#249 as open",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:412"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000314",
+      "merged_sources": [
+        "SOURCE_011:412"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "amit-pandey-medicodio",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Medicodio",
+      "recommended_action": "One human verdict required before the third bot pass",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Bot-review-only PRs left open for days \u2014 Both still open through the review window",
+          "finding_reference": "line 412",
+          "member": "amit-pandey-medicodio",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:412",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Bot-review-only PRs left open for days"
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000315_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "Murali-Shetty19",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 7/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 7
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|REPOSITORY_UNKNOWN|belongs branch descriptive doc draft exploratory improve lived long non open process purpose title",
+      "defect_type": null,
+      "description": "Repetitive work reported for Murali-Shetty19: A long-lived exploratory PR with a non-descriptive title. Reported pattern: #382 open 10 days. Report's recommended approach: Improve documentation/process \u2014 exploratory work belongs on a branch or a draft with a stated purpose, not an open PR.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "A long-lived exploratory PR with a non-descriptive title",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:443"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 exploratory work belongs on a branch or a draft with a stated purpose, not an open PR",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:443"
+        }
+      ],
+      "files": [],
+      "frequency": "#382 open 10 days",
+      "issue_id": "ISSUE_000315",
+      "merged_sources": [
+        "SOURCE_011:443"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "Murali-Shetty19",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)",
+          "high reported frequency (382) (+1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1); high reported frequency (382) (+1).",
+        "score": 5
+      },
+      "product": "Medicodio",
+      "recommended_action": "Improve documentation/process \u2014 exploratory work belongs on a branch or a draft with a stated purpose, not an open PR",
+      "related_change": "#382",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": true,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "A long-lived exploratory PR with a non-descriptive title",
+          "finding_reference": "line 443",
+          "member": "Murali-Shetty19",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:443",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "A long-lived exploratory PR with a non-descriptive title"
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000316_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "Murali-Shetty19",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.7,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 8
+      },
+      "component": null,
+      "confidence": 0.6,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|REPOSITORY_UNKNOWN|acceptance close criteria delegate ortho otherwise scoped session still wanted written",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for Murali-Shetty19: If the ortho work is still wanted, delegate it as a scoped session with written acceptance criteria; otherwise close #382.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "If the ortho work is still wanted, delegate it as a scoped session with written acceptance criteria; otherwise close #382.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:447"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000316",
+      "merged_sources": [
+        "SOURCE_011:447"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "Murali-Shetty19",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.6,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Medicodio",
+      "recommended_action": null,
+      "related_change": "#382",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "If the ortho work is still wanted, delegate it as a scoped session with written acceptance criteria; otherwise close #382.",
+          "finding_reference": "line 447",
+          "member": "Murali-Shetty19",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:447",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "If the ortho work is still wanted, delegate it as a scoped session with written acceptance criteria; otherwise close #382."
+    },
+    {
+      "analysis_scope": "UNRESOLVED",
+      "attempt_id": "ISSUE_000317_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": null,
+          "source_file_count": null,
+          "work_done": {
+            "author": "Murali-Shetty19",
+            "commit_count": 0,
+            "date": "2026_08_31",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "target repository not determined from the report (+2)",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 7/10 from: category AUTOMATION_OPPORTUNITY base 4; target repository not determined from the report (+2); no file paths identified (+1).",
+        "score": 7
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|REPOSITORY_UNKNOWN|acceptance bodies close criteria descriptive engine non purpose restate titles",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for Murali-Shetty19: Non-descriptive engine PR titles/bodies. Current evidence: #382 \"Testing ortho\", 10 days open. Recommended action: Close it or restate it with a purpose and acceptance criteria.",
+      "detected_at": "2026_08_31",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Non-descriptive engine PR titles/bodies \u2014 #382 \"Testing ortho\", 10 days open",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:469"
+        },
+        {
+          "excerpt": "Close it or restate it with a purpose and acceptance criteria",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:469"
+        },
+        {
+          "excerpt": "previous evidence: 08-21 report, pattern (5)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:469"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000317",
+      "merged_sources": [
+        "SOURCE_011:469"
+      ],
+      "missing_skills": [],
+      "next_state": "PLANNED",
+      "owner": "Murali-Shetty19",
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 7 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 7 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1).",
+        "score": 4
+      },
+      "product": "Medicodio",
+      "recommended_action": "Close it or restate it with a purpose and acceptance criteria",
+      "related_change": "#382",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": null,
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "the report does not name a repository, so scope cannot be decided",
+      "security_scope": "NONE",
+      "selected_for_attention": true,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Non-descriptive engine PR titles/bodies \u2014 #382 \"Testing ortho\", 10 days open",
+          "finding_reference": "line 469",
+          "member": "Murali-Shetty19",
+          "report_date": "2026_08_31",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_08_31_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_08_31:SOURCE_011:469",
+      "stage": "02_PLAYBOOK_MATCH",
+      "state": "PLANNED",
+      "status": "OK",
+      "title": "Non-descriptive engine PR titles/bodies"
+    }
+  ],
+  "next_expected_input_file": "2026_08_31_RUN_0005_03_PLAN_INPUT.json",
+  "next_state": "PLANNED",
+  "report_date": "2026_08_31",
+  "run_flags": [],
+  "run_id": "RUN_0005",
+  "stage": "02_PLAYBOOK_MATCH",
+  "status": "OK",
+  "warnings": []
+}
