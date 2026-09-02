@@ -1,0 +1,8 @@
+{
+  "report_date": "2026_09_01",
+  "run_id": "RUN_0005",
+  "sha256": "94e7ab43e723626f513671ce378d93d99b8ed4a59d078b27605c3155268f6f7c",
+  "source_artifact": "02_PLAYBOOK_MATCH/2026_09_01_RUN_0005_02_PLAYBOOK_MATCH_OUTPUT_DEVIN_AI.json",
+  "source_stage": "02_PLAYBOOK_MATCH",
+  "stage": "03_PLAN"
+}
