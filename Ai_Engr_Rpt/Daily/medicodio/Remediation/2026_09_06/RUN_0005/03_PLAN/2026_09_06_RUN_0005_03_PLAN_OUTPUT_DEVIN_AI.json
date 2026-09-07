@@ -1,0 +1,4146 @@
+{
+  "dry_run": true,
+  "issues": [
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000282_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
+        "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
+        "complexity 6 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|another approves approving author delegated doc findings fixes fixing improve merge person posts process readiness reviewer second",
+      "defect_type": null,
+      "description": "Repetitive work reported for akanksh-rv: Fixing another author's PR to merge-readiness, then approving it. Reported pattern: `#1282` (09-03, as author), `#1306` (09-04, as author), `#1305` + `#1318` today (as reviewer). Report's recommended approach: Improve documentation/process \u2014 reviewer posts findings; author (or Devin, delegated by the author) fixes; a second person approves.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 6",
+        "remediability NON_CODE_PROCESS",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Fixing another author's PR to merge-readiness, then approving it",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:58"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 reviewer posts findings; author (or Devin, delegated by the author) fixes; a second person approves",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:58"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": "`#1282` (09-03, as author), `#1306` (09-04, as author), `#1305` + `#1318` today (as reviewer)",
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Restate the reported pattern with its evidence and frequency.",
+        "Identify whether the remedy is process, tooling, or code.",
+        "Describe the smallest concrete improvement and who owns it.",
+        "Produce the proposal for human decision; make no repository change."
+      ],
+      "issue_id": "ISSUE_000282",
+      "merged_sources": [
+        "SOURCE_011:58"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the remedy correctly classified as process, tooling, or code?",
+          "Is every claim traceable to a report line?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Restate the reported pattern with its evidence and frequency.",
+          "Identify whether the remedy is process, tooling, or code.",
+          "Describe the smallest concrete improvement and who owns it.",
+          "Produce the proposal for human decision; make no repository change."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "The item requires an organizational policy decision."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "high reported frequency (1318) (+1)",
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 3/10 from base 3 adjusted by: high reported frequency (1318) (+1); non-code process item, no software risk (-1).",
+        "score": 3
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Improve documentation/process \u2014 reviewer posts findings; author (or Devin, delegated by the author) fixes; a second person approves",
+      "related_change": "#1282, #1305, #1306, #1318",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Fixing another author's PR to merge-readiness, then approving it",
+          "finding_reference": "line 58",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:58",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for akanksh-rv: Fixing another author's PR to merge-readiness, then approving it. / Recommended: Improve documentation/process \u2014 reviewer posts findings; author (or Devin, delegated by the author) fixes; a second person approves",
+      "time_ai": "00:15",
+      "time_human": "03:00",
+      "time_human_ai": "01:45",
+      "title": "Fixing another author's PR to merge-readiness, then approving it"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000283_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_QA_VALIDATION default tier C",
+        "complexity 5 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: qa.execute_cases, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": false,
+      "category_rationale": "reported as bug but category AUTOMATION_OPPORTUNITY shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation backfilling commit doc fails function header headers lint mandatory manual missing pass pre removes rule scripts through tooling",
+      "defect_type": null,
+      "description": "Repetitive work reported for akanksh-rv: Backfilling \"mandatory function headers\" and `docs(headers)` commits. Reported pattern: 3 today, similar 09-04. Report's recommended approach: Automate through scripts/tooling \u2014 a lint rule/pre-commit that fails on a missing header removes the manual pass.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 5",
+        "remediability TOOLING_AUTOMATION",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Backfilling \"mandatory function headers\" and `docs(headers)` commits",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:59"
+        },
+        {
+          "excerpt": "Automate through scripts/tooling \u2014 a lint rule/pre-commit that fails on a missing header removes the manual pass",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:59"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": "3 today, similar 09-04",
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+        "State explicitly which cases can and cannot be executed with available access.",
+        "Execute the executable cases and record inputs, outputs, and environment.",
+        "Classify every failure as code defect, test defect, environment, data, or configuration.",
+        "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+      ],
+      "issue_id": "ISSUE_000283",
+      "merged_sources": [
+        "SOURCE_011:59"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Are unexecuted cases clearly reported as NOT_RUN?",
+          "Is each failure classified with evidence?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+          "State explicitly which cases can and cannot be executed with available access.",
+          "Execute the executable cases and record inputs, outputs, and environment.",
+          "Classify every failure as code defect, test defect, environment, data, or configuration.",
+          "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Required test environment or credentials are unavailable.",
+          "Validation would require production or PHI access."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Automate through scripts/tooling \u2014 a lint rule/pre-commit that fails on a missing header removes the manual pass",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Backfilling \"mandatory function headers\" and `docs(headers)` commits",
+          "finding_reference": "line 59",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:59",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for akanksh-rv: Backfilling \"mandatory function headers\" and `docs(headers)` commits. / Recommended: Automate through scripts/tooling \u2014 a lint rule/pre-commit that fails on a missing header removes the manual pass",
+      "time_ai": "00:15",
+      "time_human": "04:15",
+      "time_human_ai": "02:30",
+      "title": "Backfilling \"mandatory function headers\" and `docs(headers)` commits"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000284_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_QA_VALIDATION default tier C",
+        "complexity 5 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: qa.execute_cases, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": false,
+      "category_rationale": "reported as bug but category AUTOMATION_OPPORTUNITY shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|assertions automation branch broken commit delegate five fix gate green head make realign repair repairing run specs surfaced test three weakening",
+      "defect_type": null,
+      "description": "Repetitive work reported for akanksh-rv: Repairing specs broken by fix commits (`realign five specs`, `repair three specs the gate run surfaced`). Reported pattern: 5 today, 3 on 09-04. Report's recommended approach: Automate with Devin \u2014 run the gate on the branch head and delegate \"make the suite green without weakening assertions\".",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 5",
+        "remediability TOOLING_AUTOMATION",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Repairing specs broken by fix commits (`realign five specs`, `repair three specs the gate run surfaced`)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:60"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 run the gate on the branch head and delegate \"make the suite green without weakening assertions\"",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:60"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": "5 today, 3 on 09-04",
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+        "State explicitly which cases can and cannot be executed with available access.",
+        "Execute the executable cases and record inputs, outputs, and environment.",
+        "Classify every failure as code defect, test defect, environment, data, or configuration.",
+        "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+      ],
+      "issue_id": "ISSUE_000284",
+      "merged_sources": [
+        "SOURCE_011:60"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Are unexecuted cases clearly reported as NOT_RUN?",
+          "Is each failure classified with evidence?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+          "State explicitly which cases can and cannot be executed with available access.",
+          "Execute the executable cases and record inputs, outputs, and environment.",
+          "Classify every failure as code defect, test defect, environment, data, or configuration.",
+          "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Required test environment or credentials are unavailable.",
+          "Validation would require production or PHI access."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Automate with Devin \u2014 run the gate on the branch head and delegate \"make the suite green without weakening assertions\"",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Repairing specs broken by fix commits (`realign five specs`, `repair three specs the gate run surfaced`)",
+          "finding_reference": "line 60",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:60",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for akanksh-rv: Repairing specs broken by fix commits (`realign five specs`, `repair three specs the gate run surfaced`). / Recommended: Automate with Devin \u2014 run the gate on the branch head and delegate \"make the suite green without weakening assertions\"",
+      "time_ai": "00:15",
+      "time_human": "04:15",
+      "time_human_ai": "02:30",
+      "title": "Repairing specs broken by fix commits (`realign five specs`, `repair three specs the gate run surfaced`)"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000285_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_QA_VALIDATION default tier C",
+        "complexity 5 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: qa.execute_cases, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation commit doc gate generation log output posted record review scripts through tooling",
+      "defect_type": null,
+      "description": "Repetitive work reported for akanksh-rv: `docs(review-logs): record \u2026` commits. Reported pattern: 4 today, 3 on 09-04. Report's recommended approach: Automate through scripts/tooling \u2014 generate the log from the posted review + gate output.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 5",
+        "remediability TOOLING_AUTOMATION",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "`docs(review-logs): record \u2026` commits",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:61"
+        },
+        {
+          "excerpt": "Automate through scripts/tooling \u2014 generate the log from the posted review + gate output",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:61"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": "4 today, 3 on 09-04",
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+        "State explicitly which cases can and cannot be executed with available access.",
+        "Execute the executable cases and record inputs, outputs, and environment.",
+        "Classify every failure as code defect, test defect, environment, data, or configuration.",
+        "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+      ],
+      "issue_id": "ISSUE_000285",
+      "merged_sources": [
+        "SOURCE_011:61"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Are unexecuted cases clearly reported as NOT_RUN?",
+          "Is each failure classified with evidence?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+          "State explicitly which cases can and cannot be executed with available access.",
+          "Execute the executable cases and record inputs, outputs, and environment.",
+          "Classify every failure as code defect, test defect, environment, data, or configuration.",
+          "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Required test environment or credentials are unavailable.",
+          "Validation would require production or PHI access."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Automate through scripts/tooling \u2014 generate the log from the posted review + gate output",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "`docs(review-logs): record \u2026` commits",
+          "finding_reference": "line 61",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:61",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for akanksh-rv: `docs(review-logs): record \u2026` commits. / Recommended: Automate through scripts/tooling \u2014 generate the log from the posted review + gate output",
+      "time_ai": "00:15",
+      "time_human": "04:15",
+      "time_human_ai": "02:30",
+      "title": "`docs(review-logs): record \u2026` commits"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000286_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
+        "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
+        "complexity 6 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|branch dev doc feature file improve lived merge process repairing shorter smaller",
+      "defect_type": null,
+      "description": "Repetitive work reported for akanksh-rv: Merging `dev` into a 100+-file feature branch and repairing the merge. Reported pattern: 2 today (`d3d167c0d`, `816270755`). Report's recommended approach: Improve documentation/process \u2014 smaller, shorter-lived PRs.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 6",
+        "remediability NON_CODE_PROCESS",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Merging `dev` into a 100+-file feature branch and repairing the merge",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:62"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 smaller, shorter-lived PRs",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:62"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": "2 today (`d3d167c0d`, `816270755`)",
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Restate the reported pattern with its evidence and frequency.",
+        "Identify whether the remedy is process, tooling, or code.",
+        "Describe the smallest concrete improvement and who owns it.",
+        "Produce the proposal for human decision; make no repository change."
+      ],
+      "issue_id": "ISSUE_000286",
+      "merged_sources": [
+        "SOURCE_011:62"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the remedy correctly classified as process, tooling, or code?",
+          "Is every claim traceable to a report line?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Restate the reported pattern with its evidence and frequency.",
+          "Identify whether the remedy is process, tooling, or code.",
+          "Describe the smallest concrete improvement and who owns it.",
+          "Produce the proposal for human decision; make no repository change."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "The item requires an organizational policy decision."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "high reported frequency (816270755) (+1)",
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 3/10 from base 3 adjusted by: high reported frequency (816270755) (+1); non-code process item, no software risk (-1).",
+        "score": 3
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Improve documentation/process \u2014 smaller, shorter-lived PRs",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Merging `dev` into a 100+-file feature branch and repairing the merge",
+          "finding_reference": "line 62",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:62",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for akanksh-rv: Merging `dev` into a 100+-file feature branch and repairing the merge. / Recommended: Improve documentation/process \u2014 smaller, shorter-lived PRs",
+      "time_ai": "00:15",
+      "time_human": "03:00",
+      "time_human_ai": "01:45",
+      "title": "Merging `dev` into a 100+-file feature branch and repairing the merge"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000287_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_QA_VALIDATION default tier C",
+        "complexity 5 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: qa.execute_cases, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.7,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.6,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation blocker candidate checklist convert dvr firm good list pre predicate review scoped tenancy",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for akanksh-rv: Good Devin Candidate \u2014 \"Convert the 20-blocker list from the `#1305` review into an automated DVR pre-review checklist (tenancy predicate on every firm-scoped query, `withRlsTx` for multi-table writes, `toErrorCode()` instead of `err.message`, bounded `findMany`) and run it against every open DVR PR.\"",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 5",
+        "remediability TOOLING_AUTOMATION",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Good Devin Candidate \u2014 \"Convert the 20-blocker list from the `#1305` review into an automated DVR pre-review checklist (tenancy predicate on every firm-scoped query, `withRlsTx` for multi-table writes, `toErrorCode()` instead of `err.message`, bounded `findMany`) and run it against every open DVR PR.\"",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:65"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+        "State explicitly which cases can and cannot be executed with available access.",
+        "Execute the executable cases and record inputs, outputs, and environment.",
+        "Classify every failure as code defect, test defect, environment, data, or configuration.",
+        "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+      ],
+      "issue_id": "ISSUE_000287",
+      "merged_sources": [
+        "SOURCE_011:65"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Are unexecuted cases clearly reported as NOT_RUN?",
+          "Is each failure classified with evidence?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+          "State explicitly which cases can and cannot be executed with available access.",
+          "Execute the executable cases and record inputs, outputs, and environment.",
+          "Classify every failure as code defect, test defect, environment, data, or configuration.",
+          "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Required test environment or credentials are unavailable.",
+          "Validation would require production or PHI access."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.6,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": null,
+      "related_change": "#1305",
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Good Devin Candidate \u2014 \"Convert the 20-blocker list from the `#1305` review into an automated DVR pre-review checklist (tenancy predicate on every firm-scoped query, `withRlsTx` for multi-table writes, `toErrorCode()` instead of `err.message`, bounded `findMany`) and run it against every open DVR PR.\"",
+          "finding_reference": "line 65",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:65",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Delegation opportunity recorded for akanksh-rv: Good Devin Candidate \u2014 \"Convert the 20-blocker list from the `#1305` review into an automated DVR pre-review checklist (tenancy predicate on every firm-scoped query, `withRlsTx` for multi-table writes, `toErrorCode()` instead of `err.message`, bounded `findMany`) and run it against every open DVR PR.\" / Recommended: DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "time_ai": "00:15",
+      "time_human": "04:15",
+      "time_human_ai": "02:30",
+      "title": "Good Devin Candidate \u2014 \"Convert the 20-blocker list from the `#1305` review into an automated DVR pre-review checklist (tenancy predicate on every firm-scoped q"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000288_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_REGRESSION_TEST_GENERATION default tier A",
+        "security scope could not be determined from the evidence",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: test.write_regression_test, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MISSING_TEST",
+      "category_match": false,
+      "category_rationale": "reported as bug but category MISSING_TEST shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category MISSING_TEST base 3",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 4/10 from: category MISSING_TEST base 3; no file paths identified (+1).",
+        "score": 4
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MISSING_TEST|globalcodio-monorepo|both branch candidate count dev fails feature file fix good merge onrowclick reduces test touched when write",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for akanksh-rv: Good Devin Candidate \u2014 \"Write a regression test that fails when a `dev` merge into a feature branch reduces the `onRowClick`/fix count on files touched by both sides\" (the `816270755` class).",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 4",
+        "remediability CODE_CHANGE",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Good Devin Candidate \u2014 \"Write a regression test that fails when a `dev` merge into a feature branch reduces the `onRowClick`/fix count on files touched by both sides\" (the `816270755` class).",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:66"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Identify the defect class and the exact behavior that must not regress.",
+        "Locate the existing test suite and the closest existing tests for that surface.",
+        "Write the smallest test that fails against the current behavior when the defect is present.",
+        "Run the new test and record the pre-fix result.",
+        "Run the targeted suite for the touched module.",
+        "Run the broader suite for the package.",
+        "Record every command and its output as evidence."
+      ],
+      "issue_id": "ISSUE_000288",
+      "merged_sources": [
+        "SOURCE_011:66"
+      ],
+      "missing_skills": [
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Does the test fail for the right reason before the fix?",
+          "Is the assertion tied to observable behavior rather than implementation detail?",
+          "Is the test deterministic and free of network or clock dependence?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Identify the defect class and the exact behavior that must not regress.",
+          "Locate the existing test suite and the closest existing tests for that surface.",
+          "Write the smallest test that fails against the current behavior when the defect is present.",
+          "Run the new test and record the pre-fix result.",
+          "Run the targeted suite for the touched module.",
+          "Run the broader suite for the package.",
+          "Record every command and its output as evidence."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Test framework cannot be identified.",
+          "CI or local test execution is unavailable in the target repository.",
+          "The behavior under test touches authentication, authorization, tenancy, PHI, secrets, or billing."
+        ],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Fail when Good Devin Candidate \u2014 \"Write a regression test that fails when a `dev` merge into a feature branch reduces the `onRowClick`/fix count on files touched by both  regresses",
+            "kind": "REGRESSION",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000288_T01",
+            "would_run": true
+          }
+        ],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 77,
+        "matched_on": [
+          "category MISSING_TEST",
+          "keywords: regression test"
+        ],
+        "playbook_id": "ORG_PB_REGRESSION_TEST_GENERATION",
+        "playbook_name": "Regression test generation for a known defect class",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "category MISSING_TEST (+2)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category MISSING_TEST (+2).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": "TEST_TO_BE_WRITTEN",
+        "notes": "No reproduction exists yet: the finding is absence of coverage. A generated test must first demonstrate the uncovered behavior."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [
+        "repo.test_framework_identification"
+      ],
+      "skills_required": [
+        "repo.test_framework_identification",
+        "test.write_regression_test",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Good Devin Candidate \u2014 \"Write a regression test that fails when a `dev` merge into a feature branch reduces the `onRowClick`/fix count on files touched by both sides\" (the `816270755` class).",
+          "finding_reference": "line 66",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:66",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: test.write_regression_test: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Delegation opportunity recorded for akanksh-rv: Good Devin Candidate \u2014 \"Write a regression test that fails when a `dev` merge into a feature branch reduces the `onRowClick`/fix count on files touched by both sides\" (the `816270755` class). / Recommended: DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "time_ai": "00:15",
+      "time_human": "04:00",
+      "time_human_ai": "02:15",
+      "title": "Good Devin Candidate \u2014 \"Write a regression test that fails when a `dev` merge into a feature branch reduces the `onRowClick`/fix count on files touched by both "
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000289_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_MECHANICAL_MIGRATION default tier B",
+        "security scope could not be determined from the evidence",
+        "complexity 5 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: repo.multi_file_edit, git.stacked_branches, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category MECHANICAL_MIGRATION base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category MECHANICAL_MIGRATION base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|along api candidate feature file groups hum letter next plan possible propose seam shared split support types web",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for akanksh-rv: Possible Devin Candidate \u2014 \"Propose a \u2264 60-file split plan for the next letter-groups/support-letter feature along the shared-types \u2192 db \u2192 api \u2192 web seam\" \u2014 human decides the cut.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 5",
+        "remediability CODE_CHANGE",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Possible Devin Candidate \u2014 \"Propose a \u2264 60-file split plan for the next letter-groups/support-letter feature along the shared-types \u2192 db \u2192 api \u2192 web seam\" \u2014 human decides the cut.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:67"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Enumerate every affected file and confirm the change is deterministic per file.",
+        "Confirm the transformation is reversible and produces no behavior change.",
+        "Apply the transformation in reviewable slices, each independently buildable.",
+        "Run build, typecheck, and the affected test suites per slice.",
+        "Record the file list, commands, and results for each slice."
+      ],
+      "issue_id": "ISSUE_000289",
+      "merged_sources": [
+        "SOURCE_011:67"
+      ],
+      "missing_skills": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Is every slice reviewable on its own?",
+          "Is the diff free of behavior changes?",
+          "Is the rollback simply reverting the slice?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Enumerate every affected file and confirm the change is deterministic per file.",
+          "Confirm the transformation is reversible and produces no behavior change.",
+          "Apply the transformation in reviewable slices, each independently buildable.",
+          "Run build, typecheck, and the affected test suites per slice.",
+          "Record the file list, commands, and results for each slice."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "The transformation requires human judgment on any file.",
+          "Any slice changes runtime behavior.",
+          "The migration touches database schema, data, or irreversible infrastructure."
+        ],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Existing suites must pass unchanged (no behavior change)",
+            "kind": "EXISTING_SUITE",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000289_T01",
+            "would_run": true
+          }
+        ],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 77,
+        "matched_on": [
+          "category MECHANICAL_MIGRATION",
+          "keywords: split"
+        ],
+        "playbook_id": "ORG_PB_MECHANICAL_MIGRATION",
+        "playbook_name": "Mechanical multi-file or cross-repository migration",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "category MECHANICAL_MIGRATION (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category MECHANICAL_MIGRATION (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Possible Devin Candidate \u2014 \"Propose a \u2264 60-file split plan for the next letter-groups/support-letter feature along the shared-types \u2192 db \u2192 api \u2192 web seam\" \u2014 human decides the cut.",
+          "finding_reference": "line 67",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:67",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Delegation opportunity recorded for akanksh-rv: Possible Devin Candidate \u2014 \"Propose a \u2264 60-file split plan for the next letter-groups/support-letter feature along the shared-types \u2192 db \u2192 api \u2192 web seam\" \u2014 human decides the cut. / Recommended: DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "time_ai": "00:30",
+      "time_human": "05:00",
+      "time_human_ai": "03:00",
+      "title": "Possible Devin Candidate \u2014 \"Propose a \u2264 60-file split plan for the next letter-groups/support-letter feature along the shared-types \u2192 db \u2192 api \u2192 web seam\" \u2014 hum"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000290_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_MECHANICAL_MIGRATION default tier B",
+        "security scope could not be determined from the evidence",
+        "complexity 5 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: repo.multi_file_edit, git.stacked_branches, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category MECHANICAL_MIGRATION base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category MECHANICAL_MIGRATION base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|cap delegate feature file split stack",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for akanksh-rv: > 100-file feature PRs. Current evidence: `#1317` 199 files, +25.6k, merged same day. Recommended action: Cap at 60 files; stack PRs; delegate the split to Devin.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 5",
+        "remediability CODE_CHANGE",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "> 100-file feature PRs \u2014 `#1317` 199 files, +25.6k, merged same day",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:87"
+        },
+        {
+          "excerpt": "Cap at 60 files; stack PRs; delegate the split to Devin",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:87"
+        },
+        {
+          "excerpt": "previous evidence: 08-30 `#1260` (161), 09-02 `#1282` (89), 09-04 `#1306` (163)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:87"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Enumerate every affected file and confirm the change is deterministic per file.",
+        "Confirm the transformation is reversible and produces no behavior change.",
+        "Apply the transformation in reviewable slices, each independently buildable.",
+        "Run build, typecheck, and the affected test suites per slice.",
+        "Record the file list, commands, and results for each slice."
+      ],
+      "issue_id": "ISSUE_000290",
+      "merged_sources": [
+        "SOURCE_011:87"
+      ],
+      "missing_skills": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Is every slice reviewable on its own?",
+          "Is the diff free of behavior changes?",
+          "Is the rollback simply reverting the slice?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Enumerate every affected file and confirm the change is deterministic per file.",
+          "Confirm the transformation is reversible and produces no behavior change.",
+          "Apply the transformation in reviewable slices, each independently buildable.",
+          "Run build, typecheck, and the affected test suites per slice.",
+          "Record the file list, commands, and results for each slice."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "The transformation requires human judgment on any file.",
+          "Any slice changes runtime behavior.",
+          "The migration touches database schema, data, or irreversible infrastructure."
+        ],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Existing suites must pass unchanged (no behavior change)",
+            "kind": "EXISTING_SUITE",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000290_T01",
+            "would_run": true
+          }
+        ],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 89,
+        "matched_on": [
+          "category MECHANICAL_MIGRATION",
+          "keywords: split, stack"
+        ],
+        "playbook_id": "ORG_PB_MECHANICAL_MIGRATION",
+        "playbook_name": "Mechanical multi-file or cross-repository migration",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category MECHANICAL_MIGRATION (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category MECHANICAL_MIGRATION (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Cap at 60 files; stack PRs; delegate the split to Devin",
+      "related_change": "#1317",
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "> 100-file feature PRs \u2014 `#1317` 199 files, +25.6k, merged same day",
+          "finding_reference": "line 87",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:87",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Recurring pattern flagged for akanksh-rv: > 100-file feature PRs. / Recommended: Cap at 60 files; stack PRs; delegate the split to Devin",
+      "time_ai": "00:30",
+      "time_human": "05:00",
+      "time_human_ai": "03:00",
+      "title": "> 100-file feature PRs"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000291_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
+        "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
+        "complexity 6 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|approve approver authored commit does independent non remediate required review reviewer second which",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for akanksh-rv: Remediate-then-approve (non-independent review). Current evidence: Today as reviewer: 25/25 in-window commits on `#1305`, 32/32 on `#1318`, then approved + merged both. Recommended action: Reviewer does not approve a PR on which they authored > 20 % of commits; a second approver required.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 6",
+        "remediability NON_CODE_PROCESS",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Remediate-then-approve (non-independent review) \u2014 Today as reviewer: 25/25 in-window commits on `#1305`, 32/32 on `#1318`, then approved + merged both",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:88"
+        },
+        {
+          "excerpt": "Reviewer does not approve a PR on which they authored > 20 % of commits; a second approver required",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:88"
+        },
+        {
+          "excerpt": "previous evidence: 09-03 `#1282`, 09-04 `#1306` (as author, reviewer fixed)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:88"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Restate the reported pattern with its evidence and frequency.",
+        "Identify whether the remedy is process, tooling, or code.",
+        "Describe the smallest concrete improvement and who owns it.",
+        "Produce the proposal for human decision; make no repository change."
+      ],
+      "issue_id": "ISSUE_000291",
+      "merged_sources": [
+        "SOURCE_011:88"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the remedy correctly classified as process, tooling, or code?",
+          "Is every claim traceable to a report line?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Restate the reported pattern with its evidence and frequency.",
+          "Identify whether the remedy is process, tooling, or code.",
+          "Describe the smallest concrete improvement and who owns it.",
+          "Produce the proposal for human decision; make no repository change."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "The item requires an organizational policy decision."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Reviewer does not approve a PR on which they authored > 20 % of commits; a second approver required",
+      "related_change": "#1305, #1318",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Remediate-then-approve (non-independent review) \u2014 Today as reviewer: 25/25 in-window commits on `#1305`, 32/32 on `#1318`, then approved + merged both",
+          "finding_reference": "line 88",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:88",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Recurring pattern flagged for akanksh-rv: Remediate-then-approve (non-independent review). / Recommended: Reviewer does not approve a PR on which they authored > 20 % of commits; a second approver required",
+      "time_ai": "00:15",
+      "time_human": "03:00",
+      "time_human_ai": "01:45",
+      "title": "Remediate-then-approve (non-independent review)"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000292_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
+        "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
+        "complexity 6 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "akanksh-rv",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|approve before blockers decisions filed issues item open own should track watch",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for akanksh-rv: Approve with own open blockers/decisions. Current evidence: `#1305` approved 4 m 39 s after \"4 items need your decision\"; `#1318` approved 17 min after 5 open items and \"verify before sign-off\". Recommended action: Track as a watch item; open decisions should be filed as issues before approve.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 6",
+        "remediability NON_CODE_PROCESS",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Approve with own open blockers/decisions \u2014 `#1305` approved 4 m 39 s after \"4 items need your decision\"; `#1318` approved 17 min after 5 open items and \"verify before sign-off\"",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:89"
+        },
+        {
+          "excerpt": "Track as a watch item; open decisions should be filed as issues before approve",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:89"
+        },
+        {
+          "excerpt": "previous evidence: \u2014 (first observation; not yet a Repeat Pattern)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:89"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Restate the reported pattern with its evidence and frequency.",
+        "Identify whether the remedy is process, tooling, or code.",
+        "Describe the smallest concrete improvement and who owns it.",
+        "Produce the proposal for human decision; make no repository change."
+      ],
+      "issue_id": "ISSUE_000292",
+      "merged_sources": [
+        "SOURCE_011:89"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_FIXING",
+      "owner": "akanksh-rv",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the remedy correctly classified as process, tooling, or code?",
+          "Is every claim traceable to a report line?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Restate the reported pattern with its evidence and frequency.",
+          "Identify whether the remedy is process, tooling, or code.",
+          "Describe the smallest concrete improvement and who owns it.",
+          "Produce the proposal for human decision; make no repository change."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "The item requires an organizational policy decision."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 72,
+        "matched_on": [
+          "category PROCESS_PRACTICE",
+          "keywords: ci"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Track as a watch item; open decisions should be filed as issues before approve",
+      "related_change": "#1305, #1318",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Approve with own open blockers/decisions \u2014 `#1305` approved 4 m 39 s after \"4 items need your decision\"; `#1318` approved 17 min after 5 open items and \"verify before sign-off\"",
+          "finding_reference": "line 89",
+          "member": "akanksh-rv",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:89",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Recurring pattern flagged for akanksh-rv: Approve with own open blockers/decisions. / Recommended: Track as a watch item; open decisions should be filed as issues before approve",
+      "time_ai": "00:15",
+      "time_human": "03:00",
+      "time_human_ai": "01:45",
+      "title": "Approve with own open blockers/decisions"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000293_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_QA_VALIDATION default tier C",
+        "complexity 5 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: qa.execute_cases, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": false,
+      "category_rationale": "reported as bug but category AUTOMATION_OPPORTUNITY shows the capability does not exist yet, so it is an enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|after assertions automation bugs changes drift existing failing fix fixture fixtures gate interface interfaces mocks new pre realign registry repair repairing specs stale test wave weakening",
+      "defect_type": null,
+      "description": "Repetitive work reported for SaijyotiMeti: Repairing test mocks/fixtures after interface changes (`repair stale test mocks`, `repair 3 pre-existing test-fixture bugs`, `repair gate-failing test/registry drift`). Reported pattern: 4 today; similar 09-03. Report's recommended approach: Automate with Devin \u2014 \"realign specs to the new interfaces without weakening assertions\" after each fix wave.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 5",
+        "remediability TOOLING_AUTOMATION",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Repairing test mocks/fixtures after interface changes (`repair stale test mocks`, `repair 3 pre-existing test-fixture bugs`, `repair gate-failing test/registry drift`)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:121"
+        },
+        {
+          "excerpt": "Automate with Devin \u2014 \"realign specs to the new interfaces without weakening assertions\" after each fix wave",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:121"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": "4 today; similar 09-03",
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+        "State explicitly which cases can and cannot be executed with available access.",
+        "Execute the executable cases and record inputs, outputs, and environment.",
+        "Classify every failure as code defect, test defect, environment, data, or configuration.",
+        "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+      ],
+      "issue_id": "ISSUE_000293",
+      "merged_sources": [
+        "SOURCE_011:121"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Are unexecuted cases clearly reported as NOT_RUN?",
+          "Is each failure classified with evidence?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+          "State explicitly which cases can and cannot be executed with available access.",
+          "Execute the executable cases and record inputs, outputs, and environment.",
+          "Classify every failure as code defect, test defect, environment, data, or configuration.",
+          "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Required test environment or credentials are unavailable.",
+          "Validation would require production or PHI access."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Automate with Devin \u2014 \"realign specs to the new interfaces without weakening assertions\" after each fix wave",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "BUG",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Repairing test mocks/fixtures after interface changes (`repair stale test mocks`, `repair 3 pre-existing test-fixture bugs`, `repair gate-failing test/registry drift`)",
+          "finding_reference": "line 121",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:121",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for SaijyotiMeti: Repairing test mocks/fixtures after interface changes (`repair stale test mocks`, `repair 3 pre-existing test-fixture bugs`, `repair gate-failing test/registry drift`). / Recommended: Automate with Devin \u2014 \"realign specs to the new interfaces without weakening assertions\" after each fix wave",
+      "time_ai": "00:15",
+      "time_human": "04:15",
+      "time_human_ai": "02:30",
+      "title": "Repairing test mocks/fixtures after interface changes (`repair stale test mocks`, `repair 3 pre-existing test-fixture bugs`, `repair gate-failing test/registry drift`)"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000294_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
+        "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
+        "complexity 6 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|author blocker detail did direction doc fix fixing implement improve let post process review",
+      "defect_type": null,
+      "description": "Repetitive work reported for SaijyotiMeti: Fixing the blocker in a PR she is reviewing. Reported pattern: `#1282` (09-03), `#1306`, `#1311`, `#1280` (09-04), `#1317` today. Report's recommended approach: Improve documentation/process \u2014 post the fix direction (she did, in detail) and let the author or Devin implement.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 6",
+        "remediability NON_CODE_PROCESS",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Fixing the blocker in a PR she is reviewing",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:122"
+        },
+        {
+          "excerpt": "Improve documentation/process \u2014 post the fix direction (she did, in detail) and let the author or Devin implement",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:122"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": "`#1282` (09-03), `#1306`, `#1311`, `#1280` (09-04), `#1317` today",
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Restate the reported pattern with its evidence and frequency.",
+        "Identify whether the remedy is process, tooling, or code.",
+        "Describe the smallest concrete improvement and who owns it.",
+        "Produce the proposal for human decision; make no repository change."
+      ],
+      "issue_id": "ISSUE_000294",
+      "merged_sources": [
+        "SOURCE_011:122"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_FIXING",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the remedy correctly classified as process, tooling, or code?",
+          "Is every claim traceable to a report line?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Restate the reported pattern with its evidence and frequency.",
+          "Identify whether the remedy is process, tooling, or code.",
+          "Describe the smallest concrete improvement and who owns it.",
+          "Produce the proposal for human decision; make no repository change."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "The item requires an organizational policy decision."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "high reported frequency (1317) (+1)",
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 3/10 from base 3 adjusted by: high reported frequency (1317) (+1); non-code process item, no software risk (-1).",
+        "score": 3
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Improve documentation/process \u2014 post the fix direction (she did, in detail) and let the author or Devin implement",
+      "related_change": "#1280, #1282, #1306, #1311, #1317",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Fixing the blocker in a PR she is reviewing",
+          "finding_reference": "line 122",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:122",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for SaijyotiMeti: Fixing the blocker in a PR she is reviewing. / Recommended: Improve documentation/process \u2014 post the fix direction (she did, in detail) and let the author or Devin implement",
+      "time_ai": "00:15",
+      "time_human": "03:00",
+      "time_human_ai": "01:45",
+      "title": "Fixing the blocker in a PR she is reviewing"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000295_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_QA_VALIDATION default tier C",
+        "complexity 5 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: qa.execute_cases, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "AUTOMATION_OPPORTUNITY",
+      "category_match": true,
+      "category_rationale": "category AUTOMATION_OPPORTUNITY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category AUTOMATION_OPPORTUNITY base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|audit automation commit gate generation log output scripts standards through tooling",
+      "defect_type": null,
+      "description": "Repetitive work reported for SaijyotiMeti: Standards-audit log commits. Reported pattern: 2 today, 09-04. Report's recommended approach: Automate through scripts/tooling \u2014 generate from gate output.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 5",
+        "remediability TOOLING_AUTOMATION",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Standards-audit log commits",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:123"
+        },
+        {
+          "excerpt": "Automate through scripts/tooling \u2014 generate from gate output",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:123"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": "2 today, 09-04",
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+        "State explicitly which cases can and cannot be executed with available access.",
+        "Execute the executable cases and record inputs, outputs, and environment.",
+        "Classify every failure as code defect, test defect, environment, data, or configuration.",
+        "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+      ],
+      "issue_id": "ISSUE_000295",
+      "merged_sources": [
+        "SOURCE_011:123"
+      ],
+      "missing_skills": [
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Are unexecuted cases clearly reported as NOT_RUN?",
+          "Is each failure classified with evidence?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Derive QA cases from the issue, the diff, and the acceptance criteria.",
+          "State explicitly which cases can and cannot be executed with available access.",
+          "Execute the executable cases and record inputs, outputs, and environment.",
+          "Classify every failure as code defect, test defect, environment, data, or configuration.",
+          "Report unexecuted cases as NOT_RUN rather than assuming a pass."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "Required test environment or credentials are unavailable.",
+          "Validation would require production or PHI access."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 65,
+        "matched_on": [
+          "category AUTOMATION_OPPORTUNITY"
+        ],
+        "playbook_id": "ORG_PB_QA_VALIDATION",
+        "playbook_name": "QA validation of an already-implemented change",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "category AUTOMATION_OPPORTUNITY (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category AUTOMATION_OPPORTUNITY (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Automate through scripts/tooling \u2014 generate from gate output",
+      "related_change": null,
+      "remediable": "TOOLING_AUTOMATION",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "qa.derive_cases_from_diff"
+      ],
+      "skills_required": [
+        "qa.derive_cases_from_diff",
+        "qa.execute_cases",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Standards-audit log commits",
+          "finding_reference": "line 123",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:123",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Repetitive work reported for SaijyotiMeti: Standards-audit log commits. / Recommended: Automate through scripts/tooling \u2014 generate from gate output",
+      "time_ai": "00:15",
+      "time_human": "04:15",
+      "time_human_ai": "02:30",
+      "title": "Standards-audit log commits"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000296_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
+        "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
+        "complexity 6 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.7,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.6,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|any candidate commit gate gates good issues merge open post quality raw run table",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for SaijyotiMeti: Good Devin Candidate \u2014 \"Re-run the 39/42 quality gates on the `#1305`/`#1318` merge commits and post the raw table to the PR; open issues for any gate that is not green\" \u2014 replaces hand-written gate claims.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 6",
+        "remediability NON_CODE_PROCESS",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Good Devin Candidate \u2014 \"Re-run the 39/42 quality gates on the `#1305`/`#1318` merge commits and post the raw table to the PR; open issues for any gate that is not green\" \u2014 replaces hand-written gate claims.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:126"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Restate the reported pattern with its evidence and frequency.",
+        "Identify whether the remedy is process, tooling, or code.",
+        "Describe the smallest concrete improvement and who owns it.",
+        "Produce the proposal for human decision; make no repository change."
+      ],
+      "issue_id": "ISSUE_000296",
+      "merged_sources": [
+        "SOURCE_011:126"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_FIXING",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the remedy correctly classified as process, tooling, or code?",
+          "Is every claim traceable to a report line?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Restate the reported pattern with its evidence and frequency.",
+          "Identify whether the remedy is process, tooling, or code.",
+          "Describe the smallest concrete improvement and who owns it.",
+          "Produce the proposal for human decision; make no repository change."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "The item requires an organizational policy decision."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 72,
+        "matched_on": [
+          "category PROCESS_PRACTICE",
+          "keywords: hand-written"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.6,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": null,
+      "related_change": "#1305, #1318",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Good Devin Candidate \u2014 \"Re-run the 39/42 quality gates on the `#1305`/`#1318` merge commits and post the raw table to the PR; open issues for any gate that is not green\" \u2014 replaces hand-written gate claims.",
+          "finding_reference": "line 126",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:126",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Delegation opportunity recorded for SaijyotiMeti: Good Devin Candidate \u2014 \"Re-run the 39/42 quality gates on the `#1305`/`#1318` merge commits and post the raw table to the PR; open issues for any gate that is not green\" \u2014 replaces hand-written gate claims. / Recommended: DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "time_ai": "00:15",
+      "time_human": "03:00",
+      "time_human_ai": "01:45",
+      "title": "Good Devin Candidate \u2014 \"Re-run the 39/42 quality gates on the `#1305`/`#1318` merge commits and post the raw table to the PR; open issues for any gate that is n"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000297_ATTEMPT_01",
+      "autonomy_reasons": [
+        "no approved playbook matched; investigation and proposal only"
+      ],
+      "autonomy_tier": "C",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.7,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)",
+          "security-sensitive surface BILLING (+2)"
+        ],
+        "rationale": "Complexity 8/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1); security-sensitive surface BILLING (+2).",
+        "score": 8
+      },
+      "component": null,
+      "confidence": 0.6,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|add batching candidate checklist document getstates good group parity payment support_letter test trackableprovider",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for SaijyotiMeti: Good Devin Candidate \u2014 \"Add a `getStates` batching parity test for every `TrackableProvider` (document-checklist, checklist-group, payment, support_letter) so the per-ref fan-out she flagged on `#1317` cannot recur.\"",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 8",
+        "remediability NON_CODE_PROCESS",
+        "autonomy tier C",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Good Devin Candidate \u2014 \"Add a `getStates` batching parity test for every `TrackableProvider` (document-checklist, checklist-group, payment, support_letter) so the per-ref fan-out she flagged on `#1317` cannot recur.\"",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:127"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [],
+      "issue_id": "ISSUE_000297",
+      "merged_sources": [
+        "SOURCE_011:127"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_FIXING",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [],
+        "proposed_action": "PROPOSE: no approved playbook matched; request human direction.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 0,
+        "matched_on": [],
+        "playbook_id": null,
+        "playbook_name": null,
+        "playbook_scope": null,
+        "playbook_version": null,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: security scope BILLING not allowed by playbook; complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: security scope BILLING not allowed by playbook; complexity 8 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: security scope BILLING not allowed by playbook; complexity 8 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope BILLING not allowed by playbook",
+          "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL: security scope BILLING not allowed by playbook"
+        ],
+        "source": "NO_MATCH"
+      },
+      "priority": {
+        "confidence": 0.6,
+        "factors": [
+          "security scope BILLING (+3)",
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: security scope BILLING (+3); non-code process item, no software risk (-1).",
+        "score": 5
+      },
+      "product": "Global Codio",
+      "proposed_action": "PROPOSE: no approved playbook matched; request human direction.",
+      "recommended_action": null,
+      "related_change": "#1317",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "BILLING",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Good Devin Candidate \u2014 \"Add a `getStates` batching parity test for every `TrackableProvider` (document-checklist, checklist-group, payment, support_letter) so the per-ref fan-out she flagged on `#1317` cannot recur.\"",
+          "finding_reference": "line 127",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:127",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "NO_PLAYBOOK_MATCH: human must approve an approach or add a playbook"
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Delegation opportunity recorded for SaijyotiMeti: Good Devin Candidate \u2014 \"Add a `getStates` batching parity test for every `TrackableProvider` (document-checklist, checklist-group, payment, support_letter) so the per-ref fan-out she flagged on `#1317` cannot recur.\" / Recommended: PROPOSE: no approved playbook matched; request human direction.",
+      "time_ai": "00:15",
+      "time_human": "04:00",
+      "time_human_ai": "02:15",
+      "title": "Good Devin Candidate \u2014 \"Add a `getStates` batching parity test for every `TrackableProvider` (document-checklist, checklist-group, payment, support_letter) so t"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000298_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
+        "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
+        "complexity 6 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.7,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.6,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|candidate canonical columns decisions four guidance implement interactive open owned possible precedence rule tier",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for SaijyotiMeti: Possible Devin Candidate \u2014 \"Implement the four open decisions on `#1305` (owned-rule guidance columns, canonical tier precedence, N+1 in the interactive tx, `DocumentTypeMultiSelect` collapse) once she has decided each\" \u2014 decisions are hers; implementation is delegable.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 6",
+        "remediability NON_CODE_PROCESS",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Possible Devin Candidate \u2014 \"Implement the four open decisions on `#1305` (owned-rule guidance columns, canonical tier precedence, N+1 in the interactive tx, `DocumentTypeMultiSelect` collapse) once she has decided each\" \u2014 decisions are hers; implementation is delegable.",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:128"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Restate the reported pattern with its evidence and frequency.",
+        "Identify whether the remedy is process, tooling, or code.",
+        "Describe the smallest concrete improvement and who owns it.",
+        "Produce the proposal for human decision; make no repository change."
+      ],
+      "issue_id": "ISSUE_000298",
+      "merged_sources": [
+        "SOURCE_011:128"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_FIXING",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the remedy correctly classified as process, tooling, or code?",
+          "Is every claim traceable to a report line?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Restate the reported pattern with its evidence and frequency.",
+          "Identify whether the remedy is process, tooling, or code.",
+          "Describe the smallest concrete improvement and who owns it.",
+          "Produce the proposal for human decision; make no repository change."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "The item requires an organizational policy decision."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 72,
+        "matched_on": [
+          "category PROCESS_PRACTICE",
+          "keywords: ci"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.6,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": null,
+      "related_change": "#1305",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Possible Devin Candidate \u2014 \"Implement the four open decisions on `#1305` (owned-rule guidance columns, canonical tier precedence, N+1 in the interactive tx, `DocumentTypeMultiSelect` collapse) once she has decided each\" \u2014 decisions are hers; implementation is delegable.",
+          "finding_reference": "line 128",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:128",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Delegation opportunity recorded for SaijyotiMeti: Possible Devin Candidate \u2014 \"Implement the four open decisions on `#1305` (owned-rule guidance columns, canonical tier precedence, N+1 in the interactive tx, `DocumentTypeMultiSelect` collapse) once she has decided each\" \u2014 decisions are hers; implementation is delegable. / Recommended: DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "time_ai": "00:15",
+      "time_human": "03:00",
+      "time_human_ai": "01:45",
+      "title": "Possible Devin Candidate \u2014 \"Implement the four open decisions on `#1305` (owned-rule guidance columns, canonical tier precedence, N+1 in the interactive tx, `Do"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000299_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_MECHANICAL_MIGRATION default tier B",
+        "security scope could not be determined from the evidence",
+        "complexity 5 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: repo.multi_file_edit, git.stacked_branches, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category MECHANICAL_MIGRATION base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category MECHANICAL_MIGRATION base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|globalcodio-monorepo|cap features file prd ship stack",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for SaijyotiMeti: 100+-file PRs. Current evidence: `#1305` merged at 115 files; `#1318` 82. Recommended action: Cap at 60 files; ship PRD-2 features as stacked PRs.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 5",
+        "remediability CODE_CHANGE",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "100+-file PRs \u2014 `#1305` merged at 115 files; `#1318` 82",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:148"
+        },
+        {
+          "excerpt": "Cap at 60 files; ship PRD-2 features as stacked PRs",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:148"
+        },
+        {
+          "excerpt": "previous evidence: 08-26 (`#1220` 130 files), 09-04/09-05 (`#1305` 109\u2192115)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:148"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Enumerate every affected file and confirm the change is deterministic per file.",
+        "Confirm the transformation is reversible and produces no behavior change.",
+        "Apply the transformation in reviewable slices, each independently buildable.",
+        "Run build, typecheck, and the affected test suites per slice.",
+        "Record the file list, commands, and results for each slice."
+      ],
+      "issue_id": "ISSUE_000299",
+      "merged_sources": [
+        "SOURCE_011:148"
+      ],
+      "missing_skills": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Is every slice reviewable on its own?",
+          "Is the diff free of behavior changes?",
+          "Is the rollback simply reverting the slice?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Enumerate every affected file and confirm the change is deterministic per file.",
+          "Confirm the transformation is reversible and produces no behavior change.",
+          "Apply the transformation in reviewable slices, each independently buildable.",
+          "Run build, typecheck, and the affected test suites per slice.",
+          "Record the file list, commands, and results for each slice."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "The transformation requires human judgment on any file.",
+          "Any slice changes runtime behavior.",
+          "The migration touches database schema, data, or irreversible infrastructure."
+        ],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Existing suites must pass unchanged (no behavior change)",
+            "kind": "EXISTING_SUITE",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000299_T01",
+            "would_run": true
+          }
+        ],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 89,
+        "matched_on": [
+          "category MECHANICAL_MIGRATION",
+          "keywords: stack, stacked"
+        ],
+        "playbook_id": "ORG_PB_MECHANICAL_MIGRATION",
+        "playbook_name": "Mechanical multi-file or cross-repository migration",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category MECHANICAL_MIGRATION (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category MECHANICAL_MIGRATION (+1).",
+        "score": 4
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Cap at 60 files; ship PRD-2 features as stacked PRs",
+      "related_change": "#1305, #1318",
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "100+-file PRs \u2014 `#1305` merged at 115 files; `#1318` 82",
+          "finding_reference": "line 148",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:148",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Recurring pattern flagged for SaijyotiMeti: 100+-file PRs. / Recommended: Cap at 60 files; ship PRD-2 features as stacked PRs",
+      "time_ai": "00:30",
+      "time_human": "05:00",
+      "time_human_ai": "03:00",
+      "title": "100+-file PRs"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000300_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
+        "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
+        "complexity 6 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|globalcodio-monorepo|approve approves author blocker did direction fix fixes implements only post reviewer what write you",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for SaijyotiMeti: Reviewer fixes the blocker, then approves. Current evidence: `#1317`: blocker fixed by her session (`6d3c61e46`) 16 min after her REQUEST CHANGES; approve 61 min later. Recommended action: Post fix direction; author or Devin implements; approve only what you did not write.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 6",
+        "remediability NON_CODE_PROCESS",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Reviewer fixes the blocker, then approves \u2014 `#1317`: blocker fixed by her session (`6d3c61e46`) 16 min after her REQUEST CHANGES; approve 61 min later",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:149"
+        },
+        {
+          "excerpt": "Post fix direction; author or Devin implements; approve only what you did not write",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:149"
+        },
+        {
+          "excerpt": "previous evidence: 09-03 `#1282` (14/46 commits), 09-04 `#1306` (20/81), `#1311` (16/22)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:149"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Restate the reported pattern with its evidence and frequency.",
+        "Identify whether the remedy is process, tooling, or code.",
+        "Describe the smallest concrete improvement and who owns it.",
+        "Produce the proposal for human decision; make no repository change."
+      ],
+      "issue_id": "ISSUE_000300",
+      "merged_sources": [
+        "SOURCE_011:149"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_FIXING",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the remedy correctly classified as process, tooling, or code?",
+          "Is every claim traceable to a report line?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Restate the reported pattern with its evidence and frequency.",
+          "Identify whether the remedy is process, tooling, or code.",
+          "Describe the smallest concrete improvement and who owns it.",
+          "Produce the proposal for human decision; make no repository change."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "The item requires an organizational policy decision."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Post fix direction; author or Devin implements; approve only what you did not write",
+      "related_change": "#1317",
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Reviewer fixes the blocker, then approves \u2014 `#1317`: blocker fixed by her session (`6d3c61e46`) 16 min after her REQUEST CHANGES; approve 61 min later",
+          "finding_reference": "line 149",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:149",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Recurring pattern flagged for SaijyotiMeti: Reviewer fixes the blocker, then approves. / Recommended: Post fix direction; author or Devin implements; approve only what you did not write",
+      "time_ai": "00:15",
+      "time_human": "03:00",
+      "time_human_ai": "01:45",
+      "title": "Reviewer fixes the blocker, then approves"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000301_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_TENANT_ISOLATION_VALIDATION default tier C",
+        "security-sensitive surface (TENANT_ISOLATION) is human-owned",
+        "complexity 10 exceeds the autonomous ceiling 4",
+        "globalcodio-monorepo is outside the medicodio pilot scope",
+        "required capabilities are unavailable: security.read_tenancy_model, test.write_isolation_test, qa.execute_cases",
+        "playbook requires a reproduction and none is available"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "globalcodio-monorepo"
+      ],
+      "category": "SECURITY_TENANCY",
+      "category_match": true,
+      "category_rationale": "category SECURITY_TENANCY confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": true,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "globalcodio-monorepo",
+          "source_file_count": 6501,
+          "work_done": {
+            "author": "SaijyotiMeti",
+            "commit_count": 0,
+            "date": "2026_09_06",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": true,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category SECURITY_TENANCY base 9",
+          "no file paths identified (+1)",
+          "security-sensitive surface TENANT_ISOLATION (+2)"
+        ],
+        "rationale": "Complexity 10/10 from: category SECURITY_TENANCY base 9; no file paths identified (+1); security-sensitive surface TENANT_ISOLATION (+2).",
+        "score": 10
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "SECURITY_TENANCY|globalcodio-monorepo|body claims gate instead item matching output paste raw sentence summary verification watch",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for SaijyotiMeti: PR-body claims not matching verification. Current evidence: `#1305`: three claims disproved by reviewer (\"Tests green \u2014 39 gates\", cross-tenant lookup \"closed\", `kb_rule_id` \"added\"). Recommended action: Watch item: paste raw gate output instead of a summary sentence.",
+      "detected_at": "2026_09_06",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 10",
+        "remediability CODE_CHANGE",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "PR-body claims not matching verification \u2014 `#1305`: three claims disproved by reviewer (\"Tests green \u2014 39 gates\", cross-tenant lookup \"closed\", `kb_rule_id` \"added\")",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:150"
+        },
+        {
+          "excerpt": "Watch item: paste raw gate output instead of a summary sentence",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:150"
+        },
+        {
+          "excerpt": "previous evidence: \u2014 (first observation)",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:150"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "frequency": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Read and document the current tenancy/authorization model from the code as it exists.",
+        "Identify the boundary the report claims may be violated.",
+        "Write read-only tests that assert cross-tenant access is denied.",
+        "Execute the tests and record results.",
+        "Produce a written finding with evidence and a proposed change for human decision."
+      ],
+      "issue_id": "ISSUE_000301",
+      "merged_sources": [
+        "SOURCE_011:150"
+      ],
+      "missing_skills": [
+        "security.read_tenancy_model",
+        "test.write_isolation_test",
+        "qa.execute_cases"
+      ],
+      "next_state": "DEV_FIXING",
+      "owner": "SaijyotiMeti",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the current model documented from code rather than assumed?",
+          "Does the proposal leave the semantic decision to a human?",
+          "Are all tests read-only and free of production data?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Read and document the current tenancy/authorization model from the code as it exists.",
+          "Identify the boundary the report claims may be violated.",
+          "Write read-only tests that assert cross-tenant access is denied.",
+          "Execute the tests and record results.",
+          "Produce a written finding with evidence and a proposed change for human decision."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "HUMAN_OWNED_SURFACE: TENANT_ISOLATION semantics require a human decision",
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: security.read_tenancy_model: Engineering repositories are not checked out in the pilot.",
+          "MISSING_CAPABILITY: test.write_isolation_test: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+          "NO_REPRODUCTION: playbook requires a verified reproduction first",
+          "Any remediation would alter isolation or authorization semantics.",
+          "The finding cannot be verified without production access."
+        ],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Assert cross-tenant access is denied (read-only)",
+            "kind": "ISOLATION",
+            "reason_not_generated": "human-owned surface: inspection and proposal only",
+            "test_id": "ISSUE_000301_T01",
+            "would_run": true
+          }
+        ],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 89,
+        "matched_on": [
+          "category SECURITY_TENANCY",
+          "keywords: tenant, cross-tenant"
+        ],
+        "playbook_id": "ORG_PB_TENANT_ISOLATION_VALIDATION",
+        "playbook_name": "Tenant isolation / RLS / IDOR validation (inspection and testing only)",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: security scope TENANT_ISOLATION not allowed by playbook; complexity 10 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: security scope TENANT_ISOLATION not allowed by playbook; complexity 10 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: security scope TENANT_ISOLATION not allowed by playbook; complexity 10 exceeds playbook maximum 4"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category SECURITY_TENANCY (+4)",
+          "security scope TENANT_ISOLATION (+4)"
+        ],
+        "rationale": "Priority 10/10 from base 3 adjusted by: category SECURITY_TENANCY (+4); security scope TENANT_ISOLATION (+4).",
+        "score": 10
+      },
+      "product": "Global Codio",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Watch item: paste raw gate output instead of a summary sentence",
+      "related_change": "#1305",
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "globalcodio-monorepo",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "globalcodio-monorepo is outside the medicodio pilot scope",
+      "security_scope": "TENANT_ISOLATION",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [
+        "security.read_tenancy_model",
+        "test.write_isolation_test",
+        "qa.execute_cases"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "PR-body claims not matching verification \u2014 `#1305`: three claims disproved by reviewer (\"Tests green \u2014 39 gates\", cross-tenant lookup \"closed\", `kb_rule_id` \"added\")",
+          "finding_reference": "line 150",
+          "member": "SaijyotiMeti",
+          "report_date": "2026_09_06",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_06_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_06:SOURCE_011:150",
+      "stage": "03_PLAN",
+      "state": "DEV_FIXING",
+      "status": "OK",
+      "stop_conditions": [
+        "HUMAN_OWNED_SURFACE: TENANT_ISOLATION semantics require a human decision",
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: security.read_tenancy_model: Engineering repositories are not checked out in the pilot.",
+        "MISSING_CAPABILITY: test.write_isolation_test: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: qa.execute_cases: No QA environment or credentials are provisioned for the pilot.",
+        "NO_REPRODUCTION: playbook requires a verified reproduction first"
+      ],
+      "task_description": "Work carried out: globalcodio-monorepo: repository history shows no commits on 2026-09-06 / Code now: globalcodio-monorepo reviewed read-only (6501 source file(s)); no file paths were reported / Reported: Recurring pattern flagged for SaijyotiMeti: PR-body claims not matching verification. / Recommended: Watch item: paste raw gate output instead of a summary sentence",
+      "time_ai": "00:45",
+      "time_human": "10:00",
+      "time_human_ai": "05:45",
+      "title": "PR-body claims not matching verification"
+    }
+  ],
+  "next_expected_input_file": "2026_09_06_RUN_0005_04_DEV_FIX_INPUT.json",
+  "next_state": "DEV_FIXING",
+  "report_date": "2026_09_06",
+  "run_flags": [],
+  "run_id": "RUN_0005",
+  "stage": "03_PLAN",
+  "status": "OK",
+  "warnings": []
+}

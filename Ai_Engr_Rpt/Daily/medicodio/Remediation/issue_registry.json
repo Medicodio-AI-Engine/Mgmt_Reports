@@ -280,6 +280,26 @@
     "PROCESS_PRACTICE|medicodio-nextgen-integration|behaviour changes delegate invariant test": "ISSUE_000278",
     "MECHANICAL_MIGRATION|medicodio-nextgen-integration|fan level manual out promotion team workflow": "ISSUE_000279",
     "MECHANICAL_MIGRATION|medicodio-nextgen-integration|approvals approver doc hotfix improve independent line lost nothing one process promotion review template value word": "ISSUE_000280",
-    "MECHANICAL_MIGRATION|medicodio-nextgen-integration|approvals content line review template": "ISSUE_000281"
+    "MECHANICAL_MIGRATION|medicodio-nextgen-integration|approvals content line review template": "ISSUE_000281",
+    "PROCESS_PRACTICE|globalcodio-monorepo|another approves approving author delegated doc findings fixes fixing improve merge person posts process readiness reviewer second": "ISSUE_000282",
+    "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation backfilling commit doc fails function header headers lint mandatory manual missing pass pre removes rule scripts through tooling": "ISSUE_000283",
+    "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|assertions automation branch broken commit delegate five fix gate green head make realign repair repairing run specs surfaced test three weakening": "ISSUE_000284",
+    "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation commit doc gate generation log output posted record review scripts through tooling": "ISSUE_000285",
+    "PROCESS_PRACTICE|globalcodio-monorepo|branch dev doc feature file improve lived merge process repairing shorter smaller": "ISSUE_000286",
+    "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|automation blocker candidate checklist convert dvr firm good list pre predicate review scoped tenancy": "ISSUE_000287",
+    "MISSING_TEST|globalcodio-monorepo|both branch candidate count dev fails feature file fix good merge onrowclick reduces test touched when write": "ISSUE_000288",
+    "MECHANICAL_MIGRATION|globalcodio-monorepo|along api candidate feature file groups hum letter next plan possible propose seam shared split support types web": "ISSUE_000289",
+    "MECHANICAL_MIGRATION|globalcodio-monorepo|cap delegate feature file split stack": "ISSUE_000290",
+    "PROCESS_PRACTICE|globalcodio-monorepo|approve approver authored commit does independent non remediate required review reviewer second which": "ISSUE_000291",
+    "PROCESS_PRACTICE|globalcodio-monorepo|approve before blockers decisions filed issues item open own should track watch": "ISSUE_000292",
+    "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|after assertions automation bugs changes drift existing failing fix fixture fixtures gate interface interfaces mocks new pre realign registry repair repairing specs stale test wave weakening": "ISSUE_000293",
+    "PROCESS_PRACTICE|globalcodio-monorepo|author blocker detail did direction doc fix fixing implement improve let post process review": "ISSUE_000294",
+    "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|audit automation commit gate generation log output scripts standards through tooling": "ISSUE_000295",
+    "PROCESS_PRACTICE|globalcodio-monorepo|any candidate commit gate gates good issues merge open post quality raw run table": "ISSUE_000296",
+    "PROCESS_PRACTICE|globalcodio-monorepo|add batching candidate checklist document getstates good group parity payment support_letter test trackableprovider": "ISSUE_000297",
+    "PROCESS_PRACTICE|globalcodio-monorepo|candidate canonical columns decisions four guidance implement interactive open owned possible precedence rule tier": "ISSUE_000298",
+    "MECHANICAL_MIGRATION|globalcodio-monorepo|cap features file prd ship stack": "ISSUE_000299",
+    "PROCESS_PRACTICE|globalcodio-monorepo|approve approves author blocker did direction fix fixes implements only post reviewer what write you": "ISSUE_000300",
+    "SECURITY_TENANCY|globalcodio-monorepo|body claims gate instead item matching output paste raw sentence summary verification watch": "ISSUE_000301"
   }
 }
