@@ -280,6 +280,22 @@
     "PROCESS_PRACTICE|medicodio-nextgen-integration|behaviour changes delegate invariant test": "ISSUE_000278",
     "MECHANICAL_MIGRATION|medicodio-nextgen-integration|fan level manual out promotion team workflow": "ISSUE_000279",
     "MECHANICAL_MIGRATION|medicodio-nextgen-integration|approvals approver doc hotfix improve independent line lost nothing one process promotion review template value word": "ISSUE_000280",
-    "MECHANICAL_MIGRATION|medicodio-nextgen-integration|approvals content line review template": "ISSUE_000281"
+    "MECHANICAL_MIGRATION|medicodio-nextgen-integration|approvals content line review template": "ISSUE_000281",
+    "MECHANICAL_MIGRATION|globalcodio-monorepo|another approve approves author behalf dev doc document findings finishing fix fixes improve merge person posts process review reviewer second sync": "ISSUE_000282",
+    "AUTOMATION_OPPORTUNITY|globalcodio-monorepo|api automation commit doc generation log passes recording review scripts through tooling": "ISSUE_000283",
+    "MECHANICAL_MIGRATION|globalcodio-monorepo|automation before branch clearing content dev does drift failures feature file fix gate gates inherited lands migration nightly own pass registry run someone table": "ISSUE_000284",
+    "PROCESS_PRACTICE|globalcodio-monorepo|already check checklist checks consumers doc fill grep hand have import improve incident kind pre process recompute repeating rigor same stop table value verify": "ISSUE_000285",
+    "PROCESS_PRACTICE|globalcodio-monorepo|assert builder candidate ctx data firmid good individual merge number resolvescheme review spec specified stored test three write": "ISSUE_000286",
+    "PROCESS_PRACTICE|globalcodio-monorepo|branch candidate checks dev fails feature fix gate good health inher migration one opens own registry run scheduled stop when": "ISSUE_000287",
+    "PROCESS_PRACTICE|globalcodio-monorepo|adopts adr candidate draft first null only option party possible primarypersonid reads scheme server table web when wins": "ISSUE_000288",
+    "PROCESS_PRACTICE|globalcodio-monorepo|approval approves branch commit hand leave merge open reader remediated reviewer second wait weekend when": "ISSUE_000289",
+    "PROCESS_PRACTICE|globalcodio-monorepo|adr approving before decision explicit items known left merge needs open own owns risk ship write": "ISSUE_000290",
+    "PROCESS_PRACTICE|globalcodio-monorepo|finding fix high importsession owner sev tomorrow unchanged waive waiver writing": "ISSUE_000291",
+    "MECHANICAL_MIGRATION|globalcodio-monorepo|branch draft file large now open split unreviewed": "ISSUE_000292",
+    "PROCESS_PRACTICE|globalcodio-monorepo|commit data insufficient one week": "ISSUE_000293",
+    "PROCESS_PRACTICE|globalcodio-monorepo|builder candidate data follow given good merge recipe review spec specified test three": "ISSUE_000294",
+    "PROCESS_PRACTICE|globalcodio-monorepo|candidate client close file_number four global good lists now open persons portfolio prd read remaining retracted search sites": "ISSUE_000295",
+    "PROCESS_PRACTICE|globalcodio-monorepo|day disposition finding findings fix one out own reason reject scope unanswered within working": "ISSUE_000296",
+    "PROCESS_PRACTICE|globalcodio-monorepo|ask author explicitly hand help leaving open over progressed rather": "ISSUE_000297"
   }
 }
