@@ -1,0 +1,61 @@
+{
+  "awaiting_human_decision": [
+    "ISSUE_000282",
+    "ISSUE_000283",
+    "ISSUE_000284",
+    "ISSUE_000285",
+    "ISSUE_000286",
+    "ISSUE_000287",
+    "ISSUE_000288",
+    "ISSUE_000289",
+    "ISSUE_000290",
+    "ISSUE_000291",
+    "ISSUE_000292",
+    "ISSUE_000293",
+    "ISSUE_000294",
+    "ISSUE_000295",
+    "ISSUE_000296",
+    "ISSUE_000297",
+    "ISSUE_000298",
+    "ISSUE_000299",
+    "ISSUE_000300",
+    "ISSUE_000301",
+    "ISSUE_000302"
+  ],
+  "commits_created": 0,
+  "dry_run": true,
+  "executions_performed": 0,
+  "guardrail_blocked_count": 0,
+  "guardrail_rules_fired": {},
+  "human_decisions_recorded": 0,
+  "issues_by_autonomy_tier": {
+    "D": 21
+  },
+  "issues_by_category": {
+    "AUTOMATION_OPPORTUNITY": 5,
+    "MECHANICAL_MIGRATION": 1,
+    "MISSING_TEST": 2,
+    "PROCESS_PRACTICE": 13
+  },
+  "issues_by_remediability": {
+    "CODE_CHANGE": 3,
+    "NON_CODE_PROCESS": 13,
+    "TOOLING_AUTOMATION": 5
+  },
+  "issues_by_state": {
+    "DEV_REVIEW": 21
+  },
+  "issues_total": 21,
+  "issues_without_playbook": [],
+  "missing_capabilities": {
+    "ci.run_targeted_tests": 8,
+    "git.stacked_branches": 1,
+    "qa.execute_cases": 5,
+    "repo.multi_file_edit": 1,
+    "test.write_regression_test": 2
+  },
+  "playbook_match_rate": 1.0,
+  "pull_requests_created": 0,
+  "repositories_modified": [],
+  "run_flags": []
+}
