@@ -1,0 +1,8 @@
+{
+  "report_date": "2026_09_15",
+  "run_id": "RUN_0005",
+  "sha256": "bdd01769b70e4b4f4d4b3d29f7a259d1d1a4c6c7305d53aeecd4d894a25cd1f0",
+  "source_artifact": "04_DEV_FIX/2026_09_15_RUN_0005_04_DEV_FIX_OUTPUT_DEVIN_AI.json",
+  "source_stage": "04_DEV_FIX",
+  "stage": "05_DEV_REVIEW"
+}
