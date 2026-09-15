@@ -1,0 +1,300 @@
+{
+  "dry_run": true,
+  "issues": [
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000282_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "paperclip-ai"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "paperclip-ai",
+          "source_file_count": null,
+          "work_done": {
+            "author": "Karthik R Khatavkar",
+            "commit_count": 0,
+            "date": "2026_09_14",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|paperclip-ai|automation fork github involved judgment manual merge paperclip paperclipai repo scheduled scripts sync through tooling upstream workflow",
+      "defect_type": null,
+      "description": "Repetitive work reported for Karthik R Khatavkar: Manual \"Sync fork\" of `paperclip-ai` from `paperclipai/paperclip`. Reported pattern: 11 times in 31 days (~every 3 days). Report's recommended approach: Automate through scripts/tooling: a scheduled GitHub Action (`gh repo sync` or upstream-merge workflow) \u2014 no judgment involved.",
+      "detected_at": "2026_09_14",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "Manual \"Sync fork\" of `paperclip-ai` from `paperclipai/paperclip`",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:47"
+        },
+        {
+          "excerpt": "Automate through scripts/tooling: a scheduled GitHub Action (`gh repo sync` or upstream-merge workflow) \u2014 no judgment involved",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:47"
+        }
+      ],
+      "files": [
+        "paperclipai/paperclip"
+      ],
+      "frequency": "11 times in 31 days (~every 3 days)",
+      "issue_id": "ISSUE_000282",
+      "merged_sources": [
+        "SOURCE_011:47"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "Karthik R Khatavkar",
+      "product": "Shared (third-party fork `paperclip-ai`; no product-repo activity observed in any window)",
+      "recommended_action": "Automate through scripts/tooling: a scheduled GitHub Action (`gh repo sync` or upstream-merge workflow) \u2014 no judgment involved",
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "paperclip-ai",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "paperclip-ai is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Manual \"Sync fork\" of `paperclip-ai` from `paperclipai/paperclip`",
+          "finding_reference": "line 47",
+          "member": "Karthik R Khatavkar",
+          "report_date": "2026_09_14",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_14_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_14:SOURCE_011:47",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "Manual \"Sync fork\" of `paperclip-ai` from `paperclipai/paperclip`"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000283_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "paperclip-ai"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "paperclip-ai",
+          "source_file_count": null,
+          "work_done": {
+            "author": "Karthik R Khatavkar",
+            "commit_count": 0,
+            "date": "2026_09_14",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|paperclip-ai|activity delegate meaningful mechanical none observed only script sync",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for Karthik R Khatavkar: None meaningful; the only observed activity is a mechanical sync (Recommendation: script it, do not delegate it).",
+      "detected_at": "2026_09_14",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "None meaningful; the only observed activity is a mechanical sync (Recommendation: script it, do not delegate it).",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:50"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000283",
+      "merged_sources": [
+        "SOURCE_011:50"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "Karthik R Khatavkar",
+      "product": "Shared (third-party fork `paperclip-ai`; no product-repo activity observed in any window)",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "paperclip-ai",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "paperclip-ai is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "None meaningful; the only observed activity is a mechanical sync (Recommendation: script it, do not delegate it).",
+          "finding_reference": "line 50",
+          "member": "Karthik R Khatavkar",
+          "report_date": "2026_09_14",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_14_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_14:SOURCE_011:50",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "None meaningful; the only observed activity is a mechanical sync (Recommendation: script it, do not delegate it)."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "attempt_id": "ISSUE_000284_ATTEMPT_01",
+      "branch": null,
+      "candidate_repositories": [
+        "paperclip-ai"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "paperclip-ai",
+          "source_file_count": null,
+          "work_done": {
+            "author": "Karthik R Khatavkar",
+            "commit_count": 0,
+            "date": "2026_09_14",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|paperclip-ai|confirmable none",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for Karthik R Khatavkar: None confirmable. Current evidence: first observation. Recommended action: \u2014.",
+      "detected_at": "2026_09_14",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "evidence": [
+        {
+          "excerpt": "None confirmable \u2014 first observation",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:68"
+        },
+        {
+          "excerpt": "\u2014",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:68"
+        },
+        {
+          "excerpt": "previous evidence: \u2014",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:68"
+        }
+      ],
+      "files": [],
+      "frequency": null,
+      "issue_id": "ISSUE_000284",
+      "merged_sources": [
+        "SOURCE_011:68"
+      ],
+      "next_state": "TRIAGED",
+      "owner": "Karthik R Khatavkar",
+      "product": "Shared (third-party fork `paperclip-ai`; no product-repo activity observed in any window)",
+      "recommended_action": "\u2014",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "paperclip-ai",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "run_id": "RUN_0005",
+      "scope_reason": "paperclip-ai is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "None confirmable \u2014 first observation",
+          "finding_reference": "line 68",
+          "member": "Karthik R Khatavkar",
+          "report_date": "2026_09_14",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_14_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_14:SOURCE_011:68",
+      "stage": "00_INTAKE",
+      "state": "TRIAGED",
+      "status": "OK",
+      "title": "None confirmable"
+    }
+  ],
+  "next_expected_input_file": "2026_09_14_RUN_0005_01_TRIAGE_INPUT.json",
+  "next_state": "TRIAGED",
+  "report_date": "2026_09_14",
+  "run_flags": [],
+  "run_id": "RUN_0005",
+  "stage": "00_INTAKE",
+  "status": "OK",
+  "warnings": []
+}

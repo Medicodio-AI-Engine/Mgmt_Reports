@@ -280,6 +280,9 @@
     "PROCESS_PRACTICE|medicodio-nextgen-integration|behaviour changes delegate invariant test": "ISSUE_000278",
     "MECHANICAL_MIGRATION|medicodio-nextgen-integration|fan level manual out promotion team workflow": "ISSUE_000279",
     "MECHANICAL_MIGRATION|medicodio-nextgen-integration|approvals approver doc hotfix improve independent line lost nothing one process promotion review template value word": "ISSUE_000280",
-    "MECHANICAL_MIGRATION|medicodio-nextgen-integration|approvals content line review template": "ISSUE_000281"
+    "MECHANICAL_MIGRATION|medicodio-nextgen-integration|approvals content line review template": "ISSUE_000281",
+    "MECHANICAL_MIGRATION|paperclip-ai|automation fork github involved judgment manual merge paperclip paperclipai repo scheduled scripts sync through tooling upstream workflow": "ISSUE_000282",
+    "MECHANICAL_MIGRATION|paperclip-ai|activity delegate meaningful mechanical none observed only script sync": "ISSUE_000283",
+    "PROCESS_PRACTICE|paperclip-ai|confirmable none": "ISSUE_000284"
   }
 }
