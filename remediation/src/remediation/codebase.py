@@ -40,16 +40,36 @@ class CodeContext:
         }
 
 
+def contained(checkout: Path, path: str) -> Path | None:
+    """``path`` resolved inside ``checkout``; ``None`` when it leads outside it.
+
+    Reported paths come from a report body, so ``../../etc`` is a possible cell.
+    A path that resolves outside the checkout is not answered at all: whether an
+    arbitrary host path exists is not this platform's finding to publish.
+    """
+    base = checkout.resolve()
+    candidate = (base / path.lstrip("/")).resolve()
+    return candidate if candidate == base or base in candidate.parents else None
+
+
 def checkout(root: Path | None, repository: str | None) -> Path | None:
-    """The local checkout of ``repository``, when one is available to read."""
+    """The local git checkout of ``repository``, when one is available to read.
+
+    The name comes from a report, and the directory it lands on is later handed
+    to ``git -C``: it is accepted only when it stays under ``root`` and is itself
+    a git checkout, so an unrelated or planted directory is never queried.
+    """
     if root is None or not repository:
         return None
-    candidate = root / repository.split("/")[-1]
-    return candidate if candidate.is_dir() else None
+    candidate = contained(root, repository.split("/")[-1])
+    if candidate is None or not candidate.is_dir():
+        return None
+    return candidate if (candidate / ".git").exists() else None
 
 
 def _exists(checkout: Path, path: str) -> bool:
-    return (checkout / path.lstrip("/")).exists()
+    resolved = contained(checkout, path)
+    return resolved is not None and resolved.exists()
 
 
 def _split_paths(checkout: Path, paths: tuple[str, ...]) -> tuple[list[str], list[str]]:

@@ -297,6 +297,19 @@ def _has_date_mismatch(group: list[SourceFile]) -> bool:
     return any(s.exclusion_reason == "DATE_MISMATCH" for s in group)
 
 
+def _unverified_dates(group: list[SourceFile]) -> list[str]:
+    """Warn about a source whose body never states the review date it is filed under.
+
+    The filename alone dated it, so nothing corroborates that the content covers
+    that day. Such a report is still processed — the file naming is the repository's
+    own convention — but the run says so rather than presenting it as verified.
+    """
+    names = sorted(s.path.name for s in group if not s.excluded and not s.date_verified)
+    if not names:
+        return []
+    return [f"DATE_UNVERIFIED: {', '.join(names)}; dated by filename only, no stated review date"]
+
+
 def _by_type(group: list[SourceFile]) -> dict[ReportType, list[SourceFile]]:
     """Usable sources indexed by report type."""
     indexed: dict[ReportType, list[SourceFile]] = {}
@@ -365,6 +378,7 @@ def _recognized(
 def _completeness(group: list[SourceFile]) -> tuple[Completeness, list[str], str | None]:
     """How usable this date's source set is, and what a human must do about it."""
     warnings = [DATE_MISMATCH_WARNING] if _has_date_mismatch(group) else []
+    warnings.extend(_unverified_dates(group))
     indexed = _by_type(group)
     duplicated = _duplicates(indexed)
     if duplicated:

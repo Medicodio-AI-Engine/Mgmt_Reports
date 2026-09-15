@@ -156,17 +156,34 @@ def _future_stages(merged: dict[str, Any]) -> dict[str, bool]:
     return {str(stage): _as_bool(value, False) for stage, value in raw.items()}
 
 
+def _stated(overrides: dict[str, Any] | None) -> dict[str, Any]:
+    """The overrides a caller actually stated; ``None`` never overrides."""
+    return {key: value for key, value in (overrides or {}).items() if value is not None}
+
+
 def load(config_file: Path | None = None, overrides: dict[str, Any] | None = None) -> Config:
-    """The effective configuration: file, then overrides, then environment defaults."""
-    merged = _merged(config_file or DEFAULT_CONFIG_FILE, overrides)
-    return _config(merged)
+    """The effective configuration: argument, then environment, then file, then default."""
+    path = config_file or DEFAULT_CONFIG_FILE
+    return _config(_merged(path, overrides), _stated(overrides))
 
 
-def _config(merged: dict[str, Any]) -> Config:
+def _dry_run(merged: dict[str, Any], stated: Any) -> bool:
+    """Dry run unless *every* layer that speaks says otherwise.
+
+    Precedence is deliberately not applied to this one flag: an environment
+    variable must not be able to switch writing on over a config file that says
+    the pilot is dry-run only.
+    """
+    layers = [stated, merged.get("dry_run_mode"), os.environ.get("DRY_RUN_MODE")]
+    return any(_as_bool(layer, True) for layer in layers)
+
+
+def _config(merged: dict[str, Any], stated: dict[str, Any]) -> Config:
     def pick(key: str, env: str, default: Any = None) -> Any:
-        if merged.get(key) is not None:
-            return merged[key]
-        return os.environ.get(env, default)
+        """Stated override, then environment, then file, then built-in default."""
+        if stated.get(key) is not None:
+            return stated[key]
+        return os.environ.get(env) or merged.get(key) or default
 
     return Config(
         mgmt_reports_repository=pick(
@@ -201,7 +218,7 @@ def _config(merged: dict[str, Any]) -> Config:
             PROJECT_ROOT / "skills" / "registry.yaml",
         ),
         approval_mechanism=pick("approval_mechanism", "APPROVAL_MECHANISM", "FILE_DECISION_BLOCK"),
-        dry_run_mode=_as_bool(pick("dry_run_mode", "DRY_RUN_MODE"), True),
+        dry_run_mode=_dry_run(merged, stated.get("dry_run_mode")),
         remediation_repository_allowlist=tuple(
             merged.get("remediation_repository_allowlist") or ()
         ),

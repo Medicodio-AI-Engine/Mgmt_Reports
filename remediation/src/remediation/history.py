@@ -69,9 +69,14 @@ def _has_history(checkout: Path) -> bool:
 
 
 def _window(date: str) -> list[str]:
-    """Restrict a query to the calendar day the report covers."""
+    """Restrict a query to the calendar day the report covers, in UTC.
+
+    Report dates are UTC days, so the boundaries state their zone: without it git
+    reads them in the runner's local zone and a run on a non-UTC machine files
+    near-midnight commits under the neighbouring day.
+    """
     day = date.replace("_", "-")
-    return [f"--since={day} 00:00", f"--until={day} 23:59"]
+    return [f"--since={day} 00:00:00 +0000", f"--until={day} 23:59:59 +0000"]
 
 
 def _author_filter(author: str | None) -> list[str]:

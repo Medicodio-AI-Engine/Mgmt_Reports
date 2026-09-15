@@ -14,10 +14,11 @@ attempt store, identity registry) so the stage functions stay small.
 
 from __future__ import annotations
 
+import contextlib
 import hashlib
 import json
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
@@ -52,6 +53,7 @@ from .naming import Audience, Stage, artifact_name, run_id
 from .states import State, transition
 
 QUOTED = re.compile(r"[\"\u201c]([^\"\u201c\u201d]{4,120})[\"\u201d]")
+RUN_CLAIM_ATTEMPTS = 32
 
 
 class PipelineError(RuntimeError):
@@ -100,14 +102,30 @@ class Session:
         return self.context.run_id
 
 
-def next_run_id(root: Path) -> str:
-    """Allocate the next run id by inspecting existing run directories."""
+def highest_run_number(root: Path) -> int:
+    """The largest run number any report date under ``root`` has used."""
     existing = [
         int(path.name.removeprefix("RUN_"))
         for path in root.glob("*/RUN_*")
         if path.is_dir() and path.name.removeprefix("RUN_").isdigit()
     ]
-    return run_id(max(existing, default=0) + 1)
+    return max(existing, default=0)
+
+
+def claim_run(root: Path, date: str) -> tuple[str, Path]:
+    """Reserve a run directory, and with it the run id that names it.
+
+    Creating the directory is the allocation: two runs started together both see
+    the same highest number, and the one that loses the exclusive ``mkdir`` takes
+    the next id instead of writing into the winner's directory.
+    """
+    for offset in range(RUN_CLAIM_ATTEMPTS):
+        claimed = run_id(highest_run_number(root) + 1 + offset)
+        directory = root / date / claimed
+        with contextlib.suppress(FileExistsError):
+            directory.mkdir(parents=True, exist_ok=False)
+            return claimed, directory
+    raise RuntimeError(f"could not allocate a free run id under {root}")
 
 
 def _write_input(paths: RunPaths, stage: Stage, date: str, run: str, payload: Any) -> Path:
@@ -214,11 +232,10 @@ def _open_session(config: Config, repository_root: Path, report_date: str | None
     artifact_root = config.artifact_root_directory
     artifact_root.mkdir(parents=True, exist_ok=True)
     directory = repository_root / config.mgmt_reports_directory
-    context = discovery.assemble(
-        config, directory, next_run_id(artifact_root), requested_report_date=report_date
-    )
-    paths = RunPaths(artifact_root / context.report_date / context.run_id)
-    paths.root.mkdir(parents=True, exist_ok=True)
+    found = discovery.assemble(config, directory, run_id(0), requested_report_date=report_date)
+    claimed, root = claim_run(artifact_root, found.report_date)
+    context = replace(found, run_id=claimed)
+    paths = RunPaths(root)
     return Session(
         config=config,
         context=context,

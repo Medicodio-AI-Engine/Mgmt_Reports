@@ -11,6 +11,7 @@ from remediation import codebase
 def _checkout(root: Path, name: str) -> Path:
     repo = root / name
     (repo / "src").mkdir(parents=True)
+    (repo / ".git").mkdir()
     (repo / "src" / "wizard.ts").write_text("export const wizard = 1;\n", encoding="utf-8")
     return repo
 
