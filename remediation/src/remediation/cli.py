@@ -4,6 +4,7 @@
     python -m remediation discover
     python -m remediation decisions
     python -m remediation validate
+    python -m remediation ratings-trend [--weeks 4] [--repository-root PATH]
 
 ``run`` is dry-run by default. ``--allow-writes`` exists only so the flag has to be
 typed deliberately; it still refuses unless a repository is allowlisted in config.
@@ -17,7 +18,7 @@ import sys
 from pathlib import Path
 
 from . import config as config_module
-from . import discovery, pipeline, playbooks, review, schema
+from . import discovery, pipeline, playbooks, ratings, review, schema, trend, trendreport
 from .naming import run_id
 
 EXPECTED_FAILURES = (
@@ -98,6 +99,22 @@ def cmd_decisions(args: argparse.Namespace) -> int:
     return 0
 
 
+def _trend_stem(weeks: list[trend.Week]) -> str:
+    return f"rating-trend-{weeks[-1].sunday}-{len(weeks)}w"
+
+
+def cmd_ratings_trend(args: argparse.Namespace) -> int:
+    config = _load(args)
+    detail = _repository_root(args.repository_root) / config.mgmt_reports_directory
+    weeks = trend.series(ratings.read_all(detail), args.weeks)
+    if not weeks:
+        print(f"no rating cards found in {detail}", file=sys.stderr)
+        return 1
+    written = trendreport.write(trendreport.render(weeks), Path(args.output), _trend_stem(weeks))
+    print("\n".join(str(path) for path in written))
+    return 0
+
+
 def cmd_validate(args: argparse.Namespace) -> int:
     config = _load(args)
     registry = playbooks.load_registry(config)
@@ -138,6 +155,16 @@ def _add_decisions(subparsers: argparse._SubParsersAction) -> None:
     parser.set_defaults(func=cmd_decisions)
 
 
+def _add_ratings_trend(subparsers: argparse._SubParsersAction) -> None:
+    parser = subparsers.add_parser(
+        "ratings-trend", help="week-over-week employee rating trend from the rating cards"
+    )
+    parser.add_argument("--weeks", type=int, default=4, help="ISO weeks to cover; default 4")
+    parser.add_argument("--repository-root", help="path to the Mgmt_Reports checkout")
+    parser.add_argument("--output", required=True, help="directory to write the report into")
+    parser.set_defaults(func=cmd_ratings_trend)
+
+
 def _add_validate(subparsers: argparse._SubParsersAction) -> None:
     parser = subparsers.add_parser(
         "validate", help="load configuration, playbooks, skills, and schemas"
@@ -152,7 +179,7 @@ def build_parser() -> argparse.ArgumentParser:
     # Declared once here so every subcommand can read it without attribute probing.
     parser.set_defaults(allow_writes=False)
     subparsers = parser.add_subparsers(dest="command", required=True)
-    for add in (_add_run, _add_discover, _add_decisions, _add_validate):
+    for add in (_add_run, _add_discover, _add_decisions, _add_ratings_trend, _add_validate):
         add(subparsers)
     return parser
 

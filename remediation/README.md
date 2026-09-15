@@ -47,6 +47,22 @@ stage, named `YYYY_MM_DD_<RUN_ID>_<STAGE>_<ARTIFACT>_<AUDIENCE>.<ext>`. Each sta
 `INPUT.json`, `OUTPUT_DEVIN_AI.json` (schema-validated), and `OUTPUT_PEOPLE_ENGINEER.md`.
 `audit.jsonl` is append-only.
 
+## Rating trend
+
+```bash
+../.venv/bin/python -m remediation ratings-trend --weeks 4 --repository-root .. \
+    --output ../Ai_Engr_Rpt/Daily/medicodio/Ratings
+```
+
+Reads every `employee-rating-cards-*.md` in the Detail directory, groups them into ISO weeks, and
+compares each week's most recent card with the next week's. A week with no card is printed as
+missing and its pairs as not comparable — a missing week is a finding about the inputs, never an
+interpolated score. A person rated in only one of two weeks is `NEW` or `NOT_RATED`, not a
+movement, because a card only covers the contributors active on its review day.
+
+This report is the one place individual rating values appear, at the report owner's explicit
+request; the remediation artifacts keep every rating redacted (`redact_employee_ratings`).
+
 ## Human review
 
 Review is a `DECISION:` block committed into the `05_DEV_REVIEW` human artifact — one block per
