@@ -233,6 +233,7 @@
   "weeks": [
     {
       "covered": false,
+      "daily_overall": {},
       "members_rated": 0,
       "monday": "2026-07-27",
       "review_dates": [],
@@ -241,6 +242,7 @@
     },
     {
       "covered": false,
+      "daily_overall": {},
       "members_rated": 0,
       "monday": "2026-08-03",
       "review_dates": [],
@@ -249,6 +251,7 @@
     },
     {
       "covered": false,
+      "daily_overall": {},
       "members_rated": 0,
       "monday": "2026-08-10",
       "review_dates": [],
@@ -257,10 +260,183 @@
     },
     {
       "covered": true,
-      "members_rated": 23,
+      "daily_overall": {
+        "ANANYANG8055": [
+          "NR",
+          "5.2",
+          "NR",
+          "NR",
+          "NR"
+        ],
+        "Amrutha-Beedikar": [
+          "7.2",
+          "5.1",
+          "NR",
+          "4.2",
+          "6.2"
+        ],
+        "Medicodio-Amit": [
+          "6.1",
+          "6.6",
+          "5.9",
+          "NR",
+          "NR"
+        ],
+        "Murali-Shetty19": [
+          "NR",
+          "NR",
+          "2.5",
+          "NR",
+          "NR"
+        ],
+        "NandanDate-Medicodio": [
+          "5.7",
+          "4.8",
+          "4.6",
+          "NR",
+          "NR"
+        ],
+        "Pj-Vineeth-Kumar": [
+          "5.3",
+          "NR",
+          "NR",
+          "NR",
+          "NR"
+        ],
+        "SaahilVishwakarma": [
+          "4.4",
+          "NR",
+          "4.5",
+          "NR",
+          "NR"
+        ],
+        "SaijyotiMeti": [
+          "8.1",
+          "7.8",
+          "7.4",
+          "5.7",
+          "7.3"
+        ],
+        "Shashvi1": [
+          "NR",
+          "6.5",
+          "5",
+          "NR",
+          "NR"
+        ],
+        "akanksh-rv": [
+          "6.3",
+          "6.8",
+          "7.7",
+          "7.7",
+          "7.1"
+        ],
+        "amit-pandey-medicodio": [
+          "4.8",
+          "5.2",
+          "5.9",
+          "4.5",
+          "NR"
+        ],
+        "anirudh-medicodio": [
+          "7.2",
+          "6.8",
+          "6.7",
+          "5.9",
+          "5.4"
+        ],
+        "ashwinsk-medicodio": [
+          "5.5",
+          "NR",
+          "6.1",
+          "NR",
+          "NR"
+        ],
+        "avinash-codio": [
+          "5",
+          "5.2",
+          "4.9",
+          "NR",
+          "NR"
+        ],
+        "hitesh": [
+          "NR",
+          "NR",
+          "NR",
+          "NR",
+          "4.1"
+        ],
+        "hiteshjrxmedicodio": [
+          "5.4",
+          "NR",
+          "5.3",
+          "NR",
+          "NR"
+        ],
+        "jatinkushwaha-medicodio": [
+          "5.9",
+          "5.7",
+          "5.6",
+          "6",
+          "NR"
+        ],
+        "karthikmed": [
+          "5.5",
+          "NR",
+          "NR",
+          "NR",
+          "NR"
+        ],
+        "ragha82": [
+          "5.2",
+          "5.3",
+          "7",
+          "NR",
+          "NR"
+        ],
+        "sameer-s-mansur": [
+          "6.2",
+          "5.6",
+          "5.8",
+          "6.9",
+          "5.7"
+        ],
+        "shaheen-khan11": [
+          "4.8",
+          "4.8",
+          "6.3",
+          "NR",
+          "NR"
+        ],
+        "sumedh-codio": [
+          "NR",
+          "NR",
+          "NR",
+          "NR",
+          "NR"
+        ],
+        "svh-medicodio": [
+          "NR",
+          "NR",
+          "6",
+          "NR",
+          "NR"
+        ],
+        "vishnu-saikarthik": [
+          "NR",
+          "5.6",
+          "4.8",
+          "NR",
+          "NR"
+        ]
+      },
+      "members_rated": 65,
       "monday": "2026-08-17",
       "review_dates": [
         "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
         "2026-08-23"
       ],
       "sunday": "2026-08-23",

@@ -54,11 +54,16 @@ stage, named `YYYY_MM_DD_<RUN_ID>_<STAGE>_<ARTIFACT>_<AUDIENCE>.<ext>`. Each sta
     --output ../Ai_Engr_Rpt/Daily/medicodio/Ratings
 ```
 
-Reads every `employee-rating-cards-*.md` in the Detail directory, groups them into ISO weeks, and
-compares each week's most recent card with the next week's. A week with no card is printed as
-missing and its pairs as not comparable — a missing week is a finding about the inputs, never an
-interpolated score. A person rated in only one of two weeks is `NEW` or `NOT_RATED`, not a
-movement, because a card only covers the contributors active on its review day.
+Reads every rating-card file in the Detail directory, groups them into ISO weeks, and compares each
+week's most recent card with the next week's. A week with no card is printed as missing and its
+pairs as not comparable — a missing week is a finding about the inputs, never an interpolated
+score. A person rated in only one of two weeks is `NEW` or `NOT_RATED`, not a movement, because a
+card only covers the contributors active on its review day. A week holding several review days also
+gets a day-by-day matrix of every member's overall score, so a week reads at a glance without
+collapsing to its first and last day.
+
+Cards head the overall figure `Overall` on some review days and `Weighted` on others; both are read
+as the same weighted average.
 
 This report is the one place individual rating values appear, at the report owner's explicit
 request; the remediation artifacts keep every rating redacted (`redact_employee_ratings`).

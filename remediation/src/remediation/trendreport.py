@@ -186,6 +186,32 @@ def _within(weeks: list[Week]) -> list[str]:
     return ["## Within-week movement", "", *lines] if lines else []
 
 
+def _daily_members(week: Week) -> list[str]:
+    """Every member any of the week's cards rates, newest card's order first."""
+    seen: dict[str, str] = {}
+    for card_set in reversed(week.card_sets):
+        for card in card_set.cards:
+            seen.setdefault(card.member.lower(), card.member)
+    return list(seen.values())
+
+
+def _daily_row(week: Week, member: str) -> list[str]:
+    scored = [card_set.by_member().get(member.lower()) for card_set in week.card_sets]
+    return [member, *[_score(card.overall if card else None) for card in scored]]
+
+
+def _daily_matrix(week: Week) -> list[str]:
+    """Each review day's overall score side by side, so a week reads at a glance."""
+    headers = ["Member", *[_pretty(date) for date in week.review_dates]]
+    rows = [_daily_row(week, member) for member in _daily_members(week)]
+    return [f"### {week.key} — overall score per review day", "", *_table(headers, rows), ""]
+
+
+def _daily(weeks: list[Week]) -> list[str]:
+    lines = [line for week in weeks if len(week.card_sets) > 1 for line in _daily_matrix(week)]
+    return ["## Day-by-day scores within a week", "", *lines] if lines else []
+
+
 def _card_notes(card_set: CardSet) -> list[str]:
     return [f"- {_pretty(card_set.date)}: {note}" for note in card_set.notes]
 
@@ -261,6 +287,7 @@ def _week_data(week: Week) -> dict[str, object]:
         "covered": week.covered,
         "review_dates": [_pretty(date) for date in week.review_dates],
         "members_rated": sum(len(card_set.cards) for card_set in week.card_sets),
+        "daily_overall": {member: _daily_row(week, member)[1:] for member in _daily_members(week)},
     }
 
 
@@ -283,6 +310,7 @@ def render(weeks: list[Week], generated: str | None = None) -> Report:
         *_caveats(weeks),
         *_week_over_week(weeks),
         *_within(weeks),
+        *_daily(weeks),
         *_ratings_of_record(weeks),
     ]
     return Report(markdown="\n".join(lines).rstrip() + "\n", data=_data(weeks, stamp))

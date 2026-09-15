@@ -29,6 +29,30 @@ CARD_B = """# Employee Rating Cards — 2026-08-12
 """
 
 
+CARD_C = """# Employee Rating Cards — 2026-08-14
+
+**Review date:** 2026-08-14 (Friday, UTC)
+
+## Summary grid
+
+| Member | Product | Delivery | Rigor | Review | Devin | Automation | Consistency | Overall | Band |
+| ------ | ------- | -------- | ----- | ------ | ----- | ---------- | ----------- | ------- | ---- |
+| asha | Medicodio | 8 | 8 | 8 | 7 | 6 | 8 | **7.9** | Solid |
+"""
+
+
+CARD_WEIGHTED = """# Employee Rating Cards — 2026-08-22
+
+**Review date:** 2026-08-22 (Saturday, UTC)
+
+## Summary grid
+
+| Member | Product | Delivery | Rigor | Review | Devin | Automation | Consistency | Weighted | Band |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| asha | Medicodio | 9 | 9 | NR | 5 | 4 | 9 | 7.7 | Solid |
+"""
+
+
 def _cards(tmp_path: Path) -> list[ratings.CardSet]:
     (tmp_path / "employee-rating-cards-2026-08-05.md").write_text(CARD_A, encoding="utf-8")
     (tmp_path / "employee-rating-cards-2026-08-12.md").write_text(CARD_B, encoding="utf-8")
@@ -42,6 +66,14 @@ def test_reads_both_grid_layouts(tmp_path: Path) -> None:
     assert first.by_member()["asha"].overall == 7.0
     assert first.by_member()["bhanu"].scores["Review"] is None
     assert second.by_member()["asha"].scores["Rigor"] == 8
+
+
+def test_reads_weighted_column_as_overall(tmp_path: Path) -> None:
+    """Some review days head the same figure ``Weighted`` instead of ``Overall``."""
+    path = tmp_path / "2026_08_22_Employee_Rating_Cards.md"
+    path.write_text(CARD_WEIGHTED, encoding="utf-8")
+    card = ratings.read(path).by_member()["asha"]
+    assert (card.overall, card.scores["Review"]) == (7.7, None)
 
 
 def test_activity_reports_are_not_cards(tmp_path: Path) -> None:
@@ -75,6 +107,26 @@ def test_report_states_coverage_and_values(tmp_path: Path) -> None:
     assert "2026-W30, 2026-W31" in report.markdown
     assert "+0.6" in report.markdown
     assert report.data["missing_weeks"] == ["2026-W30", "2026-W31"]
+
+
+def _weekly_cards(tmp_path: Path) -> list[ratings.CardSet]:
+    """Two review days in one ISO week, filed under the repository's naming convention."""
+    (tmp_path / "2026_08_12_Employee_Rating_Cards.md").write_text(CARD_B, encoding="utf-8")
+    (tmp_path / "2026_08_14_Employee_Rating_Cards.md").write_text(CARD_C, encoding="utf-8")
+    return ratings.read_all(tmp_path)
+
+
+def test_reads_underscored_card_filenames(tmp_path: Path) -> None:
+    assert [card_set.date for card_set in _weekly_cards(tmp_path)] == ["2026_08_12", "2026_08_14"]
+
+
+def test_daily_matrix_lists_every_review_day(tmp_path: Path) -> None:
+    weeks = trend.series(_weekly_cards(tmp_path), 2)
+    report = trendreport.render(weeks, generated="2026_08_15")
+    assert "## Day-by-day scores within a week" in report.markdown
+    assert "| asha | 7.6 | 7.9 |" in report.markdown
+    assert "| chandra | 5.4 | NR |" in report.markdown
+    assert report.data["weeks"][-1]["daily_overall"]["asha"] == ["7.6", "7.9"]
 
 
 def test_within_week_needs_two_cards(tmp_path: Path) -> None:

@@ -22,7 +22,7 @@ from . import dates, markdown
 
 DIMENSIONS = ("Delivery", "Rigor", "Review", "Devin", "Automation", "Consistency")
 NUMBER = re.compile(r"\d+(?:\.\d+)?")
-GRID_KEYS = ("Member", "Overall")
+OVERALL_HEADERS = ("Overall", "Overall (1-10)", "Weighted", "Weighted Average", "Weighted Score")
 NOTE_MARKERS = ("scope:", "caveat", "limitation")
 MAX_NOTES = 4
 MAX_NOTE_CHARS = 400
@@ -60,10 +60,18 @@ def _number(cell: str | None) -> float | None:
     return float(match.group()) if match else None
 
 
+def _states(headers: list[str], keys: tuple[str, ...]) -> bool:
+    return any(key.lower() in header for key in keys for header in headers)
+
+
 def _is_grid(table: markdown.Table) -> bool:
-    """A summary grid names its members and gives each an overall score."""
+    """A summary grid names its members and gives each an overall score.
+
+    Cards call that score ``Overall`` on some review days and ``Weighted`` on
+    others; both are the same figure, the weighted average of the dimensions.
+    """
     headers = [header.strip().lower() for header in table.headers]
-    return all(any(key.lower() in header for header in headers) for key in GRID_KEYS)
+    return _states(headers, ("Member",)) and _states(headers, OVERALL_HEADERS)
 
 
 def _dimension(row: markdown.Row, name: str) -> float | None:
@@ -86,7 +94,7 @@ def _card(row: markdown.Row) -> Card | None:
     if not member or member.startswith("-") or member.startswith(":"):
         return None
     product = (row.get("Product") or "").strip() or None
-    overall = _number(row.get("Overall", "Overall (1-10)"))
+    overall = _number(row.get(*OVERALL_HEADERS))
     return Card(
         member=member, product=product, overall=overall, band=_band(row), scores=_scores(row)
     )

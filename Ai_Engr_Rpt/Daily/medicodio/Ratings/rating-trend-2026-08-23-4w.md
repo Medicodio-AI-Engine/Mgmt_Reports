@@ -11,7 +11,7 @@
 | 2026-W31 | 2026-07-27 → 2026-08-02 | — | 0 | **no rating card in the repository** |
 | 2026-W32 | 2026-08-03 → 2026-08-09 | — | 0 | **no rating card in the repository** |
 | 2026-W33 | 2026-08-10 → 2026-08-16 | — | 0 | **no rating card in the repository** |
-| 2026-W34 | 2026-08-17 → 2026-08-23 | 2026-08-19, 2026-08-23 | 23 | covered |
+| 2026-W34 | 2026-08-17 → 2026-08-23 | 2026-08-19, 2026-08-20, 2026-08-21, 2026-08-22, 2026-08-23 | 65 | covered |
 
 Weeks without any rating card: 2026-W31, 2026-W32, 2026-W33.
 
@@ -90,9 +90,40 @@ Dimension movement (previous → current):
 | shaheen-khan11 | 7 → NR | 4 → NR | 5 → NR | 3 → NR | 4 → NR | 5 → NR |
 | SaahilVishwakarma | 5 → NR | 5 → NR | 3 → NR | 4 → NR | NR → NR | NR → NR |
 
+## Day-by-day scores within a week
+
+### 2026-W34 — overall score per review day
+
+| Member | 2026-08-19 | 2026-08-20 | 2026-08-21 | 2026-08-22 | 2026-08-23 |
+| --- | --- | --- | --- | --- | --- |
+| SaijyotiMeti | 8.1 | 7.8 | 7.4 | 5.7 | 7.3 |
+| akanksh-rv | 6.3 | 6.8 | 7.7 | 7.7 | 7.1 |
+| Amrutha-Beedikar | 7.2 | 5.1 | NR | 4.2 | 6.2 |
+| sameer-s-mansur | 6.2 | 5.6 | 5.8 | 6.9 | 5.7 |
+| anirudh-medicodio | 7.2 | 6.8 | 6.7 | 5.9 | 5.4 |
+| hitesh | NR | NR | NR | NR | 4.1 |
+| jatinkushwaha-medicodio | 5.9 | 5.7 | 5.6 | 6 | NR |
+| amit-pandey-medicodio | 4.8 | 5.2 | 5.9 | 4.5 | NR |
+| karthikmed | 5.5 | NR | NR | NR | NR |
+| ragha82 | 5.2 | 5.3 | 7 | NR | NR |
+| shaheen-khan11 | 4.8 | 4.8 | 6.3 | NR | NR |
+| ashwinsk-medicodio | 5.5 | NR | 6.1 | NR | NR |
+| svh-medicodio | NR | NR | 6 | NR | NR |
+| Medicodio-Amit | 6.1 | 6.6 | 5.9 | NR | NR |
+| hiteshjrxmedicodio | 5.4 | NR | 5.3 | NR | NR |
+| Shashvi1 | NR | 6.5 | 5 | NR | NR |
+| avinash-codio | 5 | 5.2 | 4.9 | NR | NR |
+| vishnu-saikarthik | NR | 5.6 | 4.8 | NR | NR |
+| NandanDate-Medicodio | 5.7 | 4.8 | 4.6 | NR | NR |
+| SaahilVishwakarma | 4.4 | NR | 4.5 | NR | NR |
+| Murali-Shetty19 | NR | NR | 2.5 | NR | NR |
+| ANANYANG8055 | NR | 5.2 | NR | NR | NR |
+| sumedh-codio | NR | NR | NR | NR | NR |
+| Pj-Vineeth-Kumar | 5.3 | NR | NR | NR | NR |
+
 ## Scores as stated by each card
 
-### 2026-08-19 — employee-rating-cards-2026-08-19.md
+### 2026-08-19 — 2026_08_19_Employee_Rating_Cards.md
 
 | Member | Product | Overall | Band | Delivery | Rigor | Review | Devin | Automation | Consistency |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -114,7 +145,64 @@ Dimension movement (previous → current):
 | shaheen-khan11 | Medicodio | 4.8 | Needs Support | 7 | 4 | 5 | 3 | 4 | 5 |
 | SaahilVishwakarma | Global Codio | 4.4 | Needs Support | 5 | 5 | 3 | 4 | NR | NR |
 
-### 2026-08-23 — employee-rating-cards-2026-08-23.md
+### 2026-08-20 — 2026_08_20_Employee_Rating_Cards.md
+
+| Member | Product | Overall | Band | Delivery | Rigor | Review | Devin | Automation | Consistency |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| SaijyotiMeti | Global Codio | 7.8 | Solid | 8 | 9 | 9 | 6 | 5 | 8 |
+| anirudh-medicodio | Global Codio | 6.8 | Mixed | 9 | 8 | 5 | 4 | 4 | 8 |
+| akanksh-rv | Global Codio | 6.8 | Mixed | 8 | 7 | 7 | 5 | 4 | 8 |
+| Medicodio-Amit | Medicodio | 6.6 | Mixed | 7 | 7 | NR | 7 | 4 | 7 |
+| Shashvi1 | Medicodio | 6.5 | Mixed | 7 | 8 | NR | 5 | 4 | NR |
+| jatinkushwaha-medicodio | Medicodio | 5.7 | Mixed | 8 | 5 | 4 | 4 | 4 | 8 |
+| sameer-s-mansur | Medicodio | 5.6 | Mixed | 7 | 4 | NR | 5 | 5 | 8 |
+| vishnu-saikarthik | Medicodio | 5.6 | Mixed | 7 | 5 | NR | 4 | NR | 6 |
+| ragha82 | Global Codio | 5.3 | Mixed | 6 | 5 | NR | 5 | 3 | 7 |
+| amit-pandey-medicodio | Medicodio | 5.2 | Mixed | 7 | 4 | 3 | 7 | 2 | 7 |
+| avinash-codio | Medicodio | 5.2 | Mixed | 8 | 3 | NR | 4 | 4 | 7 |
+| ANANYANG8055 | Medicodio | 5.2 | Mixed | 7 | 5 | NR | 4 | 3 | NR |
+| Amrutha-Beedikar | Global Codio | 5.1 | Mixed | 6 | 5 | NR | 4 | 3 | 7 |
+| NandanDate-Medicodio | Medicodio | 4.8 | Needs Support | 6 | 4 | 3 | 5 | 5 | 6 |
+| shaheen-khan11 | Medicodio | 4.8 | Needs Support | 6 | 5 | 4 | 4 | 4 | 5 |
+| sumedh-codio | Medicodio | NR | Not rated | NR | NR | 3 | NR | NR | NR |
+
+### 2026-08-21 — 2026_08_21_Employee_Rating_Cards.md
+
+| Member | Product | Overall | Band | Delivery | Rigor | Review | Devin | Automation | Consistency |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| akanksh-rv | Global Codio | 7.7 | Solid | 8 | 7 | 9 | 7 | 7 | 8 |
+| SaijyotiMeti | Global Codio | 7.4 | Solid | 8 | 9 | 8 | 5 | 4 | 8 |
+| ragha82 | Global Codio | 7 | Solid | 8 | 7 | NR | 4 | 9 | 7 |
+| anirudh-medicodio | Global Codio | 6.7 | Mixed | 8 | 8 | 6 | 4 | 4 | 8 |
+| shaheen-khan11 | Medicodio | 6.3 | Mixed | 8 | 6 | NR | 4 | NR | NR |
+| ashwinsk-medicodio | Medicodio | 6.1 | Mixed | 8 | 6 | NR | 4 | 4 | 7 |
+| svh-medicodio | Global Codio | 6 | Mixed | 6 | NR | NR | NR | NR | NR |
+| amit-pandey-medicodio | Medicodio | 5.9 | Mixed | 8 | 4 | 3 | 8 | 5 | 7 |
+| Medicodio-Amit | Medicodio | 5.9 | Mixed | 6 | 7 | NR | 4 | NR | NR |
+| sameer-s-mansur | Medicodio | 5.8 | Mixed | 8 | 5 | NR | 4 | 4 | 7 |
+| jatinkushwaha-medicodio | Medicodio | 5.6 | Mixed | 8 | 5 | 4 | 4 | 3 | 8 |
+| hiteshjrxmedicodio | Medicodio | 5.3 | Mixed | 5 | 7 | NR | 4 | 4 | NR |
+| Shashvi1 | Medicodio | 5 | Mixed | 6 | 4 | NR | NR | NR | NR |
+| avinash-codio | Medicodio | 4.9 | Needs Support | 8 | 3 | 3 | 4 | 4 | 7 |
+| vishnu-saikarthik | Medicodio | 4.8 | Needs Support | 7 | 3 | NR | 4 | NR | 5 |
+| NandanDate-Medicodio | Medicodio | 4.6 | Needs Support | 6 | 4 | 3 | 4 | 4 | 6 |
+| SaahilVishwakarma | Global Codio | 4.5 | Needs Support | 4 | 5 | NR | NR | NR | NR |
+| Murali-Shetty19 | Medicodio | 2.5 | Needs Support | 3 | 2 | NR | NR | NR | NR |
+
+### 2026-08-22 — 2026_08_22_Employee_Rating_Cards.md
+
+| Member | Product | Overall | Band | Delivery | Rigor | Review | Devin | Automation | Consistency |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| akanksh-rv | Global Codio | 7.7 | Solid | 9 | 9 | NR | 5 | 4 | 9 |
+| sameer-s-mansur | Medicodio | 6.9 | Mixed | 8 | 8 | NR | 4 | 5 | 8 |
+| jatinkushwaha-medicodio | Medicodio | 6 | Mixed | 7 | 6 | NR | 5 | 4 | 7 |
+| anirudh-medicodio | Global Codio | 5.9 | Mixed | 7 | 5 | NR | 5 | 5 | 8 |
+| SaijyotiMeti | Global Codio | 5.7 | Mixed | 6 | NR | NR | 4 | 5 | 8 |
+| amit-pandey-medicodio | Medicodio | 4.5 | Needs Support | 5 | 4 | 3 | 5 | 4 | 6 |
+| Amrutha-Beedikar | Global Codio | 4.2 | Needs Support | 5 | 4 | 3 | NR | NR | NR |
+| karthikmed | Shared / tooling | NR | NR | NR | NR | NR | NR | 3 | NR |
+
+### 2026-08-23 — 2026_08_23_Employee_Rating_Cards.md
 
 | Member | Product | Overall | Band | Delivery | Rigor | Review | Devin | Automation | Consistency |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
