@@ -1,0 +1,781 @@
+{
+  "dry_run": true,
+  "issues": [
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000282_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_MECHANICAL_MIGRATION default tier B",
+        "security scope could not be determined from the evidence",
+        "paperclip-ai is outside the medicodio pilot scope",
+        "required capabilities are unavailable: repo.multi_file_edit, git.stacked_branches, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "paperclip-ai"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "paperclip-ai",
+          "source_file_count": null,
+          "work_done": {
+            "author": "Karthik R Khatavkar",
+            "commit_count": 0,
+            "date": "2026_09_14",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "commands_executed": [],
+      "commit_sha": null,
+      "complexity": {
+        "confidence": 0.75,
+        "factors": [
+          "category MECHANICAL_MIGRATION base 4",
+          "repository and paths both known (-1)"
+        ],
+        "rationale": "Complexity 3/10 from: category MECHANICAL_MIGRATION base 4; repository and paths both known (-1).",
+        "score": 3
+      },
+      "component": null,
+      "confidence": 0.65,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|paperclip-ai|automation fork github involved judgment manual merge paperclip paperclipai repo scheduled scripts sync through tooling upstream workflow",
+      "defect_type": null,
+      "description": "Repetitive work reported for Karthik R Khatavkar: Manual \"Sync fork\" of `paperclip-ai` from `paperclipai/paperclip`. Reported pattern: 11 times in 31 days (~every 3 days). Report's recommended approach: Automate through scripts/tooling: a scheduled GitHub Action (`gh repo sync` or upstream-merge workflow) \u2014 no judgment involved.",
+      "detected_at": "2026_09_14",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 3",
+        "remediability CODE_CHANGE",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "Manual \"Sync fork\" of `paperclip-ai` from `paperclipai/paperclip`",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:47"
+        },
+        {
+          "excerpt": "Automate through scripts/tooling: a scheduled GitHub Action (`gh repo sync` or upstream-merge workflow) \u2014 no judgment involved",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:47"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [
+        "paperclipai/paperclip"
+      ],
+      "fix": {
+        "branch": null,
+        "changed_files": [],
+        "commands_executed": [],
+        "commit_sha": null,
+        "dry_run": true,
+        "executed": false,
+        "external_systems_changed": [],
+        "full_suite_result": null,
+        "next_state": "DEV_REVIEW",
+        "post_fix_success": null,
+        "pr_number": null,
+        "pre_fix_failure": null,
+        "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
+        "suppression_reasons": [
+          "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
+          "paperclip-ai is not in remediation_repository_allowlist"
+        ],
+        "test_cases_generated": [
+          "ISSUE_000282_T01"
+        ],
+        "test_results": [],
+        "would_have_done": [
+          "create working branch devin/issue_000282-attempt-01",
+          "plan step: Enumerate every affected file and confirm the change is deterministic per file.",
+          "plan step: Confirm the transformation is reversible and produces no behavior change.",
+          "plan step: Apply the transformation in reviewable slices, each independently buildable.",
+          "plan step: Run build, typecheck, and the affected test suites per slice.",
+          "plan step: Record the file list, commands, and results for each slice."
+        ]
+      },
+      "frequency": "11 times in 31 days (~every 3 days)",
+      "full_suite_result": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Enumerate every affected file and confirm the change is deterministic per file.",
+        "Confirm the transformation is reversible and produces no behavior change.",
+        "Apply the transformation in reviewable slices, each independently buildable.",
+        "Run build, typecheck, and the affected test suites per slice.",
+        "Record the file list, commands, and results for each slice."
+      ],
+      "issue_id": "ISSUE_000282",
+      "merged_sources": [
+        "SOURCE_011:47"
+      ],
+      "missing_skills": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_REVIEW",
+      "owner": "Karthik R Khatavkar",
+      "plan": {
+        "acceptance_criteria": [
+          "Is every slice reviewable on its own?",
+          "Is the diff free of behavior changes?",
+          "Is the rollback simply reverting the slice?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Enumerate every affected file and confirm the change is deterministic per file.",
+          "Confirm the transformation is reversible and produces no behavior change.",
+          "Apply the transformation in reviewable slices, each independently buildable.",
+          "Run build, typecheck, and the affected test suites per slice.",
+          "Record the file list, commands, and results for each slice."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "The transformation requires human judgment on any file.",
+          "Any slice changes runtime behavior.",
+          "The migration touches database schema, data, or irreversible infrastructure."
+        ],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Existing suites must pass unchanged (no behavior change)",
+            "kind": "EXISTING_SUITE",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000282_T01",
+            "would_run": true
+          }
+        ],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 77,
+        "matched_on": [
+          "category MECHANICAL_MIGRATION",
+          "keywords: sync"
+        ],
+        "playbook_id": "ORG_PB_MECHANICAL_MIGRATION",
+        "playbook_name": "Mechanical multi-file or cross-repository migration",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: confidence 5 below 60",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "post_fix_success": null,
+      "pr_number": null,
+      "pre_fix_failure": null,
+      "priority": {
+        "confidence": 0.65,
+        "factors": [
+          "category MECHANICAL_MIGRATION (+1)",
+          "high reported frequency (31) (+1)"
+        ],
+        "rationale": "Priority 5/10 from base 3 adjusted by: category MECHANICAL_MIGRATION (+1); high reported frequency (31) (+1).",
+        "score": 5
+      },
+      "product": "Shared (third-party fork `paperclip-ai`; no product-repo activity observed in any window)",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "Automate through scripts/tooling: a scheduled GitHub Action (`gh repo sync` or upstream-merge workflow) \u2014 no judgment involved",
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "paperclip-ai",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "paperclip-ai is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "Manual \"Sync fork\" of `paperclip-ai` from `paperclipai/paperclip`",
+          "finding_reference": "line 47",
+          "member": "Karthik R Khatavkar",
+          "report_date": "2026_09_14",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_14_Mgmt_Activity_Report.md",
+          "section": "repetitive",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_14:SOURCE_011:47",
+      "stage": "04_DEV_FIX",
+      "state": "DEV_REVIEW",
+      "status": "OK",
+      "stop_conditions": [
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: paperclip-ai: repository history was not read (no local checkout with history) / Code now: paperclip-ai was not inspected (no local checkout configured) / Reported: Repetitive work reported for Karthik R Khatavkar: Manual \"Sync fork\" of `paperclip-ai` from `paperclipai/paperclip`. / Recommended: Automate through scripts/tooling: a scheduled GitHub Action (`gh repo sync` or upstream-merge workflow) \u2014 no judgment involved",
+      "test_cases_generated": [
+        "ISSUE_000282_T01"
+      ],
+      "test_results": [],
+      "time_ai": "00:15",
+      "time_human": "03:00",
+      "time_human_ai": "01:45",
+      "title": "Manual \"Sync fork\" of `paperclip-ai` from `paperclipai/paperclip`"
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000283_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook ORG_PB_MECHANICAL_MIGRATION default tier B",
+        "security scope could not be determined from the evidence",
+        "complexity 5 exceeds the autonomous ceiling 4",
+        "paperclip-ai is outside the medicodio pilot scope",
+        "required capabilities are unavailable: repo.multi_file_edit, git.stacked_branches, ci.run_targeted_tests"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "paperclip-ai"
+      ],
+      "category": "MECHANICAL_MIGRATION",
+      "category_match": true,
+      "category_rationale": "category MECHANICAL_MIGRATION confirms the reported enhancement",
+      "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "paperclip-ai",
+          "source_file_count": null,
+          "work_done": {
+            "author": "Karthik R Khatavkar",
+            "commit_count": 0,
+            "date": "2026_09_14",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "commands_executed": [],
+      "commit_sha": null,
+      "complexity": {
+        "confidence": 0.6,
+        "factors": [
+          "category MECHANICAL_MIGRATION base 4",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 5/10 from: category MECHANICAL_MIGRATION base 4; no file paths identified (+1).",
+        "score": 5
+      },
+      "component": null,
+      "confidence": 0.5,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "MECHANICAL_MIGRATION|paperclip-ai|activity delegate meaningful mechanical none observed only script sync",
+      "defect_type": null,
+      "description": "Delegation opportunity recorded for Karthik R Khatavkar: None meaningful; the only observed activity is a mechanical sync (Recommendation: script it, do not delegate it).",
+      "detected_at": "2026_09_14",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 5",
+        "remediability CODE_CHANGE",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "None meaningful; the only observed activity is a mechanical sync (Recommendation: script it, do not delegate it).",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:50"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "fix": {
+        "branch": null,
+        "changed_files": [],
+        "commands_executed": [],
+        "commit_sha": null,
+        "dry_run": true,
+        "executed": false,
+        "external_systems_changed": [],
+        "full_suite_result": null,
+        "next_state": "DEV_REVIEW",
+        "post_fix_success": null,
+        "pr_number": null,
+        "pre_fix_failure": null,
+        "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
+        "suppression_reasons": [
+          "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
+          "paperclip-ai is not in remediation_repository_allowlist"
+        ],
+        "test_cases_generated": [
+          "ISSUE_000283_T01"
+        ],
+        "test_results": [],
+        "would_have_done": [
+          "create working branch devin/issue_000283-attempt-01",
+          "plan step: Enumerate every affected file and confirm the change is deterministic per file.",
+          "plan step: Confirm the transformation is reversible and produces no behavior change.",
+          "plan step: Apply the transformation in reviewable slices, each independently buildable.",
+          "plan step: Run build, typecheck, and the affected test suites per slice.",
+          "plan step: Record the file list, commands, and results for each slice."
+        ]
+      },
+      "frequency": null,
+      "full_suite_result": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Enumerate every affected file and confirm the change is deterministic per file.",
+        "Confirm the transformation is reversible and produces no behavior change.",
+        "Apply the transformation in reviewable slices, each independently buildable.",
+        "Run build, typecheck, and the affected test suites per slice.",
+        "Record the file list, commands, and results for each slice."
+      ],
+      "issue_id": "ISSUE_000283",
+      "merged_sources": [
+        "SOURCE_011:50"
+      ],
+      "missing_skills": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "next_state": "DEV_REVIEW",
+      "owner": "Karthik R Khatavkar",
+      "plan": {
+        "acceptance_criteria": [
+          "Is every slice reviewable on its own?",
+          "Is the diff free of behavior changes?",
+          "Is the rollback simply reverting the slice?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Enumerate every affected file and confirm the change is deterministic per file.",
+          "Confirm the transformation is reversible and produces no behavior change.",
+          "Apply the transformation in reviewable slices, each independently buildable.",
+          "Run build, typecheck, and the affected test suites per slice.",
+          "Record the file list, commands, and results for each slice."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+          "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+          "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot.",
+          "The transformation requires human judgment on any file.",
+          "Any slice changes runtime behavior.",
+          "The migration touches database schema, data, or irreversible infrastructure."
+        ],
+        "test_plan": [
+          {
+            "generated": false,
+            "intent": "Existing suites must pass unchanged (no behavior change)",
+            "kind": "EXISTING_SUITE",
+            "reason_not_generated": "dry-run: no repository is written",
+            "test_id": "ISSUE_000283_T01",
+            "would_run": true
+          }
+        ],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 89,
+        "matched_on": [
+          "category MECHANICAL_MIGRATION",
+          "keywords: sync, mechanical"
+        ],
+        "playbook_id": "ORG_PB_MECHANICAL_MIGRATION",
+        "playbook_name": "Mechanical multi-file or cross-repository migration",
+        "playbook_scope": "ORG",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_QA_VALIDATION: confidence 5 below 60",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 5 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope UNKNOWN not allowed by playbook"
+        ],
+        "source": "ORG_PLAYBOOK"
+      },
+      "post_fix_success": null,
+      "pr_number": null,
+      "pre_fix_failure": null,
+      "priority": {
+        "confidence": 0.5,
+        "factors": [
+          "category MECHANICAL_MIGRATION (+1)"
+        ],
+        "rationale": "Priority 4/10 from base 3 adjusted by: category MECHANICAL_MIGRATION (+1).",
+        "score": 4
+      },
+      "product": "Shared (third-party fork `paperclip-ai`; no product-repo activity observed in any window)",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": null,
+      "related_change": null,
+      "remediable": "CODE_CHANGE",
+      "reported_category": "ENHANCEMENT",
+      "repository": "paperclip-ai",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "paperclip-ai is outside the medicodio pilot scope",
+      "security_scope": "UNKNOWN",
+      "selected_for_attention": false,
+      "skills_available": [],
+      "skills_required": [
+        "repo.multi_file_edit",
+        "git.stacked_branches",
+        "ci.run_targeted_tests"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "None meaningful; the only observed activity is a mechanical sync (Recommendation: script it, do not delegate it).",
+          "finding_reference": "line 50",
+          "member": "Karthik R Khatavkar",
+          "report_date": "2026_09_14",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_14_Mgmt_Activity_Report.md",
+          "section": "opportunity",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_14:SOURCE_011:50",
+      "stage": "04_DEV_FIX",
+      "state": "DEV_REVIEW",
+      "status": "OK",
+      "stop_conditions": [
+        "SECURITY_SCOPE_UNVERIFIED: a human must confirm the surface is not security-sensitive",
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+        "MISSING_CAPABILITY: repo.multi_file_edit: Dry-run pilot performs no writes to engineering repositories.",
+        "MISSING_CAPABILITY: git.stacked_branches: Dry-run pilot creates no branches, commits, or pull requests.",
+        "MISSING_CAPABILITY: ci.run_targeted_tests: No engineering repository is checked out or allowlisted in the pilot."
+      ],
+      "task_description": "Work carried out: paperclip-ai: repository history was not read (no local checkout with history) / Code now: paperclip-ai was not inspected (no local checkout configured) / Reported: Delegation opportunity recorded for Karthik R Khatavkar: None meaningful; the only observed activity is a mechanical sync (Recommendation: script it, do not delegate it). / Recommended: DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "test_cases_generated": [
+        "ISSUE_000283_T01"
+      ],
+      "test_results": [],
+      "time_ai": "00:30",
+      "time_human": "05:00",
+      "time_human_ai": "03:00",
+      "title": "None meaningful; the only observed activity is a mechanical sync (Recommendation: script it, do not delegate it)."
+    },
+    {
+      "analysis_scope": "OUT_OF_SCOPE",
+      "approval_required": true,
+      "attempt_id": "ISSUE_000284_ATTEMPT_01",
+      "autonomy_reasons": [
+        "playbook GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL default tier C",
+        "remediability NON_CODE_PROCESS: no code change is justified from this evidence",
+        "complexity 6 exceeds the autonomous ceiling 4",
+        "paperclip-ai is outside the medicodio pilot scope"
+      ],
+      "autonomy_tier": "D",
+      "branch": null,
+      "candidate_repositories": [
+        "paperclip-ai"
+      ],
+      "category": "PROCESS_PRACTICE",
+      "category_match": true,
+      "category_rationale": "category PROCESS_PRACTICE confirms the reported enhancement",
+      "changed_files": [],
+      "code_review": [
+        {
+          "checkout_available": false,
+          "missing_paths": [],
+          "present_paths": [],
+          "repository": "paperclip-ai",
+          "source_file_count": null,
+          "work_done": {
+            "author": "Karthik R Khatavkar",
+            "commit_count": 0,
+            "date": "2026_09_14",
+            "deletions": null,
+            "files_changed": null,
+            "history_available": false,
+            "insertions": null,
+            "subjects": []
+          }
+        }
+      ],
+      "commands_executed": [],
+      "commit_sha": null,
+      "complexity": {
+        "confidence": 0.65,
+        "factors": [
+          "category PROCESS_PRACTICE base 5",
+          "no file paths identified (+1)"
+        ],
+        "rationale": "Complexity 6/10 from: category PROCESS_PRACTICE base 5; no file paths identified (+1).",
+        "score": 6
+      },
+      "component": null,
+      "confidence": 0.55,
+      "corroborating_only": false,
+      "corroboration": [],
+      "dedupe_signature": "PROCESS_PRACTICE|paperclip-ai|confirmable none",
+      "defect_type": null,
+      "description": "Recurring pattern flagged for Karthik R Khatavkar: None confirmable. Current evidence: first observation. Recommended action: \u2014.",
+      "detected_at": "2026_09_14",
+      "duplicate_of": null,
+      "environment": null,
+      "environment_signal": false,
+      "estimate_basis": [
+        "complexity 6",
+        "remediability NON_CODE_PROCESS",
+        "autonomy tier D",
+        "tier permits investigation and proposal only, so a human does the change"
+      ],
+      "evidence": [
+        {
+          "excerpt": "None confirmable \u2014 first observation",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:68"
+        },
+        {
+          "excerpt": "\u2014",
+          "kind": "RECOMMENDATION",
+          "locator": "SOURCE_011:68"
+        },
+        {
+          "excerpt": "previous evidence: \u2014",
+          "kind": "REPORT_OBSERVATION",
+          "locator": "SOURCE_011:68"
+        }
+      ],
+      "execution_allowed": false,
+      "files": [],
+      "fix": {
+        "branch": null,
+        "changed_files": [],
+        "commands_executed": [],
+        "commit_sha": null,
+        "dry_run": true,
+        "executed": false,
+        "external_systems_changed": [],
+        "full_suite_result": null,
+        "next_state": "DEV_REVIEW",
+        "post_fix_success": null,
+        "pr_number": null,
+        "pre_fix_failure": null,
+        "statement": "DRY RUN: no repository was modified, no commit or pull request was created, nothing was deployed, and no external system was changed.",
+        "suppression_reasons": [
+          "DRY_RUN_MODE enabled: no branch, commit, PR, deployment, or external change",
+          "paperclip-ai is not in remediation_repository_allowlist"
+        ],
+        "test_cases_generated": [],
+        "test_results": [],
+        "would_have_done": [
+          "create working branch devin/issue_000284-attempt-01",
+          "plan step: Restate the reported pattern with its evidence and frequency.",
+          "plan step: Identify whether the remedy is process, tooling, or code.",
+          "plan step: Describe the smallest concrete improvement and who owns it.",
+          "plan step: Produce the proposal for human decision; make no repository change."
+        ]
+      },
+      "frequency": null,
+      "full_suite_result": null,
+      "guardrail_violations": [],
+      "implementation_plan": [
+        "Restate the reported pattern with its evidence and frequency.",
+        "Identify whether the remedy is process, tooling, or code.",
+        "Describe the smallest concrete improvement and who owns it.",
+        "Produce the proposal for human decision; make no repository change."
+      ],
+      "issue_id": "ISSUE_000284",
+      "merged_sources": [
+        "SOURCE_011:68"
+      ],
+      "missing_skills": [],
+      "next_state": "DEV_REVIEW",
+      "owner": "Karthik R Khatavkar",
+      "plan": {
+        "acceptance_criteria": [
+          "Is the remedy correctly classified as process, tooling, or code?",
+          "Is every claim traceable to a report line?"
+        ],
+        "dry_run": true,
+        "execution_allowed": false,
+        "implementation_plan": [
+          "Restate the reported pattern with its evidence and frequency.",
+          "Identify whether the remedy is process, tooling, or code.",
+          "Describe the smallest concrete improvement and who owns it.",
+          "Produce the proposal for human decision; make no repository change."
+        ],
+        "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+        "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+        "stop_conditions": [
+          "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision",
+          "The item requires an organizational policy decision."
+        ],
+        "test_plan": [],
+        "verification_commands": [
+          {
+            "command": null,
+            "executed": false,
+            "note": "No verification commands are configured for this repository; a human must supply them before any execution is permitted.",
+            "phase": "TARGETED_TEST"
+          }
+        ]
+      },
+      "playbook_match": {
+        "confidence": 60,
+        "matched_on": [
+          "category PROCESS_PRACTICE"
+        ],
+        "playbook_id": "GEN_PB_PROCESS_IMPROVEMENT_PROPOSAL",
+        "playbook_name": "Process or tooling improvement proposal (no code remediation)",
+        "playbook_scope": "GENERAL",
+        "playbook_version": 1,
+        "rejected_candidates": [
+          "ORG_PB_MECHANICAL_MIGRATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_QA_VALIDATION: complexity 6 exceeds playbook maximum 5",
+          "ORG_PB_REGRESSION_TEST_GENERATION: complexity 6 exceeds playbook maximum 4",
+          "ORG_PB_TENANT_ISOLATION_VALIDATION: security scope NONE not allowed by playbook"
+        ],
+        "source": "GENERAL_PLAYBOOK"
+      },
+      "post_fix_success": null,
+      "pr_number": null,
+      "pre_fix_failure": null,
+      "priority": {
+        "confidence": 0.55,
+        "factors": [
+          "non-code process item, no software risk (-1)"
+        ],
+        "rationale": "Priority 2/10 from base 3 adjusted by: non-code process item, no software risk (-1).",
+        "score": 2
+      },
+      "product": "Shared (third-party fork `paperclip-ai`; no product-repo activity observed in any window)",
+      "proposed_action": "DOCUMENT ONLY: human-owned surface; produce findings and a proposal.",
+      "recommended_action": "\u2014",
+      "related_change": null,
+      "remediable": "NON_CODE_PROCESS",
+      "reported_category": "ENHANCEMENT",
+      "repository": "paperclip-ai",
+      "reproduction": {
+        "available": false,
+        "method": null,
+        "notes": "Derived from a management report statement; no execution-level reproduction was attempted (dry-run pilot performs no repository work)."
+      },
+      "revised_category": "ENHANCEMENT",
+      "rollback_plan": "Nothing to roll back: this issue is proposal-only, so no repository state is changed.",
+      "run_id": "RUN_0005",
+      "scope_reason": "paperclip-ai is outside the medicodio pilot scope",
+      "security_scope": "NONE",
+      "selected_for_attention": false,
+      "skills_available": [
+        "analysis.write_proposal"
+      ],
+      "skills_required": [
+        "analysis.write_proposal"
+      ],
+      "source": "MGMT_REPORT",
+      "source_provenance": [
+        {
+          "evidence_excerpt_or_locator": "None confirmable \u2014 first observation",
+          "finding_reference": "line 68",
+          "member": "Karthik R Khatavkar",
+          "report_date": "2026_09_14",
+          "report_type": "DAILY_ENGINEERING_DETAIL",
+          "repository": "Medicodio-AI-Engine/Mgmt_Reports",
+          "repository_path": "Ai_Engr_Rpt/Daily/medicodio/Detail/2026_09_14_Mgmt_Activity_Report.md",
+          "section": "repeat_pattern",
+          "source_id": "SOURCE_011"
+        }
+      ],
+      "source_reference": "2026_09_14:SOURCE_011:68",
+      "stage": "04_DEV_FIX",
+      "state": "DEV_REVIEW",
+      "status": "OK",
+      "stop_conditions": [
+        "OUT_OF_PILOT_SCOPE: widening the pilot is a human decision"
+      ],
+      "task_description": "Work carried out: paperclip-ai: repository history was not read (no local checkout with history) / Code now: paperclip-ai was not inspected (no local checkout configured) / Reported: Recurring pattern flagged for Karthik R Khatavkar: None confirmable. / Recommended: \u2014",
+      "test_cases_generated": [],
+      "test_results": [],
+      "time_ai": "00:15",
+      "time_human": "03:00",
+      "time_human_ai": "01:45",
+      "title": "None confirmable"
+    }
+  ],
+  "next_expected_input_file": "2026_09_14_RUN_0005_05_DEV_REVIEW_INPUT.json",
+  "next_state": "DEV_REVIEW",
+  "report_date": "2026_09_14",
+  "run_flags": [],
+  "run_id": "RUN_0005",
+  "stage": "04_DEV_FIX",
+  "status": "OK",
+  "warnings": []
+}
