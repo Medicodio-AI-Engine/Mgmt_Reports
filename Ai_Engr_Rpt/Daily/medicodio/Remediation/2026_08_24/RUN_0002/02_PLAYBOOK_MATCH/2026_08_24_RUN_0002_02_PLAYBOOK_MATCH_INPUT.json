@@ -1,0 +1,8 @@
+{
+  "report_date": "2026_08_24",
+  "run_id": "RUN_0002",
+  "sha256": "5dcc07407b1cd4c397a28d0e866c3b37307e61d096c63cfae87e4d015ea4c673",
+  "source_artifact": "01_TRIAGE/2026_08_24_RUN_0002_01_TRIAGE_OUTPUT_DEVIN_AI.json",
+  "source_stage": "01_TRIAGE",
+  "stage": "02_PLAYBOOK_MATCH"
+}
