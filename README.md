@@ -8,6 +8,12 @@ Management reporting artifacts produced by the daily engineering review automati
 Ai_Engr_Rpt/Daily/medicodio/Detail/
   YYYY_MM_DD_Mgmt_Activity_Report.md
   YYYY_MM_DD_Employee_Rating_Cards.md
+Ai_Engr_Rpt/Daily/medicodio/Remediation/YYYY_MM_DD/RUN_NNNN/
+  per-stage remediation run artifacts
+Ai_Engr_Rpt/Daily/medicodio/Ratings/
+  week-over-week rating trend reports
+remediation/
+  the remediation platform that reads the reports above
 ```
 
 `YYYY_MM_DD` is the **review date** (the UTC day the report covers), not the run date. The date
@@ -35,6 +41,13 @@ investigating, since a duplicate run usually means the schedule fired twice or a
 
 Reports start at review date 2026-08-19. That day has rating cards only: its management report was
 produced before reports were stored in Git and is no longer recoverable.
+
+## Remediation platform
+
+[`remediation/`](remediation/README.md) turns these reports into normalized, prioritized,
+playbook-matched remediation proposals and stops at human review. The pilot is dry-run only: it
+modifies no engineering repository and creates no commits or pull requests. Review decisions are
+`DECISION:` blocks committed into the `05_DEV_REVIEW` artifact.
 
 ## Format
 

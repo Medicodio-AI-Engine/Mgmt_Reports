@@ -1,0 +1,213 @@
+"""Command line entry point.
+
+    python -m remediation run [--report-date YYYY-MM-DD] [--repository-root PATH]
+    python -m remediation discover
+    python -m remediation decisions
+    python -m remediation validate
+    python -m remediation ratings-trend [--weeks 4] [--repository-root PATH]
+
+``run`` is dry-run by default. ``--allow-writes`` exists only so the flag has to be
+typed deliberately; it still refuses unless a repository is allowlisted in config.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+from . import config as config_module
+from . import discovery, pipeline, playbooks, ratings, review, schema, trend, trendreport
+from . import identities as identities_module
+from .naming import run_id
+
+EXPECTED_FAILURES = (
+    discovery.DiscoveryError,
+    pipeline.PipelineError,
+    schema.SchemaValidationError,
+    config_module.ConfigError,
+)
+
+
+def _repository_root(value: str | None) -> Path:
+    if value:
+        return Path(value).expanduser().resolve()
+    # remediation/src/remediation/cli.py -> repository root
+    return Path(__file__).resolve().parents[3]
+
+
+def _overrides(args: argparse.Namespace) -> dict[str, object]:
+    """Only explicitly typed flags may override the committed configuration."""
+    overrides: dict[str, object] = {}
+    if args.allow_writes:
+        overrides["dry_run_mode"] = False
+    if args.artifact_root:
+        overrides["artifact_root_directory"] = args.artifact_root
+    return overrides
+
+
+def _load(args: argparse.Namespace) -> config_module.Config:
+    path = Path(args.config).expanduser() if args.config else None
+    return config_module.load(path, overrides=_overrides(args))
+
+
+def _run_summary(result: pipeline.Result, config: config_module.Config) -> list[str]:
+    return [
+        f"run {result.run_context.run_id} report_date {result.run_context.report_date}",
+        f"completeness {result.run_context.completeness.value}",
+        f"issues {result.metrics['issues_total']}",
+        f"dry_run {config.dry_run_mode}",
+        f"artifacts {result.paths.root}",
+    ]
+
+
+def cmd_run(args: argparse.Namespace) -> int:
+    config = _load(args)
+    result = pipeline.run(
+        config,
+        report_date=args.report_date,
+        repository_root=_repository_root(args.repository_root),
+        limit=args.limit,
+    )
+    print("\n".join(_run_summary(result, config)))
+    for warning in result.run_context.warnings:
+        print(f"warning: {warning}", file=sys.stderr)
+    return 0
+
+
+def cmd_discover(args: argparse.Namespace) -> int:
+    config = _load(args)
+    root = _repository_root(args.repository_root)
+    context = discovery.assemble(
+        config,
+        root / config.mgmt_reports_directory,
+        run_id(0),
+        requested_report_date=args.report_date,
+    )
+    print(json.dumps(context.manifest(config), indent=2, sort_keys=True))
+    return 0 if context.processable else 1
+
+
+def cmd_decisions(args: argparse.Namespace) -> int:
+    config = _load(args)
+    decisions = review.load_decisions(config.artifact_root_directory)
+    if not decisions:
+        print("no DECISION blocks found")
+        return 0
+    for _, decision in sorted(decisions.items()):
+        print(json.dumps(decision.as_dict(), sort_keys=True))
+    return 0
+
+
+def _trend_stem(weeks: list[trend.Week]) -> str:
+    return f"rating-trend-{weeks[-1].sunday}-{len(weeks)}w"
+
+
+def _identities(value: str | None) -> dict[str, str]:
+    """Account names confirmed to be one person, from the committed mapping."""
+    return identities_module.load(Path(value).expanduser() if value else None)
+
+
+def _detail(args: argparse.Namespace) -> Path:
+    """The Detail directory holding the management reports and rating cards."""
+    config = _load(args)
+    return _repository_root(args.repository_root) / config.mgmt_reports_directory
+
+
+def cmd_ratings_trend(args: argparse.Namespace) -> int:
+    detail = _detail(args)
+    people = _identities(args.identities)
+    weeks = trend.series(ratings.read_all(detail, people), args.weeks)
+    if not weeks:
+        print(f"no rating cards found in {detail}", file=sys.stderr)
+        return 1
+    rendered = trendreport.render(weeks, people=people)
+    written = trendreport.write(rendered, Path(args.output), _trend_stem(weeks))
+    print("\n".join(str(path) for path in written))
+    return 0
+
+
+def cmd_validate(args: argparse.Namespace) -> int:
+    config = _load(args)
+    registry = playbooks.load_registry(config)
+    print(f"org playbooks {len(registry.org)}, general playbooks {len(registry.general)}")
+    print(f"skills registered {len(registry.skills)}")
+    for name in schema.SCHEMAS:
+        schema.load_schema(name)
+        print(f"schema loaded: {name}")
+    print(f"dry_run_mode {config.dry_run_mode}")
+    print(f"approval_mechanism {config.approval_mechanism}")
+    return 0
+
+
+def _add_run(subparsers: argparse._SubParsersAction) -> None:
+    parser = subparsers.add_parser("run", help="execute the Version 1 flow for one report date")
+    parser.add_argument("--report-date", help="YYYY-MM-DD or YYYY_MM_DD; default: latest complete")
+    parser.add_argument("--repository-root", help="path to the Mgmt_Reports checkout")
+    parser.add_argument("--limit", type=int, default=10, help="candidates to select for attention")
+    parser.add_argument(
+        "--allow-writes",
+        action="store_true",
+        help="disable dry-run (still refuses unless a repository is allowlisted)",
+    )
+    parser.set_defaults(func=cmd_run)
+
+
+def _add_discover(subparsers: argparse._SubParsersAction) -> None:
+    parser = subparsers.add_parser("discover", help="print the source manifest only")
+    parser.add_argument("--report-date")
+    parser.add_argument("--repository-root")
+    parser.set_defaults(func=cmd_discover)
+
+
+def _add_decisions(subparsers: argparse._SubParsersAction) -> None:
+    parser = subparsers.add_parser(
+        "decisions", help="print every DECISION block found in the artifacts"
+    )
+    parser.set_defaults(func=cmd_decisions)
+
+
+def _add_ratings_trend(subparsers: argparse._SubParsersAction) -> None:
+    parser = subparsers.add_parser(
+        "ratings-trend", help="week-over-week employee rating trend from the rating cards"
+    )
+    parser.add_argument("--weeks", type=int, default=4, help="ISO weeks to cover; default 4")
+    parser.add_argument("--repository-root", help="path to the Mgmt_Reports checkout")
+    parser.add_argument("--output", required=True, help="directory to write the report into")
+    parser.add_argument("--identities", help="path to the confirmed account-to-person mapping")
+    parser.set_defaults(func=cmd_ratings_trend)
+
+
+def _add_validate(subparsers: argparse._SubParsersAction) -> None:
+    parser = subparsers.add_parser(
+        "validate", help="load configuration, playbooks, skills, and schemas"
+    )
+    parser.set_defaults(func=cmd_validate)
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(prog="remediation", description=__doc__)
+    parser.add_argument("--config", help="path to config.yaml")
+    parser.add_argument("--artifact-root", help="override the artifact output directory")
+    # Declared once here so every subcommand can read it without attribute probing.
+    parser.set_defaults(allow_writes=False)
+    subparsers = parser.add_subparsers(dest="command", required=True)
+    for add in (_add_run, _add_discover, _add_decisions, _add_ratings_trend, _add_validate):
+        add(subparsers)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    try:
+        return int(args.func(args))
+    except EXPECTED_FAILURES as error:
+        # A refusal is an expected outcome, not a crash: report it in one line.
+        print(f"{type(error).__name__}: {error}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

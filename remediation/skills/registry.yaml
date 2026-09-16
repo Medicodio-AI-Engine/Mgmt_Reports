@@ -1,0 +1,43 @@
+# Capabilities this platform can claim during the dry-run pilot.
+#
+# `available: false` means the capability is not usable in the current pilot
+# configuration, so any playbook requiring it produces a missing-skill stop
+# rather than an execution attempt.
+skills:
+  - id: repo.test_framework_identification
+    description: Identify the test framework and test layout of a target repository.
+    available: true
+  - id: test.write_regression_test
+    description: Write a deterministic regression test for a described behavior.
+    available: false
+    unavailable_reason: Dry-run pilot performs no writes to engineering repositories.
+  - id: test.write_isolation_test
+    description: Write read-only cross-tenant isolation tests.
+    available: false
+    unavailable_reason: Dry-run pilot performs no writes to engineering repositories.
+  - id: ci.run_targeted_tests
+    description: Execute targeted and broader test suites and capture output.
+    available: false
+    unavailable_reason: No engineering repository is checked out or allowlisted in the pilot.
+  - id: repo.multi_file_edit
+    description: Apply a deterministic transformation across many files.
+    available: false
+    unavailable_reason: Dry-run pilot performs no writes to engineering repositories.
+  - id: git.stacked_branches
+    description: Split work into stacked, independently reviewable branches.
+    available: false
+    unavailable_reason: Dry-run pilot creates no branches, commits, or pull requests.
+  - id: qa.derive_cases_from_diff
+    description: Derive QA cases from an issue, diff, and acceptance criteria.
+    available: true
+  - id: qa.execute_cases
+    description: Execute QA cases against a running environment.
+    available: false
+    unavailable_reason: No QA environment or credentials are provisioned for the pilot.
+  - id: security.read_tenancy_model
+    description: Read and document a repository's tenancy and authorization model.
+    available: false
+    unavailable_reason: Engineering repositories are not checked out in the pilot.
+  - id: analysis.write_proposal
+    description: Produce a written, evidence-linked improvement proposal.
+    available: true

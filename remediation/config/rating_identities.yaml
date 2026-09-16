@@ -1,0 +1,8 @@
+# Account names confirmed to belong to one person, so the rating trend follows the
+# person rather than the account. Only the report owner adds an entry here: an
+# unconfirmed resemblance stays two rows and is flagged in the report instead.
+#
+# alias: canonical name
+identities:
+  # Confirmed by the report owner, 2026-09-16: one person, two GitHub accounts.
+  hiteshjrxmedicodio: hitesh

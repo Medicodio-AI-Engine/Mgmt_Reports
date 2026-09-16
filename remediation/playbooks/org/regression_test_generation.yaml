@@ -1,0 +1,49 @@
+playbook_id: ORG_PB_REGRESSION_TEST_GENERATION
+name: Regression test generation for a known defect class
+scope: ORG
+version: 1
+owner: Engineering leadership (Medicodio)
+applies_to_categories:
+  - MISSING_TEST
+  - QA_FINDING
+match_keywords:
+  - regression test
+  - regression suite
+  - test matrix
+  - tests for
+  - cannot silently regress
+  - test harness
+exclude_keywords:
+  - tenant isolation
+  - phi
+required_skills:
+  - repo.test_framework_identification
+  - test.write_regression_test
+  - ci.run_targeted_tests
+default_autonomy_tier: A
+max_complexity: 4
+allowed_security_scopes:
+  - NONE
+  - UNKNOWN
+requires_reproduction: false
+requires_failing_test_first: true
+steps:
+  - Identify the defect class and the exact behavior that must not regress.
+  - Locate the existing test suite and the closest existing tests for that surface.
+  - Write the smallest test that fails against the current behavior when the defect is present.
+  - Run the new test and record the pre-fix result.
+  - Run the targeted suite for the touched module.
+  - Run the broader suite for the package.
+  - Record every command and its output as evidence.
+guardrails:
+  - Never weaken or delete an existing assertion to make a new test pass.
+  - Never change production behavior under this playbook; tests only.
+  - Do not claim coverage without recorded command output.
+stop_conditions:
+  - Test framework cannot be identified.
+  - CI or local test execution is unavailable in the target repository.
+  - The behavior under test touches authentication, authorization, tenancy, PHI, secrets, or billing.
+review_checklist:
+  - Does the test fail for the right reason before the fix?
+  - Is the assertion tied to observable behavior rather than implementation detail?
+  - Is the test deterministic and free of network or clock dependence?

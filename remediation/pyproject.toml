@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "remediation"
+version = "1.0.0"
+description = "Controlled engineering remediation platform (Version 1, dry-run pilot)"
+requires-python = ">=3.11"
+dependencies = [
+  "jsonschema>=4.21",
+  "PyYAML>=6.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+remediation = "remediation.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4", "RUF"]
+ignore = [
+  "E501",
+  # str-valued enums are serialized straight into JSON artifacts; StrEnum would
+  # change nothing for callers and is a wider migration than this pilot needs.
+  "UP042",
+  "RUF001",
+  "RUF002",
+  "RUF003",
+]

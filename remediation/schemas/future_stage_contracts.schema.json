@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medicodio.ai/schemas/remediation/future_stage_contracts.json",
+  "title": "QA / UAT / release / learning contracts (defined, not enabled in Version 1)",
+  "type": "object",
+  "$defs": {
+    "qa_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id",
+        "issue_id",
+        "attempt_id",
+        "promoted",
+        "qa_cases",
+        "executions",
+        "verdict",
+        "failure_category",
+        "evidence",
+        "routes_back_to_dev"
+      ],
+      "properties": {
+        "run_id": { "type": "string" },
+        "issue_id": { "type": "string" },
+        "attempt_id": { "type": "string" },
+        "promoted": { "type": "boolean" },
+        "promotion_reference": { "type": ["string", "null"] },
+        "qa_cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["case_id", "derived_from", "steps", "expected"],
+            "properties": {
+              "case_id": { "type": "string" },
+              "derived_from": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": ["ISSUE", "ACCEPTANCE_CRITERIA", "DIFF", "REGRESSION_TEST", "PLAYBOOK"]
+                }
+              },
+              "steps": { "type": "array", "items": { "type": "string" } },
+              "expected": { "type": "string" }
+            }
+          }
+        },
+        "executions": { "type": "array" },
+        "verdict": { "type": "string", "enum": ["PASS", "FAIL", "NOT_RUN"] },
+        "failure_category": {
+          "type": ["string", "null"],
+          "enum": [
+            "CODE_DEFECT",
+            "TEST_DEFECT",
+            "ENVIRONMENT",
+            "TEST_DATA",
+            "CONFIGURATION",
+            "EXPECTED_BEHAVIOR",
+            "UNKNOWN",
+            null
+          ]
+        },
+        "evidence": { "type": "array" },
+        "routes_back_to_dev": { "type": "boolean" },
+        "summary": { "type": ["string", "null"] }
+      }
+    },
+    "uat_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_id", "issue_id", "attempt_id", "verdict", "returns_to", "evidence"],
+      "properties": {
+        "run_id": { "type": "string" },
+        "issue_id": { "type": "string" },
+        "attempt_id": { "type": "string" },
+        "verdict": { "type": "string", "enum": ["PASS", "FAIL", "NOT_RUN"] },
+        "returns_to": { "type": ["string", "null"], "enum": ["QA_TESTING", "RELEASE_READY", null] },
+        "evidence": { "type": "array" },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "release_readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id",
+        "issue_id",
+        "attempt_id",
+        "approvals_complete",
+        "tests_passed",
+        "qa_passed",
+        "uat_passed",
+        "unresolved_blockers",
+        "rollback_plan",
+        "deployment_procedure",
+        "change_references",
+        "evidence",
+        "release_ready"
+      ],
+      "properties": {
+        "run_id": { "type": "string" },
+        "issue_id": { "type": "string" },
+        "attempt_id": { "type": "string" },
+        "approvals_complete": { "type": "boolean" },
+        "tests_passed": { "type": "boolean" },
+        "qa_passed": { "type": "boolean" },
+        "uat_passed": { "type": "boolean" },
+        "unresolved_blockers": { "type": "array", "items": { "type": "string" } },
+        "rollback_plan": { "type": ["string", "null"] },
+        "deployment_procedure": { "type": ["string", "null"] },
+        "change_references": { "type": "array", "items": { "type": "string" } },
+        "evidence": { "type": "array" },
+        "release_ready": { "type": "boolean" },
+        "rollback_evidence": { "type": "array" }
+      }
+    },
+    "learning_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["issue_id", "playbook_id", "category", "priority", "complexity", "autonomy_tier", "attempts"],
+      "properties": {
+        "issue_id": { "type": "string" },
+        "playbook_id": { "type": ["string", "null"] },
+        "category": { "type": "string" },
+        "priority": { "type": ["integer", "null"] },
+        "complexity": { "type": ["integer", "null"] },
+        "autonomy_tier": { "type": ["string", "null"] },
+        "attempts": { "type": "integer" },
+        "rejections": { "type": "integer" },
+        "questions": { "type": "integer" },
+        "time_to_fix_seconds": { "type": ["number", "null"] },
+        "time_to_qa_seconds": { "type": ["number", "null"] },
+        "time_to_uat_seconds": { "type": ["number", "null"] },
+        "qa_first_pass": { "type": ["boolean", "null"] },
+        "uat_first_pass": { "type": ["boolean", "null"] },
+        "rolled_back": { "type": ["boolean", "null"] },
+        "false_positive": { "type": ["boolean", "null"] },
+        "human_intervention": { "type": ["boolean", "null"] },
+        "playbook_outcome": { "type": ["string", "null"], "enum": ["SUCCESS", "FAILURE", "UNKNOWN", null] }
+      }
+    }
+  }
+}

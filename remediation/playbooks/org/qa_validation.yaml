@@ -1,0 +1,45 @@
+playbook_id: ORG_PB_QA_VALIDATION
+name: QA validation of an already-implemented change
+scope: ORG
+version: 1
+owner: QA and engineering leadership (Medicodio)
+applies_to_categories:
+  - QA_FINDING
+  - REVIEW_FINDING
+  - AUTOMATION_OPPORTUNITY
+match_keywords:
+  - qa audit
+  - qa validation
+  - validation harness
+  - authenticated api validation
+  - pre-merge gate
+  - check and fix
+  - blocker pass
+exclude_keywords: []
+required_skills:
+  - qa.derive_cases_from_diff
+  - qa.execute_cases
+  - ci.run_targeted_tests
+default_autonomy_tier: C
+max_complexity: 5
+allowed_security_scopes:
+  - NONE
+  - UNKNOWN
+requires_reproduction: false
+requires_failing_test_first: false
+steps:
+  - Derive QA cases from the issue, the diff, and the acceptance criteria.
+  - State explicitly which cases can and cannot be executed with available access.
+  - Execute the executable cases and record inputs, outputs, and environment.
+  - Classify every failure as code defect, test defect, environment, data, or configuration.
+  - Report unexecuted cases as NOT_RUN rather than assuming a pass.
+guardrails:
+  - Never mark a case as passed without recorded execution output.
+  - Never treat an environment failure as a code defect without independent verification.
+  - Never perform validation against production data or PHI.
+stop_conditions:
+  - Required test environment or credentials are unavailable.
+  - Validation would require production or PHI access.
+review_checklist:
+  - Are unexecuted cases clearly reported as NOT_RUN?
+  - Is each failure classified with evidence?
