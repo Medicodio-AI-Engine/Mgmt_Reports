@@ -1,6 +1,6 @@
 # Employee Rating Trend — 4 weeks (2026-W31 → 2026-W34)
 
-**Generated:** 2026-09-15 UTC · **Weeks requested:** 4 · **Weeks with data:** 1
+**Generated:** 2026-09-16 UTC · **Weeks requested:** 4 · **Weeks with data:** 1
 
 **Confidential — individual performance data.** Per-engineer rating values are reproduced here at the report owner's explicit request. They are ratings of observable activity on single review days, not appraisals, and they are not evidence of any software defect.
 
@@ -18,6 +18,8 @@ Weeks without any rating card: 2026-W31, 2026-W32, 2026-W33.
 ## Comparability
 
 `NR` in a Current column means the later card carries no entry for that person — a card scopes itself to the contributors with observable activity on its review day — so it is an absence of evidence, not a fall in rating. Only `CHANGED` rows are movements.
+
+Accounts confirmed by the report owner to be one person, and so followed as one person here: `hiteshjrxmedicodio` → `hitesh`. Scores are unchanged; only the name they are filed under is.
 
 Each card's own scope and caveats:
 
@@ -50,22 +52,19 @@ Not comparable: no rating card exists for 2026-W33.
 | sameer-s-mansur | Medicodio (integration) | 6.2 | 5.7 | -0.5 | CHANGED |
 | SaijyotiMeti | Global Codio | 8.1 | 7.3 | -0.8 | CHANGED |
 | Amrutha-Beedikar | Global Codio | 7.2 | 6.2 | -1 | CHANGED |
+| hitesh | Medicodio (app) | 5.4 | 4.1 | -1.3 | CHANGED |
 | anirudh-medicodio | Global Codio | 7.2 | 5.4 | -1.8 | CHANGED |
-| hitesh | Medicodio (app) | NR | 4.1 | — | NEW |
 | Medicodio-Amit | Medicodio | 6.1 | NR | — | NOT_RATED |
 | jatinkushwaha-medicodio | Medicodio | 5.9 | NR | — | NOT_RATED |
 | NandanDate-Medicodio | Medicodio | 5.7 | NR | — | NOT_RATED |
 | ashwinsk-medicodio | Medicodio | 5.5 | NR | — | NOT_RATED |
 | karthikmed | Medicodio | 5.5 | NR | — | NOT_RATED |
-| hiteshjrxmedicodio | Medicodio | 5.4 | NR | — | NOT_RATED |
 | Pj-Vineeth-Kumar | Global Codio | 5.3 | NR | — | NOT_RATED |
 | ragha82 | Global Codio | 5.2 | NR | — | NOT_RATED |
 | avinash-codio | Medicodio | 5 | NR | — | NOT_RATED |
 | amit-pandey-medicodio | Medicodio | 4.8 | NR | — | NOT_RATED |
 | shaheen-khan11 | Medicodio | 4.8 | NR | — | NOT_RATED |
 | SaahilVishwakarma | Global Codio | 4.4 | NR | — | NOT_RATED |
-
-Possibly the same person under two account names, unverified: `hitesh` / `hiteshjrxmedicodio`. They are kept as separate rows until someone confirms the mapping.
 
 Dimension movement (previous → current):
 
@@ -75,14 +74,13 @@ Dimension movement (previous → current):
 | sameer-s-mansur | 8 → 7 | 5 → 7 | NR → 3 | 4 → 4 | 6 → 4 | 8 → 7 |
 | SaijyotiMeti | 8 → 8 | 9 → 8 | 9 → 9 | 8 → 5 | 5 → 4 | 8 → 8 |
 | Amrutha-Beedikar | 8 → 7 | 9 → 8 | 8 → 6 | 4 → 4 | 5 → 4 | 7 → 5 |
+| hitesh | 6 → 4 | 6 → 5 | NR → 3 | 4 → 3 | 4 → 4 | 6 → 5 |
 | anirudh-medicodio | 9 → 6 | 8 → 6 | 8 → 3 | 4 → 5 | 4 → 4 | 8 → 8 |
-| hitesh | NR → 4 | NR → 5 | NR → 3 | NR → 3 | NR → 4 | NR → 5 |
 | Medicodio-Amit | 8 → NR | 6 → NR | 6 → NR | 4 → NR | 4 → NR | 7 → NR |
 | jatinkushwaha-medicodio | 8 → NR | 6 → NR | 4 → NR | 4 → NR | 4 → NR | 8 → NR |
 | NandanDate-Medicodio | 6 → NR | 5 → NR | 4 → NR | 8 → NR | 5 → NR | 6 → NR |
 | ashwinsk-medicodio | 7 → NR | 5 → NR | NR → NR | 4 → NR | NR → NR | NR → NR |
 | karthikmed | 5 → NR | 7 → NR | NR → NR | 4 → NR | NR → NR | NR → NR |
-| hiteshjrxmedicodio | 6 → NR | 6 → NR | NR → NR | 4 → NR | 4 → NR | 6 → NR |
 | Pj-Vineeth-Kumar | 5 → NR | 6 → NR | NR → NR | 5 → NR | 5 → NR | 5 → NR |
 | ragha82 | 6 → NR | 6 → NR | 3 → NR | 5 → NR | 3 → NR | 7 → NR |
 | avinash-codio | 8 → NR | 3 → NR | 3 → NR | 5 → NR | 4 → NR | 7 → NR |
@@ -101,7 +99,7 @@ Dimension movement (previous → current):
 | Amrutha-Beedikar | 7.2 | 5.1 | NR | 4.2 | 6.2 |
 | sameer-s-mansur | 6.2 | 5.6 | 5.8 | 6.9 | 5.7 |
 | anirudh-medicodio | 7.2 | 6.8 | 6.7 | 5.9 | 5.4 |
-| hitesh | NR | NR | NR | NR | 4.1 |
+| hitesh | 5.4 | NR | 5.3 | NR | 4.1 |
 | jatinkushwaha-medicodio | 5.9 | 5.7 | 5.6 | 6 | NR |
 | amit-pandey-medicodio | 4.8 | 5.2 | 5.9 | 4.5 | NR |
 | karthikmed | 5.5 | NR | NR | NR | NR |
@@ -110,7 +108,6 @@ Dimension movement (previous → current):
 | ashwinsk-medicodio | 5.5 | NR | 6.1 | NR | NR |
 | svh-medicodio | NR | NR | 6 | NR | NR |
 | Medicodio-Amit | 6.1 | 6.6 | 5.9 | NR | NR |
-| hiteshjrxmedicodio | 5.4 | NR | 5.3 | NR | NR |
 | Shashvi1 | NR | 6.5 | 5 | NR | NR |
 | avinash-codio | 5 | 5.2 | 4.9 | NR | NR |
 | vishnu-saikarthik | NR | 5.6 | 4.8 | NR | NR |
@@ -137,7 +134,7 @@ Dimension movement (previous → current):
 | NandanDate-Medicodio | Medicodio | 5.7 | Mixed | 6 | 5 | 4 | 8 | 5 | 6 |
 | ashwinsk-medicodio | Medicodio | 5.5 | Mixed | 7 | 5 | NR | 4 | NR | NR |
 | karthikmed | Medicodio | 5.5 | Mixed | 5 | 7 | NR | 4 | NR | NR |
-| hiteshjrxmedicodio | Medicodio | 5.4 | Mixed | 6 | 6 | NR | 4 | 4 | 6 |
+| hitesh | Medicodio | 5.4 | Mixed | 6 | 6 | NR | 4 | 4 | 6 |
 | Pj-Vineeth-Kumar | Global Codio | 5.3 | Mixed | 5 | 6 | NR | 5 | 5 | 5 |
 | ragha82 | Global Codio | 5.2 | Mixed | 6 | 6 | 3 | 5 | 3 | 7 |
 | avinash-codio | Medicodio | 5 | Mixed | 8 | 3 | 3 | 5 | 4 | 7 |
@@ -181,7 +178,7 @@ Dimension movement (previous → current):
 | Medicodio-Amit | Medicodio | 5.9 | Mixed | 6 | 7 | NR | 4 | NR | NR |
 | sameer-s-mansur | Medicodio | 5.8 | Mixed | 8 | 5 | NR | 4 | 4 | 7 |
 | jatinkushwaha-medicodio | Medicodio | 5.6 | Mixed | 8 | 5 | 4 | 4 | 3 | 8 |
-| hiteshjrxmedicodio | Medicodio | 5.3 | Mixed | 5 | 7 | NR | 4 | 4 | NR |
+| hitesh | Medicodio | 5.3 | Mixed | 5 | 7 | NR | 4 | 4 | NR |
 | Shashvi1 | Medicodio | 5 | Mixed | 6 | 4 | NR | NR | NR | NR |
 | avinash-codio | Medicodio | 4.9 | Needs Support | 8 | 3 | 3 | 4 | 4 | 7 |
 | vishnu-saikarthik | Medicodio | 4.8 | Needs Support | 7 | 3 | NR | 4 | NR | 5 |

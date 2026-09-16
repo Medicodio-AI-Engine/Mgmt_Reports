@@ -15,10 +15,10 @@ which the report owner asked to show per-engineer scores.
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 
-from . import dates, markdown
+from . import dates, identities, markdown
 
 DIMENSIONS = ("Delivery", "Rigor", "Review", "Devin", "Automation", "Consistency")
 NUMBER = re.compile(r"\d+(?:\.\d+)?")
@@ -121,20 +121,30 @@ def _notes(text: str) -> tuple[str, ...]:
     return tuple(note[:MAX_NOTE_CHARS] for note in found[:MAX_NOTES])
 
 
-def read(path: Path) -> CardSet:
+def _renamed(cards: tuple[Card, ...], people: dict[str, str]) -> tuple[Card, ...]:
+    """Cards under the person's name, keeping the first when a day has two accounts."""
+    kept: dict[str, Card] = {}
+    for card in cards:
+        named = identities.canonical(card.member, people)
+        kept.setdefault(named.lower(), replace(card, member=named))
+    return tuple(kept.values())
+
+
+def read(path: Path, people: dict[str, str] | None = None) -> CardSet:
     """The cards one rating-card file states, keyed by its review date."""
     text = path.read_text(encoding="utf-8", errors="replace")
     date = dates.find_content_review_date(text) or dates.find_date(path.name) or ""
     found = [_card(row) for row in _grid_rows(text)]
     cards = tuple(card for card in found if card is not None)
-    return CardSet(date=date, path=path, cards=cards, notes=_notes(text))
+    return CardSet(date=date, path=path, cards=_renamed(cards, people or {}), notes=_notes(text))
 
 
 def _is_card_file(path: Path) -> bool:
     return path.suffix.lower() == ".md" and "rating-card" in path.name.lower().replace("_", "-")
 
 
-def read_all(directory: Path) -> list[CardSet]:
+def read_all(directory: Path, people: dict[str, str] | None = None) -> list[CardSet]:
     """Every rating-card file in ``directory``, oldest review date first."""
-    found = [read(path) for path in sorted(directory.glob("*.md")) if _is_card_file(path)]
+    cards = [path for path in sorted(directory.glob("*.md")) if _is_card_file(path)]
+    found = [read(path, people) for path in cards]
     return sorted((card_set for card_set in found if card_set.date), key=lambda item: item.date)

@@ -212,14 +212,26 @@ def _daily(weeks: list[Week]) -> list[str]:
     return ["## Day-by-day scores within a week", "", *lines] if lines else []
 
 
+def _merged_identities(people: dict[str, str]) -> list[str]:
+    """The account names a human confirmed belong to one person."""
+    if not people:
+        return []
+    stated = "; ".join(f"`{alias}` → `{name}`" for alias, name in sorted(people.items()))
+    return [
+        "Accounts confirmed by the report owner to be one person, and so followed as one "
+        f"person here: {stated}. Scores are unchanged; only the name they are filed under is.",
+        "",
+    ]
+
+
 def _card_notes(card_set: CardSet) -> list[str]:
     return [f"- {_pretty(card_set.date)}: {note}" for note in card_set.notes]
 
 
-def _caveats(weeks: list[Week]) -> list[str]:
+def _caveats(weeks: list[Week], people: dict[str, str]) -> list[str]:
     """What the cards themselves say about being compared."""
     stated = [line for week in weeks for cs in week.card_sets for line in _card_notes(cs)]
-    lines = ["## Comparability", "", NOT_RATED_NOTE, ""]
+    lines = ["## Comparability", "", NOT_RATED_NOTE, "", *_merged_identities(people)]
     if stated:
         lines += ["Each card's own scope and caveats:", "", *stated, ""]
     return lines
@@ -301,19 +313,22 @@ def _data(weeks: list[Week], generated: str) -> dict[str, object]:
     }
 
 
-def render(weeks: list[Week], generated: str | None = None) -> Report:
+def render(
+    weeks: list[Week], generated: str | None = None, people: dict[str, str] | None = None
+) -> Report:
     """The rating-trend report for a week series, plus its machine-readable form."""
     stamp = generated or dates.today()
     lines = [
         *_header(weeks, stamp),
         *_coverage(weeks),
-        *_caveats(weeks),
+        *_caveats(weeks, people or {}),
         *_week_over_week(weeks),
         *_within(weeks),
         *_daily(weeks),
         *_ratings_of_record(weeks),
     ]
-    return Report(markdown="\n".join(lines).rstrip() + "\n", data=_data(weeks, stamp))
+    data = {**_data(weeks, stamp), "merged_identities": dict(people or {})}
+    return Report(markdown="\n".join(lines).rstrip() + "\n", data=data)
 
 
 def write(report: Report, directory: Path, stem: str) -> list[Path]:

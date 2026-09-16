@@ -224,7 +224,10 @@
       "later_week": "2026-W34"
     }
   ],
-  "generated": "2026-09-15",
+  "generated": "2026-09-16",
+  "merged_identities": {
+    "hiteshjrxmedicodio": "hitesh"
+  },
   "missing_weeks": [
     "2026-W31",
     "2026-W32",
@@ -360,18 +363,11 @@
           "NR"
         ],
         "hitesh": [
-          "NR",
-          "NR",
-          "NR",
-          "NR",
-          "4.1"
-        ],
-        "hiteshjrxmedicodio": [
           "5.4",
           "NR",
           "5.3",
           "NR",
-          "NR"
+          "4.1"
         ],
         "jatinkushwaha-medicodio": [
           "5.9",

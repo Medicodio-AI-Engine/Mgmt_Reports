@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from remediation import ratings, trend, trendreport
+from remediation import identities, ratings, trend, trendreport
 
 CARD_A = """# Employee Rating Cards — Review Day 2026-08-05 (UTC)
 
@@ -127,6 +127,29 @@ def test_daily_matrix_lists_every_review_day(tmp_path: Path) -> None:
     assert "| asha | 7.6 | 7.9 |" in report.markdown
     assert "| chandra | 5.4 | NR |" in report.markdown
     assert report.data["weeks"][-1]["daily_overall"]["asha"] == ["7.6", "7.9"]
+
+
+def test_confirmed_identity_follows_the_person(tmp_path: Path) -> None:
+    """Two accounts a human confirmed are one person read as one member."""
+    (tmp_path / "2026_08_12_Employee_Rating_Cards.md").write_text(CARD_B, encoding="utf-8")
+    (tmp_path / "2026_08_14_Employee_Rating_Cards.md").write_text(CARD_C, encoding="utf-8")
+    people = {"chandra": "asha-second-account"}
+    card_set = ratings.read_all(tmp_path, people)[0]
+    assert sorted(card_set.by_member()) == ["asha", "asha-second-account"]
+
+
+def test_identity_file_states_the_mapping(tmp_path: Path) -> None:
+    path = tmp_path / "rating_identities.yaml"
+    path.write_text("identities:\n  Second-Account: person\n", encoding="utf-8")
+    assert identities.load(path) == {"second-account": "person"}
+    assert identities.load(tmp_path / "absent.yaml") == {}
+
+
+def test_report_states_confirmed_merges(tmp_path: Path) -> None:
+    weeks = trend.series(_cards(tmp_path), 2)
+    report = trendreport.render(weeks, generated="2026_08_13", people={"bhanu": "asha"})
+    assert "confirmed by the report owner to be one person" in report.markdown
+    assert report.data["merged_identities"] == {"bhanu": "asha"}
 
 
 def test_within_week_needs_two_cards(tmp_path: Path) -> None:

@@ -65,6 +65,11 @@ collapsing to its first and last day.
 Cards head the overall figure `Overall` on some review days and `Weighted` on others; both are read
 as the same weighted average.
 
+One person can contribute under two account names, which would otherwise read as one person leaving
+the rated set and another joining it. The report flags a resemblance but never acts on it; only a
+mapping a human commits to `config/rating_identities.yaml` (or `--identities`) merges two names, and
+the report states every merge it applied. Scores stay exactly as the card stated them.
+
 This report is the one place individual rating values appear, at the report owner's explicit
 request; the remediation artifacts keep every rating redacted (`redact_employee_ratings`).
 

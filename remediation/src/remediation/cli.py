@@ -19,6 +19,7 @@ from pathlib import Path
 
 from . import config as config_module
 from . import discovery, pipeline, playbooks, ratings, review, schema, trend, trendreport
+from . import identities as identities_module
 from .naming import run_id
 
 EXPECTED_FAILURES = (
@@ -103,14 +104,26 @@ def _trend_stem(weeks: list[trend.Week]) -> str:
     return f"rating-trend-{weeks[-1].sunday}-{len(weeks)}w"
 
 
-def cmd_ratings_trend(args: argparse.Namespace) -> int:
+def _identities(value: str | None) -> dict[str, str]:
+    """Account names confirmed to be one person, from the committed mapping."""
+    return identities_module.load(Path(value).expanduser() if value else None)
+
+
+def _detail(args: argparse.Namespace) -> Path:
+    """The Detail directory holding the management reports and rating cards."""
     config = _load(args)
-    detail = _repository_root(args.repository_root) / config.mgmt_reports_directory
-    weeks = trend.series(ratings.read_all(detail), args.weeks)
+    return _repository_root(args.repository_root) / config.mgmt_reports_directory
+
+
+def cmd_ratings_trend(args: argparse.Namespace) -> int:
+    detail = _detail(args)
+    people = _identities(args.identities)
+    weeks = trend.series(ratings.read_all(detail, people), args.weeks)
     if not weeks:
         print(f"no rating cards found in {detail}", file=sys.stderr)
         return 1
-    written = trendreport.write(trendreport.render(weeks), Path(args.output), _trend_stem(weeks))
+    rendered = trendreport.render(weeks, people=people)
+    written = trendreport.write(rendered, Path(args.output), _trend_stem(weeks))
     print("\n".join(str(path) for path in written))
     return 0
 
@@ -162,6 +175,7 @@ def _add_ratings_trend(subparsers: argparse._SubParsersAction) -> None:
     parser.add_argument("--weeks", type=int, default=4, help="ISO weeks to cover; default 4")
     parser.add_argument("--repository-root", help="path to the Mgmt_Reports checkout")
     parser.add_argument("--output", required=True, help="directory to write the report into")
+    parser.add_argument("--identities", help="path to the confirmed account-to-person mapping")
     parser.set_defaults(func=cmd_ratings_trend)
 
 
